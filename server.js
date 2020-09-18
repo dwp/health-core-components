@@ -287,6 +287,20 @@ app.get(/\.html?$/i, function (req, res) {
 
 // Auto render any view that exists
 
+app.post('/form_components/TakingStatementsentry-v1', function (req, res, next){
+  console.log(req.session)
+  if (typeof req.session.data.statements !== 'object'){
+    req.session.data.statements=[];
+  }
+  if (req.body.statement){
+    req.session.data.statements.push(req.body.statement)
+  }
+  console.log(req.session)
+  next()
+})
+
+
+
 // App folder routes get priority
 app.get(/^([^.]+)$/, function (req, res, next) {
   utils.matchRoutes(req, res, next)
