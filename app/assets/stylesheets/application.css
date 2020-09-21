@@ -4,6 +4,64 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+
+/* Tabs_dwp */
+
+.navigation-secondary ul:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.navigation-secondary {
+  border-bottom: 1px solid #bfc1c3;
+  margin: auto;
+  max-width: 960px;
+}
+
+.navigation-secondary ul {
+  margin: 0 auto;
+  max-width: 960px;
+  padding-left: 0;
+}
+
+.navigation-secondary li {
+  float: left;
+  list-style-type: none;
+}
+
+@media (max-width: 640px) {
+  .navigation-secondary li {
+    border: 0;
+    width: 100%;
+  }
+}
+
+.navigation-secondary a {
+  display: block;
+  padding: 15px;
+}
+
+.navigation-secondary a:visited {
+  color: #005ea5;
+}
+
+.navigation-secondary a:hover {
+  background-color: #f8f8f8;
+}
+
+.navigation-secondary .active {
+  box-shadow: inset 0px -5px 0px 0px #005ea5;
+  color: #0b0c0c;
+  text-decoration: none;
+}
+
+.navigation-secondary .active:visited {
+  color: #0b0c0c;
+}
+
+
+
 /*! Copyright (c) 2011 by Margaret Calvert & Henrik Kubel. All rights reserved. The font has been customised for exclusive use on gov.uk. This cut is not commercially available. */
 @font-face {
   font-family: "GDS Transport";
@@ -1012,7 +1070,7 @@ p + .govuk-heading-s,
 }
 
 .govuk-width-container {
-  max-width: 960px;
+  max-width: 1060px;
   margin-right: 15px;
   margin-left: 15px;
 }

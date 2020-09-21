@@ -1,0 +1,128 @@
+{% extends "layout-key-detail-bar-status.html" %}
+
+{% block pageTitle %}
+  TextArea configurable component
+{% endblock %}
+
+
+{% block beforeContent %}
+
+<!-- <a href="#" class="govuk-back-link">Back</a> -->
+{% endblock %}
+
+
+{% block content %}
+<main class="govuk-main-wrapper">
+<div class="govuk-grid-row">
+<div class="govuk-grid-column-one-quarter">
+
+
+
+<a href="/wca_v1/TakingStatementsentry" class="govuk-body govuk-!-font-size-16">Informal observations</a>
+<br>
+<br>
+<a href="#" class="govuk-body govuk-!-font-size-16">Add attendees</a>
+<br>
+<br>
+<a href="#" class="govuk-body govuk-!-font-size-16">Abandon assessment</a>
+<br>
+<br>
+<hr>
+<br>
+<br>
+<a href="/wca_v1/Landingpage" class="govuk-body govuk-!-font-size-16">Start consultation</a>
+<br>
+<br>
+<a href="/wca_v1/condition_history" class="govuk-body govuk-!-font-size-16">Condition history</a>
+<br>
+<br>
+<a href="#" class="govuk-body govuk-!-font-size-16">Social and work history</a>
+<br>
+<br>
+<a href="#" class="govuk-body govuk-!-font-size-16">Typical day</a>
+<br>
+<br>
+<a href="#" class="govuk-body govuk-!-font-size-16">Medication and side effects</a>
+<br>
+<br>
+<a href="/wca_v1/PA/landingpage" class="govuk-body govuk-!-font-size-16 govuk-!-font-weight-bold">Physical assessments</a>
+<br>
+<br>
+<a href="/wca_v1/PA/landingpage" class="govuk-body govuk-!-font-size-16 govuk-!-font-weight-bold">- Consent</a>
+<br>
+<br>
+<a href="#" class="govuk-body govuk-!-font-size-16">- General health</a>
+<br>
+<br>
+<a href="#" class="govuk-body govuk-!-font-size-16">- Lower back and legs</a>
+<br>
+<br>
+<a href="#" class="govuk-body govuk-!-font-size-16">- Neck and arms</a>
+<br>
+<br>
+<a href="#" class="govuk-body govuk-!-font-size-16">- Cardiovascular and respiratory</a>
+<br>
+<br>
+<a href="#" class="govuk-body govuk-!-font-size-16">- Vision, speech and hearing</a>
+<br>
+<br>
+<a href="#" class="govuk-body govuk-!-font-size-16">- Cental nervous system</a>
+<br>
+<br>
+<br>
+<a href="#" class="govuk-body govuk-!-font-size-16">Mental health</a>
+<br>
+<br>
+
+<a href="#" class="govuk-body govuk-!-font-size-16">Finish assessment</a>
+<br>
+<br>
+
+
+</div>
+
+
+      <div class="govuk-grid-column-three-quarters-nav">
+
+        <span class="govuk-caption-l">Physical assessment</span>
+        <h2 class="govuk-heading-l">Has the claimant given consent for this physical assessment?</h2>
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" aria-describedby="sign-in-hint">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+              <!-- <h1 class="govuk-fieldset__heading">
+
+              </h1> -->
+            </legend>
+            <!-- <div id="sign-in-hint" class="govuk-hint">
+              Select which one best matches
+            </div> -->
+            <div class="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="sign-in" name="sign-in" type="radio" value="government-gateway" aria-describedby="sign-in-item-hint">
+                <label class="govuk-label govuk-radios__label" for="sign-in">
+                  Yes
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="sign-in-2" name="sign-in" type="radio" value="govuk-verify" aria-describedby="sign-in-2-item-hint">
+                <label class="govuk-label govuk-radios__label" for="sign-in-2">
+                  No
+                </label>
+              </div>
+
+            </div>
+          </fieldset>
+        </div>
+
+
+
+      <button class="govuk-button" data-module="govuk-button">
+        Save and continue
+      </button>
+
+</div>
+</div>
+</main>
+
+{% endblock %}
