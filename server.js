@@ -313,6 +313,19 @@ app.post('/WCA_v1/TakingStatementsentry', function (req, res, next){
   next()
 })
 
+// Statements captured WCA journey
+app.post('/WCA_v1/TakingStatementsentry_saved', function (req, res, next){
+  console.log(req.session)
+  if (typeof req.session.data.statements !== 'object'){
+    req.session.data.statements=[];
+  }
+  if (req.body.statement){
+    req.session.data.statements.push(req.body.statement)
+  }
+  console.log(req.session)
+  next()
+})
+
 
 // App folder routes get priority
 app.get(/^([^.]+)$/, function (req, res, next) {

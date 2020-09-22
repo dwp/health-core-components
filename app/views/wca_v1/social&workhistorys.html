@@ -9,7 +9,6 @@
 
 {% block content %}
 
-
 <div class="govuk-width-container1">
   <main class="govuk-main-wrapper">
 
@@ -18,7 +17,7 @@
 
 
 
-      <a href="/wca_v1/TakingStatementsentry" class="govuk-body govuk-!-font-size-19 govuk-!-font-weight-bold">Informal observations</a>
+      <a href="/wca_v1/TakingStatementsentry_saved" class="govuk-body govuk-!-font-size-16">Informal observations</a>
       <br>
       <br>
       <a href="#" class="govuk-body govuk-!-font-size-16">Add attendees</a>
@@ -30,13 +29,13 @@
       <hr>
       <br>
       <br>
-      <a href="/wca_v1/Landingpage" class="govuk-body govuk-!-font-size-16">Start consultation</a>
+      <a href="#" class="govuk-body govuk-!-font-size-16">Start consultation</a>
       <br>
       <br>
-      <a href="/wca_v1/condition_history" class="govuk-body govuk-!-font-size-16">Condition history</a>
+      <a href="condition_history_saved" class="govuk-body govuk-!-font-size-16">Condition history</a>
       <br>
       <br>
-      <a href="/wca_v1/social&workhistorys" class="govuk-body govuk-!-font-size-16">Social and work history</a>
+      <a href="/wca_v1/social&workhistorys" class="govuk-body govuk-!-font-size-19 govuk-!-font-weight-bold">Social and work history</a>
       <br>
       <br>
       <a href="#" class="govuk-body govuk-!-font-size-16">Typical day</a>
@@ -45,10 +44,10 @@
       <a href="#" class="govuk-body govuk-!-font-size-16">Medication and side effects</a>
       <br>
       <br>
-      <a href="/wca_v1/PA/landingpage" class="govuk-body govuk-!-font-size-16">Physical assessments</a>
+      <a href="/wca_v1/PA/landingpage" class="govuk-body govuk-!-font-size-16">Physical assessments <br>(optional)</a>
       <br>
       <br>
-      <a href="#" class="govuk-body govuk-!-font-size-16">Mental health</a>
+      <a href="#" class="govuk-body govuk-!-font-size-16">Mental health <br>(optional)</a>
       <br>
       <br>
 
@@ -60,10 +59,10 @@
       </div>
       <div class="govuk-grid-column-three-quarters-nav">
   <!-- <span class="govuk-caption-l">Review</span> -->
-<h1 class="govuk-heading-l">Informal observations</h1>
+<h1 class="govuk-heading-l">Social and work history</h1>
 
 
-<form action="/wca_v1/TakingStatementsentry" method="post" novalidate>
+<!-- <form action="/wca_v1/TakingStatementsentry" method="post" novalidate> -->
 
 <!-- <ul class="govuk-list">
   <li>
@@ -85,14 +84,14 @@
     </thead>
     <tbody class="govuk-table__body">
 
-{% for statement in data.statements %}
+<!-- {% for statement in data.statements %} -->
       <tr class="govuk-table__row">
 
-          <td scope="row" class="govuk-table__cell">{{ statement }}</td>
+          <td scope="row" class="govuk-table__cell"></td>
 
         <!-- <td class="govuk-table__cell govuk-table__cell--numeric"><a href="#" class="govuk-link">Edit</a>&nbsp&nbsp<a href="#" class="govuk-link">Remove</a></td> -->
       </tr>
-{% endfor %}
+<!-- {% endfor %} -->
 
     </tbody>
 
@@ -101,7 +100,7 @@
 
 
   <div class="govuk-form-group">
-    <textarea class="govuk-textarea" id="statement2" name="statement" rows="3" aria-describedby="more-detail-hint" value="{{data['statement2']}}"></textarea>
+    <textarea class="govuk-textarea" id="statement5" name="statement5" rows="3" aria-describedby="more-detail-hint"></textarea>
     <button class="govuk-button govuk-button--secondary" data-module="govuk-button">  Add statement
     </button>
 

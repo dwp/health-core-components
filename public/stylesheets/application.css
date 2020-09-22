@@ -5,7 +5,7 @@
 }
 
 
-/* Navigation_dwp */
+/* Navigation_tabs_dwp */
 
 .navigation-secondary ul:after {
   content: "";
@@ -1086,8 +1086,12 @@ p + .govuk-heading-s,
 
 
 
+
+
+
+
 .govuk-width-container {
-  max-width: 960px;
+  max-width: 1060px;
   margin-right: 15px;
   margin-left: 15px;
 }
@@ -1151,7 +1155,7 @@ p + .govuk-heading-s,
   }
 }
 
-@media (min-width: 1020px) {
+@media (min-width: 1120px) {
   .govuk-width-container1 {
     margin-right: auto;
     margin-left: auto;
