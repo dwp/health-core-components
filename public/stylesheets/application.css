@@ -1129,7 +1129,7 @@ p + .govuk-heading-s,
   }
 }
 
-.govuk-width-container1 {
+/* .govuk-width-container1 {
   max-width: 1060px;
   margin-right: 15px;
   margin-left: 15px;
@@ -1166,7 +1166,7 @@ p + .govuk-heading-s,
       margin-left: auto;
     }
   }
-}
+} */
 
 
 
