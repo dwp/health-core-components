@@ -28,7 +28,7 @@
 {% from "govuk/components/tag/macro.njk"              import govukTag %}
 {% from "govuk/components/textarea/macro.njk"         import govukTextarea %}
 {% from "govuk/components/warning-text/macro.njk"     import govukWarningText %}
-{% set containerClasses = "govuk-width-container" %}
+{% set containerClasses = "govuk-width-container1" %}
 
 
 {% block head %}
@@ -42,7 +42,7 @@
 {% block header %}
 
 <header class="govuk-header " role="banner" data-module="govuk-header">
-  <div class="govuk-header__container govuk-width-container">
+  <div class="govuk-header__container govuk-width-container1">
     <div class="govuk-header__logo">
       <a href="/index" class="govuk-header__link govuk-header__link--homepage">
           <span class="govuk-header__logotype-text">
@@ -78,7 +78,7 @@
 
 .key-details-bar .key-details-bar__key-details {
   margin: 0 auto;
-  max-width: 960px;
+  max-width: 1060px;
   padding: 20px 30px 20px 30px;
   position: relative;
   font-family: "GDS Transport";

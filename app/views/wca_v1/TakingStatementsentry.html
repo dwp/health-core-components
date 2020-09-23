@@ -1,4 +1,4 @@
-{% extends "layout-key-detail-bar-status.html" %}
+{% extends "layout-key-detail-bar-status1060.html" %}
 
 {% block pageTitle %}
   TextArea component
@@ -32,7 +32,7 @@
       <a href="/wca_v1/Landingpage" class="govuk-body govuk-!-font-size-16">Start consultation</a>
       <br>
       <br>
-      <a href="/wca_v1/condition_history" class="govuk-body govuk-!-font-size-16">Condition history</a>
+      <a href="/wca_v1/condition_history_saved" class="govuk-body govuk-!-font-size-16">Condition history</a>
       <br>
       <br>
       <a href="/wca_v1/social&workhistorys" class="govuk-body govuk-!-font-size-16">Social and work history</a>
@@ -109,11 +109,10 @@
 
 
 
-
-
-<button class="govuk-button" data-module="govuk-button">
-Save & Continue
-</button>
+  {{ govukButton({
+    text: "Save and continue",
+    href: "/wca_v1/condition_history_saved"
+  }) }}
 
 </div>
 </div>

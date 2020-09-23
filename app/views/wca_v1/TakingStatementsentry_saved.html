@@ -1,4 +1,4 @@
-{% extends "layout-key-detail-bar-status.html" %}
+{% extends "layout-key-detail-bar-status1060.html" %}
 
 {% block pageTitle %}
   TextArea component
@@ -106,12 +106,15 @@
 
   </div>
 
+    {{ govukButton({
+      text: "Save and continue",
+      href: "social&workhistorys"
+    }) }}
 
 
-{{ govukButton({
-  text: "Save and continue",
-  href: "social&workhistorys"
-}) }}
+
+
+
 
 
 
