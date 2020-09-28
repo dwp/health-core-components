@@ -1,0 +1,195 @@
+{% extends "layout-key-detail-bar.html" %}
+
+{% block pageTitle %}
+  TextArea configurable component
+{% endblock %}
+
+
+{% block beforeContent %}
+
+<!-- <a href="#" class="govuk-back-link">Back</a> -->
+{% endblock %}
+
+
+{% block content %}
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-one-half">
+
+        <ol class="app-task-list1">
+                <li>
+                  <h2 class="app-task-list1__section">
+                    <span class="app-task-list1__section-number"> Assessment </span>
+                  </h2>
+                  <ul class="app-task-list1__items">
+                    <li class="app-task-list1__item">
+                      <span class="app-task-list1__task-name">
+                        <a href="#" aria-describedby="eligibility-status">
+                          Condition history
+                        </a>
+                      </span>
+                      <strong class="govuk-tag app-task-list1__tag" id="eligibility-status">Completed</strong>
+                    </li>
+                    <li class="app-task-list1__item">
+                      <span class="app-task-list1__task-name">
+                        <a href="#" aria-describedby="read-declaration-status">
+                          Social and work history
+                        </a>
+                      </span>
+                      <strong class="govuk-tag app-task-list1__tag" id="read-declaration-status">Completed</strong>
+                    </li>
+                    <li class="app-task-list1__item">
+                      <span class="app-task-list1__task-name">
+                        <a href="#" aria-describedby="read-declaration-status">
+                          Typical day
+                        </a>
+                      </span>
+                      <strong class="govuk-tag app-task-list1__tag" id="read-declaration-status">Completed</strong>
+                    </li>
+                    <li class="app-task-list1__item">
+                      <span class="app-task-list1__task-name">
+                        <a href="#" aria-describedby="read-declaration-status">
+                          Medication and side effects
+                        </a>
+                      </span>
+                      <strong class="govuk-tag app-task-list1__tag" id="read-declaration-status">Completed</strong>
+                    </li>
+                    </ul>
+                    </li>
+
+
+                    <li>
+                      <h2 class="app-task-list1__section">
+                        <span class="app-task-list1__section-number"> General actions </span>
+                      </h2>
+                      <ul class="app-task-list1__items">
+                    <li class="app-task-list1__item">
+                      <span class="app-task-list1__task-name">
+                        <a href="#" aria-describedby="read-declaration-status">
+                          Informal observations
+                        </a>
+                      </span>
+                      <strong class="govuk-tag govuk-tag--grey app-task-list1__tag" id="list-convictions-status">Optional</strong>
+                    </li>
+                    <li class="app-task-list1__item">
+                      <span class="app-task-list1__task-name">
+                        <a href="#" aria-describedby="read-declaration-status">
+                          Add attendee
+                        </a>
+                      </span>
+                      <strong class="govuk-tag govuk-tag--grey app-task-list1__tag" id="list-convictions-status">Optional</strong>
+                    </li>
+                    <li class="app-task-list1__item">
+                      <span class="app-task-list1__task-name">
+                        <a href="#" aria-describedby="read-declaration-status">
+                          Abandon assessment
+                        </a>
+                      </span>
+                      <strong class="govuk-tag govuk-tag--grey app-task-list1__tag" id="list-convictions-status">Optional</strong>
+                    </li>
+                  </ul>
+                </li>
+</ol>
+</div>
+
+  <div class="govuk-grid-column-one-half">
+<ol class="app-task-list1">
+                <li>
+                  <h2 class="app-task-list1__section">
+                    <span class="app-task-list1__section-number"> Physical assessment (Optional) </span>
+                  </h2>
+                  <ul class="app-task-list1__items">
+                    <li class="app-task-list1__item">
+                      <span class="app-task-list1__task-name">
+                        <a href="#" aria-describedby="eligibility-status">
+                          Consent
+                        </a>
+                      </span>
+                      <strong class="govuk-tag app-task-list1__tag" id="eligibility-status">Completed</strong>
+                    </li>
+                    <li class="app-task-list1__item">
+                      <span class="app-task-list1__task-name">
+                        <a href="#" aria-describedby="read-declaration-status">
+                          General health
+                        </a>
+                      </span>
+                      <strong class="govuk-tag govuk-tag--grey app-task-list1__tag" id="list-convictions-status">Not started</strong>
+                    </li>
+                    <li class="app-task-list1__item">
+                      <span class="app-task-list1__task-name">
+                        <a href="#" aria-describedby="read-declaration-status">
+                          Lower back and legs
+                        </a>
+                      </span>
+                      <strong class="govuk-tag govuk-tag--grey app-task-list1__tag" id="list-convictions-status">Not started</strong>
+                    </li>
+                    <li class="app-task-list1__item">
+                      <span class="app-task-list1__task-name">
+                        <a href="#" aria-describedby="read-declaration-status">
+                          Neck and arms
+                        </a>
+                      </span>
+                      <strong class="govuk-tag govuk-tag--grey app-task-list1__tag" id="list-convictions-status">Not started</strong>
+                    </li>
+                    <li class="app-task-list1__item">
+                      <span class="app-task-list1__task-name">
+                        <a href="#" aria-describedby="read-declaration-status">
+                          Cardiovascular and respiratory
+                        </a>
+                      </span>
+                      <strong class="govuk-tag govuk-tag--grey app-task-list1__tag" id="list-convictions-status">Not started</strong>
+                    </li>
+                    <li class="app-task-list1__item">
+                      <span class="app-task-list1__task-name">
+                        <a href="#" aria-describedby="read-declaration-status">
+                          Vision, speech and hearing
+                        </a>
+                      </span>
+                      <strong class="govuk-tag govuk-tag--grey app-task-list1__tag" id="list-convictions-status">Not started</strong>
+                    </li>
+                    <li class="app-task-list1__item">
+                      <span class="app-task-list1__task-name">
+                        <a href="#" aria-describedby="read-declaration-status">
+                          Central nervous system
+                        </a>
+                      </span>
+                      <strong class="govuk-tag govuk-tag--grey app-task-list1__tag" id="list-convictions-status">Not started</strong>
+                    </li>
+                  </ul>
+                </li>
+
+
+
+
+                <li>
+                  <h2 class="app-task-list1__section">
+                    <span class="app-task-list1__section-number"> Mental health (Optional) </span>
+                  </h2>
+                  <ul class="app-task-list1__items">
+                    <li class="app-task-list1__item">
+                      <span class="app-task-list1__task-name">
+                        <a href="#" aria-describedby="eligibility-status">
+                          Mental health
+                        </a>
+                      </span>
+                      <strong class="govuk-tag govuk-tag--grey app-task-list1__tag" id="list-convictions-status">Not started</strong>
+                    </li>
+                  </ul>
+                </li>
+
+              </ol>
+
+
+
+
+
+</div>
+
+
+<button class="govuk-button" data-module="govuk-button">
+  Save and continue
+</button>
+</div>
+
+
+{% endblock %}

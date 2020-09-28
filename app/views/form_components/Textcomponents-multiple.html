@@ -1,0 +1,71 @@
+{% extends "layout-key-detail-bar.html" %}
+
+{% block pageTitle %}
+  Multiple text fields component
+{% endblock %}
+
+
+{% block beforeContent %}
+
+<!-- <a href="#" class="govuk-back-link">Back</a> -->
+{% endblock %}
+
+
+{% block content %}
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-three-quarters">
+
+<!-- <span class="govuk-caption-l">Section heading (Caption)</span> -->
+<h1 class="govuk-heading-l">General health</h1>
+
+
+<div class="govuk-form-group">
+
+
+  <div class="govuk-form-group">
+  <label class="govuk-label" for="width-20">
+    Height (m)
+  </label>
+  <div id="more-detail-hint" class="govuk-hint">
+    Measure in metres
+  </div>
+  <input class="govuk-input govuk-input--width-10" id="width-20" name="width-20" type="text">
+</div>
+
+<div class="govuk-form-group">
+  <label class="govuk-label" for="width-10">
+    Weight (kg)
+  </label>
+  <input class="govuk-input govuk-input--width-10" id="width-10" name="width-10" type="text">
+</div>
+
+<div class="govuk-form-group">
+  <label class="govuk-label" for="width-10">
+    BMI
+  </label>
+  <input class="govuk-input govuk-input--width-10" id="width-10" name="width-10" type="text">
+</div>
+
+<div class="govuk-form-group">
+  <!-- <span class="govuk-caption-l">Section heading (Caption)</span> -->
+  <label class="govuk-label" for="more-detail">
+      Other findings
+    </label>
+
+  <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5
+" aria-describedby="more-detail-hint"></textarea>
+</div>
+
+</div>
+
+</div>
+</div>
+
+<button class="govuk-button" data-module="govuk-button">
+  Save and continue
+</button>
+
+
+
+{% endblock %}

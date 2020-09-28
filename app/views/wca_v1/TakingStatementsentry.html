@@ -62,7 +62,7 @@
 <h1 class="govuk-heading-l">Informal observations</h1>
 
 
-<form action="/wca_v1/TakingStatementsentry" method="post" novalidate>
+<!-- <form action="/wca_v1/TakingStatementsentry-post" method="post" novalidate> -->
 
 <!-- <ul class="govuk-list">
   <li>
@@ -97,12 +97,15 @@
 
   </table>
 
-
+<form action="/wca_v1/social&workhistorys" method="post" novalidate>
 
   <div class="govuk-form-group">
+    <form action="/wca_v1/TakingStatementsentry" method="post" novalidate>
     <textarea class="govuk-textarea" id="statement2" name="statement" rows="3" aria-describedby="more-detail-hint" value="{{data['statement2']}}"></textarea>
-    <button class="govuk-button govuk-button--secondary" data-module="govuk-button">  Add statement
-    </button>
+    <button class="govuk-button govuk-button--secondary" data-module="govuk-button" ">  Add statement
+    </button></form>
+
+
 
   </div>
 
@@ -110,8 +113,11 @@
 
 
   {{ govukButton({
+    id: "comment",
+    name: "comment",
+    value: "add-statement",
     text: "Save and continue",
-    href: "/wca_v1/condition_history_saved"
+    href: "/wca_v1/social&workhistorys"
   }) }}
 
 </div>

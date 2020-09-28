@@ -301,7 +301,7 @@ app.post('/form_components/TakingStatementsentry-v2', function (req, res, next){
 })
 
 // Statements captured WCA journey
-app.post('/WCA_v1/TakingStatementsentry', function (req, res, next){
+app.post('/wca_v1/TakingStatementsentry', function (req, res, next){
   console.log(req.session)
   if (typeof req.session.data.statements !== 'object'){
     req.session.data.statements=[];
@@ -312,6 +312,25 @@ app.post('/WCA_v1/TakingStatementsentry', function (req, res, next){
   console.log(req.session)
   next()
 })
+
+
+app.post('/wca_v1/social&workhistorys', function (req, res, next){
+console.log('********')
+console.log(req.body)
+  console.log(req.session)
+  if (typeof req.session.data.statements !== 'object'){
+    req.session.data.statements=[];
+  }
+  if (req.body.statement){
+    req.session.data.statements.push(req.body.statement)
+  }
+  console.log(req.session)
+  next()
+})
+
+
+
+
 
 // Statements captured WCA journey
 app.post('/WCA_v1/TakingStatementsentry_saved', function (req, res, next){
