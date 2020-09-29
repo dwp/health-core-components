@@ -1,0 +1,45 @@
+{% extends "layout-key-detail-bar.html" %}
+
+{% block pageTitle %}
+  TextArea configurable component
+{% endblock %}
+
+
+{% block beforeContent %}
+
+<!-- <a href="#" class="govuk-back-link">Back</a> -->
+{% endblock %}
+
+
+{% block content %}
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-three-quarters">
+
+<form action="/corecomponents/Research/2Navigation/tasklist/tasklist_conditionhistory" method="post" novalidate>
+
+
+
+<div class="govuk-form-group">
+  <!-- <span class="govuk-caption-l">Section heading (Caption)</span> -->
+  <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--l" for="more-detail">
+      Condition history
+    </label>
+  </h1>
+  <div id="more-detail-hint" class="govuk-hint">
+    Provide all details of your condition history
+  </div>
+  <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="10
+" aria-describedby="more-detail-hint"></textarea>
+</div>
+
+</div>
+</div>
+
+<button class="govuk-button" data-module="govuk-button">
+  Save and continue
+</button>
+
+
+
+{% endblock %}
