@@ -962,6 +962,20 @@ p + .govuk-heading-s,
 
 /* ASSESSMENT WITH NAV */
 
+.govuk-grid-column-two-thirds-nav {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0px 0px 0px 50px;
+}
+
+@media (min-width: 40.0625em) {
+  .govuk-grid-column-two-thirds-nav {
+    width: 66.6666%;
+    float: left;
+  }
+}
+
+
 .govuk-grid-column-three-quarters-nav {
   box-sizing: border-box;
   width: 100%;

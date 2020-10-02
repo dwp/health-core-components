@@ -52,11 +52,11 @@
     </thead>
     <tbody class="govuk-table__body">
       <tr class="govuk-table__row">
-        <th scope="row" class="govuk-table__header"><a href="/corecomponents/Research/2Navigation/tabs/condition_history-tabs" class="govuk-body govuk-!-font-size-19 govuk-!-font-weight-bold">Condition history</a></th>
+        <th scope="row" class="govuk-table__header"><a href="/corecomponents/Research/2Navigation/tabs/condition_history-tabs" class="govuk-body govuk-!-font-size-16">Condition history</a></th>
         <td class="govuk-table__cell govuk-table__cell--numeric"></td>
       </tr>
       <tr class="govuk-table__row">
-        <th scope="row" class="govuk-table__header"><a href="/corecomponents/Research/2Navigation/tabs/social1" class="govuk-body govuk-!-font-size-16">Social and work history</a></th>
+        <th scope="row" class="govuk-table__header"><a href="/corecomponents/Research/2Navigation/tabs/social1" class="govuk-body govuk-!-font-size-19 govuk-!-font-weight-bold">Social and work history</a></th>
         <td class="govuk-table__cell govuk-table__cell--numeric"></td>
       </tr>
       <tr class="govuk-table__row">
@@ -114,20 +114,59 @@
 </div>
 
 
-      <div class="govuk-grid-column-two-thirds-nav">
+  <div class="govuk-grid-column-two-thirds-nav">
+
+<!-- <span class="govuk-caption-l">Review</span> -->
+<h1 class="govuk-heading-l">Social and work history</h1>
+
+
+<!-- <form action="/wca_v1/TakingStatementsentry-post" method="post" novalidate> -->
+
+<!-- <ul class="govuk-list">
+<li>
+<a href="/form_components/TakingStatements" class="govuk-link">View all previous statements</a>
+</li>
+</ul> -->
+
+
+
+
+
+<table class="govuk-table">
+  <!-- <caption class="govuk-table__caption">Informal observations</caption> -->
+  <thead class="govuk-table__head">
+    <tr class="govuk-table__row">
+      <th scope="col" class="govuk-table__header">Statements added</th>
+      <!-- <th scope="col" class="govuk-table__header govuk-table__header--numeric">Actions</th> -->
+    </tr>
+  </thead>
+  <tbody class="govuk-table__body">
+
+{% for statement in data.statements %}
+    <tr class="govuk-table__row">
+
+        <td scope="row" class="govuk-table__cell">{{ statement }}</td>
+
+      <!-- <td class="govuk-table__cell govuk-table__cell--numeric"><a href="#" class="govuk-link">Edit</a>&nbsp&nbsp<a href="#" class="govuk-link">Remove</a></td> -->
+    </tr>
+{% endfor %}
+
+  </tbody>
+
+</table>
+
+<form action="/corecomponents/Research/2Navigation/tabs/social" method="post" novalidate>
 
 <div class="govuk-form-group">
-  <!-- <span class="govuk-caption-l">Section heading (Caption)</span> -->
-  <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--l" for="more-detail">
-      Condition history
-    </label>
-  </h1>
-  <div id="more-detail-hint" class="govuk-hint">
-    Provide all details of your condition history
-  </div>
-  <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="10
-" aria-describedby="more-detail-hint"></textarea>
+  <form action="/wca_v1/TakingStatementsentry" method="post" novalidate>
+  <textarea class="govuk-textarea" id="statement2" name="statement" rows="3" aria-describedby="more-detail-hint" value="{{data['statement2']}}"></textarea>
+  <button class="govuk-button govuk-button--secondary" data-module="govuk-button" ">  Add statement
+  </button></form>
+
+
+
 </div>
+
 
 
 
@@ -136,11 +175,11 @@
   name: "comment",
   value: "add-statement",
   text: "Save and continue",
-  href: "/corecomponents/Research/2Navigation/tabs/social"
+  href: "/corecomponents/Research/2Navigation/tabs/typical-day"
 }) }}
 
 </div>
-</div>
+
 </main>
 
 {% endblock %}

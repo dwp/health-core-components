@@ -1,0 +1,228 @@
+{% extends "layout-key-detail-bar-status.html" %}
+
+{% block pageTitle %}
+  Condition history tabs
+{% endblock %}
+
+
+{% block beforeContent %}
+
+<main id="content" role="main">
+  <div class="grid-row">
+    <div class="column-full">
+
+      <nav class="navigation-secondary">
+        <ul>
+          <li>
+            <a href="/corecomponents/Research/2Navigation/tabs/condition_history-tabs" class="active" aria-current="section">Assessment</a>
+          </li>
+          <li>
+            <a href="/corecomponents/Research/2Navigation/tabs/informal-observations">Informal observations</a>
+          </li>
+          <li>
+            <a href="#">Add attendee</a>
+          </li>
+          <li>
+            <a href="#">Abandon assessment</a>
+          </li>
+        </ul>
+      </nav>
+
+    </div>
+  </div>
+</main>
+{% endblock %}
+
+
+
+{% block content %}
+<main class="govuk-main-wrapper">
+<div class="govuk-grid-row">
+<div class="govuk-grid-column-one-third">
+
+
+
+  <table class="govuk-table">
+    <!-- <caption class="govuk-table__caption">Months and rates</caption> -->
+    <thead class="govuk-table__head">
+      <tr class="govuk-table__row">
+        <th scope="col" class="govuk-table__header">Assessment</th>
+        <th scope="col" class="govuk-table__header govuk-table__header--numeric"></th>
+      </tr>
+    </thead>
+    <tbody class="govuk-table__body">
+      <tr class="govuk-table__row">
+        <th scope="row" class="govuk-table__header"><a href="/corecomponents/Research/2Navigation/tabs/condition_history-tabs_complete" class="govuk-body govuk-!-font-size-16">Condition history</a></th>
+        <td class="govuk-table__cell govuk-table__cell--numeric"><div class="govuk-tag govuk-phase-banner__content__tag">
+          OK
+        </div></td>
+      </tr>
+      <tr class="govuk-table__row">
+        <th scope="row" class="govuk-table__header"><a href="/corecomponents/Research/2Navigation/tabs/social_complete" class="govuk-body govuk-!-font-size-16">Social and work history</a></th>
+        <td class="govuk-table__cell govuk-table__cell--numeric"><div class="govuk-tag govuk-phase-banner__content__tag">
+          OK
+        </div></td>
+      </tr>
+      <tr class="govuk-table__row">
+        <th scope="row" class="govuk-table__header"><a href="#" class="govuk-body govuk-!-font-size-16">Typical day</a></th>
+        <td class="govuk-table__cell govuk-table__cell--numeric"></td>
+      </tr>
+      <tr class="govuk-table__row">
+        <th scope="row" class="govuk-table__header"><a href="#" class="govuk-body govuk-!-font-size-16">Medication and side effects</a></th>
+        <td class="govuk-table__cell govuk-table__cell--numeric"></td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <table class="govuk-table">
+    <!-- <caption class="govuk-table__caption">Months and rates</caption> -->
+    <thead class="govuk-table__head">
+      <tr class="govuk-table__row">
+        <th scope="col" class="govuk-table__header">Physical assessment</th>
+        <th scope="col" class="govuk-table__header govuk-table__header--numeric"></th>
+      </tr>
+    </thead>
+    <tbody class="govuk-table__body">
+      <tr class="govuk-table__row">
+        <th scope="row" class="govuk-table__header"><a href="/corecomponents/Research/2Navigation/tabs/condition_history-tabs_complete" class="govuk-body govuk-!-font-size-16">Consent</a></th>
+        <td class="govuk-table__cell govuk-table__cell--numeric"><div class="govuk-tag govuk-phase-banner__content__tag">
+          OK
+        </div></td>
+      </tr>
+      <tr class="govuk-table__row">
+        <th scope="row" class="govuk-table__header"><a href="/corecomponents/Research/2Navigation/tabs/social_complete" class="govuk-body govuk-!-font-size-16">General health</a></th>
+        <td class="govuk-table__cell govuk-table__cell--numeric"><div class="govuk-tag govuk-phase-banner__content__tag">
+          OK
+        </div></td>
+      </tr>
+      <tr class="govuk-table__row">
+        <th scope="row" class="govuk-table__header"><a href="#" class="govuk-body govuk-!-font-size-16">Lower back and legs</a></th>
+        <td class="govuk-table__cell govuk-table__cell--numeric"></td>
+      </tr>
+      <tr class="govuk-table__row">
+        <th scope="row" class="govuk-table__header"><a href="#" class="govuk-body govuk-!-font-size-16">Neck and arms</a></th>
+        <td class="govuk-table__cell govuk-table__cell--numeric"></td>
+      </tr>
+      <tr class="govuk-table__row">
+        <th scope="row" class="govuk-table__header"><a href="/wca_v1/PA/landingpage" class="govuk-body govuk-!-font-size-19 govuk-!-font-weight-bold">Cardiovascular and respiratory</a></th>
+        <td class="govuk-table__cell govuk-table__cell--numeric"></td>
+      </tr>
+      <tr class="govuk-table__row">
+        <th scope="row" class="govuk-table__header"><a href="#" class="govuk-body govuk-!-font-size-16">Vision, speech and hearing</a></th>
+        <td class="govuk-table__cell govuk-table__cell--numeric"></td>
+      </tr>
+      <tr class="govuk-table__row">
+        <th scope="row" class="govuk-table__header"><a href="#" class="govuk-body govuk-!-font-size-16">Central nervous system</a></th>
+        <td class="govuk-table__cell govuk-table__cell--numeric"></td>
+      </tr>
+
+    </tbody>
+  </table>
+
+
+  <table class="govuk-table">
+    <!-- <caption class="govuk-table__caption">Months and rates</caption> -->
+    <thead class="govuk-table__head">
+      <tr class="govuk-table__row">
+        <th scope="col" class="govuk-table__header">Mental health</th>
+        <th scope="col" class="govuk-table__header govuk-table__header--numeric"></th>
+      </tr>
+    </thead>
+    <tbody class="govuk-table__body">
+      <tr class="govuk-table__row">
+        <th scope="row" class="govuk-table__header"><a href="/corecomponents/Research/2Navigation/tabs/condition_history-tabs_complete" class="govuk-body govuk-!-font-size-16">Mental health</a></th>
+        <td class="govuk-table__cell govuk-table__cell--numeric"></td>
+      </tr>
+
+
+    </tbody>
+  </table>
+
+</div>
+
+
+  <div class="govuk-grid-column-two-thirds-nav">
+
+<!-- <span class="govuk-caption-l">Review</span> -->
+
+        <span class="govuk-caption-l">Cardiovascular and respiratory</span>
+
+
+  <div class="govuk-form-group">
+    <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
+      <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+        <h1 class="govuk-fieldset__heading">
+          Select all of the areas you have assessed
+        </h1>
+      </legend>
+      <!-- <div id="waste-hint" class="govuk-hint">
+
+  </div> -->
+      <div class="govuk-checkboxes">
+        <div class="govuk-checkboxes__item">
+          <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+          <label class="govuk-label govuk-checkboxes__label" for="waste">
+            Radial pulse
+          </label>
+        </div>
+        <div class="govuk-checkboxes__item">
+          <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" value="mines">
+          <label class="govuk-label govuk-checkboxes__label" for="waste-2">
+            Left leg peripheral circulation
+          </label>
+        </div>
+        <div class="govuk-checkboxes__item">
+          <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+          <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+            Right leg peripheral circulation
+          </label>
+        </div>
+        <div class="govuk-checkboxes__item">
+          <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+          <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+            Blood pressure
+          </label>
+        </div>
+        <div class="govuk-checkboxes__item">
+          <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+          <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+            Cardiac
+          </label>
+        </div>
+        <div class="govuk-checkboxes__item">
+          <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+          <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+            Peak expiration flow rate
+          </label>
+        </div>
+        <div class="govuk-checkboxes__item">
+          <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+          <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+            Breathlessness
+          </label>
+        </div>
+        <div class="govuk-checkboxes__item">
+          <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+          <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+            Other: chest sounds, wheeze
+          </label>
+        </div>
+      </div>
+    </fieldset>
+  </div>
+
+
+
+
+
+<button class="govuk-button" data-module="govuk-button">
+  Save and continue
+</button>
+
+</div>
+</div>
+
+</main>
+
+{% endblock %}
