@@ -16,62 +16,69 @@
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-three-quarters">
   <!-- <span class="govuk-caption-l">Review</span> -->
-<h1 class="govuk-heading-l">Informal observations</h1>
+  <h1 class="govuk-heading-l">Informal observations</h1>
 
 
-<form action="/form_components/TakingStatementsentry-v1" method="post" novalidate>
+  <!-- <form action="/wca_v1/TakingStatementsentry-post" method="post" novalidate> -->
 
-<!-- <ul class="govuk-list">
-  <li>
-  <a href="/form_components/TakingStatements" class="govuk-link">View all previous statements</a>
-  </li>
-</ul> -->
-
-
-
-
-
-  <table class="govuk-table">
-    <!-- <caption class="govuk-table__caption">Informal observations</caption> -->
-    <thead class="govuk-table__head">
-      <tr class="govuk-table__row">
-        <th scope="col" class="govuk-table__header">Statements added</th>
-        <!-- <th scope="col" class="govuk-table__header govuk-table__header--numeric">Actions</th> -->
-      </tr>
-    </thead>
-    <tbody class="govuk-table__body">
-
-{% for statement in data.statements %}
-      <tr class="govuk-table__row">
-
-          <td scope="row" class="govuk-table__cell">{{ statement }}</td>
-
-        <!-- <td class="govuk-table__cell govuk-table__cell--numeric"><a href="#" class="govuk-link">Edit</a>&nbsp&nbsp<a href="#" class="govuk-link">Remove</a></td> -->
-      </tr>
-{% endfor %}
-
-    </tbody>
-
-  </table>
+  <!-- <ul class="govuk-list">
+    <li>
+    <a href="/form_components/TakingStatements" class="govuk-link">View all previous statements</a>
+    </li>
+  </ul> -->
 
 
 
-  <div class="govuk-form-group">
-    <textarea class="govuk-textarea" id="statement2" name="statement" rows="3" aria-describedby="more-detail-hint" value="{{data['statement2']}}"></textarea>
-    <button class="govuk-button govuk-button--secondary" data-module="govuk-button">  Add statement
-    </button>
+
+
+    <table class="govuk-table">
+      <!-- <caption class="govuk-table__caption">Informal observations</caption> -->
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th scope="col" class="govuk-table__header">Statements added</th>
+          <!-- <th scope="col" class="govuk-table__header govuk-table__header--numeric">Actions</th> -->
+        </tr>
+      </thead>
+      <tbody class="govuk-table__body">
+
+  {% for statement in data.statements %}
+        <tr class="govuk-table__row">
+
+            <td scope="row" class="govuk-table__cell">{{ statement }}</td>
+
+          <!-- <td class="govuk-table__cell govuk-table__cell--numeric"><a href="#" class="govuk-link">Edit</a>&nbsp&nbsp<a href="#" class="govuk-link">Remove</a></td> -->
+        </tr>
+  {% endfor %}
+
+      </tbody>
+
+    </table>
+
+  <form action="/form_components/TakingStatementsentry-v1" method="post" novalidate>
+
+    <div class="govuk-form-group">
+      <form action="/wca_v1/TakingStatementsentry" method="post" novalidate>
+      <textarea class="govuk-textarea" id="statement2" name="statement" rows="3" aria-describedby="more-detail-hint" value="{{data['statement2']}}"></textarea>
+      <button class="govuk-button govuk-button--secondary" data-module="govuk-button" ">  Add statement
+      </button></form>
+
+
+
+    </div>
+
+
+
+
+    {{ govukButton({
+      id: "comment",
+      name: "comment",
+      value: "add-statement",
+      text: "Save and continue"
+    }) }}
 
   </div>
-
-
-</div>
-</div>
-
-
-
-<button class="govuk-button" data-module="govuk-button">
-Save & Continue
-</button>
+  </div>
+  </main>
 
 
 

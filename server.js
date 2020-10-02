@@ -287,6 +287,22 @@ app.get(/\.html?$/i, function (req, res) {
 
 // Auto render any view that exists
 
+
+
+// Statements captured component library v1
+app.post('/form_components/TakingStatementsentry-v1', function (req, res, next){
+  console.log(req.session)
+  if (typeof req.session.data.statements !== 'object'){
+    req.session.data.statements=[];
+  }
+  if (req.body.statement){
+    req.session.data.statements.push(req.body.statement)
+  }
+  console.log(req.session)
+  next()
+})
+
+
 // Statements captured component library
 app.post('/form_components/TakingStatementsentry-v2', function (req, res, next){
   console.log(req.session)
@@ -314,7 +330,7 @@ app.post('/wca_v1/TakingStatementsentry', function (req, res, next){
 })
 
 
-app.post('/wca_v1/social&workhistorys', function (req, res, next){
+app.post('/corecomponents/Research/2Navigation/tasklist/Statementsentry_Social', function (req, res, next){
 console.log('********')
 console.log(req.body)
   console.log(req.session)
