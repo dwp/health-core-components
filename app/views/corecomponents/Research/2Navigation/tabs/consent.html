@@ -1,4 +1,4 @@
-{% extends "layout-key-detail-bar-status.html" %}
+{% extends "layout-key-detail-bar-start1060.html" %}
 
 {% block pageTitle %}
   Condition history tabs
@@ -14,17 +14,14 @@
       <nav class="navigation-secondary">
         <ul>
           <li>
-            <a href="/corecomponents/Research/2Navigation/tabs/condition_history-tabs" class="active" aria-current="section">Assessment</a>
-          </li>
-          <li>
-            <a href="/corecomponents/Research/2Navigation/tabs/informal-observations">Informal observations</a>
-          </li>
-          <li>
-            <a href="#">Add attendee</a>
+            <a href="#" class="active" aria-current="section">Assessment started: 14:00</a>
           </li>
           <li>
             <a href="#">Abandon assessment</a>
           </li>
+
+
+
         </ul>
       </nav>
 
@@ -38,7 +35,7 @@
 {% block content %}
 <main class="govuk-main-wrapper">
 <div class="govuk-grid-row">
-<div class="govuk-grid-column-one-third">
+<div class="govuk-grid-column-one-quarter">
 
 
 
@@ -64,11 +61,19 @@
         </div></td>
       </tr>
       <tr class="govuk-table__row">
-        <th scope="row" class="govuk-table__header"><a href="#" class="govuk-body govuk-!-font-size-19 govuk-!-font-weight-bold">Typical day</a></th>
+        <th scope="row" class="govuk-table__header"><a href="#" class="govuk-body govuk-!-font-size-16">Typical day</a></th>
         <td class="govuk-table__cell govuk-table__cell--numeric"></td>
       </tr>
       <tr class="govuk-table__row">
         <th scope="row" class="govuk-table__header"><a href="#" class="govuk-body govuk-!-font-size-16">Medication and side effects</a></th>
+        <td class="govuk-table__cell govuk-table__cell--numeric"></td>
+      </tr>
+      <tr class="govuk-table__row">
+        <th scope="row" class="govuk-table__header"><a href="#" class="govuk-body govuk-!-font-size-16">Add attendees (optional)</a></th>
+        <td class="govuk-table__cell govuk-table__cell--numeric"></td>
+      </tr>
+      <tr class="govuk-table__row">
+        <th scope="row" class="govuk-table__header"><a href="#" class="govuk-body govuk-!-font-size-16">Informal observations (optional)</a></th>
         <td class="govuk-table__cell govuk-table__cell--numeric"></td>
       </tr>
 
@@ -85,10 +90,32 @@
       </tr>
     </thead>
     <tbody class="govuk-table__body">
+
       <tr class="govuk-table__row">
-        <th scope="row" class="govuk-table__header"><a href="/corecomponents/Research/2Navigation/tabs/condition_history-tabs_complete" class="govuk-body govuk-!-font-size-16">Consent</a></th>
+        <th scope="row" class="govuk-table__header"><a href="/corecomponents/Research/2Navigation/tabs/social_complete" class="govuk-body govuk-!-font-size-16">General health (optional)</a></th>
         <td class="govuk-table__cell govuk-table__cell--numeric"></td>
       </tr>
+      <tr class="govuk-table__row">
+        <th scope="row" class="govuk-table__header"><a href="#" class="govuk-body govuk-!-font-size-16">Lower back and legs (optional)</a></th>
+        <td class="govuk-table__cell govuk-table__cell--numeric"></td>
+      </tr>
+      <tr class="govuk-table__row">
+        <th scope="row" class="govuk-table__header"><a href="#" class="govuk-body govuk-!-font-size-16">Neck and arms (optional)</a></th>
+        <td class="govuk-table__cell govuk-table__cell--numeric"></td>
+      </tr>
+      <tr class="govuk-table__row">
+        <th scope="row" class="govuk-table__header"><a href="/wca_v1/PA/landingpage" class="govuk-body govuk-!-font-size-19 govuk-!-font-weight-bold">Cardiovascular and respiratory (optional)</a></th>
+        <td class="govuk-table__cell govuk-table__cell--numeric"></td>
+      </tr>
+      <tr class="govuk-table__row">
+        <th scope="row" class="govuk-table__header"><a href="#" class="govuk-body govuk-!-font-size-16">Vision, speech and hearing (optional)</a></th>
+        <td class="govuk-table__cell govuk-table__cell--numeric"></td>
+      </tr>
+      <tr class="govuk-table__row">
+        <th scope="row" class="govuk-table__header"><a href="#" class="govuk-body govuk-!-font-size-16">Central nervous system (optional)</a></th>
+        <td class="govuk-table__cell govuk-table__cell--numeric"></td>
+      </tr>
+
     </tbody>
   </table>
 
@@ -103,7 +130,7 @@
     </thead>
     <tbody class="govuk-table__body">
       <tr class="govuk-table__row">
-        <th scope="row" class="govuk-table__header"><a href="/corecomponents/Research/2Navigation/tabs/condition_history-tabs_complete" class="govuk-body govuk-!-font-size-16">Mental health</a></th>
+        <th scope="row" class="govuk-table__header"><a href="/corecomponents/Research/2Navigation/tabs/condition_history-tabs_complete" class="govuk-body govuk-!-font-size-16">Mental health (optional)</a></th>
         <td class="govuk-table__cell govuk-table__cell--numeric"></td>
       </tr>
 

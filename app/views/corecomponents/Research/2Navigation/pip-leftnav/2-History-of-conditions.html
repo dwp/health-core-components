@@ -1,58 +1,106 @@
-{% extends "layout-key-detail-bar.html" %}
+{% extends "layout-key-detail-bar-start1060.html" %}
 
 {% block pageTitle %}
   Question page
 {% endblock %}
 
+{% block beforeContent %}
+<main id="content" role="main">
+  <div class="grid-row">
+    <div class="column-full">
+
+      <nav class="navigation-secondary">
+        <ul>
+          <li>
+            <a href="#" class="active" aria-current="section">Assessment started: 14:00</a>
+          </li>
+          <li>
+            <a href="#">Abandon assessment</a>
+          </li>
+
+
+
+        </ul>
+      </nav>
+
+    </div>
+  </div>
+</main>
+{% endblock %}
 
 
 {% block content %}
-
-
+<main class="govuk-main-wrapper">
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-one-quarter">
-    <h4 class="govuk-caption-m">Assessment started: (insert time stamp)</h4>
+    <!-- <h4 class="govuk-caption-m">Assessment started: (insert time stamp)</h4>
     <a href="#" class="govuk-body govuk-!-font-size-19">Abandon assessment</a>
 <hr>
 <br>
-<br>
-<a href="1-Consultation-start" class="govuk-body govuk-!-font-size-19">Start consultation</a>
-<br>
-<br>
-<a href="2-History-of-conditions" class="govuk-body govuk-!-font-size-19">History of conditions</a>
-<br>
-<br>
-<a href="3-Current-medication" class="govuk-body govuk-!-font-size-19">Current medication and treatment</a>
-<br>
-<br>
-<a href="4-Social-and-occ-history" class="govuk-body govuk-!-font-size-19">Social and occupational history</a>
-<br>
-<br>
-<a href="5-Functional-history" class="govuk-body govuk-!-font-size-19">Functional history</a>
-<br>
-<br>
-<a href="6-Observations" class="govuk-body govuk-!-font-size-19">Observations</a>
-<br>
-<br>
-<a href="7-Mental-state" class="govuk-body govuk-!-font-size-19">Mental state</a>
-<br>
-<br>
-<a href="8-Musculoskeletal" class="govuk-body govuk-!-font-size-19">Musculoskeletal system</a>
-<br>
-<br>
-<a href="9-Other-systems" class="govuk-body govuk-!-font-size-19">Other relevant systems</a>
-<br>
-<br>
-<a href="10-Submit" class="govuk-body govuk-!-font-size-19">Confirm and submit</a>
-<br>
-<br>
+<br> -->
+<table class="govuk-table">
+  <!-- <caption class="govuk-table__caption">Months and rates</caption> -->
+  <thead class="govuk-table__head">
+    <tr class="govuk-table__row">
+      <!-- <th scope="col" class="govuk-table__header">PIP Assessment</th>
+      <th scope="col" class="govuk-table__header govuk-table__header--numeric"></th> -->
+    </tr>
+  </thead>
+  <tbody class="govuk-table__body">
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header"><a href="1-consultation-start" class="govuk-body govuk-!-font-size-16">Start consultation</a></th>
+      <td class="govuk-table__cell govuk-table__cell--numeric"><div class="govuk-tag govuk-phase-banner__content__tag">
+        OK
+      </div></td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header"><a href="2-History-of-conditions" class="govuk-body govuk-!-font-size-16 govuk-!-font-weight-bold">History of conditions</a></th>
+      <td class="govuk-table__cell govuk-table__cell--numeric"></td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header"><a href="3-Current-medication" class="govuk-body govuk-!-font-size-16">Current medication and treatment</a></th>
+      <td class="govuk-table__cell govuk-table__cell--numeric"></td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header"><a href="4-Social-and-occ-history" class="govuk-body govuk-!-font-size-16">Social and occupational history</a></th>
+      <td class="govuk-table__cell govuk-table__cell--numeric"></td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header"><a href="5-Functional-history" class="govuk-body govuk-!-font-size-16">Functional history</a></th>
+      <td class="govuk-table__cell govuk-table__cell--numeric"></td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header"><a href="6-Observations" class="govuk-body govuk-!-font-size-16">Observations</a></th>
+      <td class="govuk-table__cell govuk-table__cell--numeric"></td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header"><a href="7-Mental-state" class="govuk-body govuk-!-font-size-16">Mental state</a></th>
+      <td class="govuk-table__cell govuk-table__cell--numeric"></td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header"><a href="8-Musculoskeletal" class="govuk-body govuk-!-font-size-16">Musculoskeletal system</a></th>
+      <td class="govuk-table__cell govuk-table__cell--numeric"></td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header"><a href="9-Other-systems" class="govuk-body govuk-!-font-size-16">Other relevant systems</a></th>
+      <td class="govuk-table__cell govuk-table__cell--numeric"></td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header"><a href="10-Submit" class="govuk-body govuk-!-font-size-16">Confirm and submit</a></th>
+      <td class="govuk-table__cell govuk-table__cell--numeric"></td>
+    </tr>
+
+
+  </tbody>
+</table>
+
 
 
   </div>
   <div class="govuk-grid-column-three-quarters">
     <a class="govuk-back-link" href="/url/of/previous/page">Back</a>
     <h1 class="govuk-heading-xl">History of conditions</h1>
-    <form class="form" action="/Archive/3-Current-medication" method="post">
+    <form class="form" action="/corecomponents/Research/2Navigation/pip-leftnav/3-Current-medication" method="post">
     {% from "govuk/components/input/macro.njk" import govukInput %}
 
     {{ govukInput({

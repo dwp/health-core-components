@@ -1,0 +1,200 @@
+{% extends "layout-key-detail-bar.html" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+
+  <div class="govuk-grid-column-three-quarters">
+    <a class="govuk-back-link" href="/url/of/previous/page">Back</a>
+    <h1 class="govuk-heading-xl">Functional history</h1>
+    <form class="form" action="/Archive/6-Observations" method="post">
+
+      {% from "govuk/components/textarea/macro.njk" import govukTextarea %}
+
+      {{ govukTextarea({
+      name: "Variability",
+      id: "variability",
+      label: {
+      text: "Variability"
+      },
+      hint: {
+      text: ""
+      }
+      }) }}{% from "govuk/components/textarea/macro.njk" import govukTextarea %}
+
+    {{ govukTextarea({
+    name: "planning-and-following-journeys",
+    id: "planning and following journeys",
+    label: {
+    text: "Planning and following journeys"
+    },
+    hint: {
+    text: ""
+    }
+    }) }}
+    {% from "govuk/components/textarea/macro.njk" import govukTextarea %}
+
+    {{ govukTextarea({
+    name: "moving-around",
+    id: "moving around",
+    label: {
+    text: "Moving around"
+    },
+    hint: {
+    text: ""
+    }
+    }) }}
+    {% from "govuk/components/textarea/macro.njk" import govukTextarea %}
+
+    {{ govukTextarea({
+    name: "preparing-food",
+    id: "preparing food",
+    label: {
+    text: "Preparing food"
+    },
+    hint: {
+    text: ""
+    }
+    }) }}
+    {% from "govuk/components/textarea/macro.njk" import govukTextarea %}
+
+    {{ govukTextarea({
+    name: "taking-nutrition",
+    id: "taking nutrition",
+    label: {
+    text: "Taking nutrition"
+    },
+    hint: {
+    text: ""
+    }
+    }) }}
+    {% from "govuk/components/textarea/macro.njk" import govukTextarea %}
+
+    {{ govukTextarea({
+    name: "managing-therapy",
+    id: "managing therapy",
+    label: {
+    text: "Managing therapy or monitoring a health condition"
+    },
+    hint: {
+    text: ""
+    }
+    }) }}
+    {% from "govuk/components/textarea/macro.njk" import govukTextarea %}
+
+    {{ govukTextarea({
+    name: "washing-and-bathing",
+    id: "washing and bathing",
+    label: {
+    text: "Washing and bathing"
+    },
+    hint: {
+    text: ""
+    }
+    }) }}
+    {% from "govuk/components/textarea/macro.njk" import govukTextarea %}
+
+    {{ govukTextarea({
+    name: "managing-toilet-needs",
+    id: "managing toilet needs",
+    label: {
+    text: "Managing toilet needs or incontinence"
+    },
+    hint: {
+    text: ""
+    }
+    }) }}
+    {% from "govuk/components/textarea/macro.njk" import govukTextarea %}
+
+    {{ govukTextarea({
+    name: "dressing-and-undressing",
+    id: "dressing and undressing",
+    label: {
+    text: "Dressing and undressing"
+    },
+    hint: {
+    text: ""
+    }
+    }) }}
+    {% from "govuk/components/textarea/macro.njk" import govukTextarea %}
+
+    {{ govukTextarea({
+    name: "communicating-verbally",
+    id: "communicating verbally",
+    label: {
+    text: "Communicating verbally"
+    },
+    hint: {
+    text: ""
+    }
+    }) }}
+    {% from "govuk/components/textarea/macro.njk" import govukTextarea %}
+
+    {{ govukTextarea({
+    name: "reading-and-understanding-signs-symbols-and-words",
+    id: "reading and understanding signs symbols and words",
+    label: {
+    text: "Reading and understanding signs, symbols and words"
+    },
+    hint: {
+    text: ""
+    }
+    }) }}
+    {% from "govuk/components/textarea/macro.njk" import govukTextarea %}
+
+    {{ govukTextarea({
+    name: "engaging-with-others-f2f",
+    id: "engaging with others face to face",
+    label: {
+    text: "Engaging with others face to face"
+    },
+    hint: {
+    text: ""
+    }
+    }) }}
+    {% from "govuk/components/textarea/macro.njk" import govukTextarea %}
+
+    {{ govukTextarea({
+    name: "making-budgeting-decisions",
+    id: "making budgeting decisions",
+    label: {
+    text: "Making budgeting decisions"
+    },
+    hint: {
+    text: ""
+    }
+    }) }}
+    {% from "govuk/components/textarea/macro.njk" import govukTextarea %}
+
+    {{ govukTextarea({
+    name: "other-relevant-functional-history",
+    id: "other relevant functional history",
+    label: {
+    text: "Other relevant functional history"
+    },
+    hint: {
+    text: ""
+    }
+    }) }}
+    {% from "govuk/components/button/macro.njk" import govukButton %}
+
+    {{ govukButton({
+    text: "Save and continue",
+    href: "/corecomponents/Research/2Navigation/pip-tasklist/0-tasklist_Functional_DONE"
+
+    }) }}
+  </div>
+
+</div>
+
+</main>
+</div>
+
+{% endblock %}
