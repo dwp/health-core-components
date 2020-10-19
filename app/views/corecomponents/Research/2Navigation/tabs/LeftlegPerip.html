@@ -32,6 +32,7 @@
 
 
 
+
 {% block content %}
 <main class="govuk-main-wrapper">
 <div class="govuk-grid-row">
@@ -40,6 +41,7 @@
 
 
   <table class="govuk-table">
+    <!-- <caption class="govuk-table__caption">Months and rates</caption> -->
     <thead class="govuk-table__head">
       <tr class="govuk-table__row">
         <th scope="col" class="govuk-table__header">Assessment</th>
@@ -148,88 +150,95 @@
 
 </div>
 
+      <div class="govuk-grid-column-three-quarters-nav">
 
-  <div class="govuk-grid-column-two-thirds-nav">
+        <form action="/corecomponents/Research/2Navigation/tabs/cardiac" method="post" novalidate>
 
-<!-- <span class="govuk-caption-l">Review</span> -->
+
+
+
 
         <span class="govuk-caption-l">Cardiovascular and respiratory</span>
+<h2 class="govuk-heading-l">Left Leg Peripheral Circulation</h2>
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" aria-describedby="citizenship-conditional-hint">
+            <!-- <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+              <h1 class="govuk-fieldset__heading">
+                Left Leg Peripheral Circulation
+              </h1>
+            </legend> -->
+            <label class="govuk-label" for="more-detail">
+                Select the examination you want to complete
+              </label>
+            <!-- <div id="citizenship-conditional-hint" class="govuk-hint">
+              Select the examination you want to complete
+            </div> -->
+            <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="citizenship-conditional" name="citizen" type="checkbox" value="email" data-aria-controls="conditional-citizenship-conditional">
+                <label class="govuk-label govuk-checkboxes__label" for="citizenship-conditional">
+                  Dorsalis pedis pulse
+                </label>
+              </div>
+              <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-citizenship-conditional">
+                <div class="govuk-form-group">
+                  <label class="govuk-label" for="contact-by-email">
+                    State your findings
+                  </label>
+                  <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint"></textarea>
+                </div>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="citizenship-conditional-2" name="citizen" type="checkbox" value="phone" data-aria-controls="conditional-citizenship-conditional-2">
+                <label class="govuk-label govuk-checkboxes__label" for="citizenship-conditional-2">
+                  Oedema
+                </label>
+              </div>
+              <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-citizenship-conditional-2">
+                <div class="govuk-form-group">
+                  <label class="govuk-label" for="contact-by-phone">
+                    State your findings
+                  </label>
+                    <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint"></textarea>
+                  </div>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="citizenship-conditional-3" name="citizen" type="checkbox" value="text message" data-aria-controls="conditional-citizenship-conditional-3">
+                <label class="govuk-label govuk-checkboxes__label" for="citizenship-conditional-3">
+                  Varicose veins
+                </label>
+              </div>
+              <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-citizenship-conditional-3">
+                <div class="govuk-form-group">
+                  <label class="govuk-label" for="contact-by-text">
+                    State your findings
+                  </label>
+                    <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint"></textarea>
+                    </div>
+
+              </div>
+            </div>
+
+          </fieldset>
+        </div>
+
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="more-detail">
+              Other findings
+            </label>
+          <!-- <div id="more-detail-hint" class="govuk-hint">
+            Do not include personal or financial information, like your National Insurance number or credit card details.
+          </div> -->
+          <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint"></textarea>
+        </div>
 
 
-  <div class="govuk-form-group">
-    <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
-      <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-        <h1 class="govuk-fieldset__heading">
-          Select all of the areas you have assessed
-        </h1>
-      </legend>
-      <!-- <div id="waste-hint" class="govuk-hint">
-
-  </div> -->
-      <div class="govuk-checkboxes">
-        <div class="govuk-checkboxes__item">
-          <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
-          <label class="govuk-label govuk-checkboxes__label" for="waste">
-            Radial pulse
-          </label>
-        </div>
-        <div class="govuk-checkboxes__item">
-          <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" value="mines">
-          <label class="govuk-label govuk-checkboxes__label" for="waste-2">
-            Left leg peripheral circulation
-          </label>
-        </div>
-        <div class="govuk-checkboxes__item">
-          <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
-          <label class="govuk-label govuk-checkboxes__label" for="waste-3">
-            Right leg peripheral circulation
-          </label>
-        </div>
-        <div class="govuk-checkboxes__item">
-          <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
-          <label class="govuk-label govuk-checkboxes__label" for="waste-3">
-            Blood pressure
-          </label>
-        </div>
-        <div class="govuk-checkboxes__item">
-          <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
-          <label class="govuk-label govuk-checkboxes__label" for="waste-3">
-            Cardiac
-          </label>
-        </div>
-        <div class="govuk-checkboxes__item">
-          <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
-          <label class="govuk-label govuk-checkboxes__label" for="waste-3">
-            Peak expiration flow rate
-          </label>
-        </div>
-        <div class="govuk-checkboxes__item">
-          <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
-          <label class="govuk-label govuk-checkboxes__label" for="waste-3">
-            Breathlessness
-          </label>
-        </div>
-        <div class="govuk-checkboxes__item">
-          <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
-          <label class="govuk-label govuk-checkboxes__label" for="waste-3">
-            Other: chest sounds, wheeze
-          </label>
-        </div>
-      </div>
-    </fieldset>
-  </div>
-
-
-
-
-  {{ govukButton({
-    text: "Save and continue",
-    href: "/corecomponents/Research/2Navigation/tabs/LeftlegPerip"
-  }) }}
+<button class="govuk-button" data-module="govuk-button">
+  Save and continue
+</button>
 
 </div>
 </div>
-
-</main>
 
 {% endblock %}

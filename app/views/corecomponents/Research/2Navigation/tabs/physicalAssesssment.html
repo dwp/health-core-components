@@ -49,23 +49,31 @@
     </thead>
     <tbody class="govuk-table__body">
       <tr class="govuk-table__row">
-        <th scope="row" class="govuk-table__header"><a href="/corecomponents/Research/2Navigation/tabs/condition_history-tabs" class="govuk-body govuk-!-font-size-16">Condition history</a></th>
-        <td class="govuk-table__cell govuk-table__cell--numeric"></td>
+        <th scope="row" class="govuk-table__header"><a href="/corecomponents/Research/2Navigation/tabs/condition_history-tabs_complete" class="govuk-body govuk-!-font-size-16">Condition history</a></th>
+        <td class="govuk-table__cell govuk-table__cell--numeric"><div class="govuk-tag govuk-phase-banner__content__tag">
+          OK
+        </div></td>
       </tr>
       <tr class="govuk-table__row">
-        <th scope="row" class="govuk-table__header"><a href="/corecomponents/Research/2Navigation/tabs/social1" class="govuk-body govuk-!-font-size-19 govuk-!-font-weight-bold">Social and work history</a></th>
-        <td class="govuk-table__cell govuk-table__cell--numeric"></td>
+        <th scope="row" class="govuk-table__header"><a href="/corecomponents/Research/2Navigation/tabs/social_complete" class="govuk-body govuk-!-font-size-16">Social and work history</a></th>
+        <td class="govuk-table__cell govuk-table__cell--numeric"><div class="govuk-tag govuk-phase-banner__content__tag">
+          OK
+        </div></td>
       </tr>
       <tr class="govuk-table__row">
         <th scope="row" class="govuk-table__header"><a href="#" class="govuk-body govuk-!-font-size-16">Typical day</a></th>
-        <td class="govuk-table__cell govuk-table__cell--numeric"></td>
+        <td class="govuk-table__cell govuk-table__cell--numeric"><div class="govuk-tag govuk-phase-banner__content__tag">
+          OK
+        </div></td>
       </tr>
       <tr class="govuk-table__row">
         <th scope="row" class="govuk-table__header"><a href="#" class="govuk-body govuk-!-font-size-16">Medication and side effects</a></th>
-        <td class="govuk-table__cell govuk-table__cell--numeric"></td>
+        <td class="govuk-table__cell govuk-table__cell--numeric"><div class="govuk-tag govuk-phase-banner__content__tag">
+          OK
+        </div></td>
       </tr>
       <tr class="govuk-table__row">
-        <th scope="row" class="govuk-table__header"><a href="#" class="govuk-body govuk-!-font-size-16">Physical assessment</a></th>
+        <th scope="row" class="govuk-table__header"><a href="#" class="govuk-body govuk-!-font-size-19 govuk-!-font-weight-bold">Physical assessment</a></th>
         <td class="govuk-table__cell govuk-table__cell--numeric"></td>
       </tr>
       <tr class="govuk-table__row">
@@ -84,8 +92,9 @@
 
     </tbody>
   </table>
+<!--
+  <table class="govuk-table">
 
-  <!-- <table class="govuk-table">
     <thead class="govuk-table__head">
       <tr class="govuk-table__row">
         <th scope="col" class="govuk-table__header">Physical assessment</th>
@@ -107,7 +116,7 @@
         <td class="govuk-table__cell govuk-table__cell--numeric"></td>
       </tr>
       <tr class="govuk-table__row">
-        <th scope="row" class="govuk-table__header"><a href="/wca_v1/PA/landingpage" class="govuk-body govuk-!-font-size-16">Cardiovascular and respiratory (optional)</a></th>
+        <th scope="row" class="govuk-table__header"><a href="/wca_v1/PA/landingpage" class="govuk-body govuk-!-font-size-19 govuk-!-font-weight-bold">Cardiovascular and respiratory (optional)</a></th>
         <td class="govuk-table__cell govuk-table__cell--numeric"></td>
       </tr>
       <tr class="govuk-table__row">
@@ -124,6 +133,7 @@
 
 
   <table class="govuk-table">
+
     <thead class="govuk-table__head">
       <tr class="govuk-table__row">
         <th scope="col" class="govuk-table__header">Mental health</th>
@@ -148,70 +158,78 @@
 </div>
 
 
-  <div class="govuk-grid-column-two-thirds-nav">
-
-<!-- <span class="govuk-caption-l">Review</span> -->
-<h1 class="govuk-heading-l">Social and work history</h1>
+  <div class="govuk-grid-column-three-quarters-nav">
 
 
-<!-- <form action="/wca_v1/TakingStatementsentry-post" method="post" novalidate> -->
-
-<!-- <ul class="govuk-list">
-<li>
-<a href="/form_components/TakingStatements" class="govuk-link">View all previous statements</a>
-</li>
-</ul> -->
+  <form action="/corecomponents/Research/2Navigation/tabs/PA" method="post" novalidate>
 
 
 
+      <h2 class="app-task-list__section">
+        <span class="app-task-list__section-number"><span>Select physical assessment to be completed
+      </h2>
+      <ul class="app-task-list__items">
+
+        <li class="app-task-list__item">
+          <span class="app-task-list__task-name">
+            <a href="#" aria-describedby="read-declaration-status">
+              General health
+            </a>
+          </span>
+          <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="list-convictions-status">Not selected</strong>
+        </li>
+        <li class="app-task-list__item">
+          <span class="app-task-list__task-name">
+            <a href="#" aria-describedby="read-declaration-status">
+              Lower back and legs
+            </a>
+          </span>
+          <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="list-convictions-status">Not selected</strong>
+        </li>
+        <li class="app-task-list__item">
+          <span class="app-task-list__task-name">
+            <a href="#" aria-describedby="read-declaration-status">
+              Neck and arms
+            </a>
+          </span>
+          <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="list-convictions-status">Not selected</strong>
+        </li>
+        <li class="app-task-list__item">
+          <span class="app-task-list__task-name">
+            <a href="/corecomponents/Research/2Navigation/tabs/PA" aria-describedby="read-declaration-status">
+              Cardiovascular and respiratory
+            </a>
+          </span>
+          <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="list-convictions-status">Not selected</strong>
+        </li>
+        <li class="app-task-list__item">
+          <span class="app-task-list__task-name">
+            <a href="#" aria-describedby="read-declaration-status">
+              Vision, speech and hearing
+            </a>
+          </span>
+          <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="list-convictions-status">Not selected</strong>
+        </li>
+        <li class="app-task-list__item">
+          <span class="app-task-list__task-name">
+            <a href="#" aria-describedby="read-declaration-status">
+              Central nervous system
+            </a>
+          </span>
+          <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="list-convictions-status">Not selected</strong>
+        </li>
+      </ul>
 
 
-<table class="govuk-table">
-  <!-- <caption class="govuk-table__caption">Informal observations</caption> -->
-  <thead class="govuk-table__head">
-    <tr class="govuk-table__row">
-      <th scope="col" class="govuk-table__header">Statements added</th>
-      <!-- <th scope="col" class="govuk-table__header govuk-table__header--numeric">Actions</th> -->
-    </tr>
-  </thead>
-  <tbody class="govuk-table__body">
-
-{% for statement in data.statements %}
-    <tr class="govuk-table__row">
-
-        <td scope="row" class="govuk-table__cell">{{ statement }}</td>
-
-      <!-- <td class="govuk-table__cell govuk-table__cell--numeric"><a href="#" class="govuk-link">Edit</a>&nbsp&nbsp<a href="#" class="govuk-link">Remove</a></td> -->
-    </tr>
-{% endfor %}
-
-  </tbody>
-
-</table>
-
-<form action="/corecomponents/Research/2Navigation/tabs/social" method="post" novalidate>
-
-<div class="govuk-form-group">
-  <form action="/wca_v1/TakingStatementsentry" method="post" novalidate>
-  <textarea class="govuk-textarea" id="statement2" name="statement" rows="3" aria-describedby="more-detail-hint" value="{{data['statement2']}}"></textarea>
-  <button class="govuk-button govuk-button--secondary" data-module="govuk-button" ">  Add statement
-  </button></form>
 
 
 
+
+
+<!-- <button class="govuk-button" data-module="govuk-button">
+  Save and continue
+</button> -->
 </div>
-
-
-
-
-{{ govukButton({
-  id: "comment",
-  name: "comment",
-  value: "add-statement",
-  text: "Save and continue",
-  href: "/corecomponents/Research/2Navigation/tabs/typical-day"
-}) }}
-
 </div>
 
 </main>

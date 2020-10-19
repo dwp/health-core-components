@@ -61,11 +61,15 @@
     </tr>
     <tr class="govuk-table__row">
       <th scope="row" class="govuk-table__header"><a href="3-Current-medication" class="govuk-body govuk-!-font-size-16 govuk-!-font-weight-bold">Current medication and treatment</a></th>
-      <td class="govuk-table__cell govuk-table__cell--numeric"></td>
+      <td class="govuk-table__cell govuk-table__cell--numeric"><div class="govuk-tag govuk-phase-banner__content__tag">
+        OK
+      </div></td>
     </tr>
     <tr class="govuk-table__row">
       <th scope="row" class="govuk-table__header"><a href="5-Functional-history" class="govuk-body govuk-!-font-size-16">Functional history</a></th>
-      <td class="govuk-table__cell govuk-table__cell--numeric"></td>
+      <td class="govuk-table__cell govuk-table__cell--numeric"><div class="govuk-tag govuk-phase-banner__content__tag">
+        OK
+      </div></td>
     </tr>
     <tr class="govuk-table__row">
       <th scope="row" class="govuk-table__header"><a href="4-Social-and-occ-history" class="govuk-body govuk-!-font-size-16">Social and occupational history</a></th>
@@ -110,7 +114,8 @@
         text: "Name of medication"
       },
       id: "Medication-name",
-      name: "Medicatio-name"
+      name: "Medicatio-name",
+      value: "tablets"
     }) }}
     {% from "govuk/components/input/macro.njk" import govukInput %}
 
@@ -120,7 +125,8 @@
   },
   classes: "govuk-input--width-20",
   id: "dose",
-  name: "dose"
+  name: "dose",
+  value: "500mg"
 }) }}{% from "govuk/components/input/macro.njk" import govukInput %}
 
 {{ govukInput({
@@ -129,7 +135,8 @@
   },
   classes: "govuk-input--width-20",
   id: "frequency",
-  name: "frequency"
+  name: "frequency",
+  value: "twice a day"
 }) }}
 
 
