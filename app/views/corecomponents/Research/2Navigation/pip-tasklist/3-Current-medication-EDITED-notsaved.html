@@ -1,0 +1,110 @@
+{% extends "layout-key-detail-bar.html" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+{% block beforeContent %}
+<main id="content" role="main">
+  <div class="grid-row">
+    <div class="column-full">
+
+      <nav class="navigation-secondary">
+        <ul>
+          <li>
+            <a href="#" class="active" aria-current="section">Assessment started: 14:00</a>
+          </li>
+          <li>
+            <a href="#">Abandon assessment</a>
+          </li>
+
+
+
+        </ul>
+      </nav>
+
+    </div>
+  </div>
+</main>
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+
+  <div class="govuk-grid-column-three-quarters">
+    <a class="govuk-back-link" href="/url/of/previous/page">Back</a>
+    <h1 class="govuk-heading-xl">Current medication and treatment</h1>
+    <form class="form" action="/Archive/4-Social-and-occ-history" method="post">
+    {% from "govuk/components/input/macro.njk" import govukInput %}
+
+    {{ govukInput({
+      label: {
+        text: "Name of medication"
+      },
+      id: "Medication-name",
+      name: "Medicatio-name",
+      value: "tablets"
+    }) }}
+    {% from "govuk/components/input/macro.njk" import govukInput %}
+
+{{ govukInput({
+  label: {
+    text: "Dose"
+  },
+  classes: "govuk-input--width-20",
+  id: "dose",
+  name: "dose",
+  value: "500mg"
+}) }}{% from "govuk/components/input/macro.njk" import govukInput %}
+
+{{ govukInput({
+  label: {
+    text: "Frequency"
+  },
+  classes: "govuk-input--width-20",
+  id: "frequency",
+  name: "frequency",
+  value: "2 times per day"
+}) }}
+
+
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+{{ govukButton({
+text: "Add another medication",
+classes: "govuk-button--secondary"
+}) }}
+<br>
+<br>
+
+  {% from "govuk/components/textarea/macro.njk" import govukTextarea %}
+
+  {{ govukTextarea({
+  name: "medication-history",
+  id: "medication-history",
+  label: {
+  text: "History"
+  },
+  hint: {
+  text: "Including side effects, compliance and efficacy"
+  }
+  }) }}
+
+
+  {% from "govuk/components/button/macro.njk" import govukButton %}
+
+  {{ govukButton({
+  text: "Save and continue",
+  href: "0-tasklist_medication_DONE"
+
+  }) }}
+  </div>
+
+</div>
+
+</main>
+</div>
+
+{% endblock %}
