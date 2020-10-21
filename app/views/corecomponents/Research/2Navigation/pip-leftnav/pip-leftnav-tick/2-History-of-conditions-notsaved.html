@@ -30,6 +30,9 @@
 
 
 {% block content %}
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+
 <main class="govuk-main-wrapper">
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-one-quarter">
@@ -40,13 +43,10 @@
 <br> -->
 
 
-
-
-
 <!-- tick left nav without lines-->
 <p><a href="1-consultation-start" class="govuk-body govuk-!-font-size-16">Start consultation</a>&nbsp;&nbsp;&#10004;</p>
-<p><a href="2-History-of-conditions" class="govuk-body govuk-!-font-size-16">History of conditions</a>&nbsp;&nbsp;&#10004;</p>
-<p><a href="3-Current-medication-notsaved" class="govuk-body govuk-!-font-size-16  govuk-!-font-weight-bold">Current medication and treatment</a>&nbsp;&nbsp;&#10004</p>
+<p><a href="2-History-of-conditions" class="govuk-body govuk-!-font-size-16 govuk-!-font-weight-bold">History of conditions</a>&nbsp;&nbsp;&#10004;</p>
+<p><a href="3-Current-medication" class="govuk-body govuk-!-font-size-16">Current medication and treatment</a>&nbsp;&nbsp;&#10004;</p>
 <p><a href="5-Functional-history" class="govuk-body govuk-!-font-size-16">Functional history</a></p>
 <p><a href="4-Social-and-occ-history" class="govuk-body govuk-!-font-size-16">Social and occupational history</a></p>
 <p><a href="6-Observations" class="govuk-body govuk-!-font-size-16">Observations</a></p>
@@ -57,75 +57,91 @@
 
 
 
+
   </div>
   <div class="govuk-grid-column-three-quarters">
-    <a class="govuk-back-link" href="2-History-of-conditions-notsaved">Back</a>
-    <h1 class="govuk-heading-xl">Current medication and treatment</h1>
-    <form class="form" action="5-Functional-history" method="post">
+    <a class="govuk-back-link" href="/url/of/previous/page">Back</a>
+    <h1 class="govuk-heading-xl">History of conditions</h1>
+    <form class="form" action="3-Current-medication" method="post">
     {% from "govuk/components/input/macro.njk" import govukInput %}
 
     {{ govukInput({
       label: {
-        text: "Name of medication"
+        text: "Primary condition"
       },
-      id: "Medication-name",
-      name: "Medicatio-name",
-      value: "tablets"
+      id: "primary-condition",
+      name: "primary-condition"
+    }) }}
+    {% from "govuk/components/textarea/macro.njk" import govukTextarea %}
+
+    {{ govukTextarea({
+    name: "condition-history",
+    id: "condition-history",
+    label: {
+    text: "History"
+    },
+    hint: {
+    text: "Including variability"
+    }
     }) }}
     {% from "govuk/components/input/macro.njk" import govukInput %}
 
-{{ govukInput({
-  label: {
-    text: "Dose"
-  },
-  classes: "govuk-input--width-20",
-  id: "dose",
-  name: "dose",
-  value: "500mg"
-}) }}{% from "govuk/components/input/macro.njk" import govukInput %}
+    {{ govukInput({
+      label: {
+        text: "Secondary condition"
+      },
+      id: "secondary-condition",
+      name: "secondary-condition"
+    }) }}
+    {% from "govuk/components/textarea/macro.njk" import govukTextarea %}
 
-{{ govukInput({
-  label: {
-    text: "Frequency"
-  },
-  classes: "govuk-input--width-20",
-  id: "frequency",
-  name: "frequency",
-  value: "twice a day"
+    {{ govukTextarea({
+    name: "condition-history",
+    id: "condition-history",
+    label: {
+    text: "History"
+    },
+    hint: {
+    text: "Including variability"
+    }
+    }) }}
+    {% from "govuk/components/input/macro.njk" import govukInput %}
+
+    {{ govukInput({
+      label: {
+        text: "Other condition"
+      },
+      id: "other-condition",
+      name: "other-condition"
+    }) }}
+
+
+{% from "govuk/components/textarea/macro.njk" import govukTextarea %}
+
+{{ govukTextarea({
+name: "condition-history",
+id: "condition-history",
+label: {
+text: "History"
+},
+hint: {
+text: "Including variability"
+}
 }) }}
+{% from "govuk/components/button/macro.njk" import govukButton %}
 
+{{ govukButton({
+  text: "Add another condition",
+  classes: "govuk-button--secondary"
+}) }}
+<br>
+<br>
 
 {% from "govuk/components/button/macro.njk" import govukButton %}
 
 {{ govukButton({
-text: "Add another medication",
-classes: "govuk-button--secondary",
-href: "#"
-}) }}
-
-<br>
-<br>
-
-  {% from "govuk/components/textarea/macro.njk" import govukTextarea %}
-
-  {{ govukTextarea({
-  name: "medication-history",
-  id: "medication-history",
-  label: {
-  text: "History"
-  },
-  hint: {
-  text: "Including side effects, compliance and efficacy"
-  }
-  }) }}
-
-
-  {% from "govuk/components/button/macro.njk" import govukButton %}
-
-  {{ govukButton({
   text: "Save and continue"
-
-  }) }}
+}) }}
   </div>
 
 </div>
