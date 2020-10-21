@@ -11,28 +11,30 @@
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-three-quarters">
 
-  <!-- <span class="govuk-caption-l">Review</span> -->
-<h1 class="govuk-heading-l">Typical day</h1>
+    <div class="govuk-form-group">
+
+      <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--l" for="more-detail">
+        Typical day
+        </label>
+      </h1>
+      <div id="more-detail-hint" class="govuk-hint">
+        Provide all details of your typical day
+      </div>
+      <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="10
+    " aria-describedby="more-detail-hint"></textarea>
+    </div>
 
 
-<!-- <form action="/wca_v1/TakingStatementsentry-post" method="post" novalidate> -->
 
-<!-- <ul class="govuk-list">
-  <li>
-  <a href="/form_components/TakingStatements" class="govuk-link">View all previous statements</a>
-  </li>
-</ul> -->
+<!-- statement component -->
 
-
-
+<!-- <h1 class="govuk-heading-l">Typical day</h1>
 
 
   <table class="govuk-table">
-    <!-- <caption class="govuk-table__caption">Informal observations</caption> -->
     <thead class="govuk-table__head">
       <tr class="govuk-table__row">
         <th scope="col" class="govuk-table__header">Statements added</th>
-        <!-- <th scope="col" class="govuk-table__header govuk-table__header--numeric">Actions</th> -->
       </tr>
     </thead>
     <tbody class="govuk-table__body">
@@ -42,7 +44,6 @@
 
           <td scope="row" class="govuk-table__cell">{{ statement }}</td>
 
-        <!-- <td class="govuk-table__cell govuk-table__cell--numeric"><a href="#" class="govuk-link">Edit</a>&nbsp&nbsp<a href="#" class="govuk-link">Remove</a></td> -->
       </tr>
 {% endfor %}
 
@@ -60,7 +61,7 @@
 
 
 
-  </div>
+  </div> -->
 
 
 
