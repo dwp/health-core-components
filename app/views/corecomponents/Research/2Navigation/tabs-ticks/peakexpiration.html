@@ -1,0 +1,245 @@
+{% extends "layout-key-detail-bar-start1060.html" %}
+
+{% block pageTitle %}
+  Condition history tabs
+{% endblock %}
+
+
+{% block beforeContent %}
+
+<main id="content" role="main">
+  <div class="grid-row">
+    <div class="column-full">
+
+      <nav class="navigation-secondary">
+        <ul>
+          <li>
+            <a href="#" class="active" aria-current="section">Assessment started: 14:00</a>
+          </li>
+          <li>
+            <a href="#">Abandon assessment</a>
+          </li>
+
+
+
+        </ul>
+      </nav>
+
+    </div>
+  </div>
+</main>
+{% endblock %}
+
+
+
+
+{% block content %}
+<main class="govuk-main-wrapper">
+<div class="govuk-grid-row">
+<div class="govuk-grid-column-one-quarter">
+
+
+
+  <table class="govuk-table">
+    <!-- <caption class="govuk-table__caption">Months and rates</caption> -->
+    <thead class="govuk-table__head">
+      <tr class="govuk-table__row">
+        <th scope="col" class="govuk-table__header">Assessment</th>
+        <th scope="col" class="govuk-table__header govuk-table__header--numeric"></th>
+      </tr>
+    </thead>
+    <tbody class="govuk-table__body">
+      <tr class="govuk-table__row">
+        <th scope="row" class="govuk-table__header"><a href="/corecomponents/Research/2Navigation/tabs/condition_history-tabs_complete" class="govuk-body govuk-!-font-size-16">Condition history</a></th>
+        <td class="govuk-table__cell govuk-table__cell--numeric"><div class="govuk-tag govuk-phase-banner__content__tag">
+          OK
+        </div></td>
+      </tr>
+      <tr class="govuk-table__row">
+        <th scope="row" class="govuk-table__header"><a href="/corecomponents/Research/2Navigation/tabs/social_complete" class="govuk-body govuk-!-font-size-16">Social and work history</a></th>
+        <td class="govuk-table__cell govuk-table__cell--numeric"><div class="govuk-tag govuk-phase-banner__content__tag">
+          OK
+        </div></td>
+      </tr>
+      <tr class="govuk-table__row">
+        <th scope="row" class="govuk-table__header"><a href="#" class="govuk-body govuk-!-font-size-16">Typical day</a></th>
+        <td class="govuk-table__cell govuk-table__cell--numeric"><div class="govuk-tag govuk-phase-banner__content__tag">
+          OK
+        </div></td>
+      </tr>
+      <tr class="govuk-table__row">
+        <th scope="row" class="govuk-table__header"><a href="#" class="govuk-body govuk-!-font-size-16">Medication and side effects</a></th>
+        <td class="govuk-table__cell govuk-table__cell--numeric"><div class="govuk-tag govuk-phase-banner__content__tag">
+          OK
+        </div></td>
+      </tr>
+      <tr class="govuk-table__row">
+        <th scope="row" class="govuk-table__header"><a href="#" class="govuk-body govuk-!-font-size-19 govuk-!-font-weight-bold">Physical assessment</a></th>
+        <td class="govuk-table__cell govuk-table__cell--numeric"></td>
+      </tr>
+      <tr class="govuk-table__row">
+        <th scope="row" class="govuk-table__header"><a href="#" class="govuk-body govuk-!-font-size-16">Mental health</a></th>
+        <td class="govuk-table__cell govuk-table__cell--numeric"></td>
+      </tr>
+      <tr class="govuk-table__row">
+        <th scope="row" class="govuk-table__header"><a href="#" class="govuk-body govuk-!-font-size-16">Add attendees (optional)</a></th>
+        <td class="govuk-table__cell govuk-table__cell--numeric"></td>
+      </tr>
+      <tr class="govuk-table__row">
+        <th scope="row" class="govuk-table__header"><a href="#" class="govuk-body govuk-!-font-size-16">Informal observations (optional)</a></th>
+        <td class="govuk-table__cell govuk-table__cell--numeric"></td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <!-- <table class="govuk-table">
+    <thead class="govuk-table__head">
+      <tr class="govuk-table__row">
+        <th scope="col" class="govuk-table__header">Physical assessment</th>
+        <th scope="col" class="govuk-table__header govuk-table__header--numeric"></th>
+      </tr>
+    </thead>
+    <tbody class="govuk-table__body">
+
+      <tr class="govuk-table__row">
+        <th scope="row" class="govuk-table__header"><a href="/corecomponents/Research/2Navigation/tabs/social_complete" class="govuk-body govuk-!-font-size-16">General health</a></th>
+        <td class="govuk-table__cell govuk-table__cell--numeric"></td>
+      </tr>
+      <tr class="govuk-table__row">
+        <th scope="row" class="govuk-table__header"><a href="#" class="govuk-body govuk-!-font-size-16">Lower back and legs</a></th>
+        <td class="govuk-table__cell govuk-table__cell--numeric"></td>
+      </tr>
+      <tr class="govuk-table__row">
+        <th scope="row" class="govuk-table__header"><a href="#" class="govuk-body govuk-!-font-size-16">Neck and arms</a></th>
+        <td class="govuk-table__cell govuk-table__cell--numeric"></td>
+      </tr>
+      <tr class="govuk-table__row">
+        <th scope="row" class="govuk-table__header"><a href="/wca_v1/PA/landingpage" class="govuk-body govuk-!-font-size-19 govuk-!-font-weight-bold">Cardiovascular and respiratory</a></th>
+        <td class="govuk-table__cell govuk-table__cell--numeric"></td>
+      </tr>
+      <tr class="govuk-table__row">
+        <th scope="row" class="govuk-table__header"><a href="#" class="govuk-body govuk-!-font-size-16">Vision, speech and hearing</a></th>
+        <td class="govuk-table__cell govuk-table__cell--numeric"></td>
+      </tr>
+      <tr class="govuk-table__row">
+        <th scope="row" class="govuk-table__header"><a href="#" class="govuk-body govuk-!-font-size-16">Central nervous system</a></th>
+        <td class="govuk-table__cell govuk-table__cell--numeric"></td>
+      </tr>
+
+    </tbody>
+  </table>
+
+
+  <table class="govuk-table">
+    <thead class="govuk-table__head">
+      <tr class="govuk-table__row">
+        <th scope="col" class="govuk-table__header">Mental health</th>
+        <th scope="col" class="govuk-table__header govuk-table__header--numeric"></th>
+      </tr>
+    </thead>
+    <tbody class="govuk-table__body">
+      <tr class="govuk-table__row">
+        <th scope="row" class="govuk-table__header"><a href="/corecomponents/Research/2Navigation/tabs/condition_history-tabs_complete" class="govuk-body govuk-!-font-size-16">Mental health</a></th>
+        <td class="govuk-table__cell govuk-table__cell--numeric"></td>
+      </tr>
+
+
+    </tbody>
+  </table> -->
+
+</div>
+
+      <div class="govuk-grid-column-three-quarters-nav">
+
+
+        <form action="/corecomponents/Research/2Navigation/tabs/MentalHealth" method="post" novalidate>
+
+
+
+
+
+        <span class="govuk-caption-l">Cardiovascular and respiratory</span>
+<h2 class="govuk-heading-l">Peak expiration flow rate</h2>
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" aria-describedby="citizenship-conditional-hint">
+            <!-- <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+              <h1 class="govuk-fieldset__heading">
+                Left Leg Peripheral Circulation
+              </h1>
+            </legend> -->
+            <label class="govuk-label" for="more-detail">
+                Select the examination you want to complete
+              </label>
+            <!-- <div id="citizenship-conditional-hint" class="govuk-hint">
+              Select the examination you want to complete
+            </div> -->
+            <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="citizenship-conditional" name="citizen" type="checkbox" value="email" data-aria-controls="conditional-citizenship-conditional">
+                <label class="govuk-label govuk-checkboxes__label" for="citizenship-conditional">
+                  Technique
+                </label>
+              </div>
+              <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-citizenship-conditional">
+                <div class="govuk-form-group">
+                  <label class="govuk-label" for="contact-by-email">
+                    State your findings
+                  </label>
+                  <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint"></textarea>
+                </div>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="citizenship-conditional-2" name="citizen" type="checkbox" value="phone" data-aria-controls="conditional-citizenship-conditional-2">
+                <label class="govuk-label govuk-checkboxes__label" for="citizenship-conditional-2">
+                  Value
+                </label>
+              </div>
+              <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-citizenship-conditional-2">
+                <div class="govuk-form-group">
+                  <label class="govuk-label" for="contact-by-phone">
+                    State your findings
+                  </label>
+                    <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint"></textarea>
+                  </div>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="citizenship-conditional-3" name="citizen" type="checkbox" value="text message" data-aria-controls="conditional-citizenship-conditional-3">
+                <label class="govuk-label govuk-checkboxes__label" for="citizenship-conditional-3">
+                  Meter
+                </label>
+              </div>
+              <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-citizenship-conditional-3">
+                <div class="govuk-form-group">
+                  <label class="govuk-label" for="contact-by-text">
+                    State your findings
+                  </label>
+                    <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint"></textarea>
+                    </div>
+
+              </div>
+            </div>
+
+          </fieldset>
+        </div>
+
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="more-detail">
+              Other findings
+            </label>
+          <!-- <div id="more-detail-hint" class="govuk-hint">
+            Do not include personal or financial information, like your National Insurance number or credit card details.
+          </div> -->
+          <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint"></textarea>
+        </div>
+
+
+<button class="govuk-button" data-module="govuk-button">
+  Save and continue
+</button>
+
+</div>
+</div>
+
+{% endblock %}

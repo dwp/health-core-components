@@ -1,0 +1,120 @@
+{% extends "layout-key-detail-bar-start1060.html" %}
+
+{% block pageTitle %}
+  Condition history tabs
+{% endblock %}
+
+
+{% block beforeContent %}
+
+<main id="content" role="main">
+  <div class="grid-row">
+    <div class="column-full">
+
+      <nav class="navigation-secondary">
+        <ul>
+          <li>
+            <a href="#" class="active" aria-current="section">Assessment started: 14:00</a>
+          </li>
+          <li>
+            <a href="#">Abandon assessment</a>
+          </li>
+
+
+
+        </ul>
+      </nav>
+
+    </div>
+  </div>
+</main>
+{% endblock %}
+
+
+
+
+{% block content %}
+<main class="govuk-main-wrapper">
+<div class="govuk-grid-row">
+<div class="govuk-grid-column-one-quarter">
+
+
+  <p><a href="condition_history-tabs_complete" class="govuk-body govuk-!-font-size-16">Condition history</a>&nbsp;&nbsp;&#10004;</p>
+  <p><a href="social_complete" class="govuk-body govuk-!-font-size-16">Social and work history</a>&nbsp;&nbsp;&#10004;</p>
+  <p><a href="#" class="govuk-body govuk-!-font-size-16">Typical day</a>&nbsp;&nbsp;&#10004;</p>
+  <p><a href="#" class="govuk-body govuk-!-font-size-16">Medication and side effects</a>&nbsp;&nbsp;&#10004;</p>
+  <p><a href="#" class="govuk-body govuk-!-font-size-19 govuk-!-font-weight-bold">Physical assessment</a></p>
+  <p><a href="#" class="govuk-body govuk-!-font-size-16">Mental health</a></p>
+  <p><a href="#" class="govuk-body govuk-!-font-size-16">Add attendee (optional)</a></p>
+  <p><a href="#" class="govuk-body govuk-!-font-size-16">Informal observations (optional)</a></p>
+
+
+
+</div>
+
+      <div class="govuk-grid-column-three-quarters-nav">
+
+
+        <form action="MentalHealth" method="post" novalidate>
+
+
+
+
+
+        <span class="govuk-caption-l">Cardiovascular and respiratory</span>
+<h2 class="govuk-heading-l">Breathlessness</h2>
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" aria-describedby="citizenship-conditional-hint">
+            <!-- <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+              <h1 class="govuk-fieldset__heading">
+                Left Leg Peripheral Circulation
+              </h1>
+            </legend> -->
+            <label class="govuk-label" for="more-detail">
+                Select the examination you want to complete
+              </label>
+            <!-- <div id="citizenship-conditional-hint" class="govuk-hint">
+              Select the examination you want to complete
+            </div> -->
+            <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="citizenship-conditional" name="citizen" type="checkbox" value="email" data-aria-controls="conditional-citizenship-conditional">
+                <label class="govuk-label govuk-checkboxes__label" for="citizenship-conditional">
+                  Breathlessness
+                </label>
+              </div>
+              <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-citizenship-conditional">
+                <div class="govuk-form-group">
+                  <label class="govuk-label" for="contact-by-email">
+                    State your findings
+                  </label>
+                  <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint"></textarea>
+                </div>
+              </div>
+
+              </div>
+
+
+          </fieldset>
+        </div>
+
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="more-detail">
+              Other findings
+            </label>
+          <!-- <div id="more-detail-hint" class="govuk-hint">
+            Do not include personal or financial information, like your National Insurance number or credit card details.
+          </div> -->
+          <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint"></textarea>
+        </div>
+
+
+<button class="govuk-button" data-module="govuk-button">
+  Save and continue
+</button>
+
+</div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,119 @@
+{% extends "layout-key-detail-bar-start1060.html" %}
+
+{% block pageTitle %}
+  Condition history tabs
+{% endblock %}
+
+
+{% block beforeContent %}
+
+<main id="content" role="main">
+  <div class="grid-row">
+    <div class="column-full">
+
+      <nav class="navigation-secondary">
+        <ul>
+          <li>
+            <a href="#" class="active" aria-current="section">Assessment started: 14:00</a>
+          </li>
+          <li>
+            <a href="#">Abandon assessment</a>
+          </li>
+
+
+
+        </ul>
+      </nav>
+
+    </div>
+  </div>
+</main>
+{% endblock %}
+
+
+
+{% block content %}
+<main class="govuk-main-wrapper">
+<div class="govuk-grid-row">
+<div class="govuk-grid-column-one-quarter">
+
+
+  <p><a href="condition_history-tabs_complete" class="govuk-body govuk-!-font-size-16">Condition history</a>&nbsp;&nbsp;&#10004;</p>
+  <p><a href="social_complete" class="govuk-body govuk-!-font-size-16">Social and work history</a>&nbsp;&nbsp;&#10004;</p>
+  <p><a href="#" class="govuk-body govuk-!-font-size-16">Typical day</a>&nbsp;&nbsp;&#10004;</p>
+  <p><a href="#" class="govuk-body govuk-!-font-size-16">Medication and side effects</a>&nbsp;&nbsp;&#10004;</p>
+  <p><a href="#" class="govuk-body govuk-!-font-size-19 govuk-!-font-weight-bold">Physical assessment</a></p>
+  <p><a href="#" class="govuk-body govuk-!-font-size-16">Mental health</a></p>
+  <p><a href="#" class="govuk-body govuk-!-font-size-16">Add attendee (optional)</a></p>
+  <p><a href="#" class="govuk-body govuk-!-font-size-16">Informal observations (optional)</a></p>
+
+
+
+
+
+</div>
+
+
+  <div class="govuk-grid-column-two-thirds-nav">
+
+
+  <form action="physicalAssesssment-checkbox" method="post" novalidate>
+
+
+
+  <div class="govuk-form-group">
+    <fieldset class="govuk-fieldset" aria-describedby="sign-in-hint">
+      <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+        <h1 class="govuk-fieldset__heading">
+        Has consent been given for this physical assessment
+        </h1>
+      </legend>
+      <!-- <div id="sign-in-hint" class="govuk-hint">
+        Select which one best matches
+      </div> -->
+       <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
+         <div class="govuk-radios__item">
+           <input class="govuk-radios__input" id="sign-in-2" name="sign-in" type="radio" value="govuk-verify" aria-describedby="sign-in-2-item-hint">
+           <label class="govuk-label govuk-radios__label" for="sign-in-2">
+             Yes
+           </label>
+         </div>
+
+  <div class="govuk-radios__item">
+    <input class="govuk-radios__input" id="how-contacted-conditional" name="how-contacted" type="radio" value="email" data-aria-controls="conditional-how-contacted-conditional">
+    <label class="govuk-label govuk-radios__label" for="how-contacted-conditional">
+      No
+    </label>
+  </div>
+  <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-how-contacted-conditional">
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="contact-by-email">
+        Why consent wasn't given
+      </label>
+      <textarea class="govuk-textarea" id="contact-by-email" name="contact-by-email" rows="5" type="email" spellcheck="false"></textarea>
+    </div>
+
+  </div>
+
+
+      </div>
+    </fieldset>
+
+
+
+  </div>
+
+
+
+
+
+
+<button class="govuk-button" data-module="govuk-button">
+  Save and continue
+</button>
+</div>
+</div>
+
+</main>
+
+{% endblock %}

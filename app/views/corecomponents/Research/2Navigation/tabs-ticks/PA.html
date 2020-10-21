@@ -1,0 +1,137 @@
+{% extends "layout-key-detail-bar-start1060.html" %}
+
+{% block pageTitle %}
+  Condition history tabs
+{% endblock %}
+
+
+{% block beforeContent %}
+
+<main id="content" role="main">
+  <div class="grid-row">
+    <div class="column-full">
+
+      <nav class="navigation-secondary">
+        <ul>
+          <li>
+            <a href="#" class="active" aria-current="section">Assessment started: 14:00</a>
+          </li>
+          <li>
+            <a href="#">Abandon assessment</a>
+          </li>
+
+
+
+        </ul>
+      </nav>
+
+    </div>
+  </div>
+</main>
+{% endblock %}
+
+
+
+{% block content %}
+<main class="govuk-main-wrapper">
+<div class="govuk-grid-row">
+<div class="govuk-grid-column-one-quarter">
+
+
+  <p><a href="condition_history-tabs_complete" class="govuk-body govuk-!-font-size-16">Condition history</a>&nbsp;&nbsp;&#10004;</p>
+  <p><a href="social_complete" class="govuk-body govuk-!-font-size-16">Social and work history</a>&nbsp;&nbsp;&#10004;</p>
+  <p><a href="#" class="govuk-body govuk-!-font-size-16">Typical day</a>&nbsp;&nbsp;&#10004;</p>
+  <p><a href="#" class="govuk-body govuk-!-font-size-16">Medication and side effects</a>&nbsp;&nbsp;&#10004;</p>
+  <p><a href="#" class="govuk-body govuk-!-font-size-19 govuk-!-font-weight-bold">Physical assessment</a></p>
+  <p><a href="#" class="govuk-body govuk-!-font-size-16">Mental health</a></p>
+  <p><a href="#" class="govuk-body govuk-!-font-size-16">Add attendee (optional)</a></p>
+  <p><a href="#" class="govuk-body govuk-!-font-size-16">Informal observations (optional)</a></p>
+
+
+</div>
+
+
+  <div class="govuk-grid-column-two-thirds-nav">
+
+<!-- <span class="govuk-caption-l">Review</span> -->
+
+        <span class="govuk-caption-l">Cardiovascular and respiratory</span>
+
+
+  <div class="govuk-form-group">
+    <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
+      <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+        <h1 class="govuk-fieldset__heading">
+          Select all of the areas you have assessed
+        </h1>
+      </legend>
+      <!-- <div id="waste-hint" class="govuk-hint">
+
+  </div> -->
+      <div class="govuk-checkboxes">
+        <div class="govuk-checkboxes__item">
+          <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+          <label class="govuk-label govuk-checkboxes__label" for="waste">
+            Radial pulse
+          </label>
+        </div>
+        <div class="govuk-checkboxes__item">
+          <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" value="mines">
+          <label class="govuk-label govuk-checkboxes__label" for="waste-2">
+            Left leg peripheral circulation
+          </label>
+        </div>
+        <div class="govuk-checkboxes__item">
+          <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+          <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+            Right leg peripheral circulation
+          </label>
+        </div>
+        <div class="govuk-checkboxes__item">
+          <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+          <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+            Blood pressure
+          </label>
+        </div>
+        <div class="govuk-checkboxes__item">
+          <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+          <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+            Cardiac
+          </label>
+        </div>
+        <div class="govuk-checkboxes__item">
+          <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+          <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+            Peak expiration flow rate
+          </label>
+        </div>
+        <div class="govuk-checkboxes__item">
+          <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+          <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+            Breathlessness
+          </label>
+        </div>
+        <div class="govuk-checkboxes__item">
+          <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+          <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+            Other: chest sounds, wheeze
+          </label>
+        </div>
+      </div>
+    </fieldset>
+  </div>
+
+
+
+
+  {{ govukButton({
+    text: "Save and continue",
+    href: "cardiac"
+  }) }}
+
+</div>
+</div>
+
+</main>
+
+{% endblock %}
