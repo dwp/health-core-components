@@ -1,0 +1,72 @@
+
+{% extends "layout-key-detail-bar.html" %}
+
+{% block pageTitle %}
+  TextArea component
+{% endblock %}
+
+
+{% block beforeContent %}
+
+<!-- <a href="#" class="govuk-back-link">Back</a> -->
+{% endblock %}
+
+
+{% block content %}
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-three-quarters">
+  <!-- <span class="govuk-caption-l">Review</span> -->
+  <h1 class="govuk-heading-l">Additional attendees</h1>
+
+
+  <!-- <form action="/wca_v1/TakingStatementsentry-post" method="post" novalidate> -->
+
+  <!-- <ul class="govuk-list">
+    <li>
+    <a href="/form_components/TakingStatements" class="govuk-link">View all previous statements</a>
+    </li>
+  </ul> -->
+
+<h2 class="govuk-heading-m">Attendee 1</h2>
+
+
+  <form action="#" method="post" novalidate>
+
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="width-20">
+        Name
+      </label>
+      <input class="govuk-input" id="width-20" name="width-20" type="text"></div>
+
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="width-20">
+          Relationship to claimant
+        </label>
+  <input class="govuk-input" id="width-20" name="width-20" type="text"></div>
+
+
+<hr>
+<br>
+
+<br>
+
+
+<a href="AddAnother2_2components" class="govuk-link govuk-!-font-size-19">Add another attendee</a>
+<br>
+<br>
+<br>
+    {{ govukButton({
+      id: "comment",
+      name: "comment",
+      value: "add-statement",
+      text: "Save and continue"
+    }) }}
+
+  </div>
+  </div>
+  </main>
+
+
+
+{% endblock %}
