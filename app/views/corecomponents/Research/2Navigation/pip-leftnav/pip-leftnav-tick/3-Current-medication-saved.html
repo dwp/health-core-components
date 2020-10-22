@@ -60,7 +60,7 @@
   <div class="govuk-grid-column-three-quarters">
     <a class="govuk-back-link" href="2-History-of-conditions-saved">Back</a>
     <h1 class="govuk-heading-xl">Current medication and treatment</h1>
-    <form class="form" action="5-Functional-history-saved" method="post">
+    <form class="form" action="" method="post">
     {% from "govuk/components/input/macro.njk" import govukInput %}
 
     {{ govukInput({
@@ -120,7 +120,8 @@ classes: "govuk-button--secondary"
   {% from "govuk/components/button/macro.njk" import govukButton %}
 
   {{ govukButton({
-  text: "Save and continue"
+  text: "Save and continue",
+  href: "5-Functional-history-saved"
 
   }) }}
   </div>
