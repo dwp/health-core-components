@@ -18,6 +18,9 @@
           <li>
             <a href="#">Abandon assessment</a>
           </li>
+
+
+
         </ul>
       </nav>
 
@@ -30,7 +33,7 @@
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-three-quarters">
     <a class="govuk-back-link" href="/url/of/previous/page">Back</a>
-    <h1 class="govuk-heading-xl">Start the consultation</h1>
+    <h1 class="govuk-heading-l">Start the consultation</h1>
     {% from "govuk/components/textarea/macro.njk" import govukTextarea %}
 
 {{ govukTextarea({
@@ -43,9 +46,11 @@
     text: "List all evidence considered alongside the consultation findings"
   }
 }) }}
-<h2 class="govuk-heading-l">Additional attendees</h2>
+<h2 class="govuk-heading-m">Additional attendees</h2>
 <p> The following individual attended the consultation with the claimant</p>
 {% from "govuk/components/input/macro.njk" import govukInput %}
+
+<h3 class="govuk-heading-s">Attendee 1</h3>
 
 {{ govukInput({
   label: {
@@ -65,11 +70,13 @@
 }) }}
 {% from "govuk/components/button/macro.njk" import govukButton %}
 
-{{ govukButton({
-  text: "Add another attendee",
-  classes: "govuk-button--secondary"
-}) }}
-{% from "govuk/components/warning-text/macro.njk" import govukWarningText %}
+<a href="multuple_addAnother-section_add" class="govuk-link govuk-!-font-size-19">Add another attendee</a>
+
+<br>
+<br>
+<br>
+<br>
+
 
 {{ govukWarningText({
   text: "By starting this consultation I am confirming that the nature and purpose of the consultation has been explained to the claimant and/or their representative.",
