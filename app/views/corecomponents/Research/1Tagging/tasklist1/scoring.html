@@ -1,0 +1,88 @@
+{% extends "layout-key-detail-bar.html" %}
+
+{% block pageTitle %}
+  TextArea configurable component
+{% endblock %}
+
+
+{% block beforeContent %}
+
+<!-- <a href="#" class="govuk-back-link">Back</a> -->
+{% endblock %}
+
+
+{% block content %}
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-three-quarters">
+
+        <!-- <span class="govuk-caption-l"></span> -->
+<h2 class="govuk-heading-l">Make your recommendation</h2>
+
+
+        <ol class="app-task-list1">
+                <li>
+                  <!-- <h2 class="app-task-list__section">
+                    <span class="app-task-list__section-number">1.Assessment
+                  </h2> -->
+                  <ul class="app-task-list1__items">
+
+                    <li class="app-task-list1__item">
+                      <span class="app-task-list1__task-name">
+                        <a href="/corecomponents/Research/2Navigation/tasklist/Mobilising_tagging" aria-describedby="eligibility-status">
+                          Mobilising and using steps
+                        </a>
+                      </span>
+                      <strong class="govuk-tag govuk-tag--grey app-task-list1__tag" id="list-convictions-status">Not started</strong>
+                    </li>
+                    <li class="app-task-list1__item">
+                      <span class="app-task-list1__task-name">
+                        <a href="#" aria-describedby="read-declaration-status">
+                          Planning, starting and finishing everyday tasks
+                        </a>
+                      </span>
+                      <strong class="govuk-tag govuk-tag--grey app-task-list1__tag" id="list-convictions-status">Not started</strong>
+                    </li>
+                    <li class="app-task-list1__item">
+                      <span class="app-task-list1__task-name">
+                        <a href="#" aria-describedby="read-declaration-status">
+                          Eating and drinking
+                        </a>
+                      </span>
+                      <strong class="govuk-tag govuk-tag--grey app-task-list1__tag" id="list-convictions-status">Not started</strong>
+                    </li>
+                    <li class="app-task-list1__item">
+                      <span class="app-task-list1__task-name">
+                      <h3 class="govuk-heading-m">Total score</h3>
+
+
+                      </span>
+                      <!-- <strong class="govuk-tag govuk-tag--grey app-task-list1__tag" id="list-convictions-status">Not started</strong> -->
+                    </li>
+
+                  </ul>
+                </li>
+
+
+
+              </ol>
+
+              <!-- <button class="govuk-button" data-module="govuk-button">
+                Save and continue
+              </button> -->
+
+
+<form action="/corecomponents/Research/2Navigation/tasklist/review" method="post" novalidate>
+
+
+<button class="govuk-button" data-module="govuk-button">
+  Save and continue
+</button>
+
+
+</div>
+
+
+
+
+{% endblock %}

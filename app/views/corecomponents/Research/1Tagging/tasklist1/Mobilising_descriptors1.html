@@ -1,0 +1,105 @@
+{% extends "layout-key-detail-bar.html" %}
+
+{% block pageTitle %}
+  TextArea component
+{% endblock %}
+
+
+{% block beforeContent %}
+
+<!-- <a href="#" class="govuk-back-link">Back</a> -->
+{% endblock %}
+
+
+{% block content %}
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-three-quarters">
+
+        <span class="govuk-caption-l">Mobilising and using steps</span>
+  <h2 class="govuk-heading-l">Choose the descriptor that's most appropriate to the claimant </h2>
+
+
+  <div class="govuk-form-group">
+    <fieldset class="govuk-fieldset" aria-describedby="sign-in-hint">
+
+       <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
+  <div class="govuk-radios__item">
+    <input class="govuk-radios__input" id="how-contacted-conditional" name="how-contacted" type="radio" value="email" data-aria-controls="conditional-how-contacted-conditional">
+    <label class="govuk-label govuk-radios__label" for="how-contacted-conditional">
+      Cannot mobilise more than 50 metres, or 50 metres repeatedly
+    </label>
+  </div>
+  <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-how-contacted-conditional">
+
+  </div>
+
+  <div class="govuk-radios__item">
+    <input class="govuk-radios__input" id="how-contacted-conditional" name="how-contacted" type="radio" value="email" data-aria-controls="conditional-how-contacted-conditional1">
+    <label class="govuk-label govuk-radios__label" for="how-contacted-conditional">
+      Cannot go up or down 2 steps, even if using a handrail
+    </label>
+  </div>
+  <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-how-contacted-conditional1">
+
+  </div>
+
+  <div class="govuk-radios__item">
+    <input class="govuk-radios__input" id="how-contacted-conditional" name="how-contacted" type="radio" value="email" data-aria-controls="conditional-how-contacted-conditional2">
+    <label class="govuk-label govuk-radios__label" for="how-contacted-conditional">
+      Cannot mobilise more than 100 metres, or 100 metres repeatedly
+    </label>
+  </div>
+  <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-how-contacted-conditional2">
+
+  </div>
+
+  <div class="govuk-radios__item">
+    <input class="govuk-radios__input" id="how-contacted-conditional" name="how-contacted" type="radio" value="email" data-aria-controls="conditional-how-contacted-conditional3">
+    <label class="govuk-label govuk-radios__label" for="how-contacted-conditional">
+      Cannot mobilise more than 200 metres, or 200 metres repeatedly
+    </label>
+  </div>
+  <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-how-contacted-conditional3">
+
+  </div>
+
+  <div class="govuk-radios__item">
+    <input class="govuk-radios__input" id="how-contacted-conditional" name="how-contacted" type="radio" value="email" data-aria-controls="conditional-how-contacted-conditional4">
+    <label class="govuk-label govuk-radios__label" for="how-contacted-conditional">
+      None of the above
+    </label>
+  </div>
+
+<br>
+
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="contact-by-email">
+      Give details
+    </label>
+    <textarea class="govuk-textarea" id="contact-by-email" name="contact-by-email" rows="5" type="email" spellcheck="false"></textarea>
+  </div>
+
+
+
+      </div>
+    </fieldset>
+
+
+
+
+
+<form action="/corecomponents/Research/2Navigation/tasklist/scoring_mobilising" method="post" novalidate>
+
+
+  </div>
+
+<button class="govuk-button" data-module="govuk-button">
+  Save and continue
+</button>
+
+</div>
+</div>
+
+
+{% endblock %}
