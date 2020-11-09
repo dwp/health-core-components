@@ -1,0 +1,112 @@
+{% extends "layout-key-detail-bar-start1060.html" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+{% block beforeContent %}
+<main id="content" role="main">
+  <div class="grid-row">
+    <div class="column-full">
+
+      <nav class="navigation-secondary">
+        <ul>
+          <li>
+            <a href="#" class="active" aria-current="section">Assessment started: 14:00</a>
+          </li>
+          <li>
+            <a href="#">Abandon assessment</a>
+          </li>
+
+
+
+        </ul>
+      </nav>
+
+    </div>
+  </div>
+</main>
+{% endblock %}
+
+
+{% block content %}
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+
+<main class="govuk-main-wrapper">
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-one-quarter">
+    <!-- <h4 class="govuk-caption-m">Assessment started: (insert time stamp)</h4>
+    <a href="#" class="govuk-body govuk-!-font-size-19">Abandon assessment</a>
+<hr>
+<br>
+<br> -->
+
+
+<!-- tick left nav without lines-->
+<p><a href="1-Consultation-start" class="govuk-body govuk-!-font-size-16">Start consultation</a>&nbsp;&nbsp;&#10004;</p>
+<p><a href="2-History-of-conditions" class="govuk-body govuk-!-font-size-16">Additional attendees</a>&nbsp;&nbsp;&#10004;</p>
+<p><a href="2-History-of-conditions" class="govuk-body govuk-!-font-size-19 govuk-!-font-weight-bold">History of conditions</a></p>
+<p><a href="3-Current-medication" class="govuk-body govuk-!-font-size-16">Current medication and treatment</a></p>
+<p><a href="5-Functional-history" class="govuk-body govuk-!-font-size-16">Functional history</a></p>
+<p><a href="4-Social-and-occ-history" class="govuk-body govuk-!-font-size-16">Social and occupational history</a></p>
+<p><a href="6-Observations" class="govuk-body govuk-!-font-size-16">Observations</a></p>
+<p><a href="7-Mental-state" class="govuk-body govuk-!-font-size-16">Mental state</a></p>
+<p><a href="8-Musculoskeletal" class="govuk-body govuk-!-font-size-16">Musculoskeletal system</a></p>
+<p><a href="9-Other-systems" class="govuk-body govuk-!-font-size-16">Other relevant systems</a></p>
+<p><a href="10-Submit" class="govuk-body govuk-!-font-size-16">Confirm and submit</a></p>
+
+
+
+
+  </div>
+  <div class="govuk-grid-column-three-quarters">
+    <a class="govuk-back-link" href="/url/of/previous/page">Back</a>
+    <h1 class="govuk-heading-xl">History of conditions</h1>
+    <form class="form" action="3-Current-medication" method="post">
+    {% from "govuk/components/input/macro.njk" import govukInput %}
+
+    <h2 class="govuk-heading-m">Condition 1</h2>
+
+    {{ govukInput({
+      label: {
+        text: "Condition"
+      },
+      id: "primary-condition",
+      name: "primary-condition"
+    }) }}
+    {% from "govuk/components/textarea/macro.njk" import govukTextarea %}
+
+    {{ govukTextarea({
+    name: "condition-history",
+    id: "condition-history",
+    label: {
+    text: "History"
+    },
+    hint: {
+    text: "Including variability"
+    }
+    }) }}
+    {% from "govuk/components/input/macro.njk" import govukInput %}
+
+
+{{ govukButton({
+  text: "Add another condition",
+  classes: "govuk-button--secondary"
+}) }}
+<br>
+<br>
+
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+{{ govukButton({
+  text: "Save and continue"
+}) }}
+  </div>
+
+</div>
+
+</main>
+</div>
+
+{% endblock %}

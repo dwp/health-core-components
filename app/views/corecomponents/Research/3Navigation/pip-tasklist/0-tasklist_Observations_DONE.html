@@ -1,0 +1,141 @@
+{% extends "layout-key-detail-bar.html" %}
+
+{% block pageTitle %}
+  TextArea configurable component
+{% endblock %}
+
+
+{% block beforeContent %}
+<main id="content" role="main">
+  <div class="grid-row">
+    <div class="column-full">
+
+      <nav class="navigation-secondary">
+        <ul>
+          <li>
+            <a href="#" class="active" aria-current="section">Assessment started: 14:00</a>
+          </li>
+          <li>
+            <a href="#">Abandon assessment</a>
+          </li>
+
+
+
+        </ul>
+      </nav>
+
+    </div>
+  </div>
+</main>
+{% endblock %}
+
+
+{% block content %}
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+
+
+        <ol class="app-task-list">
+                <li>
+                  <h2 class="app-task-list__section">
+                    <span class="app-task-list__section-number">1. </span> PIP Assessment
+                  </h2>
+                  <ul class="app-task-list__items">
+
+                    <li class="app-task-list__item">
+                      <span class="app-task-list__task-name">
+                    <a href="1-consultation-start" class="govuk-body govuk-!-font-size-19">Start consultation</a>
+                      </span>
+                        <strong class="govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
+                    </li>
+                    <li class="app-task-list__item">
+                      <span class="app-task-list__task-name">
+                      <a href="2-History-of-conditions" class="govuk-body govuk-!-font-size-19">History of conditions</a>
+                      </span>
+                      <strong class="govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
+                    </li>
+                    <li class="app-task-list__item">
+                      <span class="app-task-list__task-name">
+                        <a href="3-Current-medication" class="govuk-body govuk-!-font-size-19">Current medication and treatment</a>
+                      </span>
+                      <strong class="govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
+                    </li>
+                    <li class="app-task-list__item">
+                      <span class="app-task-list__task-name">
+                      <a href="5-Functional-history" class="govuk-body govuk-!-font-size-19">Functional history</a>
+                      </span>
+                    <strong class="govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
+                    </li>
+                    <li class="app-task-list__item">
+                      <span class="app-task-list__task-name">
+                      <a href="4-Social-and-occ-history" class="govuk-body govuk-!-font-size-19">Social and occupational history</a>
+                      </span>
+                        <strong class="govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
+                    </li>
+
+                    <li class="app-task-list__item">
+                      <span class="app-task-list__task-name">
+                      <a href="6-Observations" class="govuk-body govuk-!-font-size-19">Observations</a>
+                      </span>
+                      <strong class="govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
+                    </li>
+
+
+                                      </ul>
+                                    </li>
+
+                                  </ol>
+
+
+                                  <ol class="app-task-list">
+                                          <li>
+                                            <h2 class="app-task-list__section">
+                                              <span class="app-task-list__section-number">2. </span> Examination
+                                            </h2>
+                                            <ul class="app-task-list__items">
+                                              <li class="app-task-list__item">
+                                                <span class="app-task-list__task-name">
+                                                <a href="6a-Consent" class="govuk-body govuk-!-font-size-19">Mental state</a>
+                                                </span>
+                                                <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="list-convictions-status">Not started</strong>
+                                              </li>
+                                              <li class="app-task-list__item">
+                                                <span class="app-task-list__task-name">
+                                              <a href="8-Musculoskeletal" class="govuk-body govuk-!-font-size-19">Musculoskeletal system</a>
+                                                </span>
+                                                <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="list-convictions-status">Not started</strong>
+                                              </li>
+                                              <li class="app-task-list__item">
+                                                <span class="app-task-list__task-name">
+                                                <a href="9-Other-systems" class="govuk-body govuk-!-font-size-19">Other relevant systems</a>
+                                                </span>
+                                                <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="list-convictions-status">Not started</strong>
+                                              </li>
+
+
+
+
+                                            </ul>
+                                          </li>
+
+                                        </ol>
+
+              <!-- <button class="govuk-button" data-module="govuk-button">
+                Save and continue
+              </button> -->
+
+</div>
+
+
+<div class="govuk-grid-column-two-thirds">
+
+
+
+</div>
+
+
+
+
+
+{% endblock %}

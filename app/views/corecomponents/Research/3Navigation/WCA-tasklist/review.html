@@ -1,0 +1,167 @@
+{% extends "layout-key-detail-bar.html" %}
+
+{% block pageTitle %}
+Review page
+{% endblock %}
+
+
+{% block beforeContent %}
+
+<!-- <a href="#" class="govuk-back-link">Back</a> -->
+{% endblock %}
+
+
+{% block content %}
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-three-quarters">
+  <!-- <span class="govuk-caption-l">Eating and drinking</span> -->
+
+        <h1 class="govuk-heading-l">Check evidence before making your recommendation</h1>
+<br>
+        <h2 class="govuk-heading-l">Claimant evidence</h2>
+
+        <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Additional attendees
+            </dt>
+            <dd class="govuk-summary-list__value">
+              Name: Someone<br>Relationship: Friend
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">
+                Change<span class="govuk-visually-hidden"> name</span>
+              </a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Condition history
+            </dt>
+            <dd class="govuk-summary-list__value">
+              Lorem ipsum
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">
+                Change<span class="govuk-visually-hidden"> date of birth</span>
+              </a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Medication and side effects
+            </dt>
+            <dd class="govuk-summary-list__value">
+              lorem ipsum
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">
+                Change<span class="govuk-visually-hidden"> address</span>
+              </a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Social and work history
+            </dt>
+            <dd class="govuk-summary-list__value">
+              lorem ipsum
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">
+                Change<span class="govuk-visually-hidden"> contact details</span>
+              </a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Typical day
+            </dt>
+            <dd class="govuk-summary-list__value">
+              lorem ipsum
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">
+                Change<span class="govuk-visually-hidden"> contact details</span>
+              </a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Informal observations
+            </dt>
+            <dd class="govuk-summary-list__value">
+              lorem ipsum
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">
+                Change<span class="govuk-visually-hidden"> contact details</span>
+              </a>
+            </dd>
+          </div>
+        </dl>
+
+        <h2 class="govuk-heading-l">Physical assessment</h2>
+
+        <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Consent
+            </dt>
+            <dd class="govuk-summary-list__value">
+              The details and scope of the physical examination were explained, including advice not to perform any movements causing pain or discomfort. Claimant gave consent for the process to proceed
+            </dd>
+            <dd class="govuk-summary-list__actions">
+
+            </dd>
+          </div>
+      </dl>
+                <h2 class="govuk-heading-m">Cardiovascular and respiratory</h2>
+
+  <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Left leg Peripheral circulation
+            </dt>
+            <dd class="govuk-summary-list__value">
+              Dorsalis pedis pulse<br>State findings: Lorem ipsum<br><br>other findings: lorem ipsum
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">
+                Change<span class="govuk-visually-hidden"> home address</span>
+              </a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Cardiac
+            </dt>
+            <dd class="govuk-summary-list__value">
+              Respitatory rate at rest<br>State findings: Lorem ipsum
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">
+                Change<span class="govuk-visually-hidden"> licence period</span>
+              </a>
+            </dd>
+          </div>
+        </dl>
+
+
+        <form action="/corecomponents/Research/2Navigation/tasklist/evidencelcwra" method="post" novalidate>
+
+          <input type="hidden" name="answers-checked" value="true">
+
+          <button class="govuk-button" data-module="govuk-button">
+            Make your recommendation
+          </button>
+
+        </form>
+
+      </div>
+    </div>
+  </main>
+</div>
+
+{% endblock %}

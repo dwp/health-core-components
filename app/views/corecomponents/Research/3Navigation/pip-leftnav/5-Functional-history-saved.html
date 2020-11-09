@@ -1,0 +1,242 @@
+{% extends "layout-key-detail-bar-start1060.html" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+{% block beforeContent %}
+<main id="content" role="main">
+  <div class="grid-row">
+    <div class="column-full">
+
+      <nav class="navigation-secondary">
+        <ul>
+          <li>
+            <a href="#" class="active" aria-current="section">Assessment started: 14:00</a>
+          </li>
+          <li>
+            <a href="#">Abandon assessment</a>
+          </li>
+
+
+
+        </ul>
+      </nav>
+
+    </div>
+  </div>
+</main>
+{% endblock %}
+
+
+{% block content %}
+<main class="govuk-main-wrapper">
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-one-quarter">
+
+
+    <!-- tick left nav without lines-->
+    <p><a href="1-Consultation-start" class="govuk-body govuk-!-font-size-16">Start consultation</a>&nbsp;&nbsp;&#10004;</p>
+    <p><a href="2-History-of-conditions" class="govuk-body govuk-!-font-size-16">History of conditions</a>&nbsp;&nbsp;&#10004;</p>
+    <p><a href="3-Current-medication-notsaved" class="govuk-body govuk-!-font-size-16">Current medication and treatment</a>&nbsp;&nbsp;&#10004</p>
+    <p><a href="5-Functional-history" class="govuk-body govuk-!-font-size-16 govuk-!-font-weight-bold">Functional history</a>&nbsp;&nbsp;&#10004</p>
+    <p><a href="4-Social-and-occ-history" class="govuk-body govuk-!-font-size-16">Social and occupational history</a></p>
+    <p><a href="6-Observations" class="govuk-body govuk-!-font-size-16">Observations</a></p>
+    <p><a href="7-Mental-state" class="govuk-body govuk-!-font-size-16">Mental state</a></p>
+    <p><a href="8-Musculoskeletal" class="govuk-body govuk-!-font-size-16">Musculoskeletal system</a></p>
+    <p><a href="9-Other-systems" class="govuk-body govuk-!-font-size-16">Other relevant systems</a></p>
+    <p><a href="10-Submit" class="govuk-body govuk-!-font-size-16">Confirm and submit</a></p>
+
+
+
+
+
+
+
+  </div>
+  <div class="govuk-grid-column-three-quarters">
+    <a class="govuk-back-link" href="3-Current-medication-saved">Back</a>
+    <h1 class="govuk-heading-xl">Functional history</h1>
+    <form class="form" action="4-Social-and-occ-history" method="post">
+
+      {% from "govuk/components/textarea/macro.njk" import govukTextarea %}
+
+      {{ govukTextarea({
+      name: "Variability",
+      id: "variability",
+      label: {
+      text: "Variability"
+      },
+      hint: {
+      text: ""
+      }
+      }) }}{% from "govuk/components/textarea/macro.njk" import govukTextarea %}
+
+    {{ govukTextarea({
+    name: "planning-and-following-journeys",
+    id: "planning and following journeys",
+    label: {
+    text: "Planning and following journeys"
+    },
+    hint: {
+    text: ""
+    }
+    }) }}
+    {% from "govuk/components/textarea/macro.njk" import govukTextarea %}
+
+    {{ govukTextarea({
+    name: "moving-around",
+    id: "moving around",
+    label: {
+    text: "Moving around"
+    },
+    hint: {
+    text: ""
+    }
+    }) }}
+    {% from "govuk/components/textarea/macro.njk" import govukTextarea %}
+
+    {{ govukTextarea({
+    name: "preparing-food",
+    id: "preparing food",
+    label: {
+    text: "Preparing food"
+    },
+    hint: {
+    text: ""
+    }
+    }) }}
+    {% from "govuk/components/textarea/macro.njk" import govukTextarea %}
+
+    {{ govukTextarea({
+    name: "taking-nutrition",
+    id: "taking nutrition",
+    label: {
+    text: "Taking nutrition"
+    },
+    hint: {
+    text: ""
+    }
+    }) }}
+    {% from "govuk/components/textarea/macro.njk" import govukTextarea %}
+
+    {{ govukTextarea({
+    name: "managing-therapy",
+    id: "managing therapy",
+    label: {
+    text: "Managing therapy or monitoring a health condition"
+    },
+    hint: {
+    text: ""
+    }
+    }) }}
+    {% from "govuk/components/textarea/macro.njk" import govukTextarea %}
+
+    {{ govukTextarea({
+    name: "washing-and-bathing",
+    id: "washing and bathing",
+    label: {
+    text: "Washing and bathing"
+    },
+    hint: {
+    text: ""
+    }
+    }) }}
+    {% from "govuk/components/textarea/macro.njk" import govukTextarea %}
+
+    {{ govukTextarea({
+    name: "managing-toilet-needs",
+    id: "managing toilet needs",
+    label: {
+    text: "Managing toilet needs or incontinence"
+    },
+    hint: {
+    text: ""
+    }
+    }) }}
+    {% from "govuk/components/textarea/macro.njk" import govukTextarea %}
+
+    {{ govukTextarea({
+    name: "dressing-and-undressing",
+    id: "dressing and undressing",
+    label: {
+    text: "Dressing and undressing"
+    },
+    hint: {
+    text: ""
+    }
+    }) }}
+    {% from "govuk/components/textarea/macro.njk" import govukTextarea %}
+
+    {{ govukTextarea({
+    name: "communicating-verbally",
+    id: "communicating verbally",
+    label: {
+    text: "Communicating verbally"
+    },
+    hint: {
+    text: ""
+    }
+    }) }}
+    {% from "govuk/components/textarea/macro.njk" import govukTextarea %}
+
+    {{ govukTextarea({
+    name: "reading-and-understanding-signs-symbols-and-words",
+    id: "reading and understanding signs symbols and words",
+    label: {
+    text: "Reading and understanding signs, symbols and words"
+    },
+    hint: {
+    text: ""
+    }
+    }) }}
+    {% from "govuk/components/textarea/macro.njk" import govukTextarea %}
+
+    {{ govukTextarea({
+    name: "engaging-with-others-f2f",
+    id: "engaging with others face to face",
+    label: {
+    text: "Engaging with others face to face"
+    },
+    hint: {
+    text: ""
+    }
+    }) }}
+    {% from "govuk/components/textarea/macro.njk" import govukTextarea %}
+
+    {{ govukTextarea({
+    name: "making-budgeting-decisions",
+    id: "making budgeting decisions",
+    label: {
+    text: "Making budgeting decisions"
+    },
+    hint: {
+    text: ""
+    }
+    }) }}
+    {% from "govuk/components/textarea/macro.njk" import govukTextarea %}
+
+    {{ govukTextarea({
+    name: "other-relevant-functional-history",
+    id: "other relevant functional history",
+    label: {
+    text: "Other relevant functional history"
+    },
+    hint: {
+    text: ""
+    }
+    }) }}
+    {% from "govuk/components/button/macro.njk" import govukButton %}
+
+    {{ govukButton({
+    text: "Save and continue"
+
+    }) }}
+  </div>
+
+</div>
+
+</main>
+</div>
+
+{% endblock %}
