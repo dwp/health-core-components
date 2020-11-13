@@ -1,0 +1,34 @@
+{% extends "layout-key-detail-bar.html" %}
+{% block pageTitle %}
+  TextArea configurable component
+{% endblock %}
+{% block beforeContent %}
+<!-- <a href="#" class="govuk-back-link">Back</a> -->
+{% endblock %}
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-three-quarters">
+    <form action="/wca/condition-history/save-and-continue" method="post" novalidate>
+      <div class="govuk-form-group">
+      <!-- <span class="govuk-caption-l">Section heading (Caption)</span> -->
+      <h1 class="govuk-label-wrapper">
+        <label class="govuk-label govuk-label--l" for="more-detail">
+          Condition history
+        </label>
+      </h1>
+      <div id="more-detail-hint" class="govuk-hint">
+        Provide all details of your condition history
+      </div>
+      <textarea
+        class="govuk-textarea"
+        id="condition-history"
+        name="condition-history"
+        rows="10"
+        aria-describedby="more-detail-hint">{{ session['condition-history'] }}</textarea>
+    </div>
+  </div>
+</div>
+<button class="govuk-button" data-module="govuk-button">
+  Save and continue
+</button>
+{% endblock %}

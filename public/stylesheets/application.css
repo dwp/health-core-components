@@ -5,6 +5,8 @@
 }
 
 
+
+
 /* Tabs_dwp */
 
 .navigation-secondary ul:after {
@@ -63,6 +65,65 @@
 
 
 
+
+/* left nav */
+.app-subnav__section-item--current {
+    margin-left: -14px;
+    padding-left: 10px;
+    border-left: 4px solid #1d70b8;
+    background-color: #fff;
+}
+.app-subnav__section-item {
+    margin-bottom: 5px;
+    padding-top: 5px;
+    padding-bottom: 15px;
+}
+
+.app-subnav__section-item--current .app-subnav__link {
+    font-weight: bold;
+}
+
+.app-subnav__link {
+    padding: 2px 0;
+    text-decoration: none;
+}
+
+.app-subnav__section {
+    margin: 0 0 20px;
+    padding: 0;
+    list-style-type: none;
+}
+
+.app-subnav__section-item--current .app-subnav__link {
+    font-weight: bold;
+}
+
+.app-subnav__link {
+    padding: 2px 0;
+    text-decoration: none;
+}
+.app-subnav__section {
+    margin: 0 0 20px;
+    padding: 0;
+    list-style-type: none;
+}
+@media (min-width: 40.0625em)
+.app-subnav {
+    font-size: 16px;
+    font-size: 1rem;
+    line-height: 1.25;
+}
+.app-subnav {
+    margin-bottom: 100px;
+    padding: 30px 15px 0 0;
+    font-family: "GDS Transport",arial,sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: 400;
+    font-size: 16px;
+    font-size: .875rem;
+    line-height: 1.14286;
+}
 
 
 
@@ -1162,54 +1223,9 @@ p + .govuk-heading-s,
     padding-top: 50px;
   }
 }
- 
-/* left nav */
-.app-subnav__section-item--current {
-    margin-left: -14px;
-    padding-left: 10px;
-    border-left: 4px solid #1d70b8;
-    background-color: #fff;
-}
-.app-subnav__section-item {
-    margin-bottom: 5px;
-    padding-top: 5px;
-    padding-bottom: 15px;
-}
 
-.app-subnav__section-item--current .app-subnav__link {
-    font-weight: bold;
-}
 
-.app-subnav__link {
-    padding: 2px 0;
-    text-decoration: none;
-}
 
-.app-subnav__section {
-    margin: 0 0 20px;
-    padding: 0;
-    list-style-type: none;
-}
-
-.app-subnav__section-item--current .app-subnav__link {
-    font-weight: bold;
-}
-
-.app-subnav__link {
-    padding: 2px 0;
-    text-decoration: none;
-}
-.app-subnav__section {
-    margin: 0 0 20px;
-    padding: 0;
-    list-style-type: none;
-}
-@media (min-width: 40.0625em)
-.app-subnav {
-    font-size: 16px;
-    font-size: 1rem;
-    line-height: 1.25;
-}
 
 
 
