@@ -67,7 +67,7 @@
 
 
 /* left nav */
-/* .app-subnav__section-item--current {
+.app-subnav__section-item--current {
     margin-left: -14px;
     padding-left: 10px;
     border-left: 4px solid #1d70b8;
@@ -122,8 +122,8 @@
     font-weight: 400;
     font-size: 14px;
     font-size: .875rem;
-    line-height: 1.14286; */
-
+    line-height: 1.14286;
+}
 
 
 
