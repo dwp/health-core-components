@@ -44,30 +44,39 @@ TextArea configurable component
           </li>
           <li class="app-task-list__item">
             <span class="app-task-list__task-name">
-              <a href="#" aria-describedby="read-declaration-status">
+              <a href="/wca/social-work" 
+              aria-describedby="read-declaration-status">
                 Social and work history
               </a>
             </span>
-            <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="list-convictions-status">Not
-              started</strong>
-          </li>
+            {% if session['social-work'] %}
+            <strong class="govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
+            {% else %}
+            <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="list-convictions-status">Not started</strong>
+            {% endif %}
           <li class="app-task-list__item">
             <span class="app-task-list__task-name">
-              <a href="#" aria-describedby="read-declaration-status">
+              <a href="/wca/typical-day" aria-describedby="read-declaration-status">
                 Typical day
               </a>
             </span>
-            <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="list-convictions-status">Not
-              started</strong>
+            {% if session['typical-day'] %}
+            <strong class="govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
+            {% else %}
+            <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="list-convictions-status">Not started</strong>
+            {% endif %}
           </li>
           <li class="app-task-list__item">
             <span class="app-task-list__task-name">
-              <a href="#" aria-describedby="read-declaration-status">
+              <a href="/wca/medication" aria-describedby="read-declaration-status">
                 Medication and side effects
               </a>
             </span>
-            <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="list-convictions-status">Not
-              started</strong>
+            {% if session['medication'] %}
+            <strong class="govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
+            {% else %}
+            <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="list-convictions-status">Not started</strong>
+            {% endif %}
           </li>
         </ul>
       </li>

@@ -30,4 +30,41 @@ router.post('/wca/condition-history/save-and-continue', function (req, res) {
  res.redirect('/wca/task-list');
 });
  
+
+router.get('/wca/social-work', function (req, res) {
+    res.render('corecomponents/Research/3Navigation/WCA-tasklist/SocialWorkHistory.html', { session: req.session.data });
+   });
+    
+   router.post('/wca/social-work/save-and-continue', function (req, res) {
+    if (req.body['social-work']) {
+    req.session.data['social-work'] = req.body['social-work']
+    }
+    res.redirect('/wca/task-list');
+   });
+    
+
+   router.get('/wca/typical-day', function (req, res) {
+    res.render('corecomponents/Research/3Navigation/WCA-tasklist/Typical_day.html', { session: req.session.data });
+   });
+    
+   router.post('/wca/typical-day/save-and-continue', function (req, res) {
+    if (req.body['typical-day']) {
+    req.session.data['typical-day'] = req.body['typical-day']
+    }
+    res.redirect('/wca/task-list');
+   });
+
+
+   router.get('/wca/medication', function (req, res) {
+    res.render('corecomponents/Research/3Navigation/WCA-tasklist/Medication.html', { session: req.session.data });
+   });
+    
+   router.post('/wca/medication/save-and-continue', function (req, res) {
+    if (req.body['medication']) {
+    req.session.data['medication'] = req.body['medication']
+    }
+    res.redirect('/wca/task-list');
+   });
+
+
 module.exports = router

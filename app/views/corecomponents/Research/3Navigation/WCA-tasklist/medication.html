@@ -16,8 +16,7 @@
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-three-quarters">
 
-<form action="/corecomponents/Research/2Navigation/tasklist/tasklist_medication" method="post" novalidate>
-
+        <form action="/wca/medication/save-and-continue" method="post" novalidate>
 
 
 <div class="govuk-form-group">
@@ -27,8 +26,11 @@
     </label>
   </h1>
 
-  <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="10
-" aria-describedby="more-detail-hint"></textarea>
+  <textarea class="govuk-textarea" 
+  id="medication" 
+  name="medication" 
+  rows="10
+" aria-describedby="more-detail-hint">{{ session['medication'] }}</textarea>
 </div>
 
 </div>

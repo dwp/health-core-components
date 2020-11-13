@@ -11,6 +11,8 @@
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-three-quarters">
 
+    <form action="/wca/typical-day/save-and-continue" method="post" novalidate>
+
     <div class="govuk-form-group">
 
       <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--l" for="more-detail">
@@ -20,8 +22,11 @@
       <div id="more-detail-hint" class="govuk-hint">
         Provide all details of your typical day
       </div>
-      <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="10
-    " aria-describedby="more-detail-hint"></textarea>
+      <textarea class="govuk-textarea" 
+      id="typical-day" 
+      name="typical-day" 
+      rows="10
+    " aria-describedby="more-detail-hint">{{ session['typical-day'] }}</textarea>
     </div>
 
 
@@ -66,13 +71,9 @@
 
 
 
-  {{ govukButton({
-    id: "comment",
-    name: "comment",
-    value: "add-statement",
-    text: "Save and continue",
-    href: "/corecomponents/Research/2Navigation/tasklist/tasklist_TypicalDay"
-  }) }}
+  <button class="govuk-button" data-module="govuk-button">
+    Save and continue
+  </button>  
 
 </div>
 </div>
