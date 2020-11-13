@@ -76,7 +76,7 @@
 .app-subnav__section-item {
     margin-bottom: 5px;
     padding-top: 5px;
-    padding-bottom: 5px;
+    padding-bottom: 15px;
 }
 
 .app-subnav__section-item--current .app-subnav__link {
@@ -120,7 +120,7 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     font-weight: 400;
-    font-size: 14px;
+    font-size: 16px;
     font-size: .875rem;
     line-height: 1.14286;
 }
