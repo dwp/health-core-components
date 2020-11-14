@@ -20,44 +20,69 @@ TextArea configurable component
   </div>
 </main>
 {% endblock %}
+
+
 {% block content %}
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
     <ol class="app-task-list">
       <li>
         <h2 class="app-task-list__section">
-          <span class="app-task-list__section-number">1. </span> Assessment
+          <span class="app-task-list__section-number">1. </span> PIP Assessment
         </h2>
         <ul class="app-task-list__items">
           <li class="app-task-list__item">
             <span class="app-task-list__task-name">
-              <a href="/wca/condition-history"
+              <a href="/pip/evidence-considered"
                 aria-describedby="eligibility-status">
-                Condition history
+                Start consultation
               </a>
             </span>
-            {% if session['condition-history'] %}
+            {% if session['evidence-considered'] %}
             <strong class="govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
             {% else %}
             <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="list-convictions-status">Not started</strong>
             {% endif %}
           </li>
+
+
+
           <li class="app-task-list__item">
             <span class="app-task-list__task-name">
-              <a href="/wca/social-work" 
-              aria-describedby="read-declaration-status">
-                Social and work history
+              <a href="/pip/add-attendee"
+                aria-describedby="add-attendee">
+                Additional attendees
               </a>
             </span>
-            {% if session['social-work'] %}
+            {% if session['add-attendee'] %}
             <strong class="govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
             {% else %}
             <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="list-convictions-status">Not started</strong>
             {% endif %}
+          </li>
+
           <li class="app-task-list__item">
             <span class="app-task-list__task-name">
-              <a href="/wca/typical-day" aria-describedby="read-declaration-status">
-                Typical day
+              <a href="/pip/history-condition" 
+              aria-describedby="read-declaration-status">
+              History of conditions
+              </a>
+            </span>
+            {% if session['history-condition'] %}
+            <strong class="govuk-tag app-task-list__tag" id="history-condition">Completed</strong>
+            {% else %}
+            <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="history-condition">Not started</strong>
+            {% endif %}
+          </li>
+          
+          
+
+
+
+            <li class="app-task-list__item">
+            <span class="app-task-list__task-name">
+              <a href="#" aria-describedby="read-declaration-status">
+                Current medication and treatment
               </a>
             </span>
             {% if session['typical-day'] %}
@@ -66,10 +91,14 @@ TextArea configurable component
             <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="list-convictions-status">Not started</strong>
             {% endif %}
           </li>
+
+
+
+
           <li class="app-task-list__item">
             <span class="app-task-list__task-name">
-              <a href="/wca/medication" aria-describedby="read-declaration-status">
-                Medication and side effects
+              <a href="#" aria-describedby="read-declaration-status">
+                Functional history
               </a>
             </span>
             {% if session['medication'] %}
@@ -78,11 +107,40 @@ TextArea configurable component
             <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="list-convictions-status">Not started</strong>
             {% endif %}
           </li>
+
+          <li class="app-task-list__item">
+            <span class="app-task-list__task-name">
+              <a href="#" aria-describedby="read-declaration-status">
+                Social and occupational history
+              </a>
+            </span>
+            {% if session['medication'] %}
+            <strong class="govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
+            {% else %}
+            <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="list-convictions-status">Not started</strong>
+            {% endif %}
+          </li>
+
+          <li class="app-task-list__item">
+            <span class="app-task-list__task-name">
+              <a href="#" aria-describedby="read-declaration-status">
+                Observations
+              </a>
+            </span>
+            {% if session['medication'] %}
+            <strong class="govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
+            {% else %}
+            <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="list-convictions-status">Not started</strong>
+            {% endif %}
+          </li>
+
+
+
         </ul>
       </li>
       <li>
         <h2 class="app-task-list__section">
-          <span class="app-task-list__section-number">2. </span> Physical assessment (Optional)
+          <span class="app-task-list__section-number">2. </span> Examination
         </h2>
         <ul class="app-task-list__items">
           <!-- <li class="app-task-list__item">
@@ -95,8 +153,8 @@ TextArea configurable component
                     </li> -->
           <li class="app-task-list__item">
             <span class="app-task-list__task-name">
-              <a href="/wca/general-health" aria-describedby="read-declaration-status">
-                General health
+              <a href="#" aria-describedby="read-declaration-status">
+                Mental state
               </a>
             </span>
             {% if session['general-health'] %}
@@ -108,7 +166,7 @@ TextArea configurable component
           <li class="app-task-list__item">
             <span class="app-task-list__task-name">
               <a href="#" aria-describedby="read-declaration-status">
-                Lower back and legs
+                Musculoskeletal system
               </a>
             </span>
             <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="list-convictions-status">Not
@@ -117,58 +175,13 @@ TextArea configurable component
           <li class="app-task-list__item">
             <span class="app-task-list__task-name">
               <a href="#" aria-describedby="read-declaration-status">
-                Neck and arms
+                Other relevant systems
               </a>
             </span>
             <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="list-convictions-status">Not
               started</strong>
           </li>
-          <li class="app-task-list__item">
-            <span class="app-task-list__task-name">
-              <a href="/corecomponents/Research/3Navigation/WCA-tasklist/PA/cardiovascular" aria-describedby="read-declaration-status">
-                Cardiovascular and respiratory
-              </a>
-            </span> 
-            {% if session['cardio'] %}
-            <strong class="govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
-            {% else %}
-            <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="list-convictions-status">Not started</strong>
-            {% endif %}
-          </li>
-          <li class="app-task-list__item">
-            <span class="app-task-list__task-name">
-              <a href="#" aria-describedby="read-declaration-status">
-                Vision, speech and hearing
-              </a>
-            </span>
-            <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="list-convictions-status">Not
-              started</strong>
-          </li>
-          <li class="app-task-list__item">
-            <span class="app-task-list__task-name">
-              <a href="#" aria-describedby="read-declaration-status">
-                Central nervous system
-              </a>
-            </span>
-            <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="list-convictions-status">Not
-              started</strong>
-          </li>
-        </ul>
-      </li>
-      <li>
-        <h2 class="app-task-list__section">
-          <span class="app-task-list__section-number">3. </span> Mental health (Optional)
-        </h2>
-        <ul class="app-task-list__items">
-          <li class="app-task-list__item">
-            <span class="app-task-list__task-name">
-              <a href="#" aria-describedby="eligibility-status">
-                Mental health
-              </a>
-            </span>
-            <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="list-convictions-status">Not
-              started</strong>
-          </li>
+         
         </ul>
       </li>
     </ol>

@@ -67,4 +67,77 @@ router.get('/wca/social-work', function (req, res) {
    });
 
 
+   router.get('/wca/cardio', function (req, res) {
+    res.render('corecomponents/Research/3Navigation/WCA-tasklist/PA/breathlessness.html', { session: req.session.data });
+   });
+    
+   router.post('/wca/cardio/save-and-continue', function (req, res) {
+    if (req.body['cardio']) {
+    req.session.data['cardio'] = req.body['cardio']
+    }
+    res.redirect('/wca/task-list');
+   });
+
+
+   router.get('/wca/general-health', function (req, res) {
+    res.render('corecomponents/Research/3Navigation/WCA-tasklist/PA/GeneralHealth.html', { session: req.session.data });
+   });
+    
+   router.post('/wca/general-health/save-and-continue', function (req, res) {
+    if (req.body['general-health']) {
+    req.session.data['general-health'] = req.body['general-health']
+    }
+    res.redirect('/wca/task-list');
+   });
+   
+
+
+
+
+
+// PIP Tasklist
+
+   router.get('/pip/task-list', function (req, res) {
+    res.render('corecomponents/Research/3Navigation/pip-tasklist/0-TaskList.html', { session: req.session.data })
+   })
+    
+   router.get('/pip/evidence-considered', function (req, res) {
+    res.render('corecomponents/Research/3Navigation/pip-tasklist/1-Consultation-start.html', { session: req.session.data });
+   });
+    
+   router.post('/pip/evidence-considered/save-and-continue', function (req, res) {
+    if (req.body['evidence-considered']) {
+    req.session.data['evidence-considered'] = req.body['evidence-considered']
+    }
+    res.redirect('/pip/task-list');
+   });
+
+
+
+   router.get('/pip/add-attendee', function (req, res) {
+    res.render('corecomponents/Research/3Navigation/pip-tasklist/1a-AddAttendee', { session: req.session.data });
+   });
+    
+   router.post('/pip/add-attendee/save-and-continue', function (req, res) {
+    if (req.body['add-attendee']) {
+    req.session.data['add-attendee'] = req.body['add-attendee']
+    }
+    res.redirect('/pip/task-list');
+   });
+
+
+   router.get('/pip/history-condition', function (req, res) {
+    res.render('corecomponents/Research/3Navigation/pip-tasklist/2-History-of-conditions', { session: req.session.data });
+   });
+    
+   router.post('/pip/history-condition/save-and-continue', function (req, res) {
+    if (req.body['history-condition']) {
+    req.session.data['history-condition'] = req.body['history-condition']
+    }
+    res.redirect('/pip/task-list');
+   });
+
+
+
+
 module.exports = router
