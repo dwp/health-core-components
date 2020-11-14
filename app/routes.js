@@ -137,7 +137,88 @@ router.get('/wca/social-work', function (req, res) {
     res.redirect('/pip/task-list');
    });
 
+  
+   router.get('/pip/medication-name', function (req, res) {
+    res.render('corecomponents/Research/3Navigation/pip-tasklist/3-Current-medication', { session: req.session.data });
+   });
+    
+   router.post('/pip/medication-name/save-and-continue', function (req, res) {
+    if (req.body['medication-name']) {
+    req.session.data['medication-name'] = req.body['medication-name']
+    }
+    res.redirect('/pip/task-list');
+   });
 
 
+
+   router.get('/pip/social-history', function (req, res) {
+    res.render('corecomponents/Research/3Navigation/pip-tasklist/4-Social-and-occ-history.html', { session: req.session.data });
+   });
+    
+   router.post('/pip/social-history/save-and-continue', function (req, res) {
+    if (req.body['social-history']) {
+    req.session.data['social-history'] = req.body['social-history']
+    }
+    res.redirect('/pip/task-list');
+   });
+
+
+   router.get('/pip/variability', function (req, res) {
+    res.render('corecomponents/Research/3Navigation/pip-tasklist/5-Functional-history.html', { session: req.session.data });
+   });
+    
+   router.post('/pip/variability/save-and-continue', function (req, res) {
+    if (req.body['pip/variability']) {
+    req.session.data['pip/variability'] = req.body['pip/variability']
+    }
+    res.redirect('/pip/task-list');
+   });
+
+   router.get('/pip/observations', function (req, res) {
+    res.render('corecomponents/Research/3Navigation/pip-tasklist/6-Observations.html', { session: req.session.data });
+   });
+    
+   router.post('/pip/observations/save-and-continue', function (req, res) {
+    if (req.body['pip/observations']) {
+    req.session.data['pip/observations'] = req.body['pip/observations']
+    }
+    res.redirect('/pip/task-list');
+   });
+   
+
+   router.get('/pip/mental-state', function (req, res) {
+    res.render('corecomponents/Research/3Navigation/pip-tasklist/7-Mental-state.html', { session: req.session.data });
+   });
+    
+   router.post('/pip/mental-state/save-and-continue', function (req, res) {
+    if (req.body['pip/mental-state']) {
+    req.session.data['pip/mental-state'] = req.body['pip/mental-state']
+    }
+    res.redirect('/pip/task-list');
+   });
+
+
+   router.get('/pip/musculoskeletal', function (req, res) {
+    res.render('corecomponents/Research/3Navigation/pip-tasklist/8-Musculoskeletal', { session: req.session.data });
+   });
+    
+   router.post('/pip/musculoskeletal/save-and-continue', function (req, res) {
+    if (req.body['pip/musculoskeletal']) {
+    req.session.data['pip/musculoskeletal'] = req.body['pip/musculoskeletal']
+    }
+    res.redirect('/pip/task-list');
+   });
+
+
+   router.get('/pip/other-systems', function (req, res) {
+    res.render('corecomponents/Research/3Navigation/pip-tasklist/9-Other-systems', { session: req.session.data });
+   });
+    
+   router.post('/pip/other-systems/save-and-continue', function (req, res) {
+    if (req.body['pip/other-systems']) {
+    req.session.data['pip/other-systems'] = req.body['pip/other-systems']
+    }
+    res.redirect('/pip/task-list');
+   });
 
 module.exports = router

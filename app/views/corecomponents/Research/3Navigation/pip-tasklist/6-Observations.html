@@ -35,28 +35,33 @@
 
   <div class="govuk-grid-column-three-quarters">
     <a class="govuk-back-link" href="/url/of/previous/page">Back</a>
-    <h1 class="govuk-heading-xl">Observations</h1>
-    <form class="form" action="/Archive/6a-Consent" method="post">
 
-      {% from "govuk/components/textarea/macro.njk" import govukTextarea %}
+    <form action="/pip/observations/save-and-continue" method="post" novalidate>
 
-      {{ govukTextarea({
-      name: "observations",
-      id: "observations",
-      label: {
-      text: "General appearance and informal observations"
-      },
-      hint: {
-      text: "Include any observed examinations as appropriate e.g. hearing"
-      }
-      }) }}
-      {% from "govuk/components/button/macro.njk" import govukButton %}
 
-      {{ govukButton({
-      text: "Save and continue",
-      href: "/corecomponents/Research/2Navigation/pip-tasklist/0-tasklist_Observations_DONE"
 
-      }) }}
+
+
+      <div class="govuk-form-group">
+        <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--l" for="more-detail">
+            Observations
+          </label>
+        </h1>
+        <div id="more-detail-hint" class="govuk-hint">
+          Include any observed examinations as appropriate e.g. hearing
+        </div>
+        <textarea class="govuk-textarea" 
+        id="observations" 
+        name="observations" 
+        rows="5" 
+        aria-describedby="more-detail-hint">{{ data['observations'] }}</textarea>
+      </div>
+      
+
+
+      <button class="govuk-button" data-module="govuk-button">
+        Save and continue
+      </button>
 
   </div>
 

@@ -81,11 +81,11 @@ TextArea configurable component
 
             <li class="app-task-list__item">
             <span class="app-task-list__task-name">
-              <a href="#" aria-describedby="read-declaration-status">
+              <a href="/pip/medication-name" aria-describedby="read-declaration-status">
                 Current medication and treatment
               </a>
             </span>
-            {% if session['typical-day'] %}
+            {% if session['medication-name'] %}
             <strong class="govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
             {% else %}
             <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="list-convictions-status">Not started</strong>
@@ -97,11 +97,11 @@ TextArea configurable component
 
           <li class="app-task-list__item">
             <span class="app-task-list__task-name">
-              <a href="#" aria-describedby="read-declaration-status">
+              <a href="/pip/variability" aria-describedby="read-declaration-status">
                 Functional history
               </a>
             </span>
-            {% if session['medication'] %}
+            {% if session['variability'] %}
             <strong class="govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
             {% else %}
             <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="list-convictions-status">Not started</strong>
@@ -110,11 +110,11 @@ TextArea configurable component
 
           <li class="app-task-list__item">
             <span class="app-task-list__task-name">
-              <a href="#" aria-describedby="read-declaration-status">
+              <a href="/pip/social-history" aria-describedby="read-declaration-status">
                 Social and occupational history
               </a>
             </span>
-            {% if session['medication'] %}
+            {% if session['social-history'] %}
             <strong class="govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
             {% else %}
             <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="list-convictions-status">Not started</strong>
@@ -123,11 +123,11 @@ TextArea configurable component
 
           <li class="app-task-list__item">
             <span class="app-task-list__task-name">
-              <a href="#" aria-describedby="read-declaration-status">
+              <a href="/pip/observations" aria-describedby="read-declaration-status">
                 Observations
               </a>
             </span>
-            {% if session['medication'] %}
+            {% if session['observations'] %}
             <strong class="govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
             {% else %}
             <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="list-convictions-status">Not started</strong>
@@ -153,33 +153,47 @@ TextArea configurable component
                     </li> -->
           <li class="app-task-list__item">
             <span class="app-task-list__task-name">
-              <a href="#" aria-describedby="read-declaration-status">
+              <a href="/pip/mental-state" aria-describedby="read-declaration-status">
                 Mental state
               </a>
             </span>
-            {% if session['general-health'] %}
+            {% if session['mental-state'] %}
             <strong class="govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
             {% else %}
             <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="list-convictions-status">Not started</strong>
             {% endif %}
           </li>
+
+          
+
           <li class="app-task-list__item">
             <span class="app-task-list__task-name">
-              <a href="#" aria-describedby="read-declaration-status">
+              <a href="/pip/musculoskeletal" aria-describedby="read-declaration-status">
                 Musculoskeletal system
               </a>
             </span>
-            <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="list-convictions-status">Not
-              started</strong>
+            {% if session['musculoskeletal'] %}
+            <strong class="govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
+            {% else %}
+            <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="list-convictions-status">Not started</strong>
+            {% endif %}
           </li>
+
+          
+
+
+
           <li class="app-task-list__item">
             <span class="app-task-list__task-name">
-              <a href="#" aria-describedby="read-declaration-status">
+              <a href="/pip/other-systems" aria-describedby="read-declaration-status">
                 Other relevant systems
               </a>
             </span>
-            <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="list-convictions-status">Not
-              started</strong>
+            {% if session['other-systems'] %}
+            <strong class="govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
+            {% else %}
+            <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="list-convictions-status">Not started</strong>
+            {% endif %}
           </li>
          
         </ul>

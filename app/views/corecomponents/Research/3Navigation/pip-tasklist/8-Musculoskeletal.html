@@ -35,27 +35,34 @@
 
   <div class="govuk-grid-column-three-quarters">
     <a class="govuk-back-link" href="/url/of/previous/page">Back</a>
-    <h1 class="govuk-heading-xl">Musculoskeletal system</h1>
-    <form class="form" action="/Archive/9-Other-systems" method="post">
-      {% from "govuk/components/textarea/macro.njk" import govukTextarea %}
+    
+    <form action="/pip/musculoskeletal/save-and-continue" method="post" novalidate>
 
-      {{ govukTextarea({
-      name: "Musculoskeletal",
-      id: "Musculoskeletal",
-      label: {
-      text: "Details"
-      },
-      hint: {
-      text: ""
-      }
-      }) }}
-      {% from "govuk/components/button/macro.njk" import govukButton %}
 
-      {{ govukButton({
-      text: "Save and continue",
-      href: "/corecomponents/Research/2Navigation/pip-tasklist/0-tasklist_Musculoskeletal_DONE"
+ 
 
-      }) }}
+
+      <div class="govuk-form-group">
+        <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--l" for="more-detail">
+          Musculoskeletal system
+          </label>
+        </h1>
+        <div id="more-detail-hint" class="govuk-hint">
+          Details
+        </div>
+        <textarea class="govuk-textarea" 
+        id="musculoskeletal" 
+        name="musculoskeletal" 
+        rows="5" 
+        aria-describedby="more-detail-hint">{{ session['musculoskeletal'] }}</textarea>
+      </div>
+      
+
+
+      <button class="govuk-button" data-module="govuk-button">
+        Save and continue
+      </button>
+
 
   </div>
 

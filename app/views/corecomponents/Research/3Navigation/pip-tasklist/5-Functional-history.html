@@ -36,182 +36,187 @@
   <div class="govuk-grid-column-three-quarters">
     <a class="govuk-back-link" href="0-tasklist_Functional_notsaved">Back</a>
     <h1 class="govuk-heading-xl">Functional history</h1>
-    <form class="form" action="/Archive/6-Observations" method="post">
+    <form action="/pip/variability/save-and-continue" method="post" novalidate>
 
-      {% from "govuk/components/textarea/macro.njk" import govukTextarea %}
 
-      {{ govukTextarea({
-      name: "Variability",
-      id: "variability",
-      label: {
-      text: "Variability"
-      },
-      hint: {
-      text: ""
-      }
-      }) }}{% from "govuk/components/textarea/macro.njk" import govukTextarea %}
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="more-detail">
+          Variability
+          </label>
+       
+        <div id="more-detail-hint" class="govuk-hint">
+          Details
+        </div>
+        <textarea class="govuk-textarea" 
+        id="variability" 
+        name="variability" 
+        rows="5" 
+        aria-describedby="more-detail-hint">{{ session['variability'] }}</textarea>
+      </div>
 
-    {{ govukTextarea({
-    name: "planning-and-following-journeys",
-    id: "planning and following journeys",
-    label: {
-    text: "Planning and following journeys"
-    },
-    hint: {
-    text: ""
-    }
-    }) }}
-    {% from "govuk/components/textarea/macro.njk" import govukTextarea %}
 
-    {{ govukTextarea({
-    name: "moving-around",
-    id: "moving around",
-    label: {
-    text: "Moving around"
-    },
-    hint: {
-    text: ""
-    }
-    }) }}
-    {% from "govuk/components/textarea/macro.njk" import govukTextarea %}
 
-    {{ govukTextarea({
-    name: "preparing-food",
-    id: "preparing food",
-    label: {
-    text: "Preparing food"
-    },
-    hint: {
-    text: ""
-    }
-    }) }}
-    {% from "govuk/components/textarea/macro.njk" import govukTextarea %}
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="more-detail">
+          Planning and following journeys
+          </label>
+       
+        <textarea class="govuk-textarea" 
+        id="planning" 
+        name="planning" 
+        rows="5" 
+        aria-describedby="more-detail-hint">{{ data['planning'] }}</textarea>
+      </div>
 
-    {{ govukTextarea({
-    name: "taking-nutrition",
-    id: "taking nutrition",
-    label: {
-    text: "Taking nutrition"
-    },
-    hint: {
-    text: ""
-    }
-    }) }}
-    {% from "govuk/components/textarea/macro.njk" import govukTextarea %}
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="more-detail">
+          Moving around
+          </label>
+        <textarea class="govuk-textarea" 
+        id="moving" 
+        name="moving" 
+        rows="5" 
+        aria-describedby="more-detail-hint">{{ data['moving'] }}</textarea>
+      </div>
 
-    {{ govukTextarea({
-    name: "managing-therapy",
-    id: "managing therapy",
-    label: {
-    text: "Managing therapy or monitoring a health condition"
-    },
-    hint: {
-    text: ""
-    }
-    }) }}
-    {% from "govuk/components/textarea/macro.njk" import govukTextarea %}
 
-    {{ govukTextarea({
-    name: "washing-and-bathing",
-    id: "washing and bathing",
-    label: {
-    text: "Washing and bathing"
-    },
-    hint: {
-    text: ""
-    }
-    }) }}
-    {% from "govuk/components/textarea/macro.njk" import govukTextarea %}
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="more-detail">
+          Preparing food
+          </label>
+        <textarea class="govuk-textarea" 
+        id="food" 
+        name="food" 
+        rows="5" 
+        aria-describedby="more-detail-hint">{{ data['food'] }}</textarea>
+      </div>
 
-    {{ govukTextarea({
-    name: "managing-toilet-needs",
-    id: "managing toilet needs",
-    label: {
-    text: "Managing toilet needs or incontinence"
-    },
-    hint: {
-    text: ""
-    }
-    }) }}
-    {% from "govuk/components/textarea/macro.njk" import govukTextarea %}
 
-    {{ govukTextarea({
-    name: "dressing-and-undressing",
-    id: "dressing and undressing",
-    label: {
-    text: "Dressing and undressing"
-    },
-    hint: {
-    text: ""
-    }
-    }) }}
-    {% from "govuk/components/textarea/macro.njk" import govukTextarea %}
 
-    {{ govukTextarea({
-    name: "communicating-verbally",
-    id: "communicating verbally",
-    label: {
-    text: "Communicating verbally"
-    },
-    hint: {
-    text: ""
-    }
-    }) }}
-    {% from "govuk/components/textarea/macro.njk" import govukTextarea %}
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="more-detail">
+          Taking nutrition
+          </label>
+        <textarea class="govuk-textarea" 
+        id="nutrition" 
+        name="nutrition" 
+        rows="5" 
+        aria-describedby="more-detail-hint">{{ data['nutrition'] }}</textarea>
+      </div>
 
-    {{ govukTextarea({
-    name: "reading-and-understanding-signs-symbols-and-words",
-    id: "reading and understanding signs symbols and words",
-    label: {
-    text: "Reading and understanding signs, symbols and words"
-    },
-    hint: {
-    text: ""
-    }
-    }) }}
-    {% from "govuk/components/textarea/macro.njk" import govukTextarea %}
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="more-detail">
+          Managing therapy or monitoring a health condition
+          </label>
+        <textarea class="govuk-textarea" 
+        id="managing" 
+        name="managing" 
+        rows="5" 
+        aria-describedby="more-detail-hint">{{ data['managing'] }}</textarea>
+      </div>
 
-    {{ govukTextarea({
-    name: "engaging-with-others-f2f",
-    id: "engaging with others face to face",
-    label: {
-    text: "Engaging with others face to face"
-    },
-    hint: {
-    text: ""
-    }
-    }) }}
-    {% from "govuk/components/textarea/macro.njk" import govukTextarea %}
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="more-detail">
+          Washing and bathing
+          </label>
+        <textarea class="govuk-textarea" 
+        id="washing" 
+        name="washing" 
+        rows="5" 
+        aria-describedby="more-detail-hint">{{ data['washing'] }}</textarea>
+      </div>
 
-    {{ govukTextarea({
-    name: "making-budgeting-decisions",
-    id: "making budgeting decisions",
-    label: {
-    text: "Making budgeting decisions"
-    },
-    hint: {
-    text: ""
-    }
-    }) }}
-    {% from "govuk/components/textarea/macro.njk" import govukTextarea %}
 
-    {{ govukTextarea({
-    name: "other-relevant-functional-history",
-    id: "other relevant functional history",
-    label: {
-    text: "Other relevant functional history"
-    },
-    hint: {
-    text: ""
-    }
-    }) }}
-    {% from "govuk/components/button/macro.njk" import govukButton %}
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="more-detail">
+          Managing toilet needs or incontinence
+          </label>
+        <textarea class="govuk-textarea" 
+        id="toilet" 
+        name="toilet" 
+        rows="5" 
+        aria-describedby="more-detail-hint">{{ data['toilet'] }}</textarea>
+      </div>
 
-    {{ govukButton({
-    text: "Save and continue",
-    href: "/corecomponents/Research/2Navigation/pip-tasklist/0-tasklist_Functional_DONE"
 
-    }) }}
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="more-detail">
+          Dressing and undressing
+          </label>
+        <textarea class="govuk-textarea" 
+        id="dressing" 
+        name="dressing" 
+        rows="5" 
+        aria-describedby="more-detail-hint">{{ data['dressing'] }}</textarea>
+      </div>
+
+
+
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="more-detail">
+          Communicating verbally
+          </label>
+        <textarea class="govuk-textarea" 
+        id="communicating" 
+        name="communicating" 
+        rows="5" 
+        aria-describedby="more-detail-hint">{{ data['communicating'] }}</textarea>
+      </div>
+ 
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="more-detail">
+          Reading and understanding signs, symbols and words
+          </label>
+        <textarea class="govuk-textarea" 
+        id="reading" 
+        name="reading" 
+        rows="5" 
+        aria-describedby="more-detail-hint">{{ data['reading'] }}</textarea>
+      </div>
+
+
+
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="more-detail">
+          Engaging with others face to face
+          </label>
+        <textarea class="govuk-textarea" 
+        id="face-to-face" 
+        name="face-to-face" 
+        rows="5" 
+        aria-describedby="more-detail-hint">{{ data['face-to-face'] }}</textarea>
+      </div>
+
+
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="more-detail">
+          Making budgeting decisions
+          </label>
+        <textarea class="govuk-textarea" 
+        id="budget" 
+        name="budget" 
+        rows="5" 
+        aria-describedby="more-detail-hint">{{ data['budget'] }}</textarea>
+      </div>
+
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="more-detail">
+          Other relevant functional history
+          </label>
+        <textarea class="govuk-textarea" 
+        id="other-function" 
+        name="other-function" 
+        rows="5" 
+        aria-describedby="more-detail-hint">{{ data['other-function'] }}</textarea>
+      </div>
+
+
+
+    <button class="govuk-button" data-module="govuk-button">
+      Save and continue
+    </button>
+
+    
   </div>
 
 </div>

@@ -35,27 +35,37 @@
 
   <div class="govuk-grid-column-three-quarters">
     <a class="govuk-back-link" href="/url/of/previous/page">Back</a>
-    <h1 class="govuk-heading-xl">Other relevant systems</h1>
-    <form class="form" action="/Archive/10-Submit" method="post">
-      {% from "govuk/components/textarea/macro.njk" import govukTextarea %}
 
-      {{ govukTextarea({
-      name: "other-systems",
-      id: "other-systems",
-      label: {
-      text: "Details"
-      },
-      hint: {
-      text: ""
-      }
-      }) }}
-      {% from "govuk/components/button/macro.njk" import govukButton %}
+    <form action="/pip/other-systems/save-and-continue" method="post" novalidate>
 
-      {{ govukButton({
-      text: "Save and continue",
-      href: "/corecomponents/Research/2Navigation/pip-tasklist/0-tasklist_Other_DONE"
 
-      }) }}
+
+
+      <div class="govuk-form-group">
+        <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--l" for="more-detail">
+          Other relevant systems
+          </label>
+        </h1>
+        <div id="more-detail-hint" class="govuk-hint">
+          Details
+        </div>
+        <textarea class="govuk-textarea" 
+        id="other-systems" 
+        name="other-systems" 
+        rows="5" 
+        aria-describedby="more-detail-hint">{{ session['other-systems'] }}</textarea>
+      </div>
+      
+
+
+      <button class="govuk-button" data-module="govuk-button">
+        Save and continue
+      </button>
+
+
+
+
+
 
   </div>
 
