@@ -20,13 +20,13 @@
   <h1 class="govuk-heading-l">Additional attendees</h1>
 
 
-  <!-- <form action="/wca_v1/TakingStatementsentry-post" method="post" novalidate> -->
 
-  <!-- <ul class="govuk-list">
-    <li>
-    <a href="/form_components/TakingStatements" class="govuk-link">View all previous statements</a>
-    </li>
-  </ul> -->
+  <form action="/wca/attendee/save-and-continue" method="post" novalidate>
+
+
+
+  
+
 
 <h2 class="govuk-heading-m">Attendee 1</h2>
 
@@ -37,13 +37,13 @@
       <label class="govuk-label" for="width-20">
         Name
       </label>
-      <input class="govuk-input" id="width-20" name="width-20" type="text"></div>
+      <input class="govuk-input" id="attendee" name="attendee" type="text" value="{{ data['attendee'] }}"></div>
 
       <div class="govuk-form-group">
         <label class="govuk-label" for="width-20">
           Relationship to claimant
         </label>
-  <input class="govuk-input" id="width-20" name="width-20" type="text"></div>
+  <input class="govuk-input" id="relation" name="relation" type="text" value="{{ data['relation'] }}"></div>
 
 
 <hr>

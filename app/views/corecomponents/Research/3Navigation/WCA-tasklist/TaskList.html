@@ -29,6 +29,21 @@ TextArea configurable component
           <span class="app-task-list__section-number">1. </span> Assessment
         </h2>
         <ul class="app-task-list__items">
+
+          <li class="app-task-list__item">
+            <span class="app-task-list__task-name">
+              <a href="/wca/attendee"
+                aria-describedby="eligibility-status">
+                Additional attendee
+              </a>
+            </span>
+            {% if session['attendee'] %}
+            <strong class="govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
+            {% else %}
+            <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="list-convictions-status">Optional</strong>
+            {% endif %}
+          </li>
+
           <li class="app-task-list__item">
             <span class="app-task-list__task-name">
               <a href="/wca/condition-history"
@@ -56,11 +71,11 @@ TextArea configurable component
             {% endif %}
           <li class="app-task-list__item">
             <span class="app-task-list__task-name">
-              <a href="/wca/typical-day" aria-describedby="read-declaration-status">
+              <a href="/wca/statement" aria-describedby="read-declaration-status">
                 Typical day
               </a>
             </span>
-            {% if session['typical-day'] %}
+            {% if session['statement'] %}
             <strong class="govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
             {% else %}
             <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="list-convictions-status">Not started</strong>
@@ -78,6 +93,20 @@ TextArea configurable component
             <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="list-convictions-status">Not started</strong>
             {% endif %}
           </li>
+
+          <li class="app-task-list__item">
+            <span class="app-task-list__task-name">
+              <a href="/wca/medication" aria-describedby="read-declaration-status">
+                Informal observations
+              </a>
+            </span>
+            {% if session['medication'] %}
+            <strong class="govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
+            {% else %}
+            <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="list-convictions-status">Optional</strong>
+            {% endif %}
+          </li>
+
         </ul>
       </li>
       <li>

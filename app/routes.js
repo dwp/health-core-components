@@ -3,22 +3,50 @@ const router = express.Router()
  
 // statement Navigation
  
-router.post("/wca_v1/TakingStatementsentry-post", function(req, res, next){
+// router.post("/wca_v1/TakingStatementsentry-post", function(req, res, next){
  
- if(req.body['comment'] === 'add-statement'){
- res.redirect('/wca_v1/condition_history_saved');
- } else {
- res.redirect('/wca_v1/TakingStatementsentry');
- }
- next();
-});
+//  if(req.body['comment'] === 'add-statement'){
+//  res.redirect('/wca_v1/condition_history_saved');
+//  } else {
+//  res.redirect('/wca_v1/TakingStatementsentry');
+//  }
+//  next();
+// });
  
+
+
+router.post("/corecomponents/Research/3Navigation/WCA-tasklist/Typical_day-post", function(req, res, next){
+ 
+    if(req.body['statement'] === 'statement2'){
+    res.redirect('/corecomponents/Research/3Navigation/WCA-tasklist/TaskList');
+    } else {
+    res.redirect('/corecomponents/Research/3Navigation/WCA-tasklist/Typical_day');
+    }
+    next();
+   });
+
+
+
+
 // task list
  
 router.get('/wca/task-list', function (req, res) {
  res.render('corecomponents/Research/3Navigation/WCA-tasklist/TaskList.html', { session: req.session.data })
 })
  
+
+router.get('/wca/attendee', function (req, res) {
+    res.render('corecomponents/Research/3Navigation/WCA-tasklist/additionalAttendee.html', { session: req.session.data });
+   });
+    
+   router.post('/wca/attendee/save-and-continue', function (req, res) {
+    if (req.body['attendee']) {
+    req.session.data['attendee'] = req.body['attendee']
+    }
+    res.redirect('/wca/task-list');
+   });
+
+
 router.get('/wca/condition-history', function (req, res) {
  res.render('corecomponents/Research/3Navigation/WCA-tasklist/Conditionhistory.html', { session: req.session.data });
 });
@@ -43,15 +71,15 @@ router.get('/wca/social-work', function (req, res) {
    });
     
 
-   router.get('/wca/typical-day', function (req, res) {
+   router.get('/wca/statement', function (req, res) {
     res.render('corecomponents/Research/3Navigation/WCA-tasklist/Typical_day.html', { session: req.session.data });
    });
     
-   router.post('/wca/typical-day/save-and-continue', function (req, res) {
-    if (req.body['typical-day']) {
-    req.session.data['typical-day'] = req.body['typical-day']
+   router.post('/wca/statement/save-and-continue', function (req, res) {
+    if (req.body['statement']) {
+    req.session.data['statement'] = req.body['statement']
     }
-    res.redirect('/wca/task-list');
+    res.redirect('/corecomponents/Research/3Navigation/WCA-tasklist/Typical_day');
    });
 
 
