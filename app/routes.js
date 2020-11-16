@@ -79,7 +79,7 @@ router.get('/wca/social-work', function (req, res) {
     if (req.body['statement']) {
     req.session.data['statement'] = req.body['statement']
     }
-    res.redirect('/corecomponents/Research/3Navigation/WCA-tasklist/Typical_day');
+    res.redirect('/wca/task-list');
    });
 
 

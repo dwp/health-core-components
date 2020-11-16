@@ -378,6 +378,16 @@ app.post('/corecomponents/Research/3Navigation/WCA-tasklist/Typical_day', functi
 })
 
 
+
+
+// research prototype 3 wca
+app.post('/wca/statement/save-and-continue', function (req, res, next){
+res.redirect('/wca/task-list');
+})
+
+
+
+
 // App folder routes get priority
 app.get(/^([^.]+)$/, function (req, res, next) {
   utils.matchRoutes(req, res, next)

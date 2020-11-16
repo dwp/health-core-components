@@ -75,7 +75,7 @@ TextArea configurable component
                 Typical day
               </a>
             </span>
-            {% if session['statement'] %}
+            {% if data['statements'] and (data['statements'].length > 0) %}
             <strong class="govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
             {% else %}
             <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="list-convictions-status">Not started</strong>
