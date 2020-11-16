@@ -84,7 +84,7 @@ router.get('/wca/social-work', function (req, res) {
 
 
    router.get('/wca/medication', function (req, res) {
-    res.render('corecomponents/Research/3Navigation/WCA-tasklist/Medication.html', { session: req.session.data });
+    res.render('corecomponents/Research/3Navigation/WCA-tasklist/medication.html', { session: req.session.data });
    });
     
    router.post('/wca/medication/save-and-continue', function (req, res) {
