@@ -69,6 +69,7 @@ TextArea configurable component
             {% else %}
             <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="list-convictions-status">Not started</strong>
             {% endif %}
+          </li>
           <li class="app-task-list__item">
             <span class="app-task-list__task-name">
               <a href="/wca/statement" aria-describedby="read-declaration-status">
@@ -96,14 +97,14 @@ TextArea configurable component
 
           <li class="app-task-list__item">
             <span class="app-task-list__task-name">
-              <a href="/wca/obervestatement" aria-describedby="read-declaration-status">
+              <a href="/wca/observestatement" aria-describedby="read-declaration-status">
                 Informal observations
               </a>
             </span>
             {% if data['observestatements'] and (data['observestatements'].length > 0) %}
             <strong class="govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
             {% else %}
-            <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="list-convictions-status">Optional</strong>
+            <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="list-convictions-status">Not started</strong>
             {% endif %}
           </li>
 

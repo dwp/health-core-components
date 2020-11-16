@@ -38,7 +38,7 @@
 
 
 
-  {% for statement in data.observestatements %}
+  {% for observestatement in data.observestatements %}
         <tr class="govuk-table__row">
 
             <td scope="row" class="govuk-table__cell">{{ observestatement }}</td>
@@ -68,9 +68,9 @@
 
     
     {{ govukButton({
-      id: "comment",
-      name: "comment",
-      value: "add-statement",
+      id: "observecomment",
+      name: "observecomment",
+      value: "observe-add-statement",
       text: "Continue"
     
 

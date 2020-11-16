@@ -1,99 +1,14 @@
-{% extends "layout-key-detail-bar-start1060.html" %}
+{% extends "layout-key-detail-bar-start1060-leftnav.html" %}
 
 {% block pageTitle %}
   Condition history tabs
 {% endblock %}
 
 
-{% block beforeContent %}
 
-<main id="content" role="main">
-  <div class="grid-row">
-    <div class="column-full">
+{% block mainContent %}
 
-      <nav class="navigation-secondary">
-        <ul>
-          <li>
-            <a href="#" class="active" aria-current="section">Assessment started: 14:00</a>
-          </li>
-          <li>
-            <a href="#">Abandon assessment</a>
-          </li>
-
-
-
-        </ul>
-      </nav>
-
-    </div>
-  </div>
-</main>
-{% endblock %}
-
-
-
-{% block content %}
-<main class="govuk-main-wrapper">
-<div class="govuk-grid-row">
-  <div class="govuk-grid-column-one-quarter">
-
-
-
-
-<div class="app-pane__body app-width-container">
-  <div class="app-pane__subnav">
-    <nav class="app-subnav">
-
-
-
-
-          <ul class="app-subnav__section">
-
-            <li class="app-subnav__section-item">
-              <a href="condition_history-tabs" class="app-subnav__link govuk-link govuk-link--no-visited-state">Condition history</a>&nbsp;&nbsp;&#10004;
-            </li>
-
-            <li class="app-subnav__section-item app-subnav__section-item--current">
-              <a href="social" class="app-subnav__link govuk-link govuk-link--no-visited-state">Social and work history</a>
-            </li>
-
-            <li class="app-subnav__section-item">
-              <a href="2-History-of-conditions" class="app-subnav__link govuk-link govuk-link--no-visited-state">Typical day</a>
-            </li>
-
-            <li class="app-subnav__section-item">
-              <a href="3-Current-medication" class="app-subnav__link govuk-link govuk-link--no-visited-state">Medication and side effects</a>
-            </li>
-
-            <li class="app-subnav__section-item">
-              <a href="5-Functional-history" class="app-subnav__link govuk-link govuk-link--no-visited-state">Physical assessment</a>
-            </li>
-
-            <li class="app-subnav__section-item">
-              <a href="4-Social-and-occ-history" class="app-subnav__link govuk-link govuk-link--no-visited-state">Mental health</a>
-            </li>
-
-            <li class="app-subnav__section-item">
-              <a href="6-Observations" class="app-subnav__link govuk-link govuk-link--no-visited-state">Add attendee (optional)</a>
-            </li>
-
-            <li class="app-subnav__section-item">
-              <a href="7-Mental-state" class="app-subnav__link govuk-link govuk-link--no-visited-state">Informal observations (optional)</a>
-            </li>
-
-
-
-</nav>
-
-  </div>
-
-
-</div>
-
-</div>
-
-
-  <div class="govuk-grid-column-two-thirds-nav">
+<form action="/wca/leftnav/left-social/save-and-continue" method="post" novalidate>
 
 
 
@@ -106,25 +21,21 @@
   <div id="more-detail-hint" class="govuk-hint">
     Provide all details about your social and work history
   </div>
-  <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="10
-" aria-describedby="more-detail-hint"></textarea>
+  <textarea class="govuk-textarea" 
+  id="more-detail" 
+  name="left-social" 
+  rows="10
+" aria-describedby="more-detail-hint">{{ session['left-social'] }}</textarea>
 </div>
 
 
 
 
 
+<button class="govuk-button" data-module="govuk-button">
+  Save and continue
+  </button>
 
-{{ govukButton({
-  id: "comment",
-  name: "comment",
-  value: "add-statement",
-  text: "Save and continue",
-  href: "typical-day"
-}) }}
 
-</div>
-
-</main>
-
+</form>
 {% endblock %}

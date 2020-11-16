@@ -364,7 +364,7 @@ app.post('/WCA_v1/TakingStatementsentry_saved', function (req, res, next){
 
 
 
-// research prototype 3 wca
+// research prototype 3 wca typical-day
 app.post('/corecomponents/Research/3Navigation/WCA-tasklist/Typical_day', function (req, res, next){
   console.log(req.session)
   if (typeof req.session.data.statements !== 'object'){
@@ -377,17 +377,14 @@ app.post('/corecomponents/Research/3Navigation/WCA-tasklist/Typical_day', functi
   next()
 })
 
-
-
-
-// research prototype 3 wca
+// research prototype 3 wca typical-day
 app.post('/wca/statement/save-and-continue', function (req, res, next){
 res.redirect('/wca/task-list');
 })
 
 
 
-// research prototype 3 wca
+// research prototype 3 wca informal-observe
 app.post('/corecomponents/Research/3Navigation/WCA-tasklist/informal-observation', function (req, res, next){
   console.log(req.session)
   if (typeof req.session.data.observestatements !== 'object'){
@@ -400,12 +397,60 @@ app.post('/corecomponents/Research/3Navigation/WCA-tasklist/informal-observation
   next()
 })
 
-
-
-// research prototype 3 wca/informal observe
+// research prototype 3 wca informal-observe
 app.post('/wca/observestatement/save-and-continue', function (req, res, next){
-  res.redirect('/wca/task-list');
-  })
+res.redirect('/wca/task-list');
+})
+
+
+
+
+
+// left nav statements
+
+// research prototype 3 wca leftnav typical day
+app.post('/corecomponents/Research/3Navigation/WCA-Leftnav/typical-day', function (req, res, next){
+  console.log(req.session)
+  if (typeof req.session.data.leftTypstatements !== 'object'){
+    req.session.data.leftTypstatements=[];
+  }
+  if (req.body.leftTypstatement){
+    req.session.data.leftTypstatements.push(req.body.leftTypstatement)
+  }
+  console.log(req.session)
+  next()
+})
+
+// research prototype 3 wca leftnav typical day
+app.post('/wca/leftnav/leftTyptatement/save-and-continue', function (req, res, next){
+res.redirect('/corecomponents/Research/3Navigation/WCA-tasklist/informal-observation');
+})
+
+
+// research prototype 3 wca leftnav informal observartions
+app.post('/corecomponents/Research/3Navigation/WCA-Leftnav/informal-observation', function (req, res, next){
+  console.log(req.session)
+  if (typeof req.session.data.leftobvstatements !== 'object'){
+    req.session.data.leftobvstatements=[];
+  }
+  if (req.body.leftobvstatement){
+    req.session.data.leftobvstatements.push(req.body.leftobvstatement)
+  }
+  console.log(req.session)
+  next()
+})
+
+// research prototype 3 wca leftnav informal observations
+app.post('/wca/leftnav/leftobvstatement/save-and-continue', function (req, res, next){
+res.redirect('/corecomponents/Research/3Navigation/WCA-Leftnav/paRequired');
+})
+
+
+
+
+
+
+
 
 
 

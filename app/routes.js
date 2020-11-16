@@ -95,18 +95,19 @@ router.get('/wca/social-work', function (req, res) {
    });
 
 
+   
 
 
-   router.get('/wca/obervestatement', function (req, res) {
-    res.render('corecomponents/Research/3Navigation/WCA-tasklist/informal-observation.html', { session: req.session.data });
-   });
-    
-   router.post('/wca/observestatement/save-and-continue', function (req, res) {
-    if (req.body['observestatement']) {
-    req.session.data['observestatement'] = req.body['observestatement']
-    }
-    res.redirect('/wca/task-list');
-   });
+   router.get('/wca/observestatement', function (req, res) {
+      res.render('corecomponents/Research/3Navigation/WCA-tasklist/informal-observation.html', { session: req.session.data });
+     });
+      
+     router.post('/wca/observestatement/save-and-continue', function (req, res) {
+      if (req.body['observestatement']) {
+      req.session.data['observestatement'] = req.body['observestatement']
+      }
+      res.redirect('/wca/task-list');
+     });
 
 
 
@@ -264,5 +265,81 @@ router.get('/wca/social-work', function (req, res) {
     }
     res.redirect('/pip/task-list');
    });
+
+
+
+
+
+
+// left nav
+ 
+  router.get('/wca/leftnav/left-condition-history', function (req, res) {
+   res.render('corecomponents/Research/3Navigation/WCA-Leftnav/condition_history.html', { session: req.session.data });
+  });
+   
+  router.post('/wca/leftnav/left-condition-history/save-and-continue', function (req, res) {
+   if (req.body['left-condition-history']) {
+   req.session.data['left-condition-history'] = req.body['left-condition-history']
+   }
+   res.redirect('/wca/leftnav/left-medication');
+  });
+   
+
+
+  router.get('/wca/leftnav/left-medication', function (req, res) {
+   res.render('corecomponents/Research/3Navigation/WCA-Leftnav/medication.html', { session: req.session.data });
+  });
+
+  router.post('/wca/leftnav/left-medication/save-and-continue', function (req, res) {
+   if (req.body['left-medication']) {
+   req.session.data['left-medication'] = req.body['left-medication']
+   }
+   res.redirect('/wca/leftnav/left-social');
+  });
+
+
+
+  router.get('/wca/leftnav/left-social', function (req, res) {
+   res.render('corecomponents/Research/3Navigation/WCA-Leftnav/social.html', { session: req.session.data });
+  });
+
+  router.post('/wca/leftnav/left-social/save-and-continue', function (req, res) {
+   if (req.body['left-social']) {
+   req.session.data['left-social'] = req.body['left-social']
+   }
+   res.redirect('/wca/leftnav/leftTypstatement');
+  });
+
+
+
+  router.get('/wca/leftnav/leftTypstatement', function (req, res) {
+   res.render('corecomponents/Research/3Navigation/WCA-Leftnav/typical-day.html', { session: req.session.data });
+  });
+
+  router.post('/wca/leftnav//leftTypstatement/save-and-continue', function (req, res) {
+   if (req.body['/leftTypstatement']) {
+   req.session.data['/leftTypstatement'] = req.body['/leftTypstatement']
+   }
+   res.redirect('/wca/leftnav/leftobvstatement');
+  });
+
+  
+  
+  router.get('/wca/leftnav/leftobvstatement', function (req, res) {
+   res.render('corecomponents/Research/3Navigation/WCA-Leftnav/informal-observations.html', { session: req.session.data });
+  });
+
+  router.post('/wca/leftnav//leftobvstatement/save-and-continue', function (req, res) {
+   if (req.body['/leftobvstatement']) {
+   req.session.data['/leftTypstatement'] = req.body['/leftobvstatement']
+   }
+   res.redirect('/wca/leftnav/PA');
+  });
+
+ 
+
+
+
+
 
 module.exports = router
