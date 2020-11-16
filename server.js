@@ -387,6 +387,28 @@ res.redirect('/wca/task-list');
 
 
 
+// research prototype 3 wca
+app.post('/corecomponents/Research/3Navigation/WCA-tasklist/informal-observation', function (req, res, next){
+  console.log(req.session)
+  if (typeof req.session.data.observestatements !== 'object'){
+    req.session.data.observestatements=[];
+  }
+  if (req.body.observestatement){
+    req.session.data.observestatements.push(req.body.observestatement)
+  }
+  console.log(req.session)
+  next()
+})
+
+
+
+// research prototype 3 wca/informal observe
+app.post('/wca/observestatement/save-and-continue', function (req, res, next){
+  res.redirect('/wca/task-list');
+  })
+
+
+
 
 // App folder routes get priority
 app.get(/^([^.]+)$/, function (req, res, next) {

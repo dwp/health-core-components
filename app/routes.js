@@ -95,6 +95,22 @@ router.get('/wca/social-work', function (req, res) {
    });
 
 
+
+
+   router.get('/wca/obervestatement', function (req, res) {
+    res.render('corecomponents/Research/3Navigation/WCA-tasklist/informal-observation.html', { session: req.session.data });
+   });
+    
+   router.post('/wca/observestatement/save-and-continue', function (req, res) {
+    if (req.body['observestatement']) {
+    req.session.data['observestatement'] = req.body['observestatement']
+    }
+    res.redirect('/wca/task-list');
+   });
+
+
+
+
    router.get('/wca/cardio', function (req, res) {
     res.render('corecomponents/Research/3Navigation/WCA-tasklist/PA/breathlessness.html', { session: req.session.data });
    });
