@@ -1,35 +1,18 @@
-
-{% extends "layout-key-detail-bar.html" %}
+{% extends "layout-key-detail-bar-start1060-leftnav.html" %}
 
 {% block pageTitle %}
-  TextArea component
+Additional attendee - WCA 
 {% endblock %}
 
 
-{% block beforeContent %}
+{% block mainContent %}
 
-<!-- <a href="#" class="govuk-back-link">Back</a> -->
-{% endblock %}
+<form action="/wca/leftnav/wca-left-attendee/save-and-continue" method="post" novalidate>
 
 
-{% block content %}
-
-    <div class="govuk-grid-row">
-      <div class="govuk-grid-column-three-quarters">
-  <!-- <span class="govuk-caption-l">Review</span> -->
   <h1 class="govuk-heading-l">Additional attendees</h1>
 
-
-
-  <form action="/wca/attendee/save-and-continue" method="post" novalidate>
-
-
-
-  
-
-
 <h2 class="govuk-heading-m">Attendee 1</h2>
-
 
   <form action="#" method="post" novalidate>
 
@@ -37,13 +20,13 @@
       <label class="govuk-label" for="width-20">
         Name
       </label>
-      <input class="govuk-input" id="attendee" name="attendee" type="text" value="{{ data['attendee'] }}"></div>
+      <input class="govuk-input" id="wca-left-attendee" name="wca-left-attendee" type="text" value="{{ data['wca-left-attendee'] }}"></div>
 
       <div class="govuk-form-group">
         <label class="govuk-label" for="width-20">
           Relationship to claimant
         </label>
-  <input class="govuk-input" id="relation" name="relation" type="text" value="{{ data['relation'] }}"></div>
+  <input class="govuk-input" id="left-relation" name="left-relation" type="text" value="{{ data['left-relation'] }}"></div>
 
 
 <hr>

@@ -28,8 +28,6 @@
 {% from "govuk/components/tag/macro.njk"              import govukTag %}
 {% from "govuk/components/textarea/macro.njk"         import govukTextarea %}
 {% from "govuk/components/warning-text/macro.njk"     import govukWarningText %}
-{% set containerClasses = "govuk-width-container1" %}
-
 
 {% block head %}
   {% include "includes/head.html" %}
@@ -42,7 +40,7 @@
 {% block header %}
 
 <header class="govuk-header " role="banner" data-module="govuk-header">
-  <div class="govuk-header__container govuk-width-container1">
+  <div class="govuk-header__container govuk-width-container">
     <div class="govuk-header__logo">
       <a href="/index" class="govuk-header__link govuk-header__link--homepage">
           <span class="govuk-header__logotype-text">
@@ -57,9 +55,6 @@
     </div> -->
   </div>
 </header>
-
-
-
 
 {% block assess_content %}
 
@@ -81,8 +76,8 @@
 
 .key-details-bar .key-details-bar__key-details {
   margin: 0 auto;
-  max-width: 1060px;
-  padding: 20px 30px 20px 30px;
+  max-width: 990px;
+  padding: 20px 30px 20px 60px;
   position: relative;
   font-family: "GDS Transport";
 }
@@ -190,11 +185,6 @@
   margin: 5px 0 0;
 }
 
-.key-details-bar .key-details-bar__key-details .key-details-bar__status1 {
-  float: right;
-  margin: 5px 0 0;
-}
-
 @media (max-width: 670px) {
   .key-details-bar .key-details-bar__key-details .key-details-bar__status {
     font-size: 14px;
@@ -218,15 +208,18 @@ max-width:1160px !important;}
       <dt class="key-details-bar__nino">QQ 12 34 56 X</dt>
 
       <dt class="govuk-visually-hidden">Claim status:</dt>
-      <dd class="key-details-bar__status">Assessment ready to start</dd>
+      <dd class="key-details-bar__status">Assessment in progress</dd>
     </div>
 
     <div class="key-details-bar__bottom-block">
       <dt>Date of birth:</dt>
       <dd>31 December 1999</dd>
 
+      {# <dt>Mobile:</dt>
+      <dd>07771 900 900</dd>
 
-
+      <dt>Language:</dt>
+      <dd>Welsh speaker</dd> #}
     </div>
   </dl>
 </section>
@@ -242,121 +235,33 @@ max-width:1160px !important;}
 
 
 
+
+
+
+
+
+
+
+
+
+
 {% set mainClasses = mainClasses | default("govuk-main-wrapper--auto-spacing") %}
 
 {% block beforeContent %}
 
-
-
-      <nav class="navigation-secondary">
-        <h4 class="govuk-heading-s">Work capacity assessment</h4>
-        <ul>
-          <li>
-            <a href="#">Abandon assessment</a>
-          </li>
-          <li>
-            <a href="#" class="active" aria-current="section"> Assessment started: 14:00</a>
-          </li>
-         
-          
-        </ul>
-      </nav>
-
-
-{% endblock %}
-
-
-
-{% block content %}
-<main class="govuk-main-wrapper">
-<div class="govuk-grid-row">
-  <div class="govuk-grid-column-one-quarter">
-
-
+<nav class="navigation-secondary">
+  <h4 class="govuk-heading-m"></h4>
+  <ul>
+    <li>
+      <a href="#">Abandon assessment</a>
+    </li>
+    <li>
+      <a href="#" class="active" aria-current="section"> Assessment started: 14:00</a>
+    </li>
    
-<div class="app-pane__body app-width-container">
-  <div class="app-pane__subnav">
-    <nav class="app-subnav">
-
-
-      
-
-          <ul class="app-subnav__section">
-            
-            <li class="app-subnav__section-item {% if request.url == '/wca/leftnav/wca-left-attendee' %}app-subnav__section-item--current{% endif %}">
-              <a href="/wca/leftnav/wca-left-attendee" class="app-subnav__link govuk-link govuk-link--no-visited-state">Additional attendee</a>
-              {% if session['wca-left-attendee'] %}
-              &nbsp;&nbsp;&#10004;
-              {% endif %}
-            </li>
-
-            <li class="app-subnav__section-item {% if request.url == '/wca/leftnav/left-condition-history' %}app-subnav__section-item--current{% endif %}">
-              <a href="/wca/leftnav/left-condition-history" class="app-subnav__link govuk-link govuk-link--no-visited-state">Condition history</a>
-              {% if session['left-condition-history'] %}
-              &nbsp;&nbsp;&#10004;
-              {% endif %}
-            </li>
-
-            <li class="app-subnav__section-item {% if request.url == '/wca/leftnav/left-medication' %}app-subnav__section-item--current{% endif %}">
-              <a href="/wca/leftnav/left-medication" class="app-subnav__link govuk-link govuk-link--no-visited-state">Medication and side effects</a>   
-              {% if session['left-medication'] %}
-              &nbsp;&nbsp;&#10004;
-              {% endif %}
-            </li>
-            
-            <li class="app-subnav__section-item {% if request.url == '/wca/leftnav/left-social' %}app-subnav__section-item--current{% endif %}">
-              <a href="/wca/leftnav/left-social" class="app-subnav__link govuk-link govuk-link--no-visited-state">Social and work history</a>   
-              {% if session['left-social'] %}
-              &nbsp;&nbsp;&#10004;
-              {% endif %}
-            </li>
-
-            <li class="app-subnav__section-item {% if request.url == '/wca/leftnav/leftTypstatement' %}app-subnav__section-item--current{% endif %}">
-              <a href="/wca/leftnav/leftTypstatement" class="app-subnav__link govuk-link govuk-link--no-visited-state">Typical day</a>   
-              {% if session['leftTypstatement'] %}
-              &nbsp;&nbsp;&#10004;
-              {% endif %}
-            </li>
-
-            <li class="app-subnav__section-item {% if request.url == '/wca/leftnav/leftobvstatement' %}app-subnav__section-item--current{% endif %}">
-              <a href="/wca/leftnav/leftobvstatement" class="app-subnav__link govuk-link govuk-link--no-visited-state">Informal observations</a>   
-              {% if session['leftobvstatement'] %}
-              &nbsp;&nbsp;&#10004;
-              {% endif %}
-            </li>
-            
-            </ul>
-
-           
-
-
-
-
-
+    
+  </ul>
 </nav>
-
-  </div>
-
-
-</div>
-
-</div>
-
-
-
-
-
-      <div class="govuk-grid-column-two-thirds-nav">
-
-        {% block mainContent %}
-
-{% endblock %}
-
-
-
-</div>
-</div>
-</main>
 
 {% endblock %}
 

@@ -273,8 +273,23 @@ router.get('/wca/social-work', function (req, res) {
 
 // left nav WCA
  
-  router.get('/wca/leftnav/left-condition-history', function (req, res) {
 
+router.get('/wca/leftnav/wca-left-attendee', function (req, res) {
+   res.render('corecomponents/Research/3Navigation/WCA-Leftnav/additionalAttendee.html', { 
+      session: req.session.data,
+      request: req
+   });
+  });
+   
+  router.post('/wca/leftnav/wca-left-attendee/save-and-continue', function (req, res) {
+   if (req.body['wca-left-attendee']) {
+   req.session.data['wca-left-attendee'] = req.body['wca-left-attendee']
+   }
+   res.redirect('/wca/leftnav/left-condition-history');
+  });
+
+
+  router.get('/wca/leftnav/left-condition-history', function (req, res) {
    res.render('corecomponents/Research/3Navigation/WCA-Leftnav/condition_history.html', { 
       session: req.session.data,
       request: req
