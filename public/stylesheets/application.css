@@ -121,8 +121,8 @@
     -moz-osx-font-smoothing: grayscale;
     font-weight: 400;
     font-size: 16px;
-    font-size: .875rem;
-    line-height: 1.14286;
+    font-size: 1rem;
+    line-height: 1.25;
 }
 
 

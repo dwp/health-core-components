@@ -1,0 +1,52 @@
+
+{% extends "layout-key-detail-bar-start1060-pip-leftnav.html" %}
+
+{% block pageTitle %}
+  TextArea component
+{% endblock %}
+
+
+{% block mainContent %}
+
+<form action="/pip/leftnav/pip-left-attendee/save-and-continue" method="post" novalidate>
+
+  <h1 class="govuk-heading-l">Additional attendees</h1>
+
+
+
+<h2 class="govuk-heading-m">Attendee 1</h2>
+
+
+  <form action="#" method="post" novalidate>
+
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="add-attendee">
+        Name of individual
+      </label>
+      <input class="govuk-input" id="pip-left-attendee" name="pip-left-attendee" type="text" value="{{ data['pip-left-attendee'] }}"> 
+    </div>
+
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="width-20">
+          Relationship to claimant
+        </label>
+  <input class="govuk-input" id="width-20" name="width-20" type="text"></div>
+
+
+<hr>
+<br>
+
+<br>
+
+
+<a href="AddAnother2_2components_add" class="govuk-link govuk-!-font-size-19">Add another attendee</a>
+<br>
+<br>
+<br>
+<button class="govuk-button" data-module="govuk-button">
+  Save and continue
+</button>
+
+
+
+{% endblock %}

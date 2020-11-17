@@ -1,299 +1,196 @@
-{% extends "layout-key-detail-bar-start1060.html" %}
+{% extends "layout-key-detail-bar-start1060-pip-leftnav.html" %}
 
 {% block pageTitle %}
   Question page
 {% endblock %}
 
-{% block beforeContent %}
-<main id="content" role="main">
-  <div class="grid-row">
-    <div class="column-full">
-
-      <nav class="navigation-secondary">
-        <ul>
-          <li>
-            <a href="#" class="active" aria-current="section">Assessment started: 14:00</a>
-          </li>
-          <li>
-            <a href="#">Abandon assessment</a>
-          </li>
 
 
+{% block mainContent %}
 
-        </ul>
-      </nav>
+<form action="/pip/leftnav/pip-left-variability/save-and-continue" method="post" novalidate>
 
+
+<a class="govuk-back-link" href="0-tasklist_Functional_notsaved">Back</a>
+<h1 class="govuk-heading-xl">Functional history</h1>
+
+
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="more-detail">
+      Variability
+      </label>
+   
+    <div id="more-detail-hint" class="govuk-hint">
+      Details
     </div>
-  </div>
-</main>
-{% endblock %}
-
-
-{% block content %}
-<main class="govuk-main-wrapper">
-<div class="govuk-grid-row">
-  <div class="govuk-grid-column-one-quarter">
-
-
-
-
-<div class="app-pane__body app-width-container">
-  <div class="app-pane__subnav">
-    <nav class="app-subnav">
-
-
-
-
-          <ul class="app-subnav__section">
-
-            <li class="app-subnav__section-item">
-              <a href="1-Consultation-start" class="app-subnav__link govuk-link govuk-link--no-visited-state">Start consultation</a>&nbsp;&nbsp;&#10004;
-            </li>
-
-            <li class="app-subnav__section-item">
-              <a href="2a-addatendee" class="app-subnav__link govuk-link govuk-link--no-visited-state">Additional attendees</a>&nbsp;&nbsp;&#10004;
-            </li>
-
-            <li class="app-subnav__section-item">
-              <a href="2-History-of-conditions" class="app-subnav__link govuk-link govuk-link--no-visited-state">History of conditions</a>&nbsp;&nbsp;&#10004;
-            </li>
-
-            <li class="app-subnav__section-item">
-              <a href="3-Current-medication" class="app-subnav__link govuk-link govuk-link--no-visited-state">Current medication and treatment</a>&nbsp;&nbsp;&#10004;
-            </li>
-
-            <li class="app-subnav__section-item app-subnav__section-item--current">
-              <a href="5-Functional-history" class="app-subnav__link govuk-link govuk-link--no-visited-state">Functional history</a>
-            </li>
-
-            <li class="app-subnav__section-item">
-              <a href="4-Social-and-occ-history" class="app-subnav__link govuk-link govuk-link--no-visited-state">Social and occupational history</a>
-            </li>
-
-            <li class="app-subnav__section-item">
-              <a href="6-Observations" class="app-subnav__link govuk-link govuk-link--no-visited-state">Observations</a>
-            </li>
-
-            <li class="app-subnav__section-item">
-              <a href="7-Mental-state" class="app-subnav__link govuk-link govuk-link--no-visited-state">Mental state</a>
-            </li>
-
-            <li class="app-subnav__section-item">
-              <a href="8-Musculoskeletal" class="app-subnav__link govuk-link govuk-link--no-visited-state">Musculoskeletal system</a>
-            </li>
-
-            <li class="app-subnav__section-item">
-              <a href="9-Other-systems" class="app-subnav__link govuk-link govuk-link--no-visited-state">Other relevant systems</a>
-            </li>
-
-            <li class="app-subnav__section-item">
-              <a href="10-Submit" class="app-subnav__link govuk-link govuk-link--no-visited-state">Confirm and submit</a>
-            </li>
-          </ul>
-
-
-
-
-
-
-
-
-
-
-</nav>
-
+    <textarea class="govuk-textarea" 
+    id="pip-left-variability" 
+    name="pip-left-variability" 
+    rows="5" 
+    aria-describedby="more-detail-hint">{{ session['pip-left-variability'] }}</textarea>
   </div>
 
 
 
-
-
-</div>
-
-</div>
-  <div class="govuk-grid-column-three-quarters">
-    <a class="govuk-back-link" href="3-Current-medication-notsaved">Back</a>
-    <h1 class="govuk-heading-xl">Functional history</h1>
-    <form class="form" action="4-Social-and-occ-history" method="post">
-
-      {% from "govuk/components/textarea/macro.njk" import govukTextarea %}
-
-      {{ govukTextarea({
-      name: "Variability",
-      id: "variability",
-      label: {
-      text: "Variability"
-      },
-      hint: {
-      text: ""
-      }
-      }) }}{% from "govuk/components/textarea/macro.njk" import govukTextarea %}
-
-    {{ govukTextarea({
-    name: "planning-and-following-journeys",
-    id: "planning and following journeys",
-    label: {
-    text: "Planning and following journeys"
-    },
-    hint: {
-    text: ""
-    }
-    }) }}
-    {% from "govuk/components/textarea/macro.njk" import govukTextarea %}
-
-    {{ govukTextarea({
-    name: "moving-around",
-    id: "moving around",
-    label: {
-    text: "Moving around"
-    },
-    hint: {
-    text: ""
-    }
-    }) }}
-    {% from "govuk/components/textarea/macro.njk" import govukTextarea %}
-
-    {{ govukTextarea({
-    name: "preparing-food",
-    id: "preparing food",
-    label: {
-    text: "Preparing food"
-    },
-    hint: {
-    text: ""
-    }
-    }) }}
-    {% from "govuk/components/textarea/macro.njk" import govukTextarea %}
-
-    {{ govukTextarea({
-    name: "taking-nutrition",
-    id: "taking nutrition",
-    label: {
-    text: "Taking nutrition"
-    },
-    hint: {
-    text: ""
-    }
-    }) }}
-    {% from "govuk/components/textarea/macro.njk" import govukTextarea %}
-
-    {{ govukTextarea({
-    name: "managing-therapy",
-    id: "managing therapy",
-    label: {
-    text: "Managing therapy or monitoring a health condition"
-    },
-    hint: {
-    text: ""
-    }
-    }) }}
-    {% from "govuk/components/textarea/macro.njk" import govukTextarea %}
-
-    {{ govukTextarea({
-    name: "washing-and-bathing",
-    id: "washing and bathing",
-    label: {
-    text: "Washing and bathing"
-    },
-    hint: {
-    text: ""
-    }
-    }) }}
-    {% from "govuk/components/textarea/macro.njk" import govukTextarea %}
-
-    {{ govukTextarea({
-    name: "managing-toilet-needs",
-    id: "managing toilet needs",
-    label: {
-    text: "Managing toilet needs or incontinence"
-    },
-    hint: {
-    text: ""
-    }
-    }) }}
-    {% from "govuk/components/textarea/macro.njk" import govukTextarea %}
-
-    {{ govukTextarea({
-    name: "dressing-and-undressing",
-    id: "dressing and undressing",
-    label: {
-    text: "Dressing and undressing"
-    },
-    hint: {
-    text: ""
-    }
-    }) }}
-    {% from "govuk/components/textarea/macro.njk" import govukTextarea %}
-
-    {{ govukTextarea({
-    name: "communicating-verbally",
-    id: "communicating verbally",
-    label: {
-    text: "Communicating verbally"
-    },
-    hint: {
-    text: ""
-    }
-    }) }}
-    {% from "govuk/components/textarea/macro.njk" import govukTextarea %}
-
-    {{ govukTextarea({
-    name: "reading-and-understanding-signs-symbols-and-words",
-    id: "reading and understanding signs symbols and words",
-    label: {
-    text: "Reading and understanding signs, symbols and words"
-    },
-    hint: {
-    text: ""
-    }
-    }) }}
-    {% from "govuk/components/textarea/macro.njk" import govukTextarea %}
-
-    {{ govukTextarea({
-    name: "engaging-with-others-f2f",
-    id: "engaging with others face to face",
-    label: {
-    text: "Engaging with others face to face"
-    },
-    hint: {
-    text: ""
-    }
-    }) }}
-    {% from "govuk/components/textarea/macro.njk" import govukTextarea %}
-
-    {{ govukTextarea({
-    name: "making-budgeting-decisions",
-    id: "making budgeting decisions",
-    label: {
-    text: "Making budgeting decisions"
-    },
-    hint: {
-    text: ""
-    }
-    }) }}
-    {% from "govuk/components/textarea/macro.njk" import govukTextarea %}
-
-    {{ govukTextarea({
-    name: "other-relevant-functional-history",
-    id: "other relevant functional history",
-    label: {
-    text: "Other relevant functional history"
-    },
-    hint: {
-    text: ""
-    }
-    }) }}
-    {% from "govuk/components/button/macro.njk" import govukButton %}
-
-    {{ govukButton({
-    text: "Save and continue"
-
-    }) }}
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="more-detail">
+      Planning and following journeys
+      </label>
+   
+    <textarea class="govuk-textarea" 
+    id="pip-planning" 
+    name="pip-planning" 
+    rows="5" 
+    aria-describedby="more-detail-hint">{{ data['pip-planning'] }}</textarea>
   </div>
 
-</div>
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="more-detail">
+      Moving around
+      </label>
+    <textarea class="govuk-textarea" 
+    id="pip-moving" 
+    name="pip-moving" 
+    rows="5" 
+    aria-describedby="more-detail-hint">{{ data['pip-moving'] }}</textarea>
+  </div>
 
-</main>
-</div>
+
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="more-detail">
+      Preparing food
+      </label>
+    <textarea class="govuk-textarea" 
+    id="pip-food" 
+    name="pip-food" 
+    rows="5" 
+    aria-describedby="more-detail-hint">{{ data['pip-food'] }}</textarea>
+  </div>
+
+
+
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="more-detail">
+      Taking nutrition
+      </label>
+    <textarea class="govuk-textarea" 
+    id="pip-nutrition" 
+    name="pip-nutrition" 
+    rows="5" 
+    aria-describedby="more-detail-hint">{{ data['pip-nutrition'] }}</textarea>
+  </div>
+
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="more-detail">
+      Managing therapy or monitoring a health condition
+      </label>
+    <textarea class="govuk-textarea" 
+    id="pip-managing" 
+    name="pip-managing" 
+    rows="5" 
+    aria-describedby="more-detail-hint">{{ data['pip-managing'] }}</textarea>
+  </div>
+
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="more-detail">
+      Washing and bathing
+      </label>
+    <textarea class="govuk-textarea" 
+    id="pip-washing" 
+    name="pip-washing" 
+    rows="5" 
+    aria-describedby="more-detail-hint">{{ data['pip-washing'] }}</textarea>
+  </div>
+
+
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="more-detail">
+      Managing toilet needs or incontinence
+      </label>
+    <textarea class="govuk-textarea" 
+    id="pip-toilet" 
+    name="pip-toilet" 
+    rows="5" 
+    aria-describedby="more-detail-hint">{{ data['pip-toilet'] }}</textarea>
+  </div>
+
+
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="more-detail">
+      Dressing and undressing
+      </label>
+    <textarea class="govuk-textarea" 
+    id="pip-dressing" 
+    name="pip-dressing" 
+    rows="5" 
+    aria-describedby="more-detail-hint">{{ data['pip-dressing'] }}</textarea>
+  </div>
+
+
+
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="more-detail">
+      Communicating verbally
+      </label>
+    <textarea class="govuk-textarea" 
+    id="pip-communicating" 
+    name="pip-communicating" 
+    rows="5" 
+    aria-describedby="more-detail-hint">{{ data['pip-communicating'] }}</textarea>
+  </div>
+
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="more-detail">
+      Reading and understanding signs, symbols and words
+      </label>
+    <textarea class="govuk-textarea" 
+    id="pip-reading" 
+    name="pip-reading" 
+    rows="5" 
+    aria-describedby="more-detail-hint">{{ data['pip-reading'] }}</textarea>
+  </div>
+
+
+
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="more-detail">
+      Engaging with others face to face
+      </label>
+    <textarea class="govuk-textarea" 
+    id="pip-face-to-face" 
+    name="pip-face-to-face" 
+    rows="5" 
+    aria-describedby="more-detail-hint">{{ data['pip-face-to-face'] }}</textarea>
+  </div>
+
+
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="more-detail">
+      Making budgeting decisions
+      </label>
+    <textarea class="govuk-textarea" 
+    id="pip-budget" 
+    name="pip-budget" 
+    rows="5" 
+    aria-describedby="more-detail-hint">{{ data['pip-budget'] }}</textarea>
+  </div>
+
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="more-detail">
+      Other relevant functional history
+      </label>
+    <textarea class="govuk-textarea" 
+    id="pip-other-function" 
+    name="pip-other-function" 
+    rows="5" 
+    aria-describedby="more-detail-hint">{{ data['pip-other-function'] }}</textarea>
+  </div>
+
+
+
+<button class="govuk-button" data-module="govuk-button">
+  Save and continue
+</button>
+
 
 {% endblock %}

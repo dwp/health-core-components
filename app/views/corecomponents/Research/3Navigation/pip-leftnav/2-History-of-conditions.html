@@ -1,163 +1,58 @@
-{% extends "layout-key-detail-bar-start1060.html" %}
+{% extends "layout-key-detail-bar-start1060-pip-leftnav.html" %}
 
 {% block pageTitle %}
   Question page
 {% endblock %}
 
-{% block beforeContent %}
-<main id="content" role="main">
-  <div class="grid-row">
-    <div class="column-full">
+{% block mainContent %}
 
-      <nav class="navigation-secondary">
-        <ul>
-          <li>
-            <a href="#" class="active" aria-current="section">Assessment started: 14:00</a>
-          </li>
-          <li>
-            <a href="#">Abandon assessment</a>
-          </li>
+<form action="/pip/leftnav/pip-left-condition/save-and-continue" method="post" novalidate>
+
+
+  <a class="govuk-back-link" href="/url/of/previous/page">Back</a>
+  <h1 class="govuk-heading-xl">History of conditions</h1>
+  <form class="form" action="/Archive/3-Current-medication" method="post">
+ 
 
 
 
-        </ul>
-      </nav>
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="add-attendee">
+      Primary condition
+    </label>
+    <input class="govuk-input" id="pip-left-condition" name="pip-left-condition" type="text" value="{{ data['pip-left-condition'] }}"> 
+  </div>
 
+  <div class="govuk-form-group">
+    <!-- <span class="govuk-caption-l">Section heading (Caption)</span> -->
+    <h1 class="govuk-label-wrapper">
+      <label class="govuk-label" for="more-detail">
+        History
+      </label>
+    </h1>
+    <div id="more-detail-hint" class="govuk-hint">
+      Including variability
     </div>
+    <textarea
+      class="govuk-textarea"
+      id="left-history"
+      name="left-history"
+      rows="10"
+      aria-describedby="more-detail-hint">{{ session['left-history'] }}</textarea>
   </div>
-</main>
-{% endblock %}
-
-
-{% block content %}
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet">
-
-<main class="govuk-main-wrapper">
-<div class="govuk-grid-row">
-  <div class="govuk-grid-column-one-quarter">
-
-    <div class="app-pane__body app-width-container">
-      <div class="app-pane__subnav">
-        <nav class="app-subnav">
-
-
-
-
-              <ul class="app-subnav__section">
-
-                <li class="app-subnav__section-item">
-                  <a href="1-Consultation-start" class="app-subnav__link govuk-link govuk-link--no-visited-state">Start consultation</a>&nbsp;&nbsp;&#10004;
-                </li>
-
-                <li class="app-subnav__section-item">
-                  <a href="2a-addatendee" class="app-subnav__link govuk-link govuk-link--no-visited-state">Additional attendees</a>&nbsp;&nbsp;&#10004;
-                </li>
-
-                <li class="app-subnav__section-item app-subnav__section-item--current">
-                  <a href="2-History-of-conditions" class="app-subnav__link govuk-link govuk-link--no-visited-state">History of conditions</a>
-                </li>
-
-                <li class="app-subnav__section-item">
-                  <a href="3-Current-medication" class="app-subnav__link govuk-link govuk-link--no-visited-state">Current medication and treatment</a>
-                </li>
-
-                <li class="app-subnav__section-item">
-                  <a href="5-Functional-history" class="app-subnav__link govuk-link govuk-link--no-visited-state">Functional history</a>
-                </li>
-
-                <li class="app-subnav__section-item">
-                  <a href="4-Social-and-occ-history" class="app-subnav__link govuk-link govuk-link--no-visited-state">Social and occupational history</a>
-                </li>
-
-                <li class="app-subnav__section-item">
-                  <a href="6-Observations" class="app-subnav__link govuk-link govuk-link--no-visited-state">Observations</a>
-                </li>
-
-                <li class="app-subnav__section-item">
-                  <a href="7-Mental-state" class="app-subnav__link govuk-link govuk-link--no-visited-state">Mental state</a>
-                </li>
-
-                <li class="app-subnav__section-item">
-                  <a href="8-Musculoskeletal" class="app-subnav__link govuk-link govuk-link--no-visited-state">Musculoskeletal system</a>
-                </li>
-
-                <li class="app-subnav__section-item">
-                  <a href="9-Other-systems" class="app-subnav__link govuk-link govuk-link--no-visited-state">Other relevant systems</a>
-                </li>
-
-                <li class="app-subnav__section-item">
-                  <a href="10-Submit" class="app-subnav__link govuk-link govuk-link--no-visited-state">Confirm and submit</a>
-                </li>
-              </ul>
-
-
-
-
-
-
-
-
-
-
-    </nav>
-
-      </div>
-
-
-
-
-  </div>
-  </div>
-
-
-  <div class="govuk-grid-column-three-quarters">
-    <a class="govuk-back-link" href="/url/of/previous/page">Back</a>
-    <h1 class="govuk-heading-xl">History of conditions</h1>
-    <form class="form" action="3-Current-medication" method="post">
-    {% from "govuk/components/input/macro.njk" import govukInput %}
-
-    <h2 class="govuk-heading-m">Condition 1</h2>
-
-    {{ govukInput({
-      label: {
-        text: "Condition"
-      },
-      id: "primary-condition",
-      name: "primary-condition"
-    }) }}
-    {% from "govuk/components/textarea/macro.njk" import govukTextarea %}
-
-    {{ govukTextarea({
-    name: "condition-history",
-    id: "condition-history",
-    label: {
-    text: "History"
-    },
-    hint: {
-    text: "Including variability"
-    }
-    }) }}
-    {% from "govuk/components/input/macro.njk" import govukInput %}
-
+ 
 
 {{ govukButton({
-  text: "Add another condition",
-  classes: "govuk-button--secondary"
+text: "Add another condition",
+classes: "govuk-button--secondary"
 }) }}
 <br>
 <br>
 
-{% from "govuk/components/button/macro.njk" import govukButton %}
 
-{{ govukButton({
-  text: "Save and continue"
-}) }}
-  </div>
+<button class="govuk-button" data-module="govuk-button">
+Save and continue
+</button>
 
-</div>
-
-</main>
-</div>
 
 {% endblock %}

@@ -271,7 +271,7 @@ router.get('/wca/social-work', function (req, res) {
 
 
 
-// left nav
+// left nav WCA
  
   router.get('/wca/leftnav/left-condition-history', function (req, res) {
    res.render('corecomponents/Research/3Navigation/WCA-Leftnav/condition_history.html', { session: req.session.data });
@@ -316,14 +316,14 @@ router.get('/wca/social-work', function (req, res) {
    res.render('corecomponents/Research/3Navigation/WCA-Leftnav/typical-day.html', { session: req.session.data });
   });
 
-  router.post('/wca/leftnav//leftTypstatement/save-and-continue', function (req, res) {
-   if (req.body['/leftTypstatement']) {
-   req.session.data['/leftTypstatement'] = req.body['/leftTypstatement']
+  router.post('/wca/leftnav/leftTypstatement/save-and-continue', function (req, res) {
+   if (req.body['leftTypstatement']) {
+   req.session.data['leftTypstatement'] = req.body['leftTypstatement']
    }
    res.redirect('/wca/leftnav/leftobvstatement');
   });
 
-  
+
   
   router.get('/wca/leftnav/leftobvstatement', function (req, res) {
    res.render('corecomponents/Research/3Navigation/WCA-Leftnav/informal-observations.html', { session: req.session.data });
@@ -338,8 +338,107 @@ router.get('/wca/social-work', function (req, res) {
 
  
 
+  // left nav PIP
+ 
+  router.get('/pip/leftnav/left-start', function (req, res) {
+   res.render('corecomponents/Research/3Navigation/pip-leftnav/1-Consultation-start.html', { session: req.session.data });
+  });
+   
+  router.post('/pip/leftnav/left-start/save-and-continue', function (req, res) {
+   if (req.body['left-start']) {
+   req.session.data['left-start'] = req.body['left-start']
+   }
+   res.redirect('/pip/leftnav/pip-left-attendee');
+  });
 
 
 
+  router.get('/pip/leftnav/pip-left-attendee', function (req, res) {
+   res.render('corecomponents/Research/3Navigation/pip-leftnav/1a-AddAttendee.html', { session: req.session.data });
+  });
+   
+  router.post('/pip/leftnav/pip-left-attendee/save-and-continue', function (req, res) {
+   if (req.body['pip-left-attendee']) {
+   req.session.data['pip-left-attendee'] = req.body['pip-left-attendee']
+   }
+   res.redirect('/pip/leftnav/pip-left-condition');
+  });
+
+
+
+  router.get('/pip/leftnav/pip-left-condition', function (req, res) {
+   res.render('corecomponents/Research/3Navigation/pip-leftnav/2-History-of-conditions.html', { session: req.session.data });
+  });
+   
+  router.post('/pip/leftnav/pip-left-condition/save-and-continue', function (req, res) {
+   if (req.body['pip-left-condition']) {
+   req.session.data['pip-left-condition'] = req.body['pip-left-condition']
+   }
+   res.redirect('/pip/leftnav/pip-left-medication');
+  });
+
+
+
+  router.get('/pip/leftnav/pip-left-medication', function (req, res) {
+   res.render('corecomponents/Research/3Navigation/pip-leftnav/3-Current-medication.html', { session: req.session.data });
+  });
+   
+  router.post('/pip/leftnav/pip-left-medication/save-and-continue', function (req, res) {
+   if (req.body['pip-left-medication']) {
+   req.session.data['pip-left-medication'] = req.body['pip-left-medication']
+   }
+   res.redirect('/pip/leftnav/pip-left-social-history');
+  });
+
+
+
+  router.get('/pip/leftnav/pip-left-social-history', function (req, res) {
+   res.render('corecomponents/Research/3Navigation/pip-leftnav/4-Social-and-occ-history.html', { session: req.session.data });
+  });
+   
+  router.post('/pip/leftnav/pip-left-social-history/save-and-continue', function (req, res) {
+   if (req.body['pip-left-social-history']) {
+   req.session.data['pip-left-social-history'] = req.body['pip-left-social-history']
+   }
+   res.redirect('/pip/leftnav/pip-left-variability');
+  });
+
+
+
+  router.get('/pip/leftnav/pip-left-variability', function (req, res) {
+   res.render('corecomponents/Research/3Navigation/pip-leftnav/5-Functional-history.html', { session: req.session.data });
+  });
+   
+  router.post('/pip/leftnav/pip-left-variability/save-and-continue', function (req, res) {
+   if (req.body['pip-left-variability']) {
+   req.session.data['pip-left-variability'] = req.body['pip-left-variability']
+   }
+   res.redirect('/pip/leftnav/pip-left-observations');
+  });
+
+
+  router.get('/pip/leftnav/pip-left-observations', function (req, res) {
+   res.render('corecomponents/Research/3Navigation/pip-leftnav/6-Observations.html', { session: req.session.data });
+  });
+   
+  router.post('/pip/leftnav/pip-left-observations/save-and-continue', function (req, res) {
+   if (req.body['pip-left-observations']) {
+   req.session.data['pip-left-observations'] = req.body['pip-left-observations']
+   }
+   res.redirect('/pip/leftnav/pip-left-consent');
+  });
+
+
+
+  router.get('/pip/leftnav/pip-left-consent', function (req, res) {
+   res.render('corecomponents/Research/3Navigation/pip-leftnav/6a-Consent.html', { session: req.session.data });
+  });
+   
+  router.post('/pip/leftnav/pip-left-consent/save-and-continue', function (req, res) {
+   if (req.body['pip-left-consent']) {
+   req.session.data['pip-left-consent'] = req.body['pip-left-consent']
+   }
+   res.redirect('/pip/leftnav/pip-left-mental-state');
+  });
 
 module.exports = router

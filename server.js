@@ -423,7 +423,7 @@ app.post('/corecomponents/Research/3Navigation/WCA-Leftnav/typical-day', functio
 
 // research prototype 3 wca leftnav typical day
 app.post('/wca/leftnav/leftTyptatement/save-and-continue', function (req, res, next){
-res.redirect('/corecomponents/Research/3Navigation/WCA-tasklist/informal-observation');
+res.redirect('/wca/leftnav/leftobvstatement');
 })
 
 
