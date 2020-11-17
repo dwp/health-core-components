@@ -6,10 +6,12 @@
 
 
 {% block mainContent %}
+
+<form action="/pip/leftnav/pip-mental-state/save-and-continue" method="post" novalidate>
+
+
 <a class="govuk-back-link" href="/url/of/previous/page">Back</a>
   
-<form action="/pip/mental-state/save-and-continue" method="post" novalidate>
-
 
   <div class="govuk-form-group">
     <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--l" for="more-detail">
@@ -20,10 +22,10 @@
       Details
     </div>
     <textarea class="govuk-textarea" 
-    id="mental-state" 
-    name="mental-state" 
+    id="pip-mental-state" 
+    name="pip-mental-state" 
     rows="5" 
-    aria-describedby="more-detail-hint">{{ session['mental-state'] }}</textarea>
+    aria-describedby="more-detail-hint">{{ session['pip-mental-state'] }}</textarea>
   </div>
   
 

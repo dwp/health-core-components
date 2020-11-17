@@ -285,35 +285,35 @@ max-width:1160px !important;}
 
           <ul class="app-subnav__section">
 
-            <li class="app-subnav__section-item app-subnav__section-item--current">
+            <li class="app-subnav__section-item {% if request.url == '/wca/leftnav/left-condition-history' %}app-subnav__section-item--current{% endif %}">
               <a href="/wca/leftnav/left-condition-history" class="app-subnav__link govuk-link govuk-link--no-visited-state">Condition history</a>
               {% if session['left-condition-history'] %}
               &nbsp;&nbsp;&#10004;
               {% endif %}
             </li>
 
-            <li class="app-subnav__section-item">
+            <li class="app-subnav__section-item {% if request.url == '/wca/leftnav/left-medication' %}app-subnav__section-item--current{% endif %}">
               <a href="/wca/leftnav/left-medication" class="app-subnav__link govuk-link govuk-link--no-visited-state">Medication and side effects</a>   
               {% if session['left-medication'] %}
               &nbsp;&nbsp;&#10004;
               {% endif %}
             </li>
             
-            <li class="app-subnav__section-item">
+            <li class="app-subnav__section-item {% if request.url == '/wca/leftnav/left-social' %}app-subnav__section-item--current{% endif %}">
               <a href="/wca/leftnav/left-social" class="app-subnav__link govuk-link govuk-link--no-visited-state">Social and work history</a>   
               {% if session['left-social'] %}
               &nbsp;&nbsp;&#10004;
               {% endif %}
             </li>
 
-            <li class="app-subnav__section-item">
+            <li class="app-subnav__section-item {% if request.url == '/wca/leftnav/leftTypstatement' %}app-subnav__section-item--current{% endif %}">
               <a href="/wca/leftnav/leftTypstatement" class="app-subnav__link govuk-link govuk-link--no-visited-state">Typical day</a>   
               {% if session['leftTypstatement'] %}
               &nbsp;&nbsp;&#10004;
               {% endif %}
             </li>
 
-            <li class="app-subnav__section-item">
+            <li class="app-subnav__section-item {% if request.url == '/wca/leftnav/leftobvstatement' %}app-subnav__section-item--current{% endif %}">
               <a href="/wca/leftnav/leftobvstatement" class="app-subnav__link govuk-link govuk-link--no-visited-state">Informal observations</a>   
               {% if session['leftobvstatement'] %}
               &nbsp;&nbsp;&#10004;

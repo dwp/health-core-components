@@ -6,12 +6,10 @@
 
 {% block mainContent %}
 
+<form action="/pip/leftnav/pip-left-other-systems/save-and-continue" method="post" novalidate>
+
+
 <a class="govuk-back-link" href="/url/of/previous/page">Back</a>
-
-<form action="/pip/other-systems/save-and-continue" method="post" novalidate>
-
-
-
 
   <div class="govuk-form-group">
     <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--l" for="more-detail">
@@ -22,10 +20,10 @@
       Details
     </div>
     <textarea class="govuk-textarea" 
-    id="other-systems" 
-    name="other-systems" 
+    id="pip-left-other-systems" 
+    name="pip-left-other-systems" 
     rows="5" 
-    aria-describedby="more-detail-hint">{{ session['other-systems'] }}</textarea>
+    aria-describedby="more-detail-hint">{{ session['pip-left-other-systems'] }}</textarea>
   </div>
   
 

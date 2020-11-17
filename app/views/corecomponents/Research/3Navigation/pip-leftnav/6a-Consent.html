@@ -6,7 +6,7 @@
 
 {% block mainContent %}
 
-<form action="/pip/leftnav/pip-left-consent/save-and-continue" method="post" novalidate>
+<form action="/corecomponents/Research/3Navigation/pip-leftnav/7-Mental-state" method="post" novalidate>
 
 
     <a class="govuk-back-link" href="/url/of/previous/page">Back</a>
@@ -16,8 +16,8 @@
 
 {{ govukRadios({
   classes: "govuk-radios--inline",
-  idPrefix: "consent",
-  name: "consent",
+  idPrefix: "pip-left-consent",
+  name: "pip-left-consent",
   fieldset: {
     legend: {
       text: "Has the claimant given their consent for any necessary examination?",
@@ -30,7 +30,7 @@
   },
   items: [
     {
-      value: "yes",
+      value: "Yes",
       text: "Yes"
     },
     {

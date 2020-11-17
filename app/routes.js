@@ -274,7 +274,11 @@ router.get('/wca/social-work', function (req, res) {
 // left nav WCA
  
   router.get('/wca/leftnav/left-condition-history', function (req, res) {
-   res.render('corecomponents/Research/3Navigation/WCA-Leftnav/condition_history.html', { session: req.session.data });
+
+   res.render('corecomponents/Research/3Navigation/WCA-Leftnav/condition_history.html', { 
+      session: req.session.data,
+      request: req
+   });
   });
    
   router.post('/wca/leftnav/left-condition-history/save-and-continue', function (req, res) {
@@ -287,8 +291,11 @@ router.get('/wca/social-work', function (req, res) {
 
 
   router.get('/wca/leftnav/left-medication', function (req, res) {
-   res.render('corecomponents/Research/3Navigation/WCA-Leftnav/medication.html', { session: req.session.data });
-  });
+   res.render('corecomponents/Research/3Navigation/WCA-Leftnav/medication.html', { 
+   session: req.session.data,
+   request: req
+});
+});
 
   router.post('/wca/leftnav/left-medication/save-and-continue', function (req, res) {
    if (req.body['left-medication']) {
@@ -300,8 +307,11 @@ router.get('/wca/social-work', function (req, res) {
 
 
   router.get('/wca/leftnav/left-social', function (req, res) {
-   res.render('corecomponents/Research/3Navigation/WCA-Leftnav/social.html', { session: req.session.data });
-  });
+   res.render('corecomponents/Research/3Navigation/WCA-Leftnav/social.html', { 
+      session: req.session.data,
+      request: req
+   });
+   });
 
   router.post('/wca/leftnav/left-social/save-and-continue', function (req, res) {
    if (req.body['left-social']) {
@@ -313,8 +323,11 @@ router.get('/wca/social-work', function (req, res) {
 
 
   router.get('/wca/leftnav/leftTypstatement', function (req, res) {
-   res.render('corecomponents/Research/3Navigation/WCA-Leftnav/typical-day.html', { session: req.session.data });
-  });
+   res.render('corecomponents/Research/3Navigation/WCA-Leftnav/typical-day.html', { 
+      session: req.session.data,
+      request: req
+   });
+   });
 
   router.post('/wca/leftnav/leftTypstatement/save-and-continue', function (req, res) {
    if (req.body['leftTypstatement']) {
@@ -326,8 +339,12 @@ router.get('/wca/social-work', function (req, res) {
 
   
   router.get('/wca/leftnav/leftobvstatement', function (req, res) {
-   res.render('corecomponents/Research/3Navigation/WCA-Leftnav/informal-observations.html', { session: req.session.data });
-  });
+   res.render('corecomponents/Research/3Navigation/WCA-Leftnav/informal-observations.html', { 
+      session: req.session.data,
+      request: req
+   });
+   });
+  
 
   router.post('/wca/leftnav//leftobvstatement/save-and-continue', function (req, res) {
    if (req.body['/leftobvstatement']) {
@@ -341,8 +358,12 @@ router.get('/wca/social-work', function (req, res) {
   // left nav PIP
  
   router.get('/pip/leftnav/left-start', function (req, res) {
-   res.render('corecomponents/Research/3Navigation/pip-leftnav/1-Consultation-start.html', { session: req.session.data });
-  });
+   res.render('corecomponents/Research/3Navigation/pip-leftnav/1-Consultation-start.html', { 
+      session: req.session.data,
+      request: req
+   });
+   });
+  
    
   router.post('/pip/leftnav/left-start/save-and-continue', function (req, res) {
    if (req.body['left-start']) {
@@ -354,8 +375,11 @@ router.get('/wca/social-work', function (req, res) {
 
 
   router.get('/pip/leftnav/pip-left-attendee', function (req, res) {
-   res.render('corecomponents/Research/3Navigation/pip-leftnav/1a-AddAttendee.html', { session: req.session.data });
-  });
+   res.render('corecomponents/Research/3Navigation/pip-leftnav/1a-AddAttendee.html', { 
+      session: req.session.data,
+      request: req
+   });
+   });
    
   router.post('/pip/leftnav/pip-left-attendee/save-and-continue', function (req, res) {
    if (req.body['pip-left-attendee']) {
@@ -367,8 +391,11 @@ router.get('/wca/social-work', function (req, res) {
 
 
   router.get('/pip/leftnav/pip-left-condition', function (req, res) {
-   res.render('corecomponents/Research/3Navigation/pip-leftnav/2-History-of-conditions.html', { session: req.session.data });
-  });
+   res.render('corecomponents/Research/3Navigation/pip-leftnav/2-History-of-conditions.html', { 
+      session: req.session.data,
+      request: req
+   });
+   });
    
   router.post('/pip/leftnav/pip-left-condition/save-and-continue', function (req, res) {
    if (req.body['pip-left-condition']) {
@@ -380,8 +407,11 @@ router.get('/wca/social-work', function (req, res) {
 
 
   router.get('/pip/leftnav/pip-left-medication', function (req, res) {
-   res.render('corecomponents/Research/3Navigation/pip-leftnav/3-Current-medication.html', { session: req.session.data });
-  });
+   res.render('corecomponents/Research/3Navigation/pip-leftnav/3-Current-medication.html', { 
+      session: req.session.data,
+      request: req
+   });
+   });
    
   router.post('/pip/leftnav/pip-left-medication/save-and-continue', function (req, res) {
    if (req.body['pip-left-medication']) {
@@ -393,8 +423,11 @@ router.get('/wca/social-work', function (req, res) {
 
 
   router.get('/pip/leftnav/pip-left-social-history', function (req, res) {
-   res.render('corecomponents/Research/3Navigation/pip-leftnav/4-Social-and-occ-history.html', { session: req.session.data });
-  });
+   res.render('corecomponents/Research/3Navigation/pip-leftnav/4-Social-and-occ-history.html', { 
+      session: req.session.data,
+      request: req
+   });
+   });
    
   router.post('/pip/leftnav/pip-left-social-history/save-and-continue', function (req, res) {
    if (req.body['pip-left-social-history']) {
@@ -406,8 +439,11 @@ router.get('/wca/social-work', function (req, res) {
 
 
   router.get('/pip/leftnav/pip-left-variability', function (req, res) {
-   res.render('corecomponents/Research/3Navigation/pip-leftnav/5-Functional-history.html', { session: req.session.data });
-  });
+   res.render('corecomponents/Research/3Navigation/pip-leftnav/5-Functional-history.html', { 
+      session: req.session.data,
+      request: req
+   });
+   });
    
   router.post('/pip/leftnav/pip-left-variability/save-and-continue', function (req, res) {
    if (req.body['pip-left-variability']) {
@@ -418,27 +454,81 @@ router.get('/wca/social-work', function (req, res) {
 
 
   router.get('/pip/leftnav/pip-left-observations', function (req, res) {
-   res.render('corecomponents/Research/3Navigation/pip-leftnav/6-Observations.html', { session: req.session.data });
-  });
+   res.render('corecomponents/Research/3Navigation/pip-leftnav/6-Observations.html', { 
+      session: req.session.data,
+      request: req
+   });
+   });
    
   router.post('/pip/leftnav/pip-left-observations/save-and-continue', function (req, res) {
    if (req.body['pip-left-observations']) {
    req.session.data['pip-left-observations'] = req.body['pip-left-observations']
    }
-   res.redirect('/pip/leftnav/pip-left-consent');
+   res.redirect('/pip/leftnav/pip-mental-state');
   });
 
 
 
-  router.get('/pip/leftnav/pip-left-consent', function (req, res) {
-   res.render('corecomponents/Research/3Navigation/pip-leftnav/6a-Consent.html', { session: req.session.data });
-  });
+  router.get('/pip/leftnav/pip-mental-state', function (req, res) {
+   res.render('corecomponents/Research/3Navigation/pip-leftnav/6a-Consent.html', { 
+      session: req.session.data,
+      request: req
+   });
+   });
    
-  router.post('/pip/leftnav/pip-left-consent/save-and-continue', function (req, res) {
-   if (req.body['pip-left-consent']) {
-   req.session.data['pip-left-consent'] = req.body['pip-left-consent']
+  router.post('/pip/leftnav/pip-mental-state/save-and-continue', function (req, res) {
+   if (req.body['pip-mental-state']) {
+   req.session.data['pip-mental-state'] = req.body['pip-mental-state']
    }
-   res.redirect('/pip/leftnav/pip-left-mental-state');
+   res.redirect('/pip/leftnav/pip-left-musculoskeletal');
   });
+
+
+  router.get('/pip/leftnav/pip-left-musculoskeletal', function (req, res) {
+   res.render('corecomponents/Research/3Navigation/pip-leftnav/8-Musculoskeletal.html', { 
+      session: req.session.data,
+      request: req
+   });
+   });
+   
+  router.post('/pip/leftnav/pip-left-musculoskeletal/save-and-continue', function (req, res) {
+   if (req.body['pip-left-musculoskeletal']) {
+   req.session.data['pip-left-musculoskeletal'] = req.body['pip-left-musculoskeletal']
+   }
+   res.redirect('/pip/leftnav/pip-left-other-systems');
+  });
+
+
+
+  router.get('/pip/leftnav/pip-left-other-systems', function (req, res) {
+   res.render('corecomponents/Research/3Navigation/pip-leftnav/9-Other-systems.html', { 
+      session: req.session.data,
+      request: req
+   });
+   });
+   
+  router.post('/pip/leftnav/pip-left-other-systems/save-and-continue', function (req, res) {
+   if (req.body['pip-left-other-systems']) {
+   req.session.data['pip-left-other-systems'] = req.body['pip-left-other-systems']
+   }
+   res.redirect('/pip/leftnav/pip-left-submit');
+  });
+
+
+  router.get('/pip/leftnav/pip-left-submit', function (req, res) {
+   res.render('corecomponents/Research/3Navigation/pip-leftnav/10-Submit.html', { 
+      session: req.session.data,
+      request: req
+   });
+   });
+   
+  router.post('/pip/leftnav/pip-left-submit/save-and-continue', function (req, res) {
+   if (req.body['pip-left-submit']) {
+   req.session.data['pip-left-submit'] = req.body['pip-left-submit']
+   }
+   res.redirect('pip-left-submit');
+  });
+
+
 
 module.exports = router

@@ -278,76 +278,81 @@ max-width:1160px !important;}
     <nav class="app-subnav">
       <ul class="app-subnav__section">
 
-        <li class="app-subnav__section-item app-subnav__section-item--current">
+        <li class="app-subnav__section-item {% if request.url == '/pip/leftnav/left-start' %}app-subnav__section-item--current{% endif %}">
         <a href="/pip/leftnav/left-start" class="app-subnav__link govuk-link govuk-link--no-visited-state">Start consultation</a>
         {% if session['left-start'] %}
         &nbsp;&nbsp;&#10004;
         {% endif %}
       </li>
       
-        <li class="app-subnav__section-item">
+      <li class="app-subnav__section-item {% if request.url == '/pip/leftnav/pip-left-attendee' %}app-subnav__section-item--current{% endif %}">
           <a href="/pip/leftnav/pip-left-attendee" class="app-subnav__link govuk-link govuk-link--no-visited-state">Additional attendees</a>
           {% if session['pip-left-attendee'] %}
           &nbsp;&nbsp;&#10004;
           {% endif %}
         </li>
 
-        <li class="app-subnav__section-item">
+        <li class="app-subnav__section-item {% if request.url == '/pip/leftnav/pip-left-condition' %}app-subnav__section-item--current{% endif %}">
           <a href="/pip/leftnav/pip-left-condition" class="app-subnav__link govuk-link govuk-link--no-visited-state">History of conditions</a>
           {% if session['pip-left-condition'] %}
           &nbsp;&nbsp;&#10004;
           {% endif %}
         </li>
 
-        <li class="app-subnav__section-item">
+        <li class="app-subnav__section-item {% if request.url == '/pip/leftnav/pip-left-medication' %}app-subnav__section-item--current{% endif %}">
           <a href="/pip/leftnav/pip-left-medication" class="app-subnav__link govuk-link govuk-link--no-visited-state">Current medication and treatment</a>
           {% if session['pip-left-medication'] %}
           &nbsp;&nbsp;&#10004;
           {% endif %}
         </li>
         
-        <li class="app-subnav__section-item">
+        <li class="app-subnav__section-item {% if request.url == '/pip/leftnav/pip-left-social-history' %}app-subnav__section-item--current{% endif %}">
           <a href="/pip/leftnav/pip-left-social-history" class="app-subnav__link govuk-link govuk-link--no-visited-state">Social and occupational history</a>
           {% if session['pip-left-social-history'] %}
           &nbsp;&nbsp;&#10004;
           {% endif %}
         </li>
 
-        <li class="app-subnav__section-item">
+        <li class="app-subnav__section-item {% if request.url == '/pip/leftnav/pip-left-variability' %}app-subnav__section-item--current{% endif %}">
           <a href="/pip/leftnav/pip-left-variability" class="app-subnav__link govuk-link govuk-link--no-visited-state">Functional history</a>
           {% if session['pip-left-variability'] %}
           &nbsp;&nbsp;&#10004;
           {% endif %}
         </li>
 
-        <li class="app-subnav__section-item">
+        <li class="app-subnav__section-item {% if request.url == '/pip/leftnav/pip-left-observations' %}app-subnav__section-item--current{% endif %}">
           <a href="/pip/leftnav/pip-left-observations" class="app-subnav__link govuk-link govuk-link--no-visited-state">Observations</a>
           {% if session['pip-left-observations'] %}
           &nbsp;&nbsp;&#10004;
           {% endif %}
         </li>
         
-
-
-
-
-        <li class="app-subnav__section-item">
-          <a href="/pip/leftnav/pip-left-consent" class="app-subnav__link govuk-link govuk-link--no-visited-state">Mental state</a>
-          {% if session['pip-left-consent'] %}
+        <li class="app-subnav__section-item {% if request.url == '/pip/leftnav/pip-mental-state' %}app-subnav__section-item--current{% endif %}">
+          <a href="/pip/leftnav/pip-mental-state" class="app-subnav__link govuk-link govuk-link--no-visited-state">Mental state</a>
+          {% if session['pip-mental-state'] %}
           &nbsp;&nbsp;&#10004;
           {% endif %}
         </li>
 
-        <li class="app-subnav__section-item">
-          <a href="8-Musculoskeletal" class="app-subnav__link govuk-link govuk-link--no-visited-state">Musculoskeletal system</a>
+        <li class="app-subnav__section-item {% if request.url == '/pip/leftnav/pip-left-musculoskeletal' %}app-subnav__section-item--current{% endif %}">
+          <a href="/pip/leftnav/pip-left-musculoskeletal" class="app-subnav__link govuk-link govuk-link--no-visited-state">Musculoskeletal system</a>
+          {% if session['pip-left-musculoskeletal'] %}
+          &nbsp;&nbsp;&#10004;
+          {% endif %}
         </li>
 
-        <li class="app-subnav__section-item">
-          <a href="9-Other-systems" class="app-subnav__link govuk-link govuk-link--no-visited-state">Other relevant systems</a>
+        <li class="app-subnav__section-item {% if request.url == '/pip/leftnav/pip-left-other-systems' %}app-subnav__section-item--current{% endif %}">
+          <a href="/pip/leftnav/pip-left-other-systems" class="app-subnav__link govuk-link govuk-link--no-visited-state">Other relevant systems</a>
+          {% if session['pip-left-other-systems'] %}
+          &nbsp;&nbsp;&#10004;
+          {% endif %}
         </li>
 
-        <li class="app-subnav__section-item">
-          <a href="10-Submit" class="app-subnav__link govuk-link govuk-link--no-visited-state">Confirm and submit</a>
+        <li class="app-subnav__section-item {% if request.url == '/pip/leftnav/pip-left-submit' %}app-subnav__section-item--current{% endif %}">
+          <a href="/pip/leftnav/pip-left-submit" class="app-subnav__link govuk-link govuk-link--no-visited-state">Confirm and submit</a>
+          {% if session['pip-left-submit'] %}
+          &nbsp;&nbsp;&#10004;
+          {% endif %}
         </li>
       </ul>
 
