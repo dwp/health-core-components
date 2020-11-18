@@ -139,7 +139,7 @@
 }
 .app-subnav__section-item {
     margin-bottom: 5px;
-    padding-top: 5px;
+    padding-top: 0px;
     padding-bottom: 15px;
 }
 
@@ -179,7 +179,7 @@
 }
 .app-subnav {
     margin-bottom: 100px;
-    padding: 30px 15px 0 0;
+    padding: 0px 15px 0 0;
     font-family: "GDS Transport",arial,sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
