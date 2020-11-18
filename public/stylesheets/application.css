@@ -9,6 +9,63 @@
 
 /* Tabs_dwp */
 
+/* .navigation-secondary ul:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.navigation-secondary {
+  border-bottom: 1px solid #bfc1c3;
+  margin: auto;
+  max-width: 1060px;
+}
+
+.navigation-secondary ul {
+  margin: 0 auto;
+  max-width: 1060px;
+  padding-left: 0;
+}
+
+.navigation-secondary li {
+  float: left;
+  list-style-type: none;
+}
+
+@media (max-width: 640px) {
+  .navigation-secondary li {
+    border: 0;
+    width: 100%;
+  }
+}
+
+.navigation-secondary a {
+  display: block;
+  padding: 15px;
+}
+
+.navigation-secondary a:visited {
+  color: #005ea5;
+}
+
+.navigation-secondary a:hover {
+  background-color: #f8f8f8;
+}
+
+.navigation-secondary .active {
+  box-shadow: inset 0px -5px 0px 0px #005ea5;
+  color: #0b0c0c;
+  text-decoration: none;
+}
+
+.navigation-secondary .active:visited {
+  color: #0b0c0c;
+} */
+
+
+
+/* Updated for assessment Tabs_dwp */
+
 .navigation-secondary ul:after {
   content: "";
   display: block;
@@ -73,7 +130,6 @@
 
 
 
-
 /* left nav */
 .app-subnav__section-item--current {
     margin-left: -14px;
@@ -123,7 +179,7 @@
 }
 .app-subnav {
     margin-bottom: 100px;
-    padding: 10px 15px 0 0;
+    padding: 30px 15px 0 0;
     font-family: "GDS Transport",arial,sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
