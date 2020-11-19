@@ -1,0 +1,141 @@
+{% extends "layout-key-detail-bar.html" %}
+
+{% block pageTitle %}
+  TextArea component
+{% endblock %}
+
+
+{% block beforeContent %}
+
+<!-- <a href="#" class="govuk-back-link">Back</a> -->
+{% endblock %}
+
+
+{% block content %}
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-three-quarters">
+
+        <div class="govuk-error-summary" aria-labelledby="error-summary-title" role="alert" tabindex="-1" data-module="govuk-error-summary">
+          <h2 class="govuk-error-summary__title" id="error-summary-title">
+            There is a problem
+          </h2>
+          <div class="govuk-error-summary__body">
+            <ul class="govuk-list govuk-error-summary__list">
+              <li>
+                <a href="#name-csd">There is a problem with our service, the last statement was not saved. Try adding again.</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+
+  <!-- <span class="govuk-caption-l">Review</span> -->
+  <h1 class="govuk-heading-l">Informal observations</h1>
+
+
+  <!-- <form action="/wca_v1/TakingStatementsentry-post" method="post" novalidate> -->
+
+  <!-- <ul class="govuk-list">
+    <li>
+    <a href="/form_components/TakingStatements" class="govuk-link">View all previous statements</a>
+    </li>
+  </ul> -->
+
+
+
+
+  <!-- <table class="govuk-table">
+
+    <thead class="govuk-table__head">
+      <tr class="govuk-table__row">
+        <th scope="col" class="govuk-table__header">Last statements added</th>
+        <th scope="col" class="govuk-table__header govuk-table__header--numeric">Actions</th>
+      </tr>
+    </thead>
+    <tbody class="govuk-table__body">
+
+
+      <tr class="govuk-table__row">
+        <td scope="row" class="govuk-table__cell">This is an informal observation comment 02</td>
+        <td class="govuk-table__cell govuk-table__cell--numeric"><a href="#" class="govuk-link">Edit</a>&nbsp&nbsp<a href="#" class="govuk-link">Remove</a></td>
+      </tr>
+
+
+    </tbody>
+
+  </table> -->
+
+
+
+
+
+    <table class="govuk-table">
+      <!-- <caption class="govuk-table__caption">Informal observations</caption> -->
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th scope="col" class="govuk-table__header">Statements added</th>
+          <th scope="col" class="govuk-table__header govuk-table__header--numeric">Actions</th>
+        </tr>
+      </thead>
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <td scope="row" class="govuk-table__cell">This is an informal observation comment 01 Lorem ipsum Lorem ipsum Lorem ipsum</td>
+          <td class="govuk-table__cell govuk-table__cell--numeric"><a href="#" class="govuk-link">Remove</a></td>
+        </tr>
+
+        <tr class="govuk-table__row">
+          <td scope="row" class="govuk-table__cell">This is an informal observation comment 02</td>
+          <td class="govuk-table__cell govuk-table__cell--numeric"><a href="#" class="govuk-link">Remove</a></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td scope="row" class="govuk-table__cell">This is an informal observation comment 03</td>
+          <td class="govuk-table__cell govuk-table__cell--numeric"><a href="#" class="govuk-link">Remove</a></td>
+        </tr>
+
+
+
+  {% for statement in data.statements %}
+        <tr class="govuk-table__row">
+
+            <td scope="row" class="govuk-table__cell">{{ statement }}</td>
+
+          <td class="govuk-table__cell govuk-table__cell--numeric"><a href="#" class="govuk-link">Remove</a></td>
+        </tr>
+  {% endfor %}
+
+      </tbody>
+
+    </table>
+
+  <form action="/form_components/TakingStatementsentry-v1" method="post" novalidate>
+
+    <div class="govuk-form-group">
+    
+      <form action="/wca_v1/TakingStatementsentry" method="post" novalidate>
+        <input class="govuk-input" id="statement2" name="statement" type="text" value="{{data['statement2']}}">
+</form>
+ </div>
+<button class="govuk-button govuk-button--secondary" data-module="govuk-button" ">  Add statement
+    </button>
+   
+    <br>
+    <br>
+
+
+
+
+    {{ govukButton({
+      id: "comment",
+      name: "comment",
+      value: "add-statement",
+      text: "Continue"
+    }) }}
+
+  </div>
+  </div>
+  </main>
+
+
+
+{% endblock %}
