@@ -1,0 +1,64 @@
+{% extends "layout-key-detail-bar-start1060-leftnav-pa.html" %}
+
+{% block pageTitle %}
+  TextArea component
+{% endblock %}
+
+
+
+{% block mainContent %}
+
+  
+
+        
+        <form action="/corecomponents/Research/3Navigation/WCA-tasklist/PA/lowerback" method="post" novalidate>
+
+
+
+        <span class="govuk-caption-l">Lower back and legs</span>
+
+
+
+        {{ govukCheckboxes({
+          idPrefix: "back-legs",
+          name: "back-legs",
+          fieldset: {
+            legend: {
+              text: "Select all of the areas you have assessed",
+              isPageHeading: true,
+              classes: "govuk-fieldset__legend--l"
+            }
+          },
+      
+          items: [
+            {
+              value: "lower-back",
+              text: "Lower back",
+              checked: checked("back-legs", "lower-back")
+            },
+            {
+              value: "left-leg",
+              text: "Left leg",
+              checked: checked("back-legs", "left-leg")
+            },
+            {
+              value: "right-leg",
+              text: "Right leg"
+            }
+          ]
+        }) }}
+
+
+
+
+
+      
+
+
+<button class="govuk-button" data-module="govuk-button">
+  Save and continue
+</button>
+
+
+
+{% endblock %}

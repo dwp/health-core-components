@@ -14,17 +14,28 @@ const router = express.Router()
 // });
  
 
-
-router.post("/corecomponents/Research/3Navigation/WCA-tasklist/Typical_day-post", function(req, res, next){
+// router.post("/corecomponents/Research/3Navigation/WCA-tasklist/Typical_day-post", function(req, res, next){
  
-    if(req.body['statement'] === 'statement2'){
-    res.redirect('/corecomponents/Research/3Navigation/WCA-tasklist/TaskList');
-    } else {
-    res.redirect('/corecomponents/Research/3Navigation/WCA-tasklist/Typical_day');
-    }
-    next();
-   });
+//     if(req.body['statement'] === 'statement2'){
+//     res.redirect('/corecomponents/Research/3Navigation/WCA-tasklist/TaskList');
+//     } else {
+//     res.redirect('/corecomponents/Research/3Navigation/WCA-tasklist/Typical_day');
+//     }
+//     next();
+//    });
 
+// configure our routes
+
+
+   // router.post("/WCA/physical-assessments/Cardiovascular-and-respiratory/cardiovascular/decision-post", function(req, res, next){
+ 
+   //    if(req.body['cardio'] === 'cardio-radial'){
+   //    res.redirect('radial-pulse');
+   //    } if(req.body['cardio'] === 'cardio-left-leg'){
+   //    res.redirect('LeftlegPerip');
+   //    }
+   //    next();
+   //   });
 
 
 
@@ -348,6 +359,22 @@ router.get('/wca/leftnav/wca-left-attendee', function (req, res) {
    if (req.body['leftTypstatement']) {
    req.session.data['leftTypstatement'] = req.body['leftTypstatement']
    }
+   res.redirect('/wca/leftnav/physicalassessment');
+  });
+
+
+
+  router.get('/wca/leftnav/physicalassessment', function (req, res) {
+   res.render('corecomponents/Research/3Navigation/WCA-Leftnav/paRequired.html', { 
+      session: req.session.data,
+      request: req
+   });
+   });
+
+  router.post('/wca/leftnav/physicalassessment/save-and-continue', function (req, res) {
+   if (req.body['physicalassessment']) {
+   req.session.data['physicalassessment'] = req.body['physicalassessment']
+   }
    res.redirect('/wca/leftnav/leftobvstatement');
   });
 
@@ -360,7 +387,6 @@ router.get('/wca/leftnav/wca-left-attendee', function (req, res) {
    });
    });
   
-
   router.post('/wca/leftnav//leftobvstatement/save-and-continue', function (req, res) {
    if (req.body['/leftobvstatement']) {
    req.session.data['/leftTypstatement'] = req.body['/leftobvstatement']
@@ -369,6 +395,69 @@ router.get('/wca/leftnav/wca-left-attendee', function (req, res) {
   });
 
  
+// left nav WCA -- PA
+
+
+router.get('/wca/leftnav/general-health', function (req, res) {
+   res.render('corecomponents/Research/3Navigation/WCA-Leftnav/physical-assessments/General-health/GeneralHealth.html', { 
+      session: req.session.data,
+      request: req
+   });
+   });
+  
+  router.post('/wca/leftnav/general-health/save-and-continue', function (req, res) {
+   if (req.body['general-health']) {
+   req.session.data['general-health'] = req.body['general-health']
+   }
+   res.redirect('/wca/leftnav/back-legs');
+  });
+
+
+  router.get('/wca/leftnav/back-legs', function (req, res) {
+   res.render('corecomponents/Research/3Navigation/WCA-Leftnav/physical-assessments/Lower-back-and-legs/lowerbacklegs.html', { 
+      session: req.session.data,
+      request: req
+   });
+   });
+  
+  router.post('/wca/leftnav/general-health/save-and-continue', function (req, res) {
+   if (req.body['back-legs']) {
+   req.session.data['back-legs'] = req.body['back-legs']
+   }
+   res.redirect('/wca/leftnav/neck-arms');
+  });
+
+
+  router.get('/wca/leftnav/neck-arms', function (req, res) {
+   res.render('corecomponents/Research/3Navigation/WCA-Leftnav/physical-assessments/Neck-and-arms/neckArms.html', { 
+      session: req.session.data,
+      request: req
+   });
+   });
+  
+  router.post('/wca/leftnav/neck-arms/save-and-continue', function (req, res) {
+   if (req.body['neck-arms']) {
+   req.session.data['neck-arms'] = req.body['neck-arms']
+   }
+   res.redirect('/wca/leftnav/cardiovascular');
+  });
+
+  router.get('/wca/leftnav/cardiovascular', function (req, res) {
+   res.render('corecomponents/Research/3Navigation/WCA-Leftnav/physical-assessments/Cardiovascular-and-respiratory/cardiovascular.html', { 
+      session: req.session.data,
+      request: req
+   });
+   });
+  
+  router.post('/wca/leftnav/cardiovascular/save-and-continue', function (req, res) {
+   if (req.body['cardiovascular']) {
+   req.session.data['cardiovascular'] = req.body['cardiovascular']
+   }
+   res.redirect('/wca/leftnav/cardiovascular');
+  });
+
+
+
 
   // left nav PIP
  

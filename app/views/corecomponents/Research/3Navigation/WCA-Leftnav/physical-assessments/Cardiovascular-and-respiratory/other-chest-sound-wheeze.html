@@ -1,0 +1,36 @@
+{% extends "layout-key-detail-bar-start1060-leftnav-pa.html" %}
+
+{% block pageTitle %}
+  TextArea component
+{% endblock %}
+
+
+
+{% block mainContent %}
+
+
+    <form action="/corecomponents/Research/3Navigation/WCA-tasklist/PA/breathlessness" method="post" novalidate>
+
+
+<h2 class="govuk-heading-l">Other: chest sound, wheeze</h2>
+
+
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="more-detail">
+              Other findings
+            </label>
+          <!-- <div id="more-detail-hint" class="govuk-hint">
+            Do not include personal or financial information, like your National Insurance number or credit card details.
+          </div> -->
+          <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint"></textarea>
+        </div>
+
+
+<button class="govuk-button" data-module="govuk-button">
+  Save and continue
+</button>
+
+</div>
+</div>
+
+{% endblock %}
