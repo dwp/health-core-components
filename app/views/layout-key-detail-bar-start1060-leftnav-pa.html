@@ -282,7 +282,7 @@ max-width:1160px !important;}
 
           <ul class="app-subnav__section">  <h4 class="govuk-heading-s">Physical assessment</h4>
             
-            <li class="app-subnav__section-item {% if request.url == '/wca/leftnav/general-health' or request.url == '/corecomponents/Research/3Navigation/WCA-Leftnav/Attendee-question' %}app-subnav__section-item--current{% endif %}">
+            <li class="app-subnav__section-item {% if request.url == '/wca/leftnav/general-health' or request.url == '#' %}app-subnav__section-item--current{% endif %}">
               <a href="/wca/leftnav/general-health" class="app-subnav__link govuk-link govuk-link--no-visited-state">General health</a>
               {% if session['general-health'] %}
               &nbsp;&nbsp;&#10004;

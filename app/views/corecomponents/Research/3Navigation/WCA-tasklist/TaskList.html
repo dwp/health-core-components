@@ -40,31 +40,7 @@ TextArea configurable component
             <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="list-convictions-status">Not started</strong>
             {% endif %}
           </li>
-          <li class="app-task-list__item">
-            <span class="app-task-list__task-name">
-              <a href="/wca/social-work" 
-              aria-describedby="read-declaration-status">
-                Social and work history
-              </a>
-            </span>
-            {% if session['social-work'] %}
-            <strong class="govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
-            {% else %}
-            <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="list-convictions-status">Not started</strong>
-            {% endif %}
-          </li>
-          <li class="app-task-list__item">
-            <span class="app-task-list__task-name">
-              <a href="/wca/statement" aria-describedby="read-declaration-status">
-                Typical day
-              </a>
-            </span>
-            {% if data['statements'] and (data['statements'].length > 0) %}
-            <strong class="govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
-            {% else %}
-            <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="list-convictions-status">Not started</strong>
-            {% endif %}
-          </li>
+
           <li class="app-task-list__item">
             <span class="app-task-list__task-name">
               <a href="/wca/medication" aria-describedby="read-declaration-status">
@@ -77,6 +53,34 @@ TextArea configurable component
             <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="list-convictions-status">Not started</strong>
             {% endif %}
           </li>
+
+          <li class="app-task-list__item">
+            <span class="app-task-list__task-name">
+              <a href="/wca/socialstatement" 
+              aria-describedby="read-declaration-status">
+                Social and work history
+              </a>
+            </span>
+            {% if data['socialstatements'] and (data['socialstatements'].length > 0) %}
+            <strong class="govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
+            {% else %}
+            <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="list-convictions-status">Not started</strong>
+            {% endif %}
+          </li>
+          
+          <li class="app-task-list__item">
+            <span class="app-task-list__task-name">
+              <a href="/wca/statement" aria-describedby="read-declaration-status">
+                Typical day
+              </a>
+            </span>
+            {% if data['statements'] and (data['statements'].length > 0) %}
+            <strong class="govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
+            {% else %}
+            <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="list-convictions-status">Not started</strong>
+            {% endif %}
+          </li>
+        
 
           <li class="app-task-list__item">
             <span class="app-task-list__task-name">

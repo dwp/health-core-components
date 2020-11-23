@@ -7,35 +7,61 @@
 
 
 {% block mainContent %}
+<h1 class="govuk-heading-l">Social and work history</h1>
 
-<form action="/wca/leftnav/left-social/save-and-continue" method="post" novalidate>
+
+<form action="/corecomponents/Research/3Navigation/WCA-Leftnav/social" method="post" novalidate>
+
+
+
+<table class="govuk-table">
+  <!-- <caption class="govuk-table__caption">Informal observations</caption> -->
+  <thead class="govuk-table__head">
+    <tr class="govuk-table__row">
+      <th scope="col" class="govuk-table__header">Statements added</th>
+      <th scope="col" class="govuk-table__header govuk-table__header--numeric">Actions</th>
+    </tr>
+  </thead>
+  <tbody class="govuk-table__body">
+  
+
+{% for leftsocstatement in data.leftsocstatements %}
+    <tr class="govuk-table__row">
+
+        <td scope="row" class="govuk-table__cell">{{ leftsocstatement }}</td>
+
+      <td class="govuk-table__cell govuk-table__cell--numeric"><a href="#" class="govuk-link">Remove</a></td>
+    </tr>
+{% endfor %}
+
+  </tbody>
+
+</table>
 
 
 
 <div class="govuk-form-group">
-  <!-- <span class="govuk-caption-l">Section heading (Caption)</span> -->
-  <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--l" for="more-detail">
-    Social and work history
-    </label>
-  </h1>
-  <div id="more-detail-hint" class="govuk-hint">
-    Provide all details about your social and work history
-  </div>
-  <textarea class="govuk-textarea" 
-  id="more-detail" 
-  name="left-social" 
-  rows="10
-" aria-describedby="more-detail-hint">{{ session['left-social'] }}</textarea>
+
+    <input class="govuk-input" id="leftsocstatement2" name="leftsocstatement" type="text" value="{{data['leftsocstatement2']}}">
+</form>
+<br>
+<br>
+<button class="govuk-button govuk-button--secondary" data-module="govuk-button" ">  Save statement
+</button>
 </div>
 
 
+<form action="/wca/leftnav/leftsocstatement/save-and-continue" method="post" novalidate>
 
 
+{{ govukButton({
+  id: "comment",
+  name: "comment",
+  value: "add-statement",
+  text: "Continue"
 
-<button class="govuk-button" data-module="govuk-button">
-  Save and continue
-  </button>
 
-
+}) }}
 </form>
+
 {% endblock %}

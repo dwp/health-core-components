@@ -404,9 +404,48 @@ res.redirect('/wca/task-list');
 
 
 
+// research prototype 3 wca social
+app.post('/corecomponents/Research/3Navigation/WCA-tasklist/SocialWorkHistory', function (req, res, next){
+  console.log(req.session)
+  if (typeof req.session.data.socialstatements !== 'object'){
+    req.session.data.socialstatements=[];
+  }
+  if (req.body.socialstatement){
+    req.session.data.socialstatements.push(req.body.socialstatement)
+  }
+  console.log(req.session)
+  next()
+})
+
+// research prototype 3 wca social
+app.post('/wca/socialstatement/save-and-continue', function (req, res, next){
+res.redirect('/wca/task-list');
+})
+
+
 
 
 // left nav statements
+
+// research prototype 3 wca leftnav social
+app.post('/corecomponents/Research/3Navigation/WCA-Leftnav/social', function (req, res, next){
+  console.log(req.session)
+  if (typeof req.session.data.leftsocstatements !== 'object'){
+    req.session.data.leftsocstatements=[];
+  }
+  if (req.body.leftsocstatement){
+    req.session.data.leftsocstatements.push(req.body.leftsocstatement)
+  }
+  console.log(req.session)
+  next()
+})
+
+// research prototype 3 wca leftnav social
+app.post('/wca/leftnav/leftsocstatement/save-and-continue', function (req, res, next){
+res.redirect('/corecomponents/Research/3Navigation/WCA-Leftnav/typical-day');
+})
+
+
 
 // research prototype 3 wca leftnav typical day
 app.post('/corecomponents/Research/3Navigation/WCA-Leftnav/typical-day', function (req, res, next){

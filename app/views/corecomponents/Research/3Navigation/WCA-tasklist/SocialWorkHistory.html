@@ -8,74 +8,71 @@
 
 
 {% block content %}
-<div class="govuk-grid-row">
-  <div class="govuk-grid-column-three-quarters">
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-three-quarters">
+<!-- <span class="govuk-caption-l">Review</span> -->
+<h1 class="govuk-heading-l">Social and work history</h1>
 
 
-    <form action="/wca/social-work/save-and-continue" method="post" novalidate>
+  <form action="/corecomponents/Research/3Navigation/WCA-tasklist/SocialWorkHistory" method="post" novalidate>
 
-<div class="govuk-form-group">
 
-  <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--l" for="more-detail">
-    Social and work history
-    </label>
-  </h1>
-  <div id="more-detail-hint" class="govuk-hint">
-    Provide all details of your and work history
+
+    <table class="govuk-table">
+      <!-- <caption class="govuk-table__caption">Informal observations</caption> -->
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th scope="col" class="govuk-table__header">Statements added</th>
+          <th scope="col" class="govuk-table__header govuk-table__header--numeric">Actions</th>
+        </tr>
+      </thead>
+      <tbody class="govuk-table__body">
+      
+
+
+
+  {% for socialstatement in data.socialstatements %}
+        <tr class="govuk-table__row">
+
+            <td scope="row" class="govuk-table__cell">{{ socialstatement }}</td>
+
+          <td class="govuk-table__cell govuk-table__cell--numeric"><a href="#" class="govuk-link">Remove</a></td>
+        </tr>
+  {% endfor %}
+
+      </tbody>
+
+    </table>
+
+
+
+    <div class="govuk-form-group">
+    
+        <input class="govuk-input" id="socialstatement2" name="socialstatement" type="text" value="{{data['socialstatement2']}}">
+</form>
+<br>
+<br>
+<button class="govuk-button govuk-button--secondary" data-module="govuk-button">  Save statement
+    </button>
+    </div>
+
+
+    <form action="/wca/socialstatement/save-and-continue" method="post" novalidate>
+
+    
+    {{ govukButton({
+      id: "socialcomment",
+      name: "socialcomment",
+      value: "social-add-statement",
+      text: "Continue"
+    
+
+    }) }}
+</form>
   </div>
-  <textarea class="govuk-textarea" 
-  id="social-work" 
-  name="social-work" 
-  rows="10
-" aria-describedby="more-detail-hint">{{ session['social-work'] }}</textarea>
-</div>
-
-
-<!-- statement component -->
-
-<!-- <h1 class="govuk-heading-l">Social and work history</h1>
-
-  <table class="govuk-table">
-
-    <thead class="govuk-table__head">
-      <tr class="govuk-table__row">
-        <th scope="col" class="govuk-table__header">Statements added</th>
-
-      </tr>
-    </thead>
-    <tbody class="govuk-table__body">
-
-{% for statement in data.statements %}
-      <tr class="govuk-table__row">
-
-          <td scope="row" class="govuk-table__cell">{{ statement }}</td>
-</tr>
-{% endfor %}
-
-    </tbody>
-
-  </table>
-
-<form action="/wca/social-work/save-and-continue" method="post" novalidate>
-
-  <div class="govuk-form-group">
-    <form action="/wca_v1/TakingStatementsentry" method="post" novalidate>
-    <textarea class="govuk-textarea" id="statement2" name="statement" rows="3" aria-describedby="more-detail-hint" value="{{data['statement2']}}"></textarea>
-    <button class="govuk-button govuk-button--secondary" data-module="govuk-button" ">  Add statement
-    </button></form>
-
-
-
-  </div> -->
-
-
-  
-<button class="govuk-button" data-module="govuk-button">
-  Save and continue
-</button>
-
-</div>
-</div>
+  </div>
+  </main>
 
 
 

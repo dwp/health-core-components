@@ -70,16 +70,30 @@ router.post('/wca/condition-history/save-and-continue', function (req, res) {
 });
  
 
-router.get('/wca/social-work', function (req, res) {
-    res.render('corecomponents/Research/3Navigation/WCA-tasklist/SocialWorkHistory.html', { session: req.session.data });
-   });
-    
-   router.post('/wca/social-work/save-and-continue', function (req, res) {
-    if (req.body['social-work']) {
-    req.session.data['social-work'] = req.body['social-work']
-    }
-    res.redirect('/wca/task-list');
-   });
+router.get('/wca/medication', function (req, res) {
+   res.render('corecomponents/Research/3Navigation/WCA-tasklist/medication.html', { session: req.session.data });
+  });
+   
+  router.post('/wca/medication/save-and-continue', function (req, res) {
+   if (req.body['medication']) {
+   req.session.data['medication'] = req.body['medication']
+   }
+   res.redirect('/wca/task-list');
+  });
+
+
+
+
+router.get('/wca/socialstatement', function (req, res) {
+   res.render('corecomponents/Research/3Navigation/WCA-tasklist/SocialWorkHistory.html', { session: req.session.data });
+  });
+   
+  router.post('/wca/socialstatement/save-and-continue', function (req, res) {
+   if (req.body['socialstatement']) {
+   req.session.data['socialstatement'] = req.body['socialstatement']
+   }
+   res.redirect('/wca/task-list');
+  });
     
 
    router.get('/wca/statement', function (req, res) {
@@ -93,20 +107,6 @@ router.get('/wca/social-work', function (req, res) {
     res.redirect('/wca/task-list');
    });
 
-
-   router.get('/wca/medication', function (req, res) {
-    res.render('corecomponents/Research/3Navigation/WCA-tasklist/medication.html', { session: req.session.data });
-   });
-    
-   router.post('/wca/medication/save-and-continue', function (req, res) {
-    if (req.body['medication']) {
-    req.session.data['medication'] = req.body['medication']
-    }
-    res.redirect('/wca/task-list');
-   });
-
-
-   
 
 
    router.get('/wca/observestatement', function (req, res) {
@@ -327,21 +327,21 @@ router.get('/wca/leftnav/wca-left-attendee', function (req, res) {
    if (req.body['left-medication']) {
    req.session.data['left-medication'] = req.body['left-medication']
    }
-   res.redirect('/wca/leftnav/left-social');
+   res.redirect('/wca/leftnav/leftsocstatement');
   });
 
 
 
-  router.get('/wca/leftnav/left-social', function (req, res) {
+  router.get('/wca/leftnav/leftsocstatement', function (req, res) {
    res.render('corecomponents/Research/3Navigation/WCA-Leftnav/social.html', { 
       session: req.session.data,
       request: req
    });
    });
 
-  router.post('/wca/leftnav/left-social/save-and-continue', function (req, res) {
-   if (req.body['left-social']) {
-   req.session.data['left-social'] = req.body['left-social']
+  router.post('/wca/leftnav/leftsocstatement/save-and-continue', function (req, res) {
+   if (req.body['leftsocstatement']) {
+   req.session.data['leftsocstatement'] = req.body['leftsocstatement']
    }
    res.redirect('/wca/leftnav/leftTypstatement');
   });
