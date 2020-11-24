@@ -7,7 +7,7 @@
 
 {% block beforeContent %}
 
-<!-- <a href="#" class="govuk-back-link">Back</a> -->
+<a href="javascript:window.history.back();" class="govuk-back-link">Back</a>
 {% endblock %}
 
 
@@ -16,9 +16,9 @@
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-three-quarters">
 
-    <form action="/corecomponents/Research/3Navigation/WCA-tasklist/PA/breathlessness" method="post" novalidate>
-
-
+   
+      <form action="/wca/leg-back/save-and-continue" method="post" novalidate>
+        
         <span class="govuk-caption-l">Lower back and legs</span>
         <h2 class="govuk-heading-l">Right leg</h2>
 
@@ -140,7 +140,7 @@
 
 
       <div class="govuk-checkboxes__item">
-        <input class="govuk-checkboxes__input" id="citizenship-conditional-2" name="citizen" type="checkbox" value="phone" data-aria-controls="conditional-Knee-flexion-conditional">
+        <input class="govuk-checkboxes__input" id="leg-back" name="leg-back" type="checkbox" value="{ data['leg-back'] }}" data-aria-controls="conditional-Knee-flexion-conditional">
         <label class="govuk-label govuk-checkboxes__label" for="citizenship-conditional-2">
           Knee flexion
         </label>
@@ -155,7 +155,7 @@
 </legend>
 <div class="govuk-radios">
   <div class="govuk-radios__item">
-    <input class="govuk-radios__input" id="where-do-you-live" name="where-do-you-live" type="radio" value="england">
+    <input class="govuk-radios__input" id="flexion1" name="flexion" type="radio" value="{ data['flexion1'] }}">
     <label class="govuk-label govuk-radios__label" for="where-do-you-live">
       Normal (120°)
     </label>

@@ -91,7 +91,7 @@ router.get('/wca/medication', function (req, res) {
   });
 
 router.get('/wca/medication-progress/save-and-continue', function (req, res) {
-   req.session.data['medication-progress'] = {inProgress: true};
+   req.session.data['condition-history-progress'] = {inProgress: true};
    res.redirect('/wca/task-list');
   });
 
@@ -137,7 +137,7 @@ router.get('/wca/socialstatement', function (req, res) {
 
 
    router.get('/wca/cardio', function (req, res) {
-    res.render('corecomponents/Research/3Navigation/WCA-tasklist/PA/breathlessness.html', { session: req.session.data });
+    res.render('corecomponents/Research/3Navigation/WCA-tasklist/physical-assessments/Cardiovascular-and-respiratory/cardiovascular.html', { session: req.session.data });
    });
     
    router.post('/wca/cardio/save-and-continue', function (req, res) {
@@ -149,7 +149,7 @@ router.get('/wca/socialstatement', function (req, res) {
 
 
    router.get('/wca/general-health', function (req, res) {
-    res.render('corecomponents/Research/3Navigation/WCA-tasklist/PA/GeneralHealth.html', { session: req.session.data });
+    res.render('corecomponents/Research/3Navigation/WCA-tasklist/physical-assessments/General-health/GeneralHealth.html', { session: req.session.data });
    });
     
    router.post('/wca/general-health/save-and-continue', function (req, res) {
@@ -160,8 +160,31 @@ router.get('/wca/socialstatement', function (req, res) {
    });
    
 
+   router.get('/wca/leg-back', function (req, res) {
+      res.render('corecomponents/Research/3Navigation/WCA-tasklist/physical-assessments/Lower-back-and-legs/lowerbacklegs.html', { session: req.session.data });
+     });
+      
+     router.post('/wca/leg-back/save-and-continue', function (req, res) {
+      if (req.body['leg-back']) {
+      req.session.data['leg-back'] = req.body['leg-back']
+      }
+      res.redirect('/wca/task-list');
+     });
+     
 
 
+     router.get('/wca/neck-arms', function (req, res) {
+      res.render('corecomponents/Research/3Navigation/WCA-tasklist/physical-assessments/Neck-and-arms/neckArms.html', { session: req.session.data });
+     });
+      
+     router.post('/wca/neck-arms/save-and-continue', function (req, res) {
+      if (req.body['neck-arms']) {
+      req.session.data['neck-arms'] = req.body['neck-arms']
+      }
+      res.redirect('/wca/task-list');
+     });
+
+     
 
 
 // PIP Tasklist

@@ -7,7 +7,7 @@
 
 {% block beforeContent %}
 
-<!-- <a href="#" class="govuk-back-link">Back</a> -->
+<a href="javascript:window.history.back();" class="govuk-back-link">Back</a>
 {% endblock %}
 
 
@@ -16,8 +16,7 @@
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-three-quarters">
 
-    <form action="/corecomponents/Research/3Navigation/WCA-tasklist/PA/breathlessness" method="post" novalidate>
-
+      <form action="/wca/cardio/save-and-continue" method="post" novalidate>
 
 
         <span class="govuk-caption-l">Cardiovascular and respiratory</span>
@@ -48,7 +47,11 @@
                   <label class="govuk-label" for="contact-by-email">
                     State your findings
                   </label>
-                  <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint"></textarea>
+                  <textarea class="govuk-textarea" 
+                  id="cardio" 
+                  name="cardio" 
+                  rows="5" 
+                  aria-describedby="more-detail-hint">{{ session['cardio'] }}</textarea>
                 </div>
               </div>
 
