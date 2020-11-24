@@ -4,7 +4,10 @@
   Question page
 {% endblock %}
 
+{% block beforeContent %}
 
+<a href="javascript:window.history.back();" class="govuk-back-link">Back</a>
+{% endblock %}
 
 {% block content %}
 
@@ -20,7 +23,7 @@
     <form action="/pip/medication-name/save-and-continue" method="post" novalidate>
 
 
-    <a class="govuk-back-link" href="/url/of/previous/page">Back</a>
+
     <h1 class="govuk-heading-l">Current medication and treatment</h1>
    
     <div class="govuk-form-group">
@@ -48,7 +51,12 @@
         <input class="govuk-input" id="frequency" name="frequency" type="text" value="{{ data['frequency'] }}"> 
       </div>
 
-
+      <hr>
+      <br>
+      {{ govukButton({
+        text: "Add another medication",
+        classes: "govuk-button--secondary"
+      }) }}
 
 <br>
 <br>

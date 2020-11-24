@@ -4,7 +4,10 @@
   Question page
 {% endblock %}
 
+{% block beforeContent %}
 
+<a href="javascript:window.history.back();" class="govuk-back-link">Back</a>
+{% endblock %}
 
 
 {% block content %}
@@ -18,7 +21,7 @@
     <form action="/pip/history-condition/save-and-continue" method="post" novalidate>
 
 
-    <a class="govuk-back-link" href="/url/of/previous/page">Back</a>
+   
     <h1 class="govuk-heading-xl">History of conditions</h1>
     <form class="form" action="/Archive/3-Current-medication" method="post">
    
@@ -50,6 +53,35 @@
         aria-describedby="more-detail-hint">{{ session['history'] }}</textarea>
     </div>
    
+    <hr>
+<br>
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="add-attendee">
+        Secondary condition
+      </label>
+      <input class="govuk-input" id="history-condition" name="history-condition" type="text" value="{{ data['history-condition'] }}"> 
+    </div>
+
+    <div class="govuk-form-group">
+      <!-- <span class="govuk-caption-l">Section heading (Caption)</span> -->
+      <h1 class="govuk-label-wrapper">
+        <label class="govuk-label" for="more-detail">
+          History
+        </label>
+      </h1>
+      <div id="more-detail-hint" class="govuk-hint">
+        Including variability
+      </div>
+      <textarea
+        class="govuk-textarea"
+        id="history"
+        name="history"
+        rows="10"
+        aria-describedby="more-detail-hint">{{ session['history'] }}</textarea>
+    </div>
+
+<hr>
+<br>
 
 {{ govukButton({
   text: "Add another condition",

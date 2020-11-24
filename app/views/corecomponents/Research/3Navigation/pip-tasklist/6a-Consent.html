@@ -4,7 +4,10 @@
   Question page
 {% endblock %}
 
+{% block beforeContent %}
 
+<a href="javascript:window.history.back();" class="govuk-back-link">Back</a>
+{% endblock %}
 
 {% block content %}
 
@@ -12,7 +15,7 @@
 <div class="govuk-grid-row">
 
   <div class="govuk-grid-column-three-quarters">
-    <a class="govuk-back-link" href="/url/of/previous/page">Back</a>
+ 
     <h1 class="govuk-heading-xl">Consent</h1>
     <form class="form" action="/corecomponents/Research/2Navigation/pip-tasklist/7-Mental-state" method="post">
       {% from "govuk/components/radios/macro.njk" import govukRadios %}

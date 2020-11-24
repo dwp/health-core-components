@@ -4,7 +4,10 @@
   Question page
 {% endblock %}
 
+{% block beforeContent %}
 
+<a href="javascript:window.history.back();" class="govuk-back-link">Back</a>
+{% endblock %}
 
 {% block content %}
 
@@ -15,7 +18,6 @@
     <form action="/pip/evidence-considered/save-and-continue" method="post" novalidate>
 
 
-    <a class="govuk-back-link" href="/url/of/previous/page">Back</a>
     <h1 class="govuk-heading-xl">Start the consultation</h1>
   
 

@@ -5,7 +5,10 @@
   TextArea component
 {% endblock %}
 
+{% block beforeContent %}
 
+<a href="javascript:window.history.back();" class="govuk-back-link">Back</a>
+{% endblock %}
 
 
 {% block content %}
@@ -36,9 +39,9 @@
         <label class="govuk-label" for="width-20">
           Relationship to claimant
         </label>
-  <input class="govuk-input" id="width-20" name="width-20" type="text"></div>
+  <input class="govuk-input" id="relation1" name="relation1" type="text" value="{{ data['relation1'] }}"></div>
 
-
+  
 <hr>
 <br>
 
