@@ -36,6 +36,8 @@ TextArea configurable component
             </span>
             {% if session['condition-history'] %}
             <strong class="govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
+            {% elif session['condition-history-progress'].inProgress %}
+            <strong class="govuk-tag govuk-tag--blue app-task-list__tag" id="contact-details-status">In progress</strong>
             {% else %}
             <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="list-convictions-status">Not started</strong>
             {% endif %}
@@ -49,6 +51,8 @@ TextArea configurable component
             </span>
             {% if session['medication'] %}
             <strong class="govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
+            {% elif session['medication-progress'].inProgress %}
+            <strong class="govuk-tag govuk-tag--blue app-task-list__tag" id="contact-details-status">In progress</strong>
             {% else %}
             <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="list-convictions-status">Not started</strong>
             {% endif %}

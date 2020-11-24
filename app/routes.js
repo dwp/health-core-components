@@ -58,6 +58,8 @@ router.get('/wca/attendee', function (req, res) {
    });
 
 
+
+
 router.get('/wca/condition-history', function (req, res) {
  res.render('corecomponents/Research/3Navigation/WCA-tasklist/Conditionhistory.html', { session: req.session.data });
 });
@@ -68,7 +70,14 @@ router.post('/wca/condition-history/save-and-continue', function (req, res) {
  }
  res.redirect('/wca/task-list');
 });
+
+router.get('/wca/condition-history-progress/save-and-continue', function (req, res) {
+   req.session.data['condition-history-progress'] = {inProgress: true};
+   res.redirect('/wca/task-list');
+  });
  
+
+
 
 router.get('/wca/medication', function (req, res) {
    res.render('corecomponents/Research/3Navigation/WCA-tasklist/medication.html', { session: req.session.data });
@@ -81,6 +90,10 @@ router.get('/wca/medication', function (req, res) {
    res.redirect('/wca/task-list');
   });
 
+router.get('/wca/medication-progress/save-and-continue', function (req, res) {
+   req.session.data['medication-progress'] = {inProgress: true};
+   res.redirect('/wca/task-list');
+  });
 
 
 
