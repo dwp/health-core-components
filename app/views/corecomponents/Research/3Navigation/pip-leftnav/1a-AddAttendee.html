@@ -11,7 +11,7 @@
 <form action="/pip/leftnav/pip-left-attendee/save-and-continue" method="post" novalidate>
 
 
-  <a class="govuk-back-link" href="/url/of/previous/page">Back</a>
+  <a href="javascript:window.history.back();" class="govuk-back-link">Back</a>
   <h1 class="govuk-heading-l">Additional attendees</h1>
 
 
@@ -32,7 +32,7 @@
         <label class="govuk-label" for="width-20">
           Relationship to claimant
         </label>
-  <input class="govuk-input" id="width-20" name="width-20" type="text"></div>
+  <input class="govuk-input" id="pip-left-attendee1" name="pip-left-attendee1" type="text" value="{{ data['pip-left-attendee1'] }}"></div>
 
 
 <hr>
