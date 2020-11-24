@@ -1,0 +1,73 @@
+{% extends "layout-key-detail-bar-start1060-leftnav.html" %}
+
+{% block pageTitle %}
+  Left nav WCA
+{% endblock %}
+
+
+
+{% block mainContent %}
+
+<form action="/corecomponents/Research/3Navigation/WCA-Leftnav/physical-assessments/General-health/GeneralHealth" method="post" novalidate>
+
+
+
+  <div class="govuk-form-group">
+    <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
+      <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+        <h1 class="govuk-fieldset__heading">
+          Select areas for physical assessment
+        </h1>
+      </legend>
+      <div id="waste-hint" class="govuk-hint">
+    Select all that apply.
+  </div>
+      <div class="govuk-checkboxes">
+        <div class="govuk-checkboxes__item">
+          <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+          <label class="govuk-label govuk-checkboxes__label" for="waste">
+            General health
+          </label>
+        </div>
+        <div class="govuk-checkboxes__item">
+          <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" value="mines">
+          <label class="govuk-label govuk-checkboxes__label" for="waste-2">
+           Lower back and legs
+          </label>
+        </div>
+        <div class="govuk-checkboxes__item">
+          <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+          <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+            Neck and arms
+          </label>
+        </div>
+        <div class="govuk-checkboxes__item">
+          <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+          <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+            Cardiovascular and respiratory
+          </label>
+        </div>
+        <div class="govuk-checkboxes__item">
+          <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+          <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+            Vision, speech and hearing
+          </label>
+        </div>
+        <div class="govuk-checkboxes__item">
+          <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+          <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+            Central nervous system
+          </label>
+        </div>
+      </div>
+    </fieldset>
+  </div>
+
+
+<button class="govuk-button" data-module="govuk-button">
+  Save and continue
+</button>
+
+
+
+{% endblock %}

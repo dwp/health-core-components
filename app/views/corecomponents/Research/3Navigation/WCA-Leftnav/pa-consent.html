@@ -1,23 +1,14 @@
-{% extends "layout-key-detail-bar.html" %}
+{% extends "layout-key-detail-bar-start1060-leftnav.html" %}
 
 {% block pageTitle %}
-  TextArea component
+  Left nav WCA
 {% endblock %}
 
 
-{% block beforeContent %}
 
-<!-- <a href="#" class="govuk-back-link">Back</a> -->
-{% endblock %}
+{% block mainContent %}
 
-
-{% block content %}
-
-    <div class="govuk-grid-row">
-      <div class="govuk-grid-column-three-quarters">
-  <!-- <span class="govuk-caption-l">Eating and drinking</span> -->
-
-  <form action="/corecomponents/Research/2Navigation/tasklist/PA/caption/cardiovascular" method="post" novalidate>
+  <form action="/corecomponents/Research/3Navigation/WCA-Leftnav/pa-checklist" method="post" novalidate>
 
 
 
@@ -28,12 +19,10 @@
         Has consent been given for this physical assessment
         </h1>
       </legend>
-      <!-- <div id="sign-in-hint" class="govuk-hint">
-        Select which one best matches
-      </div> -->
+    
        <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
          <div class="govuk-radios__item">
-           <input class="govuk-radios__input" id="sign-in-2" name="sign-in" type="radio" value="govuk-verify" aria-describedby="sign-in-2-item-hint">
+           <input class="govuk-radios__input" id="sign-in-2" name="how-contacted" type="radio" value="govuk-verify" aria-describedby="sign-in-2-item-hint">
            <label class="govuk-label govuk-radios__label" for="sign-in-2">
              Yes
            </label>
@@ -55,24 +44,14 @@
 
   </div>
 
-
       </div>
     </fieldset>
-
-
-
   </div>
 
-
-
-
-</div>
-</div>
 
 <button class="govuk-button" data-module="govuk-button">
   Save and continue
 </button>
-
 
 
 {% endblock %}
