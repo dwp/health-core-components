@@ -1,0 +1,47 @@
+{% extends "corecomponents/Research/3Navigation/pip-leftnav-non-forced/layout-key-detail-bar-start1060-pip-leftnav-nonforced.html" %}
+
+{% block pageTitle %}
+  Left nav PIP
+{% endblock %}
+
+
+{% block mainContent %}
+
+
+    <form action="/pip/leftnav/left-start-non/save-and-continue" method="post" novalidate>
+
+
+      <a href="javascript:window.history.back();" class="govuk-back-link">Back</a>
+      <h1 class="govuk-heading-xl">Start the consultation</h1>
+    
+  
+      <div class="govuk-form-group">
+        <!-- <span class="govuk-caption-l">Section heading (Caption)</span> -->
+        <h1 class="govuk-label-wrapper">
+          <label class="govuk-label" for="more-detail">
+            Evidence considered
+          </label>
+        </h1>
+        <div id="more-detail-hint" class="govuk-hint">
+          List all evidence considered alongside the consultation findings
+        </div>
+        <textarea
+          class="govuk-textarea"
+          id="left-start-non"
+          name="left-start-non"
+          rows="10"
+          aria-describedby="more-detail-hint">{{ session['left-start-non'] }}</textarea>
+      </div>
+  
+  
+  {{ govukWarningText({
+    text: "By starting this consultation I am confirming that the nature and purpose of the consultation has been explained to the claimant and/or their representative.",
+    iconFallbackText: "Warning"
+  }) }}
+  {% from "govuk/components/button/macro.njk" import govukButton %}
+  
+  <button class="govuk-button" data-module="govuk-button">
+    Save
+  </button>
+
+{% endblock %}

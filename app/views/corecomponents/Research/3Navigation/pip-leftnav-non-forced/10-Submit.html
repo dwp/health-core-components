@@ -1,0 +1,27 @@
+{% extends "corecomponents/Research/3Navigation/pip-leftnav-non-forced/layout-key-detail-bar-start1060-pip-leftnav-nonforced.html" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+{% block mainContent %}
+
+
+<form action="/pip/leftnav/pip-left-submit/save-and-continue" method="post" novalidate>
+
+
+  <a href="javascript:window.history.back();" class="govuk-back-link">Back</a>
+    <h1 class="govuk-heading-xl">Confirm and submit</h1>
+    
+    <p>By submitting this assessment I am confirming that I have completed all
+necessary consultations with the claimant, and have given them the
+opportunity to add any further detail.</p>
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+{{ govukButton({
+text: "Submit"
+
+}) }}
+
+
+{% endblock %}

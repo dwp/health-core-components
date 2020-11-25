@@ -1,0 +1,76 @@
+{% extends "corecomponents/Research/3Navigation/pip-leftnav-non-forced/layout-key-detail-bar-start1060-pip-leftnav-nonforced.html" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+
+{% block mainContent %}
+
+<form action="/pip/leftnav/pip-left-medication-non/save-and-continue" method="post" novalidate>
+
+
+  <a href="javascript:window.history.back();" class="govuk-back-link">Back</a>
+  <h1 class="govuk-heading-l">Current medication and treatment</h1>
+ 
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="add-attendee">
+      Name of medication
+    </label>
+    <input class="govuk-input" id="pip-left-medication-non" name="pip-left-medication-non" type="text" value="{{ data['pip-left-medication-non'] }}"> 
+  </div>
+
+
+
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="add-attendee">
+        Dose
+      </label>
+      <input class="govuk-input" id="Dose" name="Dose" type="text" value="{{ data['Dose'] }}"> 
+    </div>
+  
+
+
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="add-attendee">
+        Frequency
+      </label>
+      <input class="govuk-input" id="frequency" name="frequency" type="text" value="{{ data['frequency'] }}"> 
+    </div>
+
+    <hr>
+    <br>
+    {{ govukButton({
+      text: "Add another medication",
+      classes: "govuk-button--secondary"
+    }) }}
+
+<br>
+<br>
+
+<div class="govuk-form-group">
+<!-- <span class="govuk-caption-l">Section heading (Caption)</span> -->
+<h1 class="govuk-label-wrapper">
+  <label class="govuk-label" for="more-detail">
+    History
+  </label>
+</h1>
+<div id="more-detail-hint" class="govuk-hint">
+  Including side effects, compliance and efficacy
+</div>
+<textarea
+  class="govuk-textarea"
+  id="pip-left-medication"
+  name="pip-left-medication"
+  rows="10"
+  aria-describedby="more-detail-hint">{{ session['pip-left-medication'] }}</textarea>
+</div>
+
+
+
+<button class="govuk-button" data-module="govuk-button">
+Save
+</button>
+
+
+{% endblock %}
