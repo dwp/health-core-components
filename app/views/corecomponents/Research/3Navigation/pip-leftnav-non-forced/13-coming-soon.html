@@ -1,0 +1,75 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="/url/of/previous/page">Back</a>
+  <br>
+  <br>
+  <h6 class="govuk-heading-s">Assessment ended - Duration: 48 minutes</h6>
+  <a href="#" class="govuk-body govuk-!-font-size-19">Abandon assessment</a>
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-one-quarter">
+
+<br>
+<br>
+<a href="1-consultation-start" class="govuk-body govuk-!-font-size-19">Start consultation</a>
+<br>
+<br>
+<a href="2-History-of-conditions" class="govuk-body govuk-!-font-size-19">History of conditions</a>
+<br>
+<br>
+<a href="3-Current-medication" class="govuk-body govuk-!-font-size-19">Current medication and treatment</a>
+<br>
+<br>
+<a href="4-Social-and-occ-history" class="govuk-body govuk-!-font-size-19">Social and occupational history</a>
+<br>
+<br>
+<a href="5-Functional-history" class="govuk-body govuk-!-font-size-19">Functional history</a>
+<br>
+<br>
+<a href="6-Observations" class="govuk-body govuk-!-font-size-19">Observations</a>
+<br>
+<br>
+<a href="7-Mental-state" class="govuk-body govuk-!-font-size-19">Mental state</a>
+<br>
+<br>
+<a href="8-Musculoskeletal" class="govuk-body govuk-!-font-size-19">Musculoskeletal system</a>
+<br>
+<br>
+<a href="9-Other-systems" class="govuk-body govuk-!-font-size-19">Other relevant systems</a>
+<br>
+<br>
+<a href="10-Submit" class="govuk-body govuk-!-font-size-19">Confirm and submit</a>
+<br>
+<br>
+
+
+  </div>
+  <div class="govuk-grid-column-three-quarters">
+    <h1 class="govuk-heading-xl">Page coming soon!</h1>
+    <form class="form" action="1-Consultation-start" method="post">
+    <p>Sorry we're not ready to test this page yet.</p>
+
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+{{ govukButton({
+text: "Go back"
+
+}) }}
+
+  </div>
+
+</div>
+
+</main>
+</div>
+
+{% endblock %}
