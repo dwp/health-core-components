@@ -395,24 +395,70 @@ router.get('/wca/leftnav/wca-left-attendee', function (req, res) {
    if (req.body['leftTypstatement']) {
    req.session.data['leftTypstatement'] = req.body['leftTypstatement']
    }
-   res.redirect('/wca/leftnav/physicalassessment');
+   res.redirect('/wca/leftnav/pa-required');
   });
 
 
 
-  router.get('/wca/leftnav/physicalassessment', function (req, res) {
+  router.get('/wca/leftnav/pa-required', function (req, res) {
    res.render('corecomponents/Research/3Navigation/WCA-Leftnav/paRequired.html', { 
       session: req.session.data,
       request: req
    });
    });
 
-  router.post('/wca/leftnav/physicalassessment/save-and-continue', function (req, res) {
-   if (req.body['physicalassessment']) {
-   req.session.data['physicalassessment'] = req.body['physicalassessment']
+  router.post('/wca/leftnav/pa-required/save-and-continue', function (req, res) {
+   if (req.body['pa-required']) {
+   req.session.data['pa-required'] = req.body['pa-required']
+   }
+   res.redirect('/wca/leftnav/pa-consent');
+  });
+
+  
+  router.get('/wca/leftnav/pa-consent', function (req, res) {
+   res.render('corecomponents/Research/3Navigation/WCA-Leftnav/pa-consent.html', { 
+      session: req.session.data,
+      request: req
+   });
+   });
+
+  router.post('/wca/leftnav/pa-consent/save-and-continue', function (req, res) {
+   if (req.body['pa-consent']) {
+   req.session.data['pa-consent'] = req.body['pa-consent']
+   }
+   res.redirect('/wca/leftnav/pa-checklist');
+  });
+
+
+  router.get('/wca/leftnav/pa-checklist', function (req, res) {
+   res.render('corecomponents/Research/3Navigation/WCA-Leftnav/pa-checklist.html', { 
+      session: req.session.data,
+      request: req
+   });
+   });
+
+  router.post('/wca/leftnav/pa-checklist/save-and-continue', function (req, res) {
+   if (req.body['pa-checklist']) {
+   req.session.data['pa-checklist'] = req.body['pa-checklist']
+   }
+   res.redirect('/wca/leftnav/left-lower-back-legs');
+  });
+
+
+  router.get('/wca/leftnav/mental-health', function (req, res) {
+   res.render('corecomponents/Research/3Navigation/WCA-Leftnav/mental-health.html', { 
+      session: req.session.data,
+      request: req
+   });
+   });
+   
+  router.post('/wca/leftnav/mental-health/save-and-continue', function (req, res) {
+   if (req.body['mental-health']) {
+   req.session.data['mental-health'] = req.body['mental-health']
    }
    res.redirect('/wca/leftnav/leftobvstatement');
   });
+
 
 
   
@@ -434,49 +480,115 @@ router.get('/wca/leftnav/wca-left-attendee', function (req, res) {
 // left nav WCA -- PA
 
 
-router.get('/wca/leftnav/general-health', function (req, res) {
-   res.render('corecomponents/Research/3Navigation/WCA-Leftnav/physical-assessments/General-health/GeneralHealth.html', { 
-      session: req.session.data,
-      request: req
-   });
-   });
+
+// router.get('/wca/leftnav/general-health', function (req, res) {
+//    res.render('corecomponents/Research/3Navigation/WCA-Leftnav/physical-assessments/General-health/GeneralHealth.html', { 
+//       session: req.session.data,
+//       request: req
+//    });
+//    });
   
-  router.post('/wca/leftnav/general-health/save-and-continue', function (req, res) {
-   if (req.body['general-health']) {
-   req.session.data['general-health'] = req.body['general-health']
-   }
-   res.redirect('/wca/leftnav/back-legs');
-  });
+//   router.post('/wca/leftnav/general-health/save-and-continue', function (req, res) {
+//    if (req.body['general-health']) {
+//    req.session.data['general-health'] = req.body['general-health']
+//    }
+//    res.redirect('/wca/leftnav/back-legs');
+//   });
 
 
-  router.get('/wca/leftnav/back-legs', function (req, res) {
+  router.get('/wca/leftnav/left-lower-back-legs', function (req, res) {
    res.render('corecomponents/Research/3Navigation/WCA-Leftnav/physical-assessments/Lower-back-and-legs/lowerbacklegs.html', { 
       session: req.session.data,
       request: req
    });
    });
   
-  router.post('/wca/leftnav/general-health/save-and-continue', function (req, res) {
-   if (req.body['back-legs']) {
-   req.session.data['back-legs'] = req.body['back-legs']
+  router.post('/wca/leftnav/left-lower-back-legs/save-and-continue', function (req, res) {
+   if (req.body['left-lower-back-legs']) {
+   req.session.data['left-lower-back-legs'] = req.body['left-lower-back-legs']
    }
-   res.redirect('/wca/leftnav/neck-arms');
+   res.redirect('/wca/leftnav/left-right-leg');
   });
 
 
-  router.get('/wca/leftnav/neck-arms', function (req, res) {
+  router.get('/wca/leftnav/left-right-leg', function (req, res) {
+   res.render('corecomponents/Research/3Navigation/WCA-Leftnav/physical-assessments/Lower-back-and-legs/right-leg.html', { 
+      session: req.session.data,
+      request: req
+   });
+   });
+  
+  router.post('/wca/leftnav/left-right-leg/save-and-continue', function (req, res) {
+   if (req.body['left-right-leg']) {
+   req.session.data['left-right-leg'] = req.body['left-right-leg']
+   }
+   res.redirect('/wca/leftnav/left-neck-arms');
+  });
+
+
+  router.get('/wca/leftnav/left-neck-arms', function (req, res) {
    res.render('corecomponents/Research/3Navigation/WCA-Leftnav/physical-assessments/Neck-and-arms/neckArms.html', { 
       session: req.session.data,
       request: req
    });
    });
   
-  router.post('/wca/leftnav/neck-arms/save-and-continue', function (req, res) {
-   if (req.body['neck-arms']) {
-   req.session.data['neck-arms'] = req.body['neck-arms']
+  router.post('/wca/leftnav/left-neck-arms/save-and-continue', function (req, res) {
+   if (req.body['left-neck-arms']) {
+   req.session.data['left-neck-arms'] = req.body['left-neck-arms']
+   }
+   res.redirect('/wca/leftnav/left-neck');
+  });
+
+  router.get('/wca/leftnav/left-neck', function (req, res) {
+   res.render('corecomponents/Research/3Navigation/WCA-Leftnav/physical-assessments/Neck-and-arms/neck.html', { 
+      session: req.session.data,
+      request: req
+   });
+   });
+  
+  router.post('/wca/leftnav/left-neck/save-and-continue', function (req, res) {
+   if (req.body['left-neck']) {
+   req.session.data['left-neck'] = req.body['left-neck']
+   }
+   res.redirect('/wca/leftnav/complete');
+  });
+
+  
+  router.get('/wca/leftnav/complete', function (req, res) {
+   res.render('corecomponents/Research/3Navigation/WCA-Leftnav/physical-assessments/Complete.html', { 
+      session: req.session.data,
+      request: req
+   });
+   });
+
+  router.post('/wca/leftnav/complete/save-and-continue', function (req, res) {
+   if (req.body['complete']) {
+   req.session.data['complete'] = req.body['complete']
+   }
+   res.redirect('/wca/leftnav/mental-health');
+  });
+
+
+  router.get(' /wca/leftnav/add-pa', function (req, res) {
+   res.render('corecomponents/Research/3Navigation/WCA-Leftnav/pa-checklist-saved.html', { 
+      session: req.session.data,
+      request: req
+   });
+   });
+
+  router.post(' /wca/leftnav/add-pa/save-and-continue', function (req, res) {
+   if (req.body['add-pa']) {
+   req.session.data['add-pa'] = req.body['add-pa']
    }
    res.redirect('/wca/leftnav/cardiovascular');
   });
+
+
+ 
+
+
+
 
   router.get('/wca/leftnav/cardiovascular', function (req, res) {
    res.render('corecomponents/Research/3Navigation/WCA-Leftnav/physical-assessments/Cardiovascular-and-respiratory/cardiovascular.html', { 
@@ -493,6 +605,21 @@ router.get('/wca/leftnav/general-health', function (req, res) {
   });
 
 
+  router.get('/wca/leftnav/add-pa', function (req, res) {
+   res.render('corecomponents/Research/3Navigation/WCA-Leftnav/physical-assessments/Cardiovascular-and-respiratory/cardiovascular.html', { 
+      session: req.session.data,
+      request: req
+   });
+   });
+  
+  router.post('/wca/leftnav/cardiovascular/save-and-continue', function (req, res) {
+   if (req.body['cardiovascular']) {
+   req.session.data['cardiovascular'] = req.body['cardiovascular']
+   }
+   res.redirect('/wca/leftnav/cardiovascular');
+  });
+
+  
 
 
   // left nav PIP
@@ -503,7 +630,6 @@ router.get('/wca/leftnav/general-health', function (req, res) {
       request: req
    });
    });
-  
    
   router.post('/pip/leftnav/left-start/save-and-continue', function (req, res) {
    if (req.body['left-start']) {

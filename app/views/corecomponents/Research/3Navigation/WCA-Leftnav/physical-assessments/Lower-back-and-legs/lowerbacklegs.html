@@ -1,4 +1,4 @@
-{% extends "layout-key-detail-bar-start1060-leftnav-pa.html" %}
+{% extends "corecomponents/Research/3Navigation/layout-key-detail-bar-1060-leftnav-pa-lowerback.html" %}
 
 {% block pageTitle %}
   TextArea component
@@ -11,13 +11,10 @@
   
 
         
-        <form action="/corecomponents/Research/3Navigation/WCA-tasklist/PA/lowerback" method="post" novalidate>
-
-
+      
+          <form action="/wca/leftnav/left-lower-back-legs/save-and-continue" method="post" novalidate>
 
         <span class="govuk-caption-l">Lower back and legs</span>
-
-
 
         {{ govukCheckboxes({
           idPrefix: "back-legs",
@@ -42,7 +39,7 @@
               checked: checked("back-legs", "left-leg")
             },
             {
-              value: "right-leg",
+              value: "{{ data['right-leg'] }}",
               text: "Right leg"
             }
           ]

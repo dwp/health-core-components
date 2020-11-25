@@ -261,7 +261,7 @@ max-width:1160px !important;}
           
         </ul>
       </nav><br>
-      <a href="/corecomponents/Research/3Navigation/WCA-Leftnav/typical-day" class="govuk-link">Back to WCA menu</a>
+      <a href="/corecomponents/Research/3Navigation/WCA-Leftnav/typical-day" class="govuk-link">Back to main menu</a>
 
 {% endblock %}
 
@@ -282,28 +282,32 @@ max-width:1160px !important;}
 
           <ul class="app-subnav__section">  <h4 class="govuk-heading-s">Physical assessment</h4>
             
-            <li class="app-subnav__section-item {% if request.url == '/wca/leftnav/general-health' or request.url == '#' %}app-subnav__section-item--current{% endif %}">
+            <!-- <li class="app-subnav__section-item {% if request.url == '/wca/leftnav/general-health' or request.url == '#' %}app-subnav__section-item--current{% endif %}">
               <a href="/wca/leftnav/general-health" class="app-subnav__link govuk-link govuk-link--no-visited-state">General health</a>
               {% if session['general-health'] %}
               &nbsp;&nbsp;&#10004;
               {% endif %}
-            </li>
+            </li> -->
 
-            <li class="app-subnav__section-item {% if request.url == '/wca/leftnav/back-legs' %}app-subnav__section-item--current{% endif %}">
-              <a href="/wca/leftnav/back-legs" class="app-subnav__link govuk-link govuk-link--no-visited-state">Lower back and legs</a>
-              {% if session['back-legs'] %}
+            <li class="app-subnav__section-item {% if request.url == '/wca/leftnav/left-lower-back-legs' %}app-subnav__section-item--current{% endif %}">
+              <a href="/wca/leftnav/left-lower-back-legs" class="app-subnav__link govuk-link govuk-link--no-visited-state">Lower back and legs</a>
+              {% if session['left-lower-back-legs'] %}
               &nbsp;&nbsp;&#10004;
               {% endif %}
             </li>
 
-            <li class="app-subnav__section-item {% if request.url == '/wca/leftnav/neck-arms' %}app-subnav__section-item--current{% endif %}">
-              <a href="/wca/leftnav/neck-arms" class="app-subnav__link govuk-link govuk-link--no-visited-state">Neck and arms</a>   
-              {% if session['neck-arms'] %}
+            <li class="app-subnav__section-item {% if request.url == '/wca/leftnav/left-neck-arms' %}app-subnav__section-item--current{% endif %}">
+              <a href="/wca/leftnav/left-neck-arms" class="app-subnav__link govuk-link govuk-link--no-visited-state">Neck and arms</a>   
+              {% if session['left-neck-arms'] %}
               &nbsp;&nbsp;&#10004;
               {% endif %}
+            </li>
+<hr>
+            <li class="app-subnav__section-item">
+              <a href="/corecomponents/Research/3Navigation/WCA-Leftnav/pa-checklist-saved" class="app-subnav__link govuk-link govuk-link--no-visited-state">Add another physical assessment area</a>
             </li>
             
-            <li class="app-subnav__section-item {% if request.url == '/wca/leftnav/cardiovascular' %}app-subnav__section-item--current{% endif %}">
+            <!-- <li class="app-subnav__section-item {% if request.url == '/wca/leftnav/cardiovascular' %}app-subnav__section-item--current{% endif %}">
               <a href="/wca/leftnav/cardiovascular" class="app-subnav__link govuk-link govuk-link--no-visited-state">Cardiovascular and respiratory</a>   
               {% if session['cardiovascular'] %}
               &nbsp;&nbsp;&#10004;
@@ -321,7 +325,7 @@ max-width:1160px !important;}
               {% if session['nervous-system'] %}
               &nbsp;&nbsp;&#10004;
               {% endif %}
-            </li>
+            </li> -->
 
            
             

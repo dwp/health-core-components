@@ -1,4 +1,4 @@
-{% extends "layout-key-detail-bar-start1060-leftnav.html" %}
+{% extends "corecomponents/Research/3Navigation/layout-key-detail-bar-start1060-leftnav.html" %}
 
 {% block pageTitle %}
   Left nav WCA
@@ -6,19 +6,16 @@
 
 
 
-
-
-
 {% block mainContent %}
 
-<form action="/wca/leftnav/left-condition-history/save-and-continue" method="post" novalidate>
+<form action="/corecomponents/Research/3Navigation/WCA-Leftnav/pa-checklist-saved" method="post" novalidate>
 
   <a class="govuk-back-link" href="/url/of/previous/page">Back</a>
   
 <div class="govuk-form-group">
   <!-- <span class="govuk-caption-l">Section heading (Caption)</span> -->
   <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--l" for="more-detail">
-      Condition history
+      Mental health
     </label>
   </h1>
   <div id="more-detail-hint" class="govuk-hint">
@@ -26,9 +23,9 @@
   </div>
   <textarea class="govuk-textarea" 
   id="more-detail" 
-  name="left-condition-history" 
+  name="mental-health" 
   rows="10
-" aria-describedby="more-detail-hint">{{ session['left-condition-history'] }}</textarea>
+" aria-describedby="more-detail-hint">{{ session['mental-health'] }}</textarea>
 </div>
 
 

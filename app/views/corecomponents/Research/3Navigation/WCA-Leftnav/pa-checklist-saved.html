@@ -8,7 +8,7 @@
 
 {% block mainContent %}
 
-<form action="/wca/leftnav/pa-checklist/save-and-continue" method="post" novalidate>
+<form action="/wca/leftnav/add-pa" method="post" novalidate>
 
 
 
@@ -24,19 +24,19 @@
   </div>
       <div class="govuk-checkboxes">
         <div class="govuk-checkboxes__item">
-          <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="{{ data['general-health'] }}">
+          <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
           <label class="govuk-label govuk-checkboxes__label" for="waste">
             General health
           </label>
         </div>
         <div class="govuk-checkboxes__item">
-          <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" value="{{ data['back-legs'] }}">
+          <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" value="mines" checked="checked">
           <label class="govuk-label govuk-checkboxes__label" for="waste-2">
            Lower back and legs
           </label>
         </div>
         <div class="govuk-checkboxes__item">
-          <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="{{ data['neck-arms'] }}">
+          <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm" checked="checked">
           <label class="govuk-label govuk-checkboxes__label" for="waste-3">
             Neck and arms
           </label>

@@ -1,4 +1,4 @@
-{% extends "layout-key-detail-bar-start1060-leftnav-pa.html" %}
+{% extends "corecomponents/Research/3Navigation/layout-key-detail-bar-1060-leftnav-pa-neckarms.html" %}
 
 
 {% block pageTitle %}
@@ -9,8 +9,8 @@
 
 {% block mainContent %}
 
-    <form action="/corecomponents/Research/3Navigation/WCA-tasklist/PA/breathlessness" method="post" novalidate>
-
+<form action="/wca/leftnav/left-neck/save-and-continue" method="post" novalidate>
+       
 
 
         <span class="govuk-caption-l">Neck and arms</span>
@@ -24,7 +24,7 @@
     </label>
     <div class="govuk-checkboxes" data-module="govuk-checkboxes">
       <div class="govuk-checkboxes__item">
-        <input class="govuk-checkboxes__input" id="citizenship-conditional" name="citizen" type="checkbox" value="email" data-aria-controls="conditional-extension-conditional">
+        <input class="govuk-checkboxes__input" id="left-neck-arms" name="left-neck-arms" type="checkbox" value="{ data['left-neck-arms'] }}" data-aria-controls="conditional-extension-conditional">
         <label class="govuk-label govuk-checkboxes__label" for="citizenship-conditional">
           Extension
         </label>

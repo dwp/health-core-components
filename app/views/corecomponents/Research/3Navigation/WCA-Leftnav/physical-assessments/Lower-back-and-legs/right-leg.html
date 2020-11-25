@@ -1,4 +1,4 @@
-{% extends "layout-key-detail-bar-start1060-leftnav-pa.html" %}
+{% extends "corecomponents/Research/3Navigation/layout-key-detail-bar-1060-leftnav-pa-lowerback.html" %}
 
 {% block pageTitle %}
   TextArea component
@@ -8,8 +8,8 @@
 
 {% block mainContent %}
 
-    <form action="/corecomponents/Research/3Navigation/WCA-tasklist/PA/breathlessness" method="post" novalidate>
-
+<form action="/wca/leftnav/left-right-leg/save-and-continue" method="post" novalidate>
+       
 
         <span class="govuk-caption-l">Lower back and legs</span>
         <h2 class="govuk-heading-l">Right leg</h2>
@@ -21,7 +21,7 @@
     </label>
     <div class="govuk-checkboxes" data-module="govuk-checkboxes">
       <div class="govuk-checkboxes__item">
-        <input class="govuk-checkboxes__input" id="citizenship-conditional" name="citizen" type="checkbox" value="email" data-aria-controls="conditional-citizenship-conditional">
+        <input class="govuk-checkboxes__input" id="left-lower-back-legs" name="left-lower-back-legs" type="checkbox" value="{ data['left-straight'] }}" data-aria-controls="conditional-citizenship-conditional">
         <label class="govuk-label govuk-checkboxes__label" for="citizenship-conditional">
           Straight leg raising
         </label>
@@ -84,7 +84,7 @@
 </div>
       </div>
       <div class="govuk-checkboxes__item">
-        <input class="govuk-checkboxes__input" id="citizenship-conditional-2" name="citizen" type="checkbox" value="phone" data-aria-controls="conditional-citizenship-conditional-2">
+        <input class="govuk-checkboxes__input" id="left-lower-back-legs" name="left-lower-back-legs" type="checkbox" value="{ data['left-lower-back-legs'] }}" data-aria-controls="conditional-citizenship-conditional-2">
         <label class="govuk-label govuk-checkboxes__label" for="citizenship-conditional-2">
           Hip flexion
         </label>
@@ -132,7 +132,7 @@
 
 
       <div class="govuk-checkboxes__item">
-        <input class="govuk-checkboxes__input" id="citizenship-conditional-2" name="citizen" type="checkbox" value="phone" data-aria-controls="conditional-Knee-flexion-conditional">
+        <input class="govuk-checkboxes__input" id="leg-back" name="leg-back" type="checkbox" value="{ data['leg-back'] }}" data-aria-controls="conditional-Knee-flexion-conditional">
         <label class="govuk-label govuk-checkboxes__label" for="citizenship-conditional-2">
           Knee flexion
         </label>
@@ -178,7 +178,7 @@
 
 
       <div class="govuk-checkboxes__item">
-        <input class="govuk-checkboxes__input" id="citizenship-conditional-2" name="citizen" type="checkbox" value="phone" data-aria-controls="conditional-knee-extension-conditional">
+        <input class="govuk-checkboxes__input" id="left-lower-back-legs" name="left-lower-back-legs" type="checkbox" value="{ data['left-lower-back-legs'] }}" data-aria-controls="conditional-knee-extension-conditional">
         <label class="govuk-label govuk-checkboxes__label" for="citizenship-conditional-2">
           Knee extension
         </label>
@@ -211,7 +211,7 @@
 
 
       <div class="govuk-checkboxes__item">
-        <input class="govuk-checkboxes__input" id="citizenship-conditional-2" name="citizen" type="checkbox" value="phone" data-aria-controls="conditional-external-hip-conditional">
+        <input class="govuk-checkboxes__input" id="left-lower-back-legs" name="left-lower-back-legs" type="checkbox" value="{ data['left-lower-back-legs'] }}" data-aria-controls="conditional-external-hip-conditional">
         <label class="govuk-label govuk-checkboxes__label" for="citizenship-conditional-2">
           External hip rotation
         </label>
@@ -399,12 +399,12 @@
       Other findings
     </label>
 
-  <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint"></textarea>
+  <textarea class="govuk-textarea" id="more-detail1" name="more-detail1" rows="5" aria-describedby="more-detail1-hint"></textarea>
 </div>
 
 
 <button class="govuk-button" data-module="govuk-button">
 Save and continue
 </button>
-
+</form>
 {% endblock %}

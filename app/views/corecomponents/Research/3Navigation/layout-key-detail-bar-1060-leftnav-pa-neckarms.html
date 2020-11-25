@@ -260,8 +260,8 @@ max-width:1160px !important;}
          
           
         </ul>
-      </nav>
-
+      </nav><br>
+      <a href="/corecomponents/Research/3Navigation/WCA-Leftnav/typical-day" class="govuk-link">Back to main menu</a>
 
 {% endblock %}
 
@@ -273,7 +273,6 @@ max-width:1160px !important;}
   <div class="govuk-grid-column-one-quarter">
 
    
-   
 <div class="app-pane__body app-width-container">
   <div class="app-pane__subnav">
     <nav class="app-subnav">
@@ -281,70 +280,51 @@ max-width:1160px !important;}
 
       
 
-          <ul class="app-subnav__section">  <h4 class="govuk-heading-s">Start assessment</h4>
+          <ul class="app-subnav__section">  <h4 class="govuk-heading-s">Physical assessment</h4>
             
-            <li class="app-subnav__section-item {% if request.url == '/wca/leftnav/wca-left-attendee' or request.url == '/corecomponents/Research/3Navigation/WCA-Leftnav/Attendee-question' %}app-subnav__section-item--current{% endif %}">
-              <a href="/wca/leftnav/wca-left-attendee" class="app-subnav__link govuk-link govuk-link--no-visited-state">Additional attendee</a>
-              {% if session['wca-left-attendee'] %}
+            <!-- <li class="app-subnav__section-item {% if request.url == '/wca/leftnav/general-health' or request.url == '#' %}app-subnav__section-item--current{% endif %}">
+              <a href="/wca/leftnav/general-health" class="app-subnav__link govuk-link govuk-link--no-visited-state">General health</a>
+              {% if session['general-health'] %}
               &nbsp;&nbsp;&#10004;
               {% endif %}
+            </li> -->
+
+            <li class="app-subnav__section-item">
+              <a href="/wca/leftnav/left-lower-back-legs" class="app-subnav__link govuk-link govuk-link--no-visited-state">Lower back and legs</a>
+              &nbsp;&nbsp;&#10004;
             </li>
 
-            <li class="app-subnav__section-item {% if request.url == '/wca/leftnav/left-condition-history' %}app-subnav__section-item--current{% endif %}">
-              <a href="/wca/leftnav/left-condition-history" class="app-subnav__link govuk-link govuk-link--no-visited-state">Condition history</a>
-              {% if session['left-condition-history'] %}
-              &nbsp;&nbsp;&#10004;
-              {% endif %}
-            </li>
-
-            <li class="app-subnav__section-item {% if request.url == '/wca/leftnav/left-medication' %}app-subnav__section-item--current{% endif %}">
-              <a href="/wca/leftnav/left-medication" class="app-subnav__link govuk-link govuk-link--no-visited-state">Medication and side effects</a>   
-              {% if session['left-medication'] %}
-              &nbsp;&nbsp;&#10004;
-              {% endif %}
+            <li class="app-subnav__section-item app-subnav__section-item--current">
+              <a href="/wca/leftnav/left-neck-arms" class="app-subnav__link govuk-link govuk-link--no-visited-state">Neck and arms</a>   
+             
             </li>
             
-            <li class="app-subnav__section-item {% if request.url == '/wca/leftnav/leftsocstatement' %}app-subnav__section-item--current{% endif %}">
-              <a href="/wca/leftnav/leftsocstatement" class="app-subnav__link govuk-link govuk-link--no-visited-state">Social and work history</a>   
-              {% if session['leftsocstatement'] %}
+<hr>
+            <li class="app-subnav__section-item">
+              <a href="/corecomponents/Research/3Navigation/WCA-Leftnav/pa-checklist-saved" class="app-subnav__link govuk-link govuk-link--no-visited-state">Add another physical assessment area</a>
+            </li>
+            
+            <!-- <li class="app-subnav__section-item {% if request.url == '/wca/leftnav/cardiovascular' %}app-subnav__section-item--current{% endif %}">
+              <a href="/wca/leftnav/cardiovascular" class="app-subnav__link govuk-link govuk-link--no-visited-state">Cardiovascular and respiratory</a>   
+              {% if session['cardiovascular'] %}
               &nbsp;&nbsp;&#10004;
               {% endif %}
             </li>
 
-            <li class="app-subnav__section-item {% if request.url == '/wca/leftnav/leftTypstatement' %}app-subnav__section-item--current{% endif %}">
-              <a href="/wca/leftnav/leftTypstatement" class="app-subnav__link govuk-link govuk-link--no-visited-state">Typical day</a>   
-              {% if session['leftTypstatement'] %}
+            <li class="app-subnav__section-item {% if request.url == '/wca/leftnav/vision' %}app-subnav__section-item--current{% endif %}">
+              <a href="/wca/leftnav/vision" class="app-subnav__link govuk-link govuk-link--no-visited-state">Vision, speech and hearing</a>   
+              {% if session['vision'] %}
               &nbsp;&nbsp;&#10004;
               {% endif %}
             </li>
-            <li class="app-subnav__section-item {% if request.url == '/wca/leftnav/pa-required' %}app-subnav__section-item--current{% endif %}">
-              <a href="/wca/leftnav/pa-required" class="app-subnav__link govuk-link govuk-link--no-visited-state">Physical assessment</a>   
-              {% if session['pa-required'] %}
+            <li class="app-subnav__section-item {% if request.url == '/wca/leftnav/nervous-system' %}app-subnav__section-item--current{% endif %}">
+              <a href="/wca/leftnav/nervous-system" class="app-subnav__link govuk-link govuk-link--no-visited-state">Central nervous system</a>   
+              {% if session['nervous-system'] %}
               &nbsp;&nbsp;&#10004;
               {% endif %}
-            </li>
+            </li> -->
 
-            <li class="app-subnav__section-item {% if request.url == '/wca/leftnav/mental-health' %}app-subnav__section-item--current{% endif %}">
-              <a href="/wca/leftnav/mental-health" class="app-subnav__link govuk-link govuk-link--no-visited-state">Mental health</a>   
-              {% if session['mental-health'] %}
-              &nbsp;&nbsp;&#10004;
-              {% endif %}
-            </li>
-        
-
-            <li class="app-subnav__section-item {% if request.url == '/wca/leftnav/leftobvstatement' %}app-subnav__section-item--current{% endif %}">
-              <a href="/wca/leftnav/leftobvstatement" class="app-subnav__link govuk-link govuk-link--no-visited-state">Informal observations</a>   
-              {% if session['leftobvstatement'] %}
-              &nbsp;&nbsp;&#10004;
-              {% endif %}
-            </li>
-
-            <li class="app-subnav__section-item {% if request.url == '/wca/leftnav/submit' %}app-subnav__section-item--current{% endif %}">
-              <a href="/wca/leftnav/submit" class="app-subnav__link govuk-link govuk-link--no-visited-state">Confirm and submit</a>   
-              {% if session['submit'] %}
-              &nbsp;&nbsp;&#10004;
-              {% endif %}
-            </li>
+           
             
 
             </ul>
@@ -368,7 +348,7 @@ max-width:1160px !important;}
 
 
 
-      <div class="govuk-grid-column-two-thirds-nav">
+      <div class="govuk-grid-column-three-quarters">
 
         {% block mainContent %}
 

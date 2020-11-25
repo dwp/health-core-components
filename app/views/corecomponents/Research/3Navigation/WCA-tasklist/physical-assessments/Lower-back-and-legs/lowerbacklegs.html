@@ -35,20 +35,20 @@
               classes: "govuk-fieldset__legend--l"
             }
           },
-      
+        
           items: [
             {
-              value: "lower-back",
+              value: "{{ data['lower-back'] }}",
               text: "Lower back",
               checked: checked("back-legs", "lower-back")
             },
             {
-              value: "left-leg",
+              value: "{{ data['Left-leg'] }}",
               text: "Left leg",
               checked: checked("back-legs", "left-leg")
             },
             {
-              value: "right-leg",
+              value: "{{ data['right-leg'] }}",
               text: "Right leg"
             }
           ]
