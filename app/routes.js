@@ -797,4 +797,196 @@ router.get('/wca/leftnav/wca-left-attendee', function (req, res) {
 
 
 
+
+    // left nav PIP - non forced journey
+ 
+    router.get('/pip/leftnav/left-start-non', function (req, res) {
+      res.render('corecomponents/Research/3Navigation/pip-leftnav-non-forced/1-Consultation-start.html', { 
+         session: req.session.data,
+         request: req
+      });
+      });
+      
+     router.post('/pip/leftnav/left-start-non/save-and-continue', function (req, res) {
+      if (req.body['left-start-non']) {
+      req.session.data['left-start-non'] = req.body['left-start-non']
+      }
+      res.redirect('/pip/leftnav/left-start-non');
+     });
+   
+   
+   
+     router.get('/pip/leftnav/pip-left-attendee-non', function (req, res) {
+      res.render('corecomponents/Research/3Navigation/pip-leftnav-non-forced/1a-AddAttendee.html', { 
+         session: req.session.data,
+         request: req
+      });
+      });
+      
+     router.post('/pip/leftnav/pip-left-attendee-non/save-and-continue', function (req, res) {
+      if (req.body['pip-left-attendee-non']) {
+      req.session.data['pip-left-attendee-non'] = req.body['pip-left-attendee-non']
+      }
+      res.redirect('/pip/leftnav/pip-left-attendee-non');
+     });
+   
+   
+   
+     router.get('/pip/leftnav/pip-left-condition-non', function (req, res) {
+      res.render('corecomponents/Research/3Navigation/pip-leftnav-non-forced/2-History-of-conditions.html', { 
+         session: req.session.data,
+         request: req
+      });
+      });
+      
+     router.post('/pip/leftnav/pip-left-condition-non/save-and-continue', function (req, res) {
+      if (req.body['pip-left-condition-non']) {
+      req.session.data['pip-left-condition-non'] = req.body['pip-left-condition-non']
+      }
+      res.redirect('/pip/leftnav/pip-left-condition-non');
+     });
+   
+   
+   
+     router.get('/pip/leftnav/pip-left-medication-non', function (req, res) {
+      res.render('corecomponents/Research/3Navigation/pip-leftnav-non-forced/3-Current-medication.html', { 
+         session: req.session.data,
+         request: req
+      });
+      });
+      
+     router.post('/pip/leftnav/pip-left-medication-non/save-and-continue', function (req, res) {
+      if (req.body['pip-left-medication-non']) {
+      req.session.data['pip-left-medication-non'] = req.body['pip-left-medication-non']
+      }
+      res.redirect('/pip/leftnav/pip-left-medication-non');
+     });
+   
+   
+   
+     router.get('/pip/leftnav/pip-left-social-history-non', function (req, res) {
+      res.render('corecomponents/Research/3Navigation/pip-leftnav-non-forced/4-Social-and-occ-history.html', { 
+         session: req.session.data,
+         request: req
+      });
+      });
+      
+     router.post('/pip/leftnav/pip-left-social-history-non/save-and-continue', function (req, res) {
+      if (req.body['pip-left-social-history-non']) {
+      req.session.data['pip-left-social-history-non'] = req.body['pip-left-social-history-non']
+      }
+      res.redirect('/pip/leftnav/pip-left-social-history-non');
+     });
+   
+   
+   
+     router.get('/pip/leftnav/pip-left-variability-non', function (req, res) {
+      res.render('corecomponents/Research/3Navigation/pip-leftnav-non-forced/5-Functional-history.html', { 
+         session: req.session.data,
+         request: req
+      });
+      });
+      
+     router.post('/pip/leftnav/pip-left-variability-non/save-and-continue', function (req, res) {
+      if (req.body['pip-left-variability-non']) {
+      req.session.data['pip-left-variability-non'] = req.body['pip-left-variability-non']
+      }
+      res.redirect('/pip/leftnav/pip-left-variability-non');
+     });
+   
+   
+     router.get('/pip/leftnav/pip-left-observations-non', function (req, res) {
+      res.render('corecomponents/Research/3Navigation/pip-leftnav-non-forced/6-Observations.html', { 
+         session: req.session.data,
+         request: req
+      });
+      });
+      
+     router.post('/pip/leftnav/pip-left-observations-non/save-and-continue', function (req, res) {
+      if (req.body['pip-left-observations-non']) {
+      req.session.data['pip-left-observations-non'] = req.body['pip-left-observations-non']
+      }
+      res.redirect('/pip/leftnav/pip-left-observations-non');
+     });
+   
+   
+     router.get('/pip/leftnav/pip-consent-non', function (req, res) {
+      res.render('corecomponents/Research/3Navigation/pip-leftnav-non-forced/6a-Consent.html', { 
+         session: req.session.data,
+         request: req
+      });
+      });
+      
+     router.post('/pip/leftnav/pip-consent-non/save-and-continue', function (req, res) {
+      if (req.body['pip-consent-non']) {
+      req.session.data['pip-consent-non'] = req.body['pip-consent-non']
+      }
+      res.redirect('/pip/leftnav/pip-mental-state-non');
+     });
+   
+   
+   
+     router.get('/pip/leftnav/pip-mental-state-non', function (req, res) {
+      res.render('corecomponents/Research/3Navigation/pip-leftnav-non-forced/7-Mental-state.html', { 
+         session: req.session.data,
+         request: req
+      });
+      });
+      
+     router.post('/pip/leftnav/pip-mental-state-non/save-and-continue', function (req, res) {
+      if (req.body['pip-mental-state-non']) {
+      req.session.data['pip-mental-state-non'] = req.body['pip-mental-state-non']
+      }
+      res.redirect('/pip/leftnav/pip-mental-state-non');
+     });
+   
+   
+     router.get('/pip/leftnav/pip-left-musculoskeletal-non', function (req, res) {
+      res.render('corecomponents/Research/3Navigation/pip-leftnav-non-forced/8-Musculoskeletal.html', { 
+         session: req.session.data,
+         request: req
+      });
+      });
+      
+     router.post('/pip/leftnav/pip-left-musculoskeletal-non/save-and-continue', function (req, res) {
+      if (req.body['pip-left-musculoskeletal-non']) {
+      req.session.data['pip-left-musculoskeletal-non'] = req.body['pip-left-musculoskeletal-non']
+      }
+      res.redirect('/pip/leftnav/pip-left-musculoskeletal-non');
+     });
+   
+   
+   
+     router.get('/pip/leftnav/pip-left-other-systems', function (req, res) {
+      res.render('corecomponents/Research/3Navigation/pip-leftnav-non-forced/9-Other-systems.html', { 
+         session: req.session.data,
+         request: req
+      });
+      });
+      
+     router.post('/pip/leftnav/pip-left-other-systems/save-and-continue', function (req, res) {
+      if (req.body['pip-left-other-systems']) {
+      req.session.data['pip-left-other-systems'] = req.body['pip-left-other-systems']
+      }
+      res.redirect('/pip/leftnav/pip-left-submit');
+     });
+   
+   
+     router.get('/pip/leftnav/pip-left-submit', function (req, res) {
+      res.render('corecomponents/Research/3Navigation/pip-leftnav-non-forced/10-Submit.html', { 
+         session: req.session.data,
+         request: req
+      });
+      });
+      
+     router.post('/pip/leftnav/pip-left-submit/save-and-continue', function (req, res) {
+      if (req.body['pip-left-submit']) {
+      req.session.data['pip-left-submit'] = req.body['pip-left-submit']
+      }
+      res.redirect('pip-left-submit');
+     });
+
+
+
+
 module.exports = router
