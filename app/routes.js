@@ -956,35 +956,6 @@ router.get('/wca/leftnav/wca-left-attendee', function (req, res) {
      });
    
    
-   
-     router.get('/pip/leftnav/pip-left-other-systems', function (req, res) {
-      res.render('corecomponents/Research/3Navigation/pip-leftnav-non-forced/9-Other-systems.html', { 
-         session: req.session.data,
-         request: req
-      });
-      });
-      
-     router.post('/pip/leftnav/pip-left-other-systems/save-and-continue', function (req, res) {
-      if (req.body['pip-left-other-systems']) {
-      req.session.data['pip-left-other-systems'] = req.body['pip-left-other-systems']
-      }
-      res.redirect('/pip/leftnav/pip-left-submit');
-     });
-   
-   
-     router.get('/pip/leftnav/pip-left-submit', function (req, res) {
-      res.render('corecomponents/Research/3Navigation/pip-leftnav-non-forced/10-Submit.html', { 
-         session: req.session.data,
-         request: req
-      });
-      });
-      
-     router.post('/pip/leftnav/pip-left-submit/save-and-continue', function (req, res) {
-      if (req.body['pip-left-submit']) {
-      req.session.data['pip-left-submit'] = req.body['pip-left-submit']
-      }
-      res.redirect('pip-left-submit');
-     });
 
 
 
