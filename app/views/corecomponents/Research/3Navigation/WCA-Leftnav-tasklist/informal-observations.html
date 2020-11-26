@@ -1,0 +1,68 @@
+{% extends "corecomponents/Research/3Navigation/WCA-Leftnav-tasklist/layout-key-detail-bar-start1060-leftnav.html" %}
+
+{% block pageTitle %}
+  TextArea component
+{% endblock %}
+
+
+
+
+
+{% block mainContent %}
+
+
+<h1 class="govuk-heading-l">Informal observations</h1>
+
+
+  <form action="/corecomponents/Research/3Navigation/WCA-Leftnav-tasklist/informal-observations" method="post" novalidate>
+
+
+
+
+  <table class="govuk-table">
+
+    <thead class="govuk-table__head">
+      <tr class="govuk-table__row">
+        <th scope="col" class="govuk-table__header">Statements added</th>
+
+      </tr>
+    </thead>
+    <tbody class="govuk-table__body">
+
+
+      {% for taskleftobvstatement in data.taskleftobvstatements %}
+      <tr class="govuk-table__row">
+
+          <td scope="row" class="govuk-table__cell">{{ taskleftobvstatement }}</td>
+
+        <td class="govuk-table__cell govuk-table__cell--numeric"><a href="#" class="govuk-link">Remove</a></td>
+      </tr>
+{% endfor %}
+
+    </tbody>
+
+  </table>
+
+
+
+  <div class="govuk-form-group">
+  
+      <input class="govuk-input" id="taskleftobvstatement2" name="taskleftobvstatement" type="text" value="{{data['taskleftobvstatement2']}}">
+</form>
+<br>
+<br>
+<button class="govuk-button govuk-button--secondary" data-module="govuk-button">  Add statement
+  </button>
+  </div>
+
+
+  <form action="/wca/leftnav/leftobvstatement-task/save-and-continue" method="post" novalidate>
+
+
+<button class="govuk-button" data-module="govuk-button">
+Save & Continue
+</button>
+
+
+
+{% endblock %}

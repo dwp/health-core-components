@@ -1,0 +1,62 @@
+{% extends "corecomponents/Research/3Navigation/WCA-Leftnav-tasklist/layout-key-detail-bar-start1060-leftnav-main-pa-tasklist.html" %}
+
+{% block pageTitle %}
+  TextArea component
+{% endblock %}
+
+
+{% block mainContent %}
+
+        
+        <form action="/wca/neck-arms-task/save-and-continue" method="post" novalidate>
+
+        <span class="govuk-caption-l">Neck and arms</span>
+
+
+        {{ govukCheckboxes({
+          idPrefix: "neck-arms",
+          name: "neck-arms",
+          fieldset: {
+            legend: {
+              text: "Select all of the areas you have assessed",
+              isPageHeading: true,
+              classes: "govuk-fieldset__legend--l"
+            }
+          },
+      
+          items: [
+            {
+              value: "neck",
+              text: "Neck",
+              checked: checked("neck-arms", "neck")
+            },
+            {
+              value: "left-upper-arm",
+              text: "Left upper arm",
+              checked: checked("neck-arms", "left-upper-arm")
+            },
+            {
+              value: "right-upper-arm",
+              text: "Right upper arm"
+            },
+            {
+              value: "left-forearm",
+              text: "Left forearm"
+            },
+            {
+              value: "right-forearm",
+              text: "Right forearm"
+            }
+          ]
+        }) }}
+
+
+
+
+<button class="govuk-button" data-module="govuk-button">
+  Save and continue
+</button>
+
+
+
+{% endblock %}

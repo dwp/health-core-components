@@ -1,0 +1,42 @@
+{% extends "corecomponents/Research/3Navigation/WCA-Leftnav-tasklist/layout-key-detail-bar-start1060-leftnav.html" %}
+
+{% block pageTitle %}
+  Left nav WCA
+{% endblock %}
+
+
+
+
+{% block mainContent %}
+
+<form action="/wca/leftnav/left-medication-task/save-and-continue" method="post" novalidate>
+
+
+
+<div class="govuk-form-group">
+  <!-- <span class="govuk-caption-l">Section heading (Caption)</span> -->
+  <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--l" for="more-detail">
+    Medication and side effects
+    </label>
+  </h1>
+  <div id="more-detail-hint" class="govuk-hint">
+    Provide details
+  </div>
+  <textarea class="govuk-textarea" 
+  id="left-medication-task" 
+  name="left-medication-task" 
+  rows="10
+" aria-describedby="more-detail-hint">{{ session['left-medication-task'] }}</textarea>
+</div>
+
+
+
+
+
+<button class="govuk-button" data-module="govuk-button">
+  Save and continue
+  </button>
+
+
+</form>
+{% endblock %}

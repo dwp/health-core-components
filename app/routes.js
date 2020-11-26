@@ -960,4 +960,252 @@ router.get('/wca/leftnav/wca-left-attendee', function (req, res) {
 
 
 
+
+
+
+
+
+
+// left nav WCA - tasklist version
+ 
+
+router.get('/wca/leftnav/wca-left-attendee-task', function (req, res) {
+   res.render('corecomponents/Research/3Navigation/WCA-Leftnav-tasklist/additionalAttendee.html', { 
+      session: req.session.data,
+      request: req
+   });
+  });
+   
+  router.post('/wca/leftnav/wca-left-attendee-task/save-and-continue', function (req, res) {
+   if (req.body['wca-left-attendee-task']) {
+   req.session.data['wca-left-attendee-task'] = req.body['wca-left-attendee-task']
+   }
+   res.redirect('/wca/leftnav/left-condition-history-task');
+  });
+
+
+  router.get('/wca/leftnav/left-condition-history-task', function (req, res) {
+   res.render('corecomponents/Research/3Navigation/WCA-Leftnav-tasklist/condition_history.html', { 
+      session: req.session.data,
+      request: req
+   });
+  });
+   
+  router.post('/wca/leftnav/left-condition-history-task/save-and-continue', function (req, res) {
+   if (req.body['left-condition-history-task']) {
+   req.session.data['left-condition-history-task'] = req.body['left-condition-history-task']
+   }
+   res.redirect('/wca/leftnav/left-medication-task');
+  });
+   
+
+
+  router.get('/wca/leftnav/left-medication-task', function (req, res) {
+   res.render('corecomponents/Research/3Navigation/WCA-Leftnav-tasklist/medication.html', { 
+   session: req.session.data,
+   request: req
+});
+});
+
+  router.post('/wca/leftnav/left-medication-task/save-and-continue', function (req, res) {
+   if (req.body['left-medication-task']) {
+   req.session.data['left-medication-task'] = req.body['left-medication-task']
+   }
+   res.redirect('/wca/leftnav/leftsocstatement-task');
+  });
+
+
+
+  router.get('/wca/leftnav/leftsocstatement-task', function (req, res) {
+   res.render('corecomponents/Research/3Navigation/WCA-Leftnav-tasklist/social.html', { 
+      session: req.session.data,
+      request: req
+   });
+   });
+
+  router.post('/wca/leftnav/leftsocstatement-task/save-and-continue', function (req, res) {
+   if (req.body['leftsocstatement-task']) {
+   req.session.data['leftsocstatement-task'] = req.body['leftsocstatement-task']
+   }
+   res.redirect('/wca/leftnav/leftTypstatement-task');
+  });
+
+
+
+  router.get('/wca/leftnav/leftTypstatement-task', function (req, res) {
+   res.render('corecomponents/Research/3Navigation/WCA-Leftnav-tasklist/typical-day.html', { 
+      session: req.session.data,
+      request: req
+   });
+   });
+
+  router.post('/wca/leftnav/leftTypstatement-task/save-and-continue', function (req, res) {
+   if (req.body['leftTypstatement-task']) {
+   req.session.data['leftTypstatement-task'] = req.body['leftTypstatement-task']
+   }
+   res.redirect('/wca/leftnav/pa-required-task');
+  });
+
+
+
+  router.get('/wca/leftnav/pa-required-task', function (req, res) {
+   res.render('corecomponents/Research/3Navigation/WCA-Leftnav-tasklist/paRequired.html', { 
+      session: req.session.data,
+      request: req
+   });
+   });
+
+  router.post('/wca/leftnav/pa-required-task/save-and-continue', function (req, res) {
+   if (req.body['pa-required-task']) {
+   req.session.data['pa-required-task'] = req.body['pa-required-task']
+   }
+   res.redirect('/wca/leftnav/pa-consent-task');
+  });
+
+  
+  router.get('/wca/leftnav/pa-consent-task', function (req, res) {
+   res.render('corecomponents/Research/3Navigation/WCA-Leftnav-tasklist/pa-consent.html', { 
+      session: req.session.data,
+      request: req
+   });
+   });
+
+  router.post('/wca/leftnav/pa-consent-task/save-and-continue', function (req, res) {
+   if (req.body['pa-consent-task']) {
+   req.session.data['pa-consent-task'] = req.body['pa-consent-task']
+   }
+   res.redirect('/wca/left-tasklist');
+  });
+
+
+  router.get('/wca/leftnav/pa-tasklist', function (req, res) {
+   res.render('corecomponents/Research/3Navigation/WCA-Leftnav-tasklist/pa-tasklist.html', { 
+      session: req.session.data,
+      request: req
+   });
+   });
+
+//   router.post('/wca/leftnav/pa-tasklist/save-and-continue', function (req, res) {
+//    if (req.body['pa-tasklist']) {
+//    req.session.data['pa-tasklist'] = req.body['pa-tasklist']
+//    }
+//    res.redirect('/wca/leftnav/pa-tasklist');
+//   });
+
+
+
+  router.get('/wca/leftnav/mental-health-task', function (req, res) {
+   res.render('corecomponents/Research/3Navigation/WCA-Leftnav-tasklist/mental-health.html', { 
+      session: req.session.data,
+      request: req
+   });
+   });
+   
+  router.post('/wca/leftnav/mental-health-task/save-and-continue', function (req, res) {
+   if (req.body['mental-health-task']) {
+   req.session.data['mental-health-task'] = req.body['mental-health']
+   }
+   res.redirect('/wca/leftnav/leftobvstatement-task');
+  });
+
+
+  
+  router.get('/wca/leftnav/leftobvstatement-task', function (req, res) {
+   res.render('corecomponents/Research/3Navigation/WCA-Leftnav-tasklist/informal-observations.html', { 
+      session: req.session.data,
+      request: req
+   });
+   });
+  
+  router.post('/wca/leftnav//leftobvstatement-task/save-and-continue', function (req, res) {
+   if (req.body['/leftobvstatement-task']) {
+   req.session.data['/leftTypstatement-task'] = req.body['/leftobvstatement-task']
+   }
+   res.redirect('/wca/leftnav/PA-task');
+  });
+
+
+
+
+
+
+//   wca tasklist with left nav
+
+
+
+router.get('/wca/left-tasklist', function (req, res) {
+   res.render('corecomponents/Research/3Navigation/WCA-Leftnav-tasklist/left-tasklist.html', { session: req.session.data });
+  });
+   
+
+
+router.get('/wca/cardio-task', function (req, res) {
+   res.render('corecomponents/Research/3Navigation/WCA-tasklist/physical-assessments/Cardiovascular-and-respiratory/cardiovascular.html', { session: req.session.data });
+  });
+   
+  router.post('//wca/cardio-task/save-and-continue', function (req, res) {
+   if (req.body['cardio-task']) {
+   req.session.data['cardio-task'] = req.body['cardio-task']
+   }
+   res.redirect('/wca/task-list');
+  });
+
+
+  router.get('/wca/general-health', function (req, res) {
+   res.render('corecomponents/Research/3Navigation/WCA-tasklist/physical-assessments/General-health/GeneralHealth.html', { session: req.session.data });
+  });
+   
+  router.post('/wca/general-health/save-and-continue', function (req, res) {
+   if (req.body['general-health']) {
+   req.session.data['general-health'] = req.body['general-health']
+   }
+   res.redirect('/wca/task-list');
+  });
+  
+
+  router.get('/wca/left-lower-back-legs-task', function (req, res) {
+     res.render('corecomponents/Research/3Navigation/WCA-Leftnav-tasklist/physical-assessments/Lower-back-and-legs/lowerbacklegs', { session: req.session.data });
+    });
+     
+    router.post('/wca/left-lower-back-legs-task/save-and-continue', function (req, res) {
+     if (req.body['left-lower-back-legs-task']) {
+     req.session.data['left-lower-back-legs-task'] = req.body['left-lower-back-legs-task']
+     }
+     res.redirect('/wca/left-right-legs-task');
+    });
+    
+    router.get('/wca/left-right-legs-task', function (req, res) {
+      res.render('corecomponents/Research/3Navigation/WCA-Leftnav-tasklist/physical-assessments/Lower-back-and-legs/right-leg.html', { session: req.session.data });
+     });
+      
+     router.post('/wca/left-right-legs-task/save-and-continue', function (req, res) {
+      if (req.body['/wca/left-right-legs-task']) {
+      req.session.data['/wca/left-right-legs-task'] = req.body['left-lower-back-legs-task']
+      }
+      res.redirect('/wca/left-tasklist');
+     });
+
+
+    router.get('/wca/neck-arms-task', function (req, res) {
+     res.render('corecomponents/Research/3Navigation/WCA-Leftnav-tasklist/physical-assessments/Neck-and-arms/neckArms.html', { session: req.session.data });
+    });
+     
+    router.post('/wca/neck-arms-task/save-and-continue', function (req, res) {
+     if (req.body['neck-arms-task']) {
+     req.session.data['neck-arms-task'] = req.body['neck-arms-task']
+     }
+     res.redirect('/wca/left-neck-task');
+    });
+
+    router.get('/wca/left-neck-task', function (req, res) {
+      res.render('corecomponents/Research/3Navigation/WCA-Leftnav-tasklist/physical-assessments/Neck-and-arms/neck.html', { session: req.session.data });
+     });
+      
+     router.post('/wca/left-neck-task/save-and-continue', function (req, res) {
+      if (req.body['left-neck-task']) {
+      req.session.data['left-neck-task'] = req.body['left-neck-task']
+      }
+      res.redirect('/wca/left-tasklist');
+     });
+
 module.exports = router

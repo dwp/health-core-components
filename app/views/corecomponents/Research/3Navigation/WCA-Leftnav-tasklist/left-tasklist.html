@@ -1,0 +1,108 @@
+{% extends "corecomponents/Research/3Navigation/WCA-Leftnav-tasklist/layout-key-detail-bar-start1060-leftnav-main-pa-tasklist.html" %}
+
+{% block pageTitle %}
+  Left nav WCA
+{% endblock %}
+
+
+
+{% block mainContent %}
+
+
+
+<form action="/wca/left-tasklist/save-and-continue" method="post" novalidate>
+
+
+  <ul class="app-task-list__items">
+
+
+<li>
+  <h2 class="app-task-list__section">
+    <span class="app-task-list__section-number"></span> Physical assessment (Optional)
+  </h2>
+  <ul class="app-task-list__items">
+    <!-- <li class="app-task-list__item">
+                <span class="app-task-list__task-name">
+                  <a href="#" aria-describedby="eligibility-status">
+                    Consent required
+                  </a>
+                </span>
+                <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="list-convictions-status">Not started</strong>
+              </li> -->
+    <li class="app-task-list__item">
+      <span class="app-task-list__task-name">
+        <a href="#" aria-describedby="read-declaration-status">
+          General health
+        </a>
+      </span>
+      {% if session['general-health'] %}
+      <strong class="govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
+      {% else %}
+      <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="list-convictions-status">Not started</strong>
+      {% endif %}
+    </li>
+
+    <li class="app-task-list__item">
+      <span class="app-task-list__task-name">
+        <a href="/wca/left-lower-back-legs-task" aria-describedby="read-declaration-status">
+          Lower back and legs
+        </a>
+      </span>
+      {% if session['left-lower-back-legs-task'] %}
+      <strong class="govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
+      {% else %}
+      <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="list-convictions-status">Not started</strong>
+      {% endif %}
+    </li>
+
+    <li class="app-task-list__item">
+      <span class="app-task-list__task-name">
+        <a href="/wca/neck-arms-task" aria-describedby="read-declaration-status">
+          Neck and arms
+        </a>
+      </span>
+       {% if session['neck-arms-task'] %}
+      <strong class="govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
+      {% else %}
+      <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="list-convictions-status">Not started</strong>
+      {% endif %}
+    </li>
+
+    <li class="app-task-list__item">
+      <span class="app-task-list__task-name">
+        <a href="/corecomponents/Research/3Navigation/WCA-tasklist/PA/cardiovascular" aria-describedby="read-declaration-status">
+          Cardiovascular and respiratory
+        </a>
+      </span> 
+      {% if session['cardio'] %}
+      <strong class="govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
+      {% else %}
+      <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="list-convictions-status">Not started</strong>
+      {% endif %}
+    </li>
+    <li class="app-task-list__item">
+      <span class="app-task-list__task-name">
+        <a href="#" aria-describedby="read-declaration-status">
+          Vision, speech and hearing
+        </a>
+      </span>
+      <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="list-convictions-status">Not
+        started</strong>
+    </li>
+    <li class="app-task-list__item">
+      <span class="app-task-list__task-name">
+        <a href="#" aria-describedby="read-declaration-status">
+          Central nervous system
+        </a>
+      </span>
+      <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="list-convictions-status">Not
+        started</strong>
+    </li>
+  </ul>
+</li>
+
+</ol>
+        
+
+
+{% endblock %}

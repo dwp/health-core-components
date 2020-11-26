@@ -1,0 +1,42 @@
+{% extends "corecomponents/Research/3Navigation/WCA-Leftnav-tasklist/layout-key-detail-bar-start1060-leftnav.html" %}
+
+{% block pageTitle %}
+  Left nav WCA
+{% endblock %}
+
+
+
+
+
+
+{% block mainContent %}
+
+<form action="/wca/leftnav/left-condition-history-task/save-and-continue" method="post" novalidate>
+
+  <a class="govuk-back-link" href="/url/of/previous/page">Back</a>
+  
+<div class="govuk-form-group">
+  <!-- <span class="govuk-caption-l">Section heading (Caption)</span> -->
+  <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--l" for="more-detail">
+      Condition history
+    </label>
+  </h1>
+  <div id="more-detail-hint" class="govuk-hint">
+    Provide all details of your condition history
+  </div>
+  <textarea class="govuk-textarea" 
+  id="left-condition-history-task" 
+  name="left-condition-history-task" 
+  rows="10
+" aria-describedby="more-detail-hint">{{ session['left-condition-history-task'] }}</textarea>
+</div>
+
+
+
+<button class="govuk-button" data-module="govuk-button">
+  Save and continue
+  </button>
+
+
+</form>
+{% endblock %}

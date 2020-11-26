@@ -493,6 +493,71 @@ res.redirect('/corecomponents/Research/3Navigation/WCA-Leftnav/paRequired');
 
 
 
+// left nav statements - TASKLIST VERSION
+
+// research prototype 3 wca leftnav social
+app.post('/corecomponents/Research/3Navigation/WCA-Leftnav-tasklist/social', function (req, res, next){
+  console.log(req.session)
+  if (typeof req.session.data.taskleftsocstatements !== 'object'){
+    req.session.data.taskleftsocstatements=[];
+  }
+  if (req.body.taskleftsocstatement){
+    req.session.data.taskleftsocstatements.push(req.body.taskleftsocstatement)
+  }
+  console.log(req.session)
+  next()
+})
+
+// research prototype 3 wca leftnav social
+app.post('/wca/leftnav/leftsocstatement-task/save-and-continue', function (req, res, next){
+res.redirect('/corecomponents/Research/3Navigation/WCA-Leftnav-tasklist/typical-day');
+})
+
+
+
+// research prototype 3 wca leftnav typical day
+app.post('/corecomponents/Research/3Navigation/WCA-Leftnav-tasklist/typical-day', function (req, res, next){
+  console.log(req.session)
+  if (typeof req.session.data.taskleftTypstatements !== 'object'){
+    req.session.data.taskleftTypstatements=[];
+  }
+  if (req.body.taskleftTypstatement){
+    req.session.data.taskleftTypstatements.push(req.body.taskleftTypstatement)
+  }
+  console.log(req.session)
+  next()
+})
+
+// research prototype 3 wca leftnav typical day
+app.post('/wca/leftnav/leftTyptatement-task/save-and-continue', function (req, res, next){
+res.redirect('/wca/leftnav/leftobvstatement-task');
+})
+
+
+// research prototype 3 wca leftnav informal observartions
+app.post('/corecomponents/Research/3Navigation/WCA-Leftnav-tasklist/informal-observation', function (req, res, next){
+  console.log(req.session)
+  if (typeof req.session.data.taskleftobvstatements !== 'object'){
+    req.session.data.taskleftobvstatements=[];
+  }
+  if (req.body.taskleftobvstatement){
+    req.session.data.taskleftobvstatements.push(req.body.taskleftobvstatement)
+  }
+  console.log(req.session)
+  next()
+})
+
+// research prototype 3 wca leftnav informal observations
+app.post('/wca/leftnav/leftobvstatement-task/save-and-continue', function (req, res, next){
+res.redirect('/corecomponents/Research/3Navigation/WCA-Leftnav-tasklist/paRequired');
+})
+
+
+
+
+
+
+
 
 // App folder routes get priority
 app.get(/^([^.]+)$/, function (req, res, next) {

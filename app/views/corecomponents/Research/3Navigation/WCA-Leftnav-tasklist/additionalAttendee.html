@@ -1,0 +1,55 @@
+{% extends "corecomponents/Research/3Navigation/WCA-Leftnav-tasklist/layout-key-detail-bar-start1060-leftnav.html" %}
+
+{% block pageTitle %}
+Additional attendee - WCA 
+{% endblock %}
+
+
+{% block mainContent %}
+
+<form action="/wca/leftnav/wca-left-attendee-task/save-and-continue" method="post" novalidate>
+
+  <a class="govuk-back-link" href="/url/of/previous/page">Back</a>
+  <h1 class="govuk-heading-l">Additional attendees</h1>
+
+<h2 class="govuk-heading-m">Attendee 1</h2>
+
+  <form action="#" method="post" novalidate>
+
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="width-20">
+        Name
+      </label>
+      <input class="govuk-input" id="wca-left-attendee-task" name="wca-left-attendee-task" type="text" value="{{ data['wca-left-attendee-task'] }}"></div>
+
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="width-20">
+          Relationship to claimant
+        </label>
+  <input class="govuk-input" id="left-relation" name="left-relation" type="text" value="{{ data['left-relation'] }}"></div>
+
+
+<hr>
+<br>
+
+<br>
+
+
+<a href="#" class="govuk-link govuk-!-font-size-19">Add another attendee</a>
+<br>
+<br>
+<br>
+    {{ govukButton({
+      id: "comment",
+      name: "comment",
+      value: "add-statement",
+      text: "Save and continue"
+    }) }}
+
+  </div>
+  </div>
+  </main>
+
+
+
+{% endblock %}

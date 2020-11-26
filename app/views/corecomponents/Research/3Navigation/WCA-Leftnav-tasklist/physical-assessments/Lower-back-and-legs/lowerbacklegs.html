@@ -1,0 +1,61 @@
+{% extends "corecomponents/Research/3Navigation/WCA-Leftnav-tasklist/layout-key-detail-bar-start1060-leftnav-main-pa-tasklist.html" %}
+
+{% block pageTitle %}
+  TextArea component
+{% endblock %}
+
+
+
+{% block mainContent %}
+
+  
+
+        
+      
+          <form action="/wca/left-lower-back-legs-task/save-and-continue" method="post" novalidate>
+
+        <span class="govuk-caption-l">Lower back and legs</span>
+
+        {{ govukCheckboxes({
+          idPrefix: "back-legs",
+          name: "back-legs",
+          fieldset: {
+            legend: {
+              text: "Select all of the areas you have assessed",
+              isPageHeading: true,
+              classes: "govuk-fieldset__legend--l"
+            }
+          },
+      
+          items: [
+            {
+              value: "lower-back",
+              text: "Lower back",
+              checked: checked("back-legs", "lower-back")
+            },
+            {
+              value: "left-leg",
+              text: "Left leg",
+              checked: checked("back-legs", "left-leg")
+            },
+            {
+              value: "{{ data['right-leg'] }}",
+              text: "Right leg"
+            }
+          ]
+        }) }}
+
+
+
+
+
+      
+
+
+<button class="govuk-button" data-module="govuk-button">
+  Save and continue
+</button>
+
+
+
+{% endblock %}

@@ -1,0 +1,413 @@
+{#- We can't mount GOV.UK Frontend's assets at root as it's done automatically by the extensions framework. -#}
+{%- set assetPath = '/govuk/assets' -%}
+
+{% extends "govuk/template.njk" %}
+
+{% from "govuk/components/accordion/macro.njk"        import govukAccordion %}
+{% from "govuk/components/back-link/macro.njk"        import govukBackLink %}
+{% from "govuk/components/breadcrumbs/macro.njk"      import govukBreadcrumbs %}
+{% from "govuk/components/button/macro.njk"           import govukButton %}
+{% from "govuk/components/character-count/macro.njk"  import govukCharacterCount %}
+{% from "govuk/components/checkboxes/macro.njk"       import govukCheckboxes %}
+{% from "govuk/components/date-input/macro.njk"       import govukDateInput %}
+{% from "govuk/components/details/macro.njk"          import govukDetails %}
+{% from "govuk/components/error-message/macro.njk"    import govukErrorMessage %}
+{% from "govuk/components/error-summary/macro.njk"    import govukErrorSummary %}
+{% from "govuk/components/fieldset/macro.njk"         import govukFieldset %}
+{% from "govuk/components/file-upload/macro.njk"      import govukFileUpload %}
+{% from "govuk/components/input/macro.njk"            import govukInput %}
+{% from "govuk/components/inset-text/macro.njk"       import govukInsetText %}
+{% from "govuk/components/panel/macro.njk"            import govukPanel %}
+{% from "govuk/components/phase-banner/macro.njk"     import govukPhaseBanner %}
+{% from "govuk/components/radios/macro.njk"           import govukRadios %}
+{% from "govuk/components/select/macro.njk"           import govukSelect %}
+{% from "govuk/components/skip-link/macro.njk"        import govukSkipLink %}
+{% from "govuk/components/summary-list/macro.njk"     import govukSummaryList %}
+{% from "govuk/components/table/macro.njk"            import govukTable %}
+{% from "govuk/components/tabs/macro.njk"             import govukTabs %}
+{% from "govuk/components/tag/macro.njk"              import govukTag %}
+{% from "govuk/components/textarea/macro.njk"         import govukTextarea %}
+{% from "govuk/components/warning-text/macro.njk"     import govukWarningText %}
+{% set containerClasses = "govuk-width-container1" %}
+
+
+{% block head %}
+  {% include "includes/head.html" %}
+{% endblock %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block header %}
+
+<header class="govuk-header " role="banner" data-module="govuk-header">
+  <div class="govuk-header__container govuk-width-container1">
+    <div class="govuk-header__logo">
+      <a href="/index" class="govuk-header__link govuk-header__link--homepage">
+          <span class="govuk-header__logotype-text">
+            Health assessment
+          </span>
+      </a>
+    </div>
+    <!-- <div class="govuk-header__content">
+      <a href="#" class="govuk-header__link govuk-header__link--service-name">
+        Service name
+      </a>
+    </div> -->
+  </div>
+</header>
+
+
+
+
+{% block assess_content %}
+
+<!-- Styling of head and keydetails bar -->
+<style type="text/css">
+
+  .govuk-header {
+    border-bottom: 10px solid #000000;
+  }
+
+  .govuk-header__container {
+    border-bottom: 0px;
+  }
+
+
+.key-details-bar {
+  background-color: #005ea5;
+}
+
+.key-details-bar .key-details-bar__key-details {
+  margin: 0 auto;
+  max-width: 1060px;
+  padding: 20px 30px 20px 30px;
+  position: relative;
+  font-family: "GDS Transport";
+}
+
+@media (max-width: 670px) {
+  .key-details-bar .key-details-bar__key-details {
+    padding: 20px 15px;
+  }
+}
+
+.key-details-bar .key-details-bar__key-details * {
+  color: #fff;
+}
+
+.key-details-bar .key-details-bar__key-details .key-details-bar__top-block::after,
+.key-details-bar .key-details-bar__key-details .key-details-bar__bottom-block::after {
+  clear: both;
+  content: ' ';
+  display: block;
+}
+
+.key-details-bar .key-details-bar__key-details .key-details-bar__bottom-block {
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  content: ' ';
+  padding-top: 10px;
+  margin-top: 6px;
+}
+
+@media (max-width: 670px) {
+  .key-details-bar .key-details-bar__key-details .key-details-bar__bottom-block {
+    border: 0;
+  }
+}
+
+.key-details-bar .key-details-bar__key-details dd,
+.key-details-bar .key-details-bar__key-details dt {
+  float: left;
+  font-size: 19px;
+  margin-right: 5px;
+}
+
+@media (max-width: 670px) {
+  .key-details-bar .key-details-bar__key-details dd,
+  .key-details-bar .key-details-bar__key-details dt {
+    float: none;
+    font-size: 16px;
+    margin: 0;
+  }
+}
+
+.key-details-bar .key-details-bar__key-details dd {
+  margin-right: 20px;
+}
+
+@media (max-width: 670px) {
+  .key-details-bar .key-details-bar__key-details dd {
+    margin-bottom: 20px;
+  }
+  .key-details-bar .key-details-bar__key-details dd:last-of-type {
+    margin-bottom: 0;
+  }
+}
+
+.key-details-bar .key-details-bar__key-details .key-details-bar__name {
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.11111;
+  margin-right: 10px;
+}
+
+@media (max-width: 670px) {
+  .key-details-bar .key-details-bar__key-details .key-details-bar__name {
+    font-size: 24px;
+    line-height: 1.04167;
+    float: left;
+    margin: 0 5px 0 0;
+  }
+}
+
+.key-details-bar .key-details-bar__key-details .key-details-bar__nino {
+  font-size: 24px;
+  line-height: 1;
+  margin-top: 12px;
+}
+
+@media (max-width: 670px) {
+  .key-details-bar .key-details-bar__key-details .key-details-bar__nino {
+    font-size: 18px;
+    float: left;
+    margin: 5px 0 0 0;
+  }
+}
+
+.key-details-bar .key-details-bar__key-details .key-details-bar__status {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.25;
+  padding: 5px 8px 0;
+  color: #005ea5;
+  background-color: #fff;
+  letter-spacing: 1px;
+  text-decoration: none;
+  text-transform: uppercase;
+  float: right;
+  margin: 5px 0 0;
+}
+
+.key-details-bar .key-details-bar__key-details .key-details-bar__status1 {
+  float: right;
+  margin: 5px 0 0;
+}
+
+@media (max-width: 670px) {
+  .key-details-bar .key-details-bar__key-details .key-details-bar__status {
+    font-size: 14px;
+    float: left;
+    clear: both;
+    margin-top: 5px;
+  }
+}
+
+#global-header .header-wrapper{
+max-width:1160px !important;}
+</style>
+
+<section class="key-details-bar" role="contentinfo" aria-label="Key details">
+  <dl class="key-details-bar__key-details">
+    <div class="key-details-bar__top-block">
+      <dt class="govuk-visually-hidden">Name:</dt>
+      <dt class="key-details-bar__name">John Smith</dt>
+
+      <dt class="govuk-visually-hidden">National Insurance number:</dt>
+      <dt class="key-details-bar__nino">QQ 12 34 56 X</dt>
+
+      <dt class="govuk-visually-hidden">Claim status:</dt>
+      <dd class="key-details-bar__status">Assessment in progress</dd>
+    </div>
+
+    <div class="key-details-bar__bottom-block">
+      <dt>Date of birth:</dt>
+      <dd>31 December 1999</dd>
+
+
+
+    </div>
+  </dl>
+</section>
+
+{% endblock %}
+
+
+{% endblock %}
+
+
+
+
+
+
+
+{% set mainClasses = mainClasses | default("govuk-main-wrapper--auto-spacing") %}
+
+{% block beforeContent %}
+
+
+
+      <nav class="navigation-secondary">
+        <h4 class="govuk-heading-s">Work capacity assessment</h4>
+        <ul>
+          <li>
+            <a href="#">Abandon assessment</a>
+          </li>
+          <li>
+            <a href="#" class="active" aria-current="section"> Assessment started: 14:00</a>
+          </li>
+         
+          
+        </ul>
+      </nav>
+
+
+{% endblock %}
+
+
+
+{% block content %}
+<main class="govuk-main-wrapper">
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-one-quarter">
+
+   
+   
+<div class="app-pane__body app-width-container">
+  <div class="app-pane__subnav">
+    <nav class="app-subnav">
+
+
+      
+
+          <ul class="app-subnav__section">  <h4 class="govuk-heading-s">Start assessment</h4>
+            
+            <li class="app-subnav__section-item {% if request.url == '/wca/leftnav/wca-left-attendee-task' or request.url == '/corecomponents/Research/3Navigation/WCA-Leftnav/Attendee-question' %}app-subnav__section-item--current{% endif %}">
+              <a href="/wca/leftnav/wca-left-attendee-task" class="app-subnav__link govuk-link govuk-link--no-visited-state">Additional attendee</a>
+              {% if session['wca-left-attendee-task'] %}
+              &nbsp;&nbsp;&#10004;
+              {% endif %}
+            </li>
+
+            <li class="app-subnav__section-item {% if request.url == '/wca/leftnav/left-condition-history-task' %}app-subnav__section-item--current{% endif %}">
+              <a href="/wca/leftnav/left-condition-history-task" class="app-subnav__link govuk-link govuk-link--no-visited-state">Condition history</a>
+              {% if session['left-condition-history-task'] %}
+              &nbsp;&nbsp;&#10004;
+              {% endif %}
+            </li>
+
+            <li class="app-subnav__section-item {% if request.url == '/wca/leftnav/left-medication-task' %}app-subnav__section-item--current{% endif %}">
+              <a href="/wca/leftnav/left-medication-task" class="app-subnav__link govuk-link govuk-link--no-visited-state">Medication and side effects</a>   
+              {% if session['left-medication-task'] %}
+              &nbsp;&nbsp;&#10004;
+              {% endif %}
+            </li>
+            
+            <li class="app-subnav__section-item {% if request.url == '/wca/leftnav/leftsocstatement-task' %}app-subnav__section-item--current{% endif %}">
+              <a href="/wca/leftnav/leftsocstatement-task" class="app-subnav__link govuk-link govuk-link--no-visited-state">Social and work history</a>   
+              {% if session['leftsocstatement-task'] %}
+              &nbsp;&nbsp;&#10004;
+              {% endif %}
+            </li>
+
+            <li class="app-subnav__section-item {% if request.url == '/wca/leftnav/leftTypstatement-task' %}app-subnav__section-item--current{% endif %}">
+              <a href="/wca/leftnav/leftTypstatement-task" class="app-subnav__link govuk-link govuk-link--no-visited-state">Typical day</a>   
+              {% if session['leftTypstatement-task'] %}
+              &nbsp;&nbsp;&#10004;
+              {% endif %}
+            </li>
+            <li class="app-subnav__section-item {% if request.url == '/wca/leftnav/pa-required-task' %}app-subnav__section-item--current{% endif %}">
+              <a href="/wca/leftnav/pa-required-task" class="app-subnav__link govuk-link govuk-link--no-visited-state">Physical assessment</a>   
+              {% if session['pa-required-task'] %}
+              &nbsp;&nbsp;&#10004;
+              {% endif %}
+            </li>
+
+            <li class="app-subnav__section-item {% if request.url == '/wca/leftnav/mental-health-task' %}app-subnav__section-item--current{% endif %}">
+              <a href="/wca/leftnav/mental-health-task" class="app-subnav__link govuk-link govuk-link--no-visited-state">Mental health</a>   
+              {% if session['mental-health-task'] %}
+              &nbsp;&nbsp;&#10004;
+              {% endif %}
+            </li>
+        
+
+            <li class="app-subnav__section-item {% if request.url == '/wca/leftnav/leftobvstatement-task' %}app-subnav__section-item--current{% endif %}">
+              <a href="/wca/leftnav/leftobvstatement-task" class="app-subnav__link govuk-link govuk-link--no-visited-state">Informal observations</a>   
+              {% if session['leftobvstatement-task'] %}
+              &nbsp;&nbsp;&#10004;
+              {% endif %}
+            </li>
+
+            <li class="app-subnav__section-item {% if request.url == '/wca/leftnav/submit-task' %}app-subnav__section-item--current{% endif %}">
+              <a href="/wca/leftnav/submit-task" class="app-subnav__link govuk-link govuk-link--no-visited-state">Confirm and submit</a>   
+              {% if session['submit-task'] %}
+              &nbsp;&nbsp;&#10004;
+              {% endif %}
+            </li>
+            
+
+            </ul>
+
+           
+
+
+
+
+
+</nav>
+
+  </div>
+
+
+</div>
+
+</div>
+
+
+
+
+
+      <div class="govuk-grid-column-two-thirds-nav">
+
+        {% block mainContent %}
+
+{% endblock %}
+
+
+
+</div>
+</div>
+</main>
+
+{% endblock %}
+
+
+
+
+{% if useAutoStoreData %}
+  {% block footer %}
+    {{ govukFooter({
+      meta: {
+        items: [
+          {
+            href: "https://govuk-prototype-kit.herokuapp.com/",
+            text: ""
+          },
+          {
+            href: "/prototype-admin/clear-data",
+            text: ""
+          }
+        ]
+      }
+    }) }}
+  {% endblock %}
+{% endif %}
+
+{% block bodyEnd %}
+  {% block scripts %}
+    {% include "includes/scripts.html" %}
+    {% block pageScripts %}{% endblock %}
+  {% endblock %}
+  <!-- GOV.UK Prototype Kit {{releaseVersion}} -->
+{% endblock %}
