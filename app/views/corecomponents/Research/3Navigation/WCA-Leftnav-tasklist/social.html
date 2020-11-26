@@ -1,4 +1,4 @@
-{% extends "corecomponents/Research/3Navigation/WCA-Leftnav-tasklist/layout-key-detail-bar-start1060-leftnav-social.html" %}
+{% extends "corecomponents/Research/3Navigation/WCA-Leftnav-tasklist/layout-key-detail-bar-start1060-leftnav.html" %}
 
 {% block pageTitle %}
   Condition history tabs
@@ -42,10 +42,13 @@
 
 <div class="govuk-form-group">
 
-    <input class="govuk-input" id="taskleftsocstatement2" name="taskleftsocstatement" type="text" value="{{data['taskleftsocstatement2']}}">
+  <textarea class="govuk-textarea" id="taskleftsocstatement2" name="taskleftsocstatement" rows="3" aria-describedby="more-detail-hint">{{data['askleftsocstatement2']}}</textarea>
+
+
+    <!-- <input class="govuk-input" id="taskleftsocstatement2" name="taskleftsocstatement" type="text" value="{{data['taskleftsocstatement2']}}"> -->
 </form>
-<br>
-<br>
+<!-- <br>
+<br> -->
 <button class="govuk-button govuk-button--secondary" data-module="govuk-button">  Add statement
 </button>
 </div>
