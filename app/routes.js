@@ -1103,7 +1103,7 @@ router.get('/wca/leftnav/wca-left-attendee-task', function (req, res) {
    
   router.post('/wca/leftnav/mental-health-task/save-and-continue', function (req, res) {
    if (req.body['mental-health-task']) {
-   req.session.data['mental-health-task'] = req.body['mental-health']
+   req.session.data['mental-health-task'] = req.body['mental-health-task']
    }
    res.redirect('/wca/leftnav/leftobvstatement-task');
   });

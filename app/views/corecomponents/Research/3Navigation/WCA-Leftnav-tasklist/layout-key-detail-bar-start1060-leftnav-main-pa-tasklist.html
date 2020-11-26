@@ -324,9 +324,9 @@ max-width:1160px !important;}
 
             </li>
 
-            <li class="app-subnav__section-item {% if request.url == '/wca/leftnav/mental-health' %}app-subnav__section-item--current{% endif %}">
+            <li class="app-subnav__section-item {% if request.url == '/wca/leftnav/mental-health-task' %}app-subnav__section-item--current{% endif %}">
               <a href="/wca/leftnav/mental-health-task" class="app-subnav__link govuk-link govuk-link--no-visited-state">Mental health</a>   
-              {% if session['mental-health'] %}
+              {% if session['mental-health-task'] %}
               &nbsp;&nbsp;&#10004;
               {% endif %}
             </li>

@@ -1,0 +1,39 @@
+{% extends "corecomponents/Research/3Navigation/WCA-Leftnav-tasklist/layout-key-detail-bar-start1060-leftnav-mental-tasklist.html" %}
+
+{% block pageTitle %}
+  Left nav WCA
+{% endblock %}
+
+
+
+{% block mainContent %}
+
+<form action="/wca/leftnav/mental-health-task/save-and-continue" method="post" novalidate>
+
+  <a class="govuk-back-link" href="/url/of/previous/page">Back</a>
+  
+<div class="govuk-form-group">
+  <!-- <span class="govuk-caption-l">Section heading (Caption)</span> -->
+  <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--l" for="more-detail">
+      Mental health
+    </label>
+  </h1>
+  <div id="more-detail-hint" class="govuk-hint">
+    Provide all details
+  </div>
+  <textarea class="govuk-textarea" 
+  id="mental-health-task" 
+  name="mental-health-task" 
+  rows="10
+" aria-describedby="more-detail-hint">{{ session['mental-health-task'] }}</textarea>
+</div>
+
+
+
+<button class="govuk-button" data-module="govuk-button">
+  Save and continue
+  </button>
+
+
+</form>
+{% endblock %}
