@@ -70,11 +70,11 @@
 
     <li class="app-task-list__item">
       <span class="app-task-list__task-name">
-        <a href="/corecomponents/Research/3Navigation/WCA-tasklist/PA/cardiovascular" aria-describedby="read-declaration-status">
+        <a href="/wca/cardio-task" aria-describedby="read-declaration-status">
           Cardiovascular and respiratory
         </a>
       </span> 
-      {% if session['cardio'] %}
+      {% if session['cardio-task'] %}
       <strong class="govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
       {% else %}
       <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="list-convictions-status">Not started</strong>
@@ -103,6 +103,9 @@
 
 </ol>
         
+<button class="govuk-button" data-module="govuk-button">
+  Continue to mental health
+</button>
 
 
 {% endblock %}

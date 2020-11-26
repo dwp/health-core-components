@@ -1,4 +1,4 @@
-{% extends "corecomponents/Research/3Navigation/layout-key-detail-bar-1060-leftnav-pa1.html" %}
+{% extends "corecomponents/Research/3Navigation/WCA-Leftnav-tasklist/layout-key-detail-bar-start1060-leftnav-main-pa-tasklist.html" %}
 
 {% block pageTitle %}
   TextArea component
@@ -7,7 +7,7 @@
 
 {% block mainContent %}
 
-    <form action="/corecomponents/Research/3Navigation/WCA-tasklist/PA/breathlessness" method="post" novalidate>
+     <form action="/wca/blood-task/save-and-continue" method="post" novalidate>
 
 
 
@@ -29,7 +29,7 @@
             </div> -->
             <div class="govuk-checkboxes" data-module="govuk-checkboxes">
               <div class="govuk-checkboxes__item">
-                <input class="govuk-checkboxes__input" id="citizenship-conditional" name="citizen" type="checkbox" value="email" data-aria-controls="conditional-citizenship-conditional">
+                <input class="govuk-checkboxes__input" id="cardio-task"" name="cardio-task"" type="checkbox" value="{ data['cardio-task"'] }}" data-aria-controls="conditional-citizenship-conditional">
                 <label class="govuk-label govuk-checkboxes__label" for="citizenship-conditional">
                   Blood pressure
                 </label>
@@ -39,7 +39,11 @@
                   <label class="govuk-label" for="contact-by-email">
                     State your findings
                   </label>
-                  <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint"></textarea>
+                  <textarea class="govuk-textarea" 
+                  id="cardio-task"" 
+                  name="cardio-task"" 
+                  rows="5" 
+                  aria-describedby="more-detail-hint">{{ session['cardio-task"'] }}</textarea>
                 </div>
               </div>
 

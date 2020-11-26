@@ -1137,17 +1137,34 @@ router.get('/wca/left-tasklist', function (req, res) {
    res.render('corecomponents/Research/3Navigation/WCA-Leftnav-tasklist/left-tasklist.html', { session: req.session.data });
   });
    
+  router.post('/wca/left-tasklist/save-and-continue', function (req, res) {
+   if (req.body['left-tasklist']) {
+   req.session.data['left-tasklist'] = req.body['left-tasklist']
+   }
+   res.redirect('/wca/leftnav/mental-health-task');
+  });
 
 
 router.get('/wca/cardio-task', function (req, res) {
-   res.render('corecomponents/Research/3Navigation/WCA-tasklist/physical-assessments/Cardiovascular-and-respiratory/cardiovascular.html', { session: req.session.data });
+   res.render('corecomponents/Research/3Navigation/WCA-Leftnav-tasklist/physical-assessments/Cardiovascular-and-respiratory/cardiovascular.html', { session: req.session.data });
   });
    
-  router.post('//wca/cardio-task/save-and-continue', function (req, res) {
+  router.post('/wca/cardio-task/save-and-continue', function (req, res) {
    if (req.body['cardio-task']) {
    req.session.data['cardio-task'] = req.body['cardio-task']
    }
-   res.redirect('/wca/task-list');
+   res.redirect('/wca/blood-task');
+  });
+
+  router.get('/wca/blood-task', function (req, res) {
+   res.render('corecomponents/Research/3Navigation/WCA-Leftnav-tasklist/physical-assessments/Cardiovascular-and-respiratory/blood-pressue.html', { session: req.session.data });
+  });
+   
+  router.post('/wca/blood-task/save-and-continue', function (req, res) {
+   if (req.body['blood-task']) {
+   req.session.data['blood-task'] = req.body['cardio-task']
+   }
+   res.redirect('/wca/left-tasklist');
   });
 
 

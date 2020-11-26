@@ -10,23 +10,31 @@
 
 <form action="/wca/leftnav/mental-health-task/save-and-continue" method="post" novalidate>
 
-  <a class="govuk-back-link" href="/url/of/previous/page">Back</a>
-  
-<div class="govuk-form-group">
-  <!-- <span class="govuk-caption-l">Section heading (Caption)</span> -->
-  <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--l" for="more-detail">
-      Mental health
-    </label>
-  </h1>
-  <div id="more-detail-hint" class="govuk-hint">
-    Provide all details
+
+  <div class="govuk-form-group">
+    <fieldset class="govuk-fieldset">
+      <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+        <h1 class="govuk-fieldset__heading">
+          Is a mental health assessment required?
+        </h1>
+      </legend>
+      <div class="govuk-radios">
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="where-do-you-live" name="where-do-you-live" type="radio" value="england">
+          <label class="govuk-label govuk-radios__label" for="where-do-you-live">
+            Yes
+          </label>
+        </div>
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="where-do-you-live-2" name="where-do-you-live" type="radio" value="scotland">
+          <label class="govuk-label govuk-radios__label" for="where-do-you-live-2">
+          No
+          </label>
+        </div>
+      </div>
+
+    </fieldset>
   </div>
-  <textarea class="govuk-textarea" 
-  id="mental-health-task" 
-  name="mental-health-task" 
-  rows="10
-" aria-describedby="more-detail-hint">{{ session['mental-health-task'] }}</textarea>
-</div>
 
 
 
