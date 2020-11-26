@@ -25,12 +25,12 @@
 
 
     <h1 class="govuk-heading-l">Current medication and treatment</h1>
-   
+    <h2 class="govuk-heading-m">Medication 1</h2>
     <div class="govuk-form-group">
       <label class="govuk-label" for="add-attendee">
         Name of medication
       </label>
-      <input class="govuk-input" id="Medication" name="Medication" type="text" value="{{ data['Medication'] }}"> 
+      <input class="govuk-input" id="medication" name="medication-name" type="text" value="{{ data['medication-name'] }}"> 
     </div>
   
 
@@ -53,14 +53,13 @@
 
       <hr>
       <br>
-      {{ govukButton({
-        text: "Add another medication",
-        classes: "govuk-button--secondary"
-      }) }}
+      <a href="/corecomponents/Research/3Navigation/pip-tasklist/3-Current-medication-addanother" class="govuk-link govuk-!-font-size-19">Add another medication</a>
 
+      <br>
 <br>
 <br>
-
+<br>
+<br>
 <div class="govuk-form-group">
   <!-- <span class="govuk-caption-l">Section heading (Caption)</span> -->
   <h1 class="govuk-label-wrapper">
@@ -74,9 +73,9 @@
   <textarea
     class="govuk-textarea"
     id="medication-name"
-    name="medication-name"
+    name="medication-name2"
     rows="10"
-    aria-describedby="more-detail-hint">{{ session['medication-name'] }}</textarea>
+    aria-describedby="more-detail-hint">{{ session['medication-name2'] }}</textarea>
 </div>
 
 

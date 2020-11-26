@@ -242,6 +242,17 @@ router.get('/wca/socialstatement', function (req, res) {
    });
 
 
+   router.get('/pip/medication-name-add', function (req, res) {
+      res.render('corecomponents/Research/3Navigation/pip-tasklist/3-Current-medication-addanother.html', { session: req.session.data });
+     });
+      
+     router.post('/pip/medication-name-add/save-and-continue', function (req, res) {
+      if (req.body['medication-name-add']) {
+      req.session.data['medication-name-add'] = req.body['medication-name-add']
+      }
+      res.redirect('/pip/task-list');
+     });
+  
 
    router.get('/pip/social-history', function (req, res) {
     res.render('corecomponents/Research/3Navigation/pip-tasklist/4-Social-and-occ-history.html', { session: req.session.data });
@@ -688,6 +699,22 @@ router.get('/wca/leftnav/wca-left-attendee', function (req, res) {
 
 
 
+
+  router.get('/pip/leftnav/pip-left-medication-add', function (req, res) {
+   res.render('corecomponents/Research/3Navigation/pip-leftnav/3-Current-medication-add1.html', { 
+      session: req.session.data,
+      request: req
+   });
+   });
+   
+  router.post('/pip/leftnav/pip-left-medication-add/save-and-continue', function (req, res) {
+   if (req.body['pip-left-medication-add']) {
+   req.session.data['pip-left-medication'] = req.body['pip-left-medication-add']
+   }
+   res.redirect('/pip/leftnav/pip-left-social-history');
+  });
+
+
   router.get('/pip/leftnav/pip-left-social-history', function (req, res) {
    res.render('corecomponents/Research/3Navigation/pip-leftnav/4-Social-and-occ-history.html', { 
       session: req.session.data,
@@ -862,6 +889,21 @@ router.get('/wca/leftnav/wca-left-attendee', function (req, res) {
       res.redirect('/pip/leftnav/pip-left-medication-non');
      });
    
+     router.get('/pip/leftnav/pip-left-medication-non-add', function (req, res) {
+      res.render('corecomponents/Research/3Navigation/pip-leftnav-non-forced/3-Current-medication-add.html', { 
+         session: req.session.data,
+         request: req
+      });
+      });
+      
+     router.post('/pip/leftnav/pip-left-medication-non-add/save-and-continue', function (req, res) {
+      if (req.body['pip-left-medication-non-add']) {
+      req.session.data['pip-left-medication-non-add'] = req.body['pip-left-medication-non-add']
+      }
+      res.redirect('/pip/leftnav/pip-left-medication-non-add');
+     });
+   
+     
    
    
      router.get('/pip/leftnav/pip-left-social-history-non', function (req, res) {

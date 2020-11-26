@@ -17,7 +17,7 @@
     <label class="govuk-label" for="add-attendee">
       Name of medication
     </label>
-    <input class="govuk-input" id="Medication" name="Medication" type="text" value="{{ data['Medication'] }}"> 
+    <input class="govuk-input" id="Medication" name="pip-left-medication" type="text" value="{{ data['pip-left-medication'] }}"> 
   </div>
 
 
@@ -26,7 +26,7 @@
       <label class="govuk-label" for="add-attendee">
         Dose
       </label>
-      <input class="govuk-input" id="Dose" name="Dose" type="text" value="{{ data['Dose'] }}"> 
+      <input class="govuk-input" id="Dose" name="Dose3" type="text" value="{{ data['Dose3'] }}"> 
     </div>
   
 
@@ -35,16 +35,17 @@
       <label class="govuk-label" for="add-attendee">
         Frequency
       </label>
-      <input class="govuk-input" id="frequency" name="frequency" type="text" value="{{ data['frequency'] }}"> 
+      <input class="govuk-input" id="frequency" name="frequency3" type="text" value="{{ data['frequency3'] }}"> 
     </div>
 
     <hr>
     <br>
-    {{ govukButton({
-      text: "Add another medication",
-      classes: "govuk-button--secondary"
-    }) }}
+    <a href="/corecomponents/Research/3Navigation/pip-leftnav/3-Current-medication-add1" class="govuk-link govuk-!-font-size-19">Add another medication</a>
 
+
+<br>
+<br>
+<br>
 <br>
 <br>
 
@@ -61,9 +62,9 @@
 <textarea
   class="govuk-textarea"
   id="pip-left-medication"
-  name="pip-left-medication"
+  name="pip-left-medication1"
   rows="10"
-  aria-describedby="more-detail-hint">{{ session['pip-left-medication'] }}</textarea>
+  aria-describedby="more-detail-hint">{{ session['pip-left-medication1'] }}</textarea>
 </div>
 
 

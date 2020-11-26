@@ -1,0 +1,114 @@
+{% extends "corecomponents/Research/3Navigation/pip-leftnav-non-forced/layout-key-detail-bar-start1060-pip-leftnav-nonforced.html" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+
+{% block mainContent %}
+
+<form action="/pip/leftnav/pip-left-medication-add/save-and-continue" method="post" novalidate>
+
+
+  <a href="javascript:window.history.back();" class="govuk-back-link">Back</a>
+  <h1 class="govuk-heading-l">Current medication and treatment</h1>
+ 
+  <h2 class="govuk-heading-m">Medication 1
+    <a href="#" class="govuk-link govuk-!-font-size-19 app-task-list__tag govuk-!-font-weight-regular" id="list-convictions-status">Remove</a>
+</h2>
+
+
+
+
+<div class="govuk-form-group">
+  <label class="govuk-label" for="add-attendee">
+    Name of medication
+  </label>
+  <input class="govuk-input" id="Medication" name="pip-left-medication" type="text" value="{{ data['pip-left-medication'] }}"> 
+</div>
+
+
+
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="add-attendee">
+      Dose
+    </label>
+    <input class="govuk-input" id="Dose" name="Dose3" type="text" value="{{ data['Dose3'] }}"> 
+  </div>
+
+
+
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="add-attendee">
+      Frequency
+    </label>
+    <input class="govuk-input" id="frequency" name="frequency3" type="text" value="{{ data['frequency3'] }}"> 
+  </div>
+
+  <hr>
+<br>
+<br>
+<h2 class="govuk-heading-m">Medication 2
+  <a href="#" class="govuk-link govuk-!-font-size-19 app-task-list__tag govuk-!-font-weight-regular" id="list-convictions-status">Remove</a>
+</h2>
+
+<div class="govuk-form-group">
+  <label class="govuk-label" for="add-attendee">
+    Name of medication
+  </label>
+  <input class="govuk-input" id="Medication" name="pip-left-medication4" type="text" value="{{ data['pip-left-medication4'] }}"> 
+</div>
+
+
+
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="add-attendee">
+      Dose
+    </label>
+    <input class="govuk-input" id="Dose" name="Dose4" type="text" value="{{ data['Dose4'] }}"> 
+  </div>
+
+
+
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="add-attendee">
+      Frequency
+    </label>
+    <input class="govuk-input" id="frequency" name="frequency4" type="text" value="{{ data['frequency4'] }}"> 
+  </div>
+
+  <hr>
+  <br>
+  <a href="#" class="govuk-link govuk-!-font-size-19">Add another medication</a>
+
+  <br>
+<br>
+<br>
+<br>
+<br>
+<div class="govuk-form-group">
+<!-- <span class="govuk-caption-l">Section heading (Caption)</span> -->
+<h1 class="govuk-label-wrapper">
+<label class="govuk-label" for="more-detail">
+  History
+</label>
+</h1>
+<div id="more-detail-hint" class="govuk-hint">
+Including side effects, compliance and efficacy
+</div>
+<textarea
+class="govuk-textarea"
+id="medication-name"
+name="medication-name2"
+rows="10"
+aria-describedby="more-detail-hint">{{ session['medication-name2'] }}</textarea>
+</div>
+
+
+
+<button class="govuk-button" data-module="govuk-button">
+Save
+</button>
+
+
+{% endblock %}
