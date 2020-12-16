@@ -1,0 +1,208 @@
+{% extends "layout-key-detail-bar.html" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+{% block beforeContent %}
+
+<a href="javascript:window.history.back();" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+
+  <div class="govuk-grid-column-three-quarters">
+
+    <h1 class="govuk-heading-xl">Functional history</h1>
+    <form action="/pip/variability/save-and-continue" method="post" novalidate>
+
+
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="more-detail">
+          Variability
+          </label>
+       
+        <div id="more-detail-hint" class="govuk-hint">
+          Details
+        </div>
+        <textarea class="govuk-textarea" 
+        id="variability" 
+        name="variability" 
+        rows="5" 
+        aria-describedby="more-detail-hint">{{ session['variability'] }}</textarea>
+      </div>
+
+
+
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="more-detail">
+          Planning and following journeys
+          </label>
+       
+        <textarea class="govuk-textarea" 
+        id="planning" 
+        name="planning" 
+        rows="5" 
+        aria-describedby="more-detail-hint">{{ data['planning'] }}</textarea>
+      </div>
+
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="more-detail">
+          Moving around
+          </label>
+        <textarea class="govuk-textarea" 
+        id="moving" 
+        name="moving" 
+        rows="5" 
+        aria-describedby="more-detail-hint">{{ data['moving'] }}</textarea>
+      </div>
+
+
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="more-detail">
+          Preparing food
+          </label>
+        <textarea class="govuk-textarea" 
+        id="food" 
+        name="food" 
+        rows="5" 
+        aria-describedby="more-detail-hint">{{ data['food'] }}</textarea>
+      </div>
+
+
+
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="more-detail">
+          Taking nutrition
+          </label>
+        <textarea class="govuk-textarea" 
+        id="nutrition" 
+        name="nutrition" 
+        rows="5" 
+        aria-describedby="more-detail-hint">{{ data['nutrition'] }}</textarea>
+      </div>
+
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="more-detail">
+          Managing therapy or monitoring a health condition
+          </label>
+        <textarea class="govuk-textarea" 
+        id="managing" 
+        name="managing" 
+        rows="5" 
+        aria-describedby="more-detail-hint">{{ data['managing'] }}</textarea>
+      </div>
+
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="more-detail">
+          Washing and bathing
+          </label>
+        <textarea class="govuk-textarea" 
+        id="washing" 
+        name="washing" 
+        rows="5" 
+        aria-describedby="more-detail-hint">{{ data['washing'] }}</textarea>
+      </div>
+
+
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="more-detail">
+          Managing toilet needs or incontinence
+          </label>
+        <textarea class="govuk-textarea" 
+        id="toilet" 
+        name="toilet" 
+        rows="5" 
+        aria-describedby="more-detail-hint">{{ data['toilet'] }}</textarea>
+      </div>
+
+
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="more-detail">
+          Dressing and undressing
+          </label>
+        <textarea class="govuk-textarea" 
+        id="dressing" 
+        name="dressing" 
+        rows="5" 
+        aria-describedby="more-detail-hint">{{ data['dressing'] }}</textarea>
+      </div>
+
+
+
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="more-detail">
+          Communicating verbally
+          </label>
+        <textarea class="govuk-textarea" 
+        id="communicating" 
+        name="communicating" 
+        rows="5" 
+        aria-describedby="more-detail-hint">{{ data['communicating'] }}</textarea>
+      </div>
+ 
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="more-detail">
+          Reading and understanding signs, symbols and words
+          </label>
+        <textarea class="govuk-textarea" 
+        id="reading" 
+        name="reading" 
+        rows="5" 
+        aria-describedby="more-detail-hint">{{ data['reading'] }}</textarea>
+      </div>
+
+
+
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="more-detail">
+          Engaging with others face to face
+          </label>
+        <textarea class="govuk-textarea" 
+        id="face-to-face" 
+        name="face-to-face" 
+        rows="5" 
+        aria-describedby="more-detail-hint">{{ data['face-to-face'] }}</textarea>
+      </div>
+
+
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="more-detail">
+          Making budgeting decisions
+          </label>
+        <textarea class="govuk-textarea" 
+        id="budget" 
+        name="budget" 
+        rows="5" 
+        aria-describedby="more-detail-hint">{{ data['budget'] }}</textarea>
+      </div>
+
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="more-detail">
+          Other relevant functional history
+          </label>
+        <textarea class="govuk-textarea" 
+        id="other-function" 
+        name="other-function" 
+        rows="5" 
+        aria-describedby="more-detail-hint">{{ data['other-function'] }}</textarea>
+      </div>
+
+
+
+    <button class="govuk-button" data-module="govuk-button">
+      Save and continue
+    </button>
+
+    
+  </div>
+
+</div>
+
+</main>
+</div>
+
+{% endblock %}

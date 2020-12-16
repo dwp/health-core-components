@@ -1,43 +1,46 @@
-{% extends "corecomponents/Research/3Navigation/layout-key-detail-bar-tasklist-wca.html" %}
+{% extends "corecomponents/Research/3Navigation/layout-key-detail-bar-tasklist-pip.html" %}
 {% block pageTitle %}
 TextArea configurable component
 {% endblock %}
 
+
 {% block content %}
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
+
+
+
     <ol class="app-task-list">
       <li>
         <h2 class="app-task-list__section">
-          <span class="app-task-list__section-number">1. </span> Claimant evidence
+          <span class="app-task-list__section-number">1. </span> Assessment
         </h2>
         <ul class="app-task-list__items">
-
           <li class="app-task-list__item">
             <span class="app-task-list__task-name">
-              <a href="/wca/attendee"
+              <a href="/pip/evidence-considered"
                 aria-describedby="eligibility-status">
-                Additional attendee
+                Start consultation
               </a>
             </span>
-            {% if session['attendee'] %}
+            {% if session['evidence-considered'] %}
             <strong class="govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
             {% else %}
-            <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="list-convictions-status">Optional</strong>
+            <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="list-convictions-status">Not started</strong>
             {% endif %}
           </li>
 
+
+
           <li class="app-task-list__item">
             <span class="app-task-list__task-name">
-              <a href="/wca/condition-history"
-                aria-describedby="eligibility-status">
-                Condition history
+              <a href="/pip/add-attendee"
+                aria-describedby="add-attendee">
+                Additional attendees
               </a>
             </span>
-            {% if session['condition-history'] %}
+            {% if session['add-attendee'] %}
             <strong class="govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
-            {% elif session['condition-history-progress'].inProgress %}
-            <strong class="govuk-tag govuk-tag--blue app-task-list__tag" id="contact-details-status">In progress</strong>
             {% else %}
             <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="list-convictions-status">Not started</strong>
             {% endif %}
@@ -45,68 +48,84 @@ TextArea configurable component
 
           <li class="app-task-list__item">
             <span class="app-task-list__task-name">
-              <a href="/wca/medication" aria-describedby="read-declaration-status">
-                Medication and side effects
-              </a>
-            </span>
-            {% if session['medication'] %}
-            <strong class="govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
-            {% elif session['medication-progress'].inProgress %}
-            <strong class="govuk-tag govuk-tag--blue app-task-list__tag" id="contact-details-status">In progress</strong>
-            {% else %}
-            <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="list-convictions-status">Not started</strong>
-            {% endif %}
-          </li>
-
-          <li class="app-task-list__item">
-            <span class="app-task-list__task-name">
-              <a href="/wca/socialstatement" 
+              <a href="/pip/history-condition" 
               aria-describedby="read-declaration-status">
-                Social and work history
+              History of conditions
               </a>
             </span>
-            {% if data['socialstatements'] and (data['socialstatements'].length > 0) %}
-            <strong class="govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
+            {% if session['history-condition'] %}
+            <strong class="govuk-tag app-task-list__tag" id="history-condition">Completed</strong>
             {% else %}
-            <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="list-convictions-status">Not started</strong>
+            <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="history-condition">Not started</strong>
             {% endif %}
           </li>
           
-          <li class="app-task-list__item">
+          
+
+
+
+            <li class="app-task-list__item">
             <span class="app-task-list__task-name">
-              <a href="/wca/statement" aria-describedby="read-declaration-status">
-                Typical day
+              <a href="/pip/medication-name" aria-describedby="read-declaration-status">
+                Current medication and treatment
               </a>
-            </span> 
-            <!-- <strong class="govuk-tag govuk-tag--blue app-task-list__tag">
-              In progress
-            </strong> -->
-            {% if data['statements'] and (data['statements'].length > 0) %}
+            </span>
+            {% if session['medication-name'] %}
             <strong class="govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
             {% else %}
             <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="list-convictions-status">Not started</strong>
             {% endif %}
           </li>
-        
+
+
+
 
           <li class="app-task-list__item">
             <span class="app-task-list__task-name">
-              <a href="/wca/observestatement" aria-describedby="read-declaration-status">
-                Informal observations
+              <a href="/pip/variability" aria-describedby="read-declaration-status">
+                Functional history
               </a>
             </span>
-            {% if data['observestatements'] and (data['observestatements'].length > 0) %}
+            {% if session['variability'] %}
             <strong class="govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
             {% else %}
             <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="list-convictions-status">Not started</strong>
             {% endif %}
           </li>
+
+          <li class="app-task-list__item">
+            <span class="app-task-list__task-name">
+              <a href="/pip/social-history" aria-describedby="read-declaration-status">
+                Social and occupational history
+              </a>
+            </span>
+            {% if session['social-history'] %}
+            <strong class="govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
+            {% else %}
+            <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="list-convictions-status">Not started</strong>
+            {% endif %}
+          </li>
+
+          <li class="app-task-list__item">
+            <span class="app-task-list__task-name">
+              <a href="/pip/observations" aria-describedby="read-declaration-status">
+                Observations
+              </a>
+            </span>
+            {% if session['observations'] %}
+            <strong class="govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
+            {% else %}
+            <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="list-convictions-status">Not started</strong>
+            {% endif %}
+          </li>
+
+
 
         </ul>
       </li>
       <li>
         <h2 class="app-task-list__section">
-          <span class="app-task-list__section-number">2. </span> Physical assessment
+          <span class="app-task-list__section-number">2. </span> Examination
         </h2>
         <ul class="app-task-list__items">
           <!-- <li class="app-task-list__item">
@@ -119,86 +138,49 @@ TextArea configurable component
                     </li> -->
           <li class="app-task-list__item">
             <span class="app-task-list__task-name">
-              <a href="/wca/general-health" aria-describedby="read-declaration-status">
-                General health
+              <a href="/pip/mental-state" aria-describedby="read-declaration-status">
+                Mental state
               </a>
             </span>
-            {% if session['general-health'] %}
+            {% if session['mental-state'] %}
             <strong class="govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
             {% else %}
             <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="list-convictions-status">Not started</strong>
             {% endif %}
           </li>
+
+          
+
           <li class="app-task-list__item">
             <span class="app-task-list__task-name">
-              <a href="/wca/leg-back" aria-describedby="read-declaration-status">
-                Lower back and legs
+              <a href="/pip/musculoskeletal" aria-describedby="read-declaration-status">
+                Musculoskeletal system
               </a>
             </span>
-            {% if session['leg-back'] %}
+            {% if session['musculoskeletal'] %}
             <strong class="govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
             {% else %}
             <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="list-convictions-status">Not started</strong>
             {% endif %}
           </li>
+
+          
+
+
+
           <li class="app-task-list__item">
             <span class="app-task-list__task-name">
-              <a href="/wca/neck-arms" aria-describedby="read-declaration-status">
-                Neck and arms
+              <a href="/pip/other-systems" aria-describedby="read-declaration-status">
+                Other relevant systems
               </a>
             </span>
-            {% if session['neck-arms'] %}
+            {% if session['other-systems'] %}
             <strong class="govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
             {% else %}
             <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="list-convictions-status">Not started</strong>
             {% endif %}
           </li>
-          <li class="app-task-list__item">
-            <span class="app-task-list__task-name">
-              <a href="/wca/cardio" aria-describedby="read-declaration-status">
-                Cardiovascular and respiratory
-              </a>
-            </span> 
-            {% if session['cardio'] %}
-            <strong class="govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
-            {% else %}
-            <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="list-convictions-status">Not started</strong>
-            {% endif %}
-          </li>
-          <li class="app-task-list__item">
-            <span class="app-task-list__task-name">
-              <a href="#" aria-describedby="read-declaration-status">
-                Vision, speech and hearing
-              </a>
-            </span>
-            <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="list-convictions-status">Not
-              started</strong>
-          </li>
-          <li class="app-task-list__item">
-            <span class="app-task-list__task-name">
-              <a href="#" aria-describedby="read-declaration-status">
-                Central nervous system
-              </a>
-            </span>
-            <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="list-convictions-status">Not
-              started</strong>
-          </li>
-        </ul>
-      </li>
-      <li>
-        <h2 class="app-task-list__section">
-          <span class="app-task-list__section-number">3. </span> Mental health
-        </h2>
-        <ul class="app-task-list__items">
-          <li class="app-task-list__item">
-            <span class="app-task-list__task-name">
-              <a href="#" aria-describedby="eligibility-status">
-                Mental health
-              </a>
-            </span>
-            <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="list-convictions-status">Not
-              started</strong>
-          </li>
+         
         </ul>
       </li>
     </ol>

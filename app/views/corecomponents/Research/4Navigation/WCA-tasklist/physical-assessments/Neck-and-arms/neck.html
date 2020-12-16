@@ -1,0 +1,289 @@
+{% extends "layout-key-detail-bar.html" %}
+
+{% block pageTitle %}
+  TextArea component
+{% endblock %}
+
+
+{% block beforeContent %}
+
+<a href="javascript:window.history.back();" class="govuk-back-link">Back</a>
+{% endblock %}
+
+
+{% block content %}
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-three-quarters">
+
+    <form action="/wca/neck-arms/save-and-continue" method="post" novalidate>
+
+
+
+        <span class="govuk-caption-l">Neck and arms</span>
+       
+        <h2 class="govuk-heading-l">Neck</h2>
+
+<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" aria-describedby="citizenship-conditional-hint">
+    <label class="govuk-label" for="more-detail">
+      Select the examination you want to complete
+    </label>
+    <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="citizenship-conditional" name="citizen" type="checkbox" value="email" data-aria-controls="conditional-extension-conditional">
+        <label class="govuk-label govuk-checkboxes__label" for="citizenship-conditional">
+          Extension
+        </label>
+      </div>
+      <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-extension-conditional">
+        <div class="govuk-form-group">
+<fieldset class="govuk-fieldset">
+<legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+  <h1 class="govuk-fieldset__heading">
+    Choose below
+  </h1>
+</legend>
+<div class="govuk-radios">
+  <div class="govuk-radios__item">
+    <input class="govuk-radios__input" id="where-do-you-live" name="where-do-you-live" type="radio" value="england">
+    <label class="govuk-label govuk-radios__label" for="where-do-you-live">
+      Unrestricted
+    </label>
+  </div>
+  <div class="govuk-radios__item">
+    <input class="govuk-radios__input" id="where-do-you-live-2" name="where-do-you-live" type="radio" value="scotland">
+    <label class="govuk-label govuk-radios__label" for="where-do-you-live-2">
+      Upward neck movement reduced by a quarter to between 60° and 70°
+    </label>
+  </div>
+  <div class="govuk-radios__item">
+    <input class="govuk-radios__input" id="where-do-you-live-3" name="where-do-you-live" type="radio" value="wales">
+    <label class="govuk-label govuk-radios__label" for="where-do-you-live-3">
+      Upward neck movement greatly reduced to less than 30°
+    </label>
+  </div>
+</div>
+
+</fieldset>
+</div>
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="citizenship-conditional-2" name="citizen" type="checkbox" value="phone" data-aria-controls="conditional-forward-flexion-conditional">
+        <label class="govuk-label govuk-checkboxes__label" for="citizenship-conditional-2">
+          Forward flexion
+        </label>
+      </div>
+      <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-forward-flexion-conditional">
+        <div class="govuk-form-group">
+<fieldset class="govuk-fieldset">
+<legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+  <h1 class="govuk-fieldset__heading">
+    Choose below
+  </h1>
+</legend>
+<div class="govuk-radios">
+  <div class="govuk-radios__item">
+    <input class="govuk-radios__input" id="where-do-you-live" name="where-do-you-live" type="radio" value="england">
+    <label class="govuk-label govuk-radios__label" for="where-do-you-live">
+      Unrestricted
+    </label>
+  </div>
+  <div class="govuk-radios__item">
+    <input class="govuk-radios__input" id="where-do-you-live-2" name="where-do-you-live" type="radio" value="scotland">
+    <label class="govuk-label govuk-radios__label" for="where-do-you-live-2">
+      Can very nearly touch chin to front of chest (gap of 1 cm)
+    </label>
+  </div>
+  <div class="govuk-radios__item">
+    <input class="govuk-radios__input" id="where-do-you-live-3" name="where-do-you-live" type="radio" value="wales">
+    <label class="govuk-label govuk-radios__label" for="where-do-you-live-3">
+      Cannot touch chin to front of chest (gap greater than 2 cm)
+    </label>
+  </div>
+
+</div>
+</fieldset>
+</div>
+      </div>
+
+<div class="govuk-checkboxes__item">
+  <input class="govuk-checkboxes__input" id="citizenship-conditional-2" name="citizen" type="checkbox" value="phone" data-aria-controls="conditional-left-ear-conditional">
+  <label class="govuk-label govuk-checkboxes__label" for="citizenship-conditional-2">
+    Left ear to shoulder
+  </label>
+</div>
+<div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-left-ear-conditional">
+  <div class="govuk-form-group">
+<fieldset class="govuk-fieldset">
+<legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+<h1 class="govuk-fieldset__heading">
+Choose below
+</h1>
+</legend>
+<div class="govuk-radios">
+<div class="govuk-radios__item">
+<input class="govuk-radios__input" id="where-do-you-live" name="where-do-you-live" type="radio" value="england">
+<label class="govuk-label govuk-radios__label" for="where-do-you-live">
+  Unrestricted
+</label>
+</div>
+<div class="govuk-radios__item">
+<input class="govuk-radios__input" id="where-do-you-live-2" name="where-do-you-live" type="radio" value="scotland">
+<label class="govuk-label govuk-radios__label" for="where-do-you-live-2">
+  No: cannot move ear towards shoulder
+</label>
+</div>
+
+</div>
+
+</fieldset>
+</div>
+      </div>
+
+
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="neck-arms" name="neck-arms" type="checkbox" value="{ data['neck-arms'] }}" data-aria-controls="conditional-left-rotation-conditional">
+        <label class="govuk-label govuk-checkboxes__label" for="citizenship-conditional-2">
+          Left rotation
+        </label>
+      </div>
+      <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-left-rotation-conditional">
+        <div class="govuk-form-group">
+<fieldset class="govuk-fieldset">
+<legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+  <h1 class="govuk-fieldset__heading">
+    Choose below
+  </h1>
+</legend>
+<div class="govuk-radios">
+  <div class="govuk-radios__item">
+    <input class="govuk-radios__input" id="where-do-you-live" name="where-do-you-live" type="radio" value="england">
+    <label class="govuk-label govuk-radios__label" for="where-do-you-live">
+      Unrestricted
+    </label>
+  </div>
+  <div class="govuk-radios__item">
+    <input class="govuk-radios__input" id="where-do-you-live-2" name="where-do-you-live" type="radio" value="scotland">
+    <label class="govuk-label govuk-radios__label" for="where-do-you-live-2">
+      Ability to look to side is reduced to between 60° and 70°
+    </label>
+  </div>
+  <div class="govuk-radios__item">
+    <input class="govuk-radios__input" id="where-do-you-live-2" name="where-do-you-live" type="radio" value="scotland">
+    <label class="govuk-label govuk-radios__label" for="where-do-you-live-2">
+      Ability to look to side to less is reduced to less than 60°
+    </label>
+  </div>
+
+ 
+
+</div>
+</fieldset>
+</div>
+      </div>
+
+
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="neck-arms" name="neck-arms" type="checkbox" value="{ data['neck-arms'] }}" data-aria-controls="conditional-right-ear-conditional">
+        <label class="govuk-label govuk-checkboxes__label" for="citizenship-conditional-2">
+          Right ear to shoulder
+        </label>
+      </div>
+      <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-right-ear-conditional">
+        <div class="govuk-form-group">
+      <fieldset class="govuk-fieldset">
+      <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+      <h1 class="govuk-fieldset__heading">
+      Choose below
+      </h1>
+      </legend>
+      <div class="govuk-radios">
+      <div class="govuk-radios__item">
+      <input class="govuk-radios__input" id="where-do-you-live" name="where-do-you-live" type="radio" value="england">
+      <label class="govuk-label govuk-radios__label" for="where-do-you-live">
+        Unrestricted
+      </label>
+      </div>
+      <div class="govuk-radios__item">
+      <input class="govuk-radios__input" id="where-do-you-live-2" name="where-do-you-live" type="radio" value="scotland">
+      <label class="govuk-label govuk-radios__label" for="where-do-you-live-2">
+        No: cannot move ear towards shoulder
+      </label>
+      </div>
+      
+      </div>
+      
+      </fieldset>
+      </div>
+            </div>
+      
+      
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="neck-arms" name="neck-arms" type="checkbox" value="{ data['neck-arms'] }}" data-aria-controls="conditional-right-rotation-conditional">
+              <label class="govuk-label govuk-checkboxes__label" for="citizenship-conditional-2">
+                Right rotation
+              </label>
+            </div>
+            <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-right-rotation-conditional">
+              <div class="govuk-form-group">
+      <fieldset class="govuk-fieldset">
+      <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+        <h1 class="govuk-fieldset__heading">
+          Choose below
+        </h1>
+      </legend>
+      <div class="govuk-radios">
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="where-do-you-live" name="where-do-you-live" type="radio" value="england">
+          <label class="govuk-label govuk-radios__label" for="where-do-you-live">
+            Unrestricted
+          </label>
+        </div>
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="where-do-you-live-2" name="where-do-you-live" type="radio" value="scotland">
+          <label class="govuk-label govuk-radios__label" for="where-do-you-live-2">
+            Ability to look to side is reduced to between 60° and 70°
+          </label>
+        </div>
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="where-do-you-live-2" name="where-do-you-live" type="radio" value="scotland">
+          <label class="govuk-label govuk-radios__label" for="where-do-you-live-2">
+            Ability to look to side to less is reduced to less than 60°
+          </label>
+        </div>
+      
+       
+      
+      </div>
+      </fieldset>
+      </div>
+            </div>
+
+
+
+
+
+
+
+      </div>
+
+
+  </fieldset>
+</div>
+
+<div class="govuk-form-group">
+  <label class="govuk-label" for="more-detail">
+      Other findings
+    </label>
+
+  <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint"></textarea>
+</div>
+
+
+<button class="govuk-button" data-module="govuk-button">
+Save and continue
+</button>
+</div>
+</div>
+{% endblock %}

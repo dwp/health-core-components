@@ -1,0 +1,58 @@
+{% extends "layout-key-detail-bar.html" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+{% block beforeContent %}
+
+<a href="javascript:window.history.back();" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+
+  <div class="govuk-grid-column-three-quarters">
+
+
+    <form action="/pip/other-systems/save-and-continue" method="post" novalidate>
+
+
+
+
+      <div class="govuk-form-group">
+        <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--l" for="more-detail">
+          Other relevant systems
+          </label>
+        </h1>
+        <div id="more-detail-hint" class="govuk-hint">
+          Details
+        </div>
+        <textarea class="govuk-textarea" 
+        id="other-systems" 
+        name="other-systems" 
+        rows="5" 
+        aria-describedby="more-detail-hint">{{ session['other-systems'] }}</textarea>
+      </div>
+      
+
+
+      <button class="govuk-button" data-module="govuk-button">
+        Save and continue
+      </button>
+
+
+
+
+
+
+  </div>
+
+</div>
+
+</main>
+</div>
+
+{% endblock %}

@@ -1268,3 +1268,298 @@ router.get('/wca/cardio-task', function (req, res) {
      });
 
 module.exports = router
+
+
+
+
+
+
+
+
+// Prototype research 4
+// WCA
+
+router.get('/wca/task-list4', function (req, res) {
+   res.render('corecomponents/Research/4Navigation/WCA-tasklist/TaskList.html', { session: req.session.data })
+  })
+   
+  
+  router.get('/wca/attendee4', function (req, res) {
+      res.render('corecomponents/Research/4Navigation/WCA-tasklist/additionalAttendee.html', { session: req.session.data });
+     });
+      
+     router.post('/wca/attendee4/save-and-continue', function (req, res) {
+      if (req.body['attendee4']) {
+      req.session.data['attendee4'] = req.body['attendee4']
+      }
+      res.redirect('/wca/task-list4');
+     });
+  
+  
+  
+  
+  router.get('/wca/condition-history4', function (req, res) {
+   res.render('corecomponents/Research/4Navigation/WCA-tasklist/Conditionhistory.html', { session: req.session.data });
+  });
+   
+  router.post('/wca/condition-history4/save-and-continue', function (req, res) {
+   if (req.body['condition-history4']) {
+   req.session.data['condition-history4'] = req.body['condition-history4']
+   }
+   res.redirect('/wca/task-list4');
+  });
+
+
+  router.get('/wca/condition-history-progress4/save-and-continue', function (req, res) {
+   req.session.data['condition-history-progress4'] = {inProgress: true};
+   res.redirect('/wca/task-list4');
+  });
+ 
+
+
+
+router.get('/wca/medication4', function (req, res) {
+   res.render('corecomponents/Research/4Navigation/WCA-tasklist/medication.html', { session: req.session.data });
+  });
+   
+  router.post('/wca/medication4/save-and-continue', function (req, res) {
+   if (req.body['medication4']) {
+   req.session.data['medication4'] = req.body['medication4']
+   }
+   res.redirect('/wca/task-list4');
+  });
+
+router.get('/wca/medication-progress4/save-and-continue', function (req, res) {
+   req.session.data['condition-history-progress4'] = {inProgress: true};
+   res.redirect('/wca/task-list4');
+  });
+
+
+
+router.get('/wca/socialstatement4', function (req, res) {
+   res.render('corecomponents/Research/4Navigation/WCA-tasklist/SocialWorkHistory.html', { session: req.session.data });
+  });
+   
+  router.post('/wca/socialstatement4/save-and-continue', function (req, res) {
+   if (req.body['socialstatement4']) {
+   req.session.data['socialstatement4'] = req.body['socialstatement4']
+   }
+   res.redirect('/wca/task-list4');
+  });
+    
+
+   router.get('/wca/statement4', function (req, res) {
+    res.render('corecomponents/Research/4Navigation/WCA-tasklist/Typical_day.html', { session: req.session.data });
+   });
+    
+   router.post('/wca/statement4/save-and-continue', function (req, res) {
+    if (req.body['statement4']) {
+    req.session.data['statement4'] = req.body['statement4']
+    }
+    res.redirect('/wca/task-list4');
+   });
+
+
+
+   router.get('/wca/observestatement4', function (req, res) {
+      res.render('corecomponents/Research/4Navigation/WCA-tasklist/informal-observation.html', { session: req.session.data });
+     });
+      
+     router.post('/wca/observestatement4/save-and-continue', function (req, res) {
+      if (req.body['observestatement4']) {
+      req.session.data['observestatement4'] = req.body['observestatement4']
+      }
+      res.redirect('/wca/task-list4');
+     });
+
+
+
+
+   router.get('/wca/cardio4', function (req, res) {
+    res.render('corecomponents/Research/4Navigation/WCA-tasklist/physical-assessments/Cardiovascular-and-respiratory/cardiovascular.html', { session: req.session.data });
+   });
+    
+   router.post('/wca/cardio4/save-and-continue', function (req, res) {
+    if (req.body['cardio4']) {
+    req.session.data['cardio4'] = req.body['cardio4']
+    }
+    res.redirect('/wca/task-list4');
+   });
+
+
+   router.get('/wca/general-health4', function (req, res) {
+    res.render('corecomponents/Research/4Navigation/WCA-tasklist/physical-assessments/General-health/GeneralHealth.html', { session: req.session.data });
+   });
+    
+   router.post('/wca/general-health4/save-and-continue', function (req, res) {
+    if (req.body['general-health4']) {
+    req.session.data['general-health4'] = req.body['general-health4']
+    }
+    res.redirect('/wca/task-list4');
+   });
+   
+
+   router.get('/wca/leg-back4', function (req, res) {
+      res.render('corecomponents/Research/4Navigation/WCA-tasklist/physical-assessments/Lower-back-and-legs/lowerbacklegs.html', { session: req.session.data });
+     });
+      
+     router.post('/wca/leg-back4/save-and-continue', function (req, res) {
+      if (req.body['leg-back4']) {
+      req.session.data['leg-back4'] = req.body['leg-back4']
+      }
+      res.redirect('/wca/task-list4');
+     });
+     
+
+
+     router.get('/wca/neck-arms4', function (req, res) {
+      res.render('corecomponents/Research/4Navigation/WCA-tasklist/physical-assessments/Neck-and-arms/neckArms.html', { session: req.session.data });
+     });
+      
+     router.post('/wca/neck-arms4/save-and-continue', function (req, res) {
+      if (req.body['neck-arms4']) {
+      req.session.data['neck-arms4'] = req.body['neck-arms4']
+      }
+      res.redirect('/wca/task-list4');
+     });
+
+     
+
+
+// PIP Tasklist
+
+   router.get('/pip/task-list4', function (req, res) {
+    res.render('corecomponents/Research/4Navigation/pip-tasklist/0-TaskList.html', { session: req.session.data })
+   })
+    
+   router.get('/pip/evidence-considered4', function (req, res) {
+    res.render('corecomponents/Research/4Navigation/pip-tasklist/1-Consultation-start.html', { session: req.session.data });
+   });
+    
+   router.post('/pip/evidence-considered4/save-and-continue', function (req, res) {
+    if (req.body['evidence-considered4']) {
+    req.session.data['evidence-considered4'] = req.body['evidence-considered4']
+    }
+    res.redirect('/pip/task-list4');
+   });
+
+
+
+   router.get('/pip/add-attendee4', function (req, res) {
+    res.render('corecomponents/Research/4Navigation/pip-tasklist/1a-AddAttendee', { session: req.session.data });
+   });
+    
+   router.post('/pip/add-attendee4/save-and-continue', function (req, res) {
+    if (req.body['add-attendee4']) {
+    req.session.data['add-attendee4'] = req.body['add-attendee4']
+    }
+    res.redirect('/pip/task-list4');
+   });
+
+
+   router.get('/pip/history-condition4', function (req, res) {
+    res.render('corecomponents/Research/4Navigation/pip-tasklist/2-History-of-conditions', { session: req.session.data });
+   });
+    
+   router.post('/pip/history-condition4/save-and-continue', function (req, res) {
+    if (req.body['history-condition4']) {
+    req.session.data['history-condition4'] = req.body['history-condition4']
+    }
+    res.redirect('/pip/task-list4');
+   });
+
+  
+   router.get('/pip/medication-name4', function (req, res) {
+    res.render('corecomponents/Research/4Navigation/pip-tasklist/3-Current-medication', { session: req.session.data });
+   });
+    
+   router.post('/pip/medication-name4/save-and-continue', function (req, res) {
+    if (req.body['medication-name4']) {
+    req.session.data['medication-name4'] = req.body['medication-name4']
+    }
+    res.redirect('/pip/task-list4');
+   });
+
+
+   router.get('/pip/medication-name-add4', function (req, res) {
+      res.render('corecomponents/Research/4Navigation/pip-tasklist/3-Current-medication-addanother.html', { session: req.session.data });
+     });
+      
+     router.post('/pip/medication-name-add4/save-and-continue', function (req, res) {
+      if (req.body['medication-name-add4']) {
+      req.session.data['medication-name-add4'] = req.body['medication-name-add4']
+      }
+      res.redirect('/pip/task-list4');
+     });
+  
+
+   router.get('/pip/social-history4', function (req, res) {
+    res.render('corecomponents/Research/4Navigation/pip-tasklist/4-Social-and-occ-history.html', { session: req.session.data });
+   });
+    
+   router.post('/pip/social-history4/save-and-continue', function (req, res) {
+    if (req.body['social-history4']) {
+    req.session.data['social-history4'] = req.body['social-history4']
+    }
+    res.redirect('/pip/task-list4');
+   });
+
+
+   router.get('/pip/variability4', function (req, res) {
+    res.render('corecomponents/Research/4Navigation/pip-tasklist/5-Functional-history.html', { session: req.session.data });
+   });
+    
+   router.post('/pip/variability4/save-and-continue', function (req, res) {
+    if (req.body['pip/variability4']) {
+    req.session.data['pip/variability4'] = req.body['pip/variability4']
+    }
+    res.redirect('/pip/task-list4');
+   });
+
+   router.get('/pip/observations4', function (req, res) {
+    res.render('corecomponents/Research/4Navigation/pip-tasklist/6-Observations.html', { session: req.session.data });
+   });
+    
+   router.post('/pip/observations4/save-and-continue', function (req, res) {
+    if (req.body['pip/observations4']) {
+    req.session.data['pip/observations4'] = req.body['pip/observations4']
+    }
+    res.redirect('/pip/task-list4');
+   });
+   
+
+   router.get('/pip/mental-state4', function (req, res) {
+    res.render('corecomponents/Research/4Navigation/pip-tasklist/7-Mental-state.html', { session: req.session.data });
+   });
+    
+   router.post('/pip/mental-state4/save-and-continue', function (req, res) {
+    if (req.body['pip/mental-state4']) {
+    req.session.data['pip/mental-state4'] = req.body['pip/mental-state4']
+    }
+    res.redirect('/pip/task-list4');
+   });
+
+
+   router.get('/pip/musculoskeletal4', function (req, res) {
+    res.render('corecomponents/Research/4Navigation/pip-tasklist/8-Musculoskeletal', { session: req.session.data });
+   });
+    
+   router.post('/pip/musculoskeletal4/save-and-continue', function (req, res) {
+    if (req.body['pip/musculoskeletal4']) {
+    req.session.data['pip/musculoskeletal4'] = req.body['pip/musculoskeletal4']
+    }
+    res.redirect('/pip/task-list4');
+   });
+
+
+   router.get('/pip/other-systems4', function (req, res) {
+    res.render('corecomponents/Research/4Navigation/pip-tasklist/9-Other-systems', { session: req.session.data });
+   });
+    
+   router.post('/pip/other-systems4/save-and-continue', function (req, res) {
+    if (req.body['pip/other-systems4']) {
+    req.session.data['pip/other-systems4'] = req.body['pip/other-systems4']
+    }
+    res.redirect('/pip/task-list4');
+   });
+

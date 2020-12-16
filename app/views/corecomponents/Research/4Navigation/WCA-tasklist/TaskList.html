@@ -9,18 +9,18 @@ TextArea configurable component
     <ol class="app-task-list">
       <li>
         <h2 class="app-task-list__section">
-          <span class="app-task-list__section-number">1. </span> Claimant evidence
+          <span class="app-task-list__section-number">About claimant 
         </h2>
-        <ul class="app-task-list__items">
+        <ul class="app-task-list__items1">
 
           <li class="app-task-list__item">
             <span class="app-task-list__task-name">
-              <a href="/wca/attendee"
+              <a href="/wca/attendee4"
                 aria-describedby="eligibility-status">
                 Additional attendee
               </a>
             </span>
-            {% if session['attendee'] %}
+            {% if session['attendee4'] %}
             <strong class="govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
             {% else %}
             <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="list-convictions-status">Optional</strong>
@@ -29,14 +29,14 @@ TextArea configurable component
 
           <li class="app-task-list__item">
             <span class="app-task-list__task-name">
-              <a href="/wca/condition-history"
+              <a href="/wca/condition-history4"
                 aria-describedby="eligibility-status">
                 Condition history
               </a>
             </span>
-            {% if session['condition-history'] %}
+            {% if session['condition-history4'] %}
             <strong class="govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
-            {% elif session['condition-history-progress'].inProgress %}
+            {% elif session['condition-history-progress4'].inProgress %}
             <strong class="govuk-tag govuk-tag--blue app-task-list__tag" id="contact-details-status">In progress</strong>
             {% else %}
             <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="list-convictions-status">Not started</strong>
@@ -45,13 +45,13 @@ TextArea configurable component
 
           <li class="app-task-list__item">
             <span class="app-task-list__task-name">
-              <a href="/wca/medication" aria-describedby="read-declaration-status">
+              <a href="/wca/medication4" aria-describedby="read-declaration-status">
                 Medication and side effects
               </a>
             </span>
             {% if session['medication'] %}
             <strong class="govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
-            {% elif session['medication-progress'].inProgress %}
+            {% elif session['medication-progress4'].inProgress %}
             <strong class="govuk-tag govuk-tag--blue app-task-list__tag" id="contact-details-status">In progress</strong>
             {% else %}
             <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="list-convictions-status">Not started</strong>
@@ -60,7 +60,7 @@ TextArea configurable component
 
           <li class="app-task-list__item">
             <span class="app-task-list__task-name">
-              <a href="/wca/socialstatement" 
+              <a href="/wca/socialstatement4" 
               aria-describedby="read-declaration-status">
                 Social and work history
               </a>
@@ -74,7 +74,7 @@ TextArea configurable component
           
           <li class="app-task-list__item">
             <span class="app-task-list__task-name">
-              <a href="/wca/statement" aria-describedby="read-declaration-status">
+              <a href="/wca/statement4" aria-describedby="read-declaration-status">
                 Typical day
               </a>
             </span> 
@@ -91,7 +91,7 @@ TextArea configurable component
 
           <li class="app-task-list__item">
             <span class="app-task-list__task-name">
-              <a href="/wca/observestatement" aria-describedby="read-declaration-status">
+              <a href="/wca/observestatement4" aria-describedby="read-declaration-status">
                 Informal observations
               </a>
             </span>
@@ -102,13 +102,30 @@ TextArea configurable component
             {% endif %}
           </li>
 
+          <!-- <li class="app-task-list__item">
+          <span class="app-task-list__task-name">
+            <a href="#" aria-describedby="eligibility-status">
+              Finish face to face
+            </a>
+          </span>
+          {% if data['observestatements'] and (data['observestatements'].length > 0) %}
+          <strong class="govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
+          {% else %}
+          <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="list-convictions-status">Not started</strong>
+          {% endif %}
+        </li> -->
         </ul>
       </li>
       <li>
+    
+
         <h2 class="app-task-list__section">
-          <span class="app-task-list__section-number">2. </span> Physical assessment
+          <span class="app-task-list__section-number">Physical assessment
         </h2>
-        <ul class="app-task-list__items">
+        <div id="more-detail-hint" class="govuk-hint">
+          Select areas applicable for this assessment
+        </div>
+        <ul class="app-task-list__items1">
           <!-- <li class="app-task-list__item">
                       <span class="app-task-list__task-name">
                         <a href="#" aria-describedby="eligibility-status">
@@ -126,7 +143,7 @@ TextArea configurable component
             {% if session['general-health'] %}
             <strong class="govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
             {% else %}
-            <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="list-convictions-status">Not started</strong>
+            <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="list-convictions-status">Assess</strong>
             {% endif %}
           </li>
           <li class="app-task-list__item">
@@ -136,9 +153,9 @@ TextArea configurable component
               </a>
             </span>
             {% if session['leg-back'] %}
-            <strong class="govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
+            <strong class="govuk-tag app-task-list__tag" id="eligibility-status">Complete</strong>
             {% else %}
-            <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="list-convictions-status">Not started</strong>
+            <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="list-convictions-status">Assess</strong>
             {% endif %}
           </li>
           <li class="app-task-list__item">
@@ -150,7 +167,7 @@ TextArea configurable component
             {% if session['neck-arms'] %}
             <strong class="govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
             {% else %}
-            <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="list-convictions-status">Not started</strong>
+            <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="list-convictions-status">Assess</strong>
             {% endif %}
           </li>
           <li class="app-task-list__item">
@@ -162,7 +179,7 @@ TextArea configurable component
             {% if session['cardio'] %}
             <strong class="govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
             {% else %}
-            <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="list-convictions-status">Not started</strong>
+            <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="list-convictions-status">Assess</strong>
             {% endif %}
           </li>
           <li class="app-task-list__item">
@@ -171,8 +188,7 @@ TextArea configurable component
                 Vision, speech and hearing
               </a>
             </span>
-            <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="list-convictions-status">Not
-              started</strong>
+            <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="list-convictions-status">Assess</strong>
           </li>
           <li class="app-task-list__item">
             <span class="app-task-list__task-name">
@@ -180,24 +196,45 @@ TextArea configurable component
                 Central nervous system
               </a>
             </span>
-            <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="list-convictions-status">Not
-              started</strong>
+            <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="list-convictions-status">Assess</strong>
           </li>
         </ul>
       </li>
       <li>
         <h2 class="app-task-list__section">
-          <span class="app-task-list__section-number">3. </span> Mental health
+          <span class="app-task-list__section-number"> Mental health
         </h2>
-        <ul class="app-task-list__items">
+        <ul class="app-task-list__items1">
           <li class="app-task-list__item">
             <span class="app-task-list__task-name">
               <a href="#" aria-describedby="eligibility-status">
                 Mental health
               </a>
             </span>
-            <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="list-convictions-status">Not
-              started</strong>
+            <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="list-convictions-status">Assess</strong>
+          </li>
+        </ul>
+      </li>
+      
+
+
+
+
+
+      <li>
+    
+        <h2 class="app-task-list__section">
+          <span class="app-task-list__section-number">Complete face to face
+        </h2>
+        <ul class="app-task-list__items1">
+          <li class="app-task-list__item">
+            <span class="app-task-list__task-name">
+              <a href="#" aria-describedby="eligibility-status">
+                Review and submit
+              </a>
+            </span>
+            <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="list-convictions-status">Do this last
+              </strong>
           </li>
         </ul>
       </li>

@@ -425,6 +425,74 @@ res.redirect('/wca/task-list');
 
 
 
+
+
+
+// research prototype 4 wca typical-day
+app.post('/corecomponents/Research/4Navigation/WCA-tasklist/Typical_day', function (req, res, next){
+  console.log(req.session)
+  if (typeof req.session.data.statements !== 'object'){
+    req.session.data.statements=[];
+  }
+  if (req.body.statement){
+    req.session.data.statements.push(req.body.statement)
+  }
+  console.log(req.session)
+  next()
+})
+
+// research prototype 4 wca typical-day
+app.post('/wca/statement4/save-and-continue', function (req, res, next){
+res.redirect('/wca/task-list4');
+})
+
+
+
+// research prototype 4 wca informal-observe
+app.post('/corecomponents/Research/4Navigation/WCA-tasklist/informal-observation', function (req, res, next){
+  console.log(req.session)
+  if (typeof req.session.data.observestatements !== 'object'){
+    req.session.data.observestatements=[];
+  }
+  if (req.body.observestatement){
+    req.session.data.observestatements.push(req.body.observestatement)
+  }
+  console.log(req.session)
+  next()
+})
+
+// research prototype 4 wca informal-observe
+app.post('/wca/observestatement4/save-and-continue', function (req, res, next){
+res.redirect('/wca/task-list4');
+})
+
+
+
+// research prototype 4 wca social
+app.post('/corecomponents/Research/4Navigation/WCA-tasklist/SocialWorkHistory', function (req, res, next){
+  console.log(req.session)
+  if (typeof req.session.data.socialstatements !== 'object'){
+    req.session.data.socialstatements=[];
+  }
+  if (req.body.socialstatement){
+    req.session.data.socialstatements.push(req.body.socialstatement)
+  }
+  console.log(req.session)
+  next()
+})
+
+// research prototype 4 wca social
+app.post('/wca/socialstatement4/save-and-continue', function (req, res, next){
+res.redirect('/wca/task-list4');
+})
+
+
+
+
+
+
+
+
 // left nav statements
 
 // research prototype 3 wca leftnav social
@@ -551,7 +619,6 @@ app.post('/corecomponents/Research/3Navigation/WCA-Leftnav-tasklist/informal-obs
 app.post('/wca/leftnav/leftobvstatement-task/save-and-continue', function (req, res, next){
 res.redirect('/corecomponents/Research/3Navigation/WCA-Leftnav-tasklist/paRequired');
 })
-
 
 
 

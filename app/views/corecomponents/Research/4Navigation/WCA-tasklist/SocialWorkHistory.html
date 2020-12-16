@@ -1,0 +1,82 @@
+{% extends "layout-key-detail-bar.html" %}
+
+{% block pageTitle %}
+  TextArea component
+{% endblock %}
+
+
+{% block beforeContent %}
+
+<a href="javascript:window.history.back();" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-three-quarters">
+<!-- <span class="govuk-caption-l">Review</span> -->
+<h1 class="govuk-heading-l">Social and work history</h1>
+
+
+  <form action="/corecomponents/Research/4Navigation/WCA-tasklist/SocialWorkHistory" method="post" novalidate>
+
+
+
+    <table class="govuk-table">
+      <!-- <caption class="govuk-table__caption">Informal observations</caption> -->
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th scope="col" class="govuk-table__header">Statements added</th>
+          <th scope="col" class="govuk-table__header govuk-table__header--numeric">Actions</th>
+        </tr>
+      </thead>
+      <tbody class="govuk-table__body">
+      
+
+
+
+  {% for socialstatement in data.socialstatements %}
+        <tr class="govuk-table__row">
+
+            <td scope="row" class="govuk-table__cell">{{ socialstatement }}</td>
+
+          <td class="govuk-table__cell govuk-table__cell--numeric"><a href="#" class="govuk-link">Remove</a></td>
+        </tr>
+  {% endfor %}
+
+      </tbody>
+
+    </table>
+
+
+
+    <div class="govuk-form-group">
+    
+        <input class="govuk-input" id="socialstatement2" name="socialstatement" type="text" value="{{data['socialstatement2']}}">
+</form>
+<br>
+<br>
+<button class="govuk-button govuk-button--secondary" data-module="govuk-button">  Add statement
+    </button>
+    </div>
+
+
+    <form action="/wca/socialstatement4/save-and-continue" method="post" novalidate>
+
+    
+    {{ govukButton({
+      id: "socialcomment",
+      name: "socialcomment",
+      value: "social-add-statement",
+      text: "Continue"
+    
+
+    }) }}
+</form>
+  </div>
+  </div>
+  </main>
+
+
+
+{% endblock %}
