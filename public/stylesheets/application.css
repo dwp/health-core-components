@@ -181,7 +181,7 @@
 .app-subnav {
     margin-bottom: 100px;
     padding: 0px 15px 0 0;
-    font-family: "GDS Transport",arial,sans-serif;
+    font-family: "arial" ,sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     font-weight: 400;
@@ -252,7 +252,7 @@
 
 /*! Copyright (c) 2011 by Margaret Calvert & Henrik Kubel. All rights reserved. The font has been customised for exclusive use on gov.uk. This cut is not commercially available. */
 @font-face {
-  font-family: "GDS Transport";
+  font-family: "Arial";
   src: url("/govuk/assets/fonts/light-94a07e06a1-v2.woff2") format("woff2"), url("/govuk/assets/fonts/light-f591b13f7d-v2.woff") format("woff");
   font-weight: normal;
   font-style: normal;
@@ -260,7 +260,7 @@
 }
 
 @font-face {
-  font-family: "GDS Transport";
+  font-family: "Arial";
   src: url("/govuk/assets/fonts/bold-b542beb274-v2.woff2") format("woff2"), url("/govuk/assets/fonts/bold-affa96571d-v2.woff") format("woff");
   font-weight: bold;
   font-style: normal;
@@ -7653,56 +7653,8 @@ p + .govuk-heading-s,
   }
 }
 
-.app-task-list__items {
-  font-family: "Arial", sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  font-weight: 400;
-  font-size: 16px;
-  font-size: 1rem;
-  line-height: 1.25;
-  margin-bottom: 40px;
-  list-style: none;
-  padding-left: 0;
-}
 
-@media print {
-  .app-task-list__items {
-    font-family: sans-serif;
-  }
-}
-
-@media (min-width: 40.0625em) {
-  .app-task-list__items {
-    font-size: 19px;
-    font-size: 1.1875rem;
-    line-height: 1.31579;
-  }
-}
-
-@media print {
-  .app-task-list__items {
-    font-size: 14pt;
-    line-height: 1.15;
-  }
-}
-
-@media (min-width: 40.0625em) {
-  .app-task-list__items {
-    margin-bottom: 60px;
-  }
-}
-
-@media (min-width: 40.0625em) {
-  .app-task-list__items {
-    padding-left: 30px;
-  }
-}
-
-
-
-
-
+/* Tasklist no bullet points */
 
 .app-task-list__items1 {
   font-family: "Arial", sans-serif;
@@ -7752,7 +7704,108 @@ p + .govuk-heading-s,
 
 
 
+/* Scoring total font */
 
+.govuk-heading-m-score {
+  color: #0b0c0c;
+  font-family: "Arial", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 700;
+  font-size: 18px;
+  font-size: 1.125rem;
+  line-height: 1.11111;
+  display: block;
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+
+@media print {
+  .govuk-heading-m-score {
+    color: #000000;
+  }
+}
+
+@media print {
+  .govuk-heading-m-score {
+    font-family: sans-serif;
+  }
+}
+
+@media (min-width: 40.0625em) {
+  .govuk-heading-m-score {
+    font-size: 24px;
+    font-size: 1.5rem;
+    line-height: 1.25;
+  }
+}
+
+@media print {
+  .govuk-heading-m-score {
+    font-size: 18pt;
+    line-height: 1.15;
+  }
+}
+
+@media (min-width: 40.0625em) {
+  .govuk-heading-m-score {
+    margin-bottom: 0px;
+  }
+}
+
+
+
+
+
+
+
+
+.app-task-list__items {
+  font-family: "Arial", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 400;
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1.25;
+  margin-bottom: 40px;
+  list-style: none;
+  padding-left: 0;
+}
+
+@media print {
+  .app-task-list__items {
+    font-family: sans-serif;
+  }
+}
+
+@media (min-width: 40.0625em) {
+  .app-task-list__items {
+    font-size: 19px;
+    font-size: 1.1875rem;
+    line-height: 1.31579;
+  }
+}
+
+@media print {
+  .app-task-list__items {
+    font-size: 14pt;
+    line-height: 1.15;
+  }
+}
+
+@media (min-width: 40.0625em) {
+  .app-task-list__items {
+    margin-bottom: 60px;
+  }
+}
+
+@media (min-width: 40.0625em) {
+  .app-task-list__items {
+    padding-left: 30px;
+  }
+}
 
 .app-task-list__item {
   border-bottom: 1px solid #b1b4b6;

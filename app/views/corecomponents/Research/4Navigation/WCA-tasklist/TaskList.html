@@ -15,7 +15,7 @@ TextArea configurable component
 
           <li class="app-task-list__item">
             <span class="app-task-list__task-name">
-              <a href="/wca/attendee4"
+              <a href="/corecomponents/Research/4Navigation/WCA-tasklist/additionalAttendeequestion"
                 aria-describedby="eligibility-status">
                 Additional attendee
               </a>
@@ -23,7 +23,7 @@ TextArea configurable component
             {% if session['attendee4'] %}
             <strong class="govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
             {% else %}
-            <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="list-convictions-status">Optional</strong>
+            <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="list-convictions-status">Not started</strong>
             {% endif %}
           </li>
 
@@ -134,9 +134,21 @@ TextArea configurable component
                       </span>
                       <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="list-convictions-status">Not started</strong>
                     </li> -->
+                    <li class="app-task-list__item">
+                      <span class="app-task-list__task-name">
+                        <a href="#" aria-describedby="read-declaration-status">
+                          Consent required
+                        </a>
+                      </span>
+                      {% if session['general-health'] %}
+                      <strong class="govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
+                      {% else %}
+                      <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="list-convictions-status">Consent not provided</strong>
+                      {% endif %}
+                    </li>
           <li class="app-task-list__item">
             <span class="app-task-list__task-name">
-              <a href="/wca/general-health" aria-describedby="read-declaration-status">
+              <a href="#" aria-describedby="read-declaration-status">
                 General health
               </a>
             </span>
@@ -148,7 +160,7 @@ TextArea configurable component
           </li>
           <li class="app-task-list__item">
             <span class="app-task-list__task-name">
-              <a href="/wca/leg-back" aria-describedby="read-declaration-status">
+              <a href="#" aria-describedby="read-declaration-status">
                 Lower back and legs
               </a>
             </span>
@@ -160,7 +172,7 @@ TextArea configurable component
           </li>
           <li class="app-task-list__item">
             <span class="app-task-list__task-name">
-              <a href="/wca/neck-arms" aria-describedby="read-declaration-status">
+              <a href="#" aria-describedby="read-declaration-status">
                 Neck and arms
               </a>
             </span>
@@ -172,7 +184,7 @@ TextArea configurable component
           </li>
           <li class="app-task-list__item">
             <span class="app-task-list__task-name">
-              <a href="/wca/cardio" aria-describedby="read-declaration-status">
+              <a href="#" aria-describedby="read-declaration-status">
                 Cardiovascular and respiratory
               </a>
             </span> 
@@ -204,6 +216,9 @@ TextArea configurable component
         <h2 class="app-task-list__section">
           <span class="app-task-list__section-number"> Mental health
         </h2>
+        <div id="more-detail-hint" class="govuk-hint">
+          Select if applicable for this assessment
+        </div>
         <ul class="app-task-list__items1">
           <li class="app-task-list__item">
             <span class="app-task-list__task-name">
@@ -229,7 +244,7 @@ TextArea configurable component
         <ul class="app-task-list__items1">
           <li class="app-task-list__item">
             <span class="app-task-list__task-name">
-              <a href="#" aria-describedby="eligibility-status">
+              <a href="/corecomponents/Research/4Navigation/WCA-tasklist/review" aria-describedby="eligibility-status">
                 Review and submit
               </a>
             </span>

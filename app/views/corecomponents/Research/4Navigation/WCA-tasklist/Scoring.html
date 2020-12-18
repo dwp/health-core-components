@@ -1,0 +1,117 @@
+{% extends "corecomponents/Research/4Navigation/WCA-tasklist/layout-key-detail-bar-complete.html" %}
+
+{% block pageTitle %}
+TextArea configurable component
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h2 class="govuk-heading-l">Make your recommendation</h2>
+<br>
+    <ol class="app-task-list">
+      <li>
+        <h2 class="app-task-list__section">
+          <span class="app-task-list__section-number">Selected areas to be scored
+        </h2>
+        <ul class="app-task-list__items1">
+
+          <li class="app-task-list__item">
+            <span class="app-task-list__task-name">
+              <a href="/wca/descriptor/mobile"
+                aria-describedby="eligibility-status">
+                Mobilising and using steps
+              </a>
+            </span>
+            {% if session['mobile1'] %}
+            <strong class="govuk-tag app-task-list__tag" id="eligibility-status">15</strong>
+            {% else %}
+            <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="list-convictions-status">Not started</strong>
+            {% endif %}
+          </li>
+
+          <li class="app-task-list__item">
+            <span class="app-task-list__task-name">
+              <a href="/wca/condition-history4"
+                aria-describedby="eligibility-status">
+                Standing, sitting and transferring from seat to seat
+              </a>
+            </span>
+            {% if session['condition-history4'] %}
+            <strong class="govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
+            {% elif session['condition-history-progress4'].inProgress %}
+            <strong class="govuk-tag govuk-tag--blue app-task-list__tag" id="contact-details-status">In progress</strong>
+            {% else %}
+            <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="list-convictions-status">Not started</strong>
+            {% endif %}
+          </li>
+
+          <li class="app-task-list__item">
+            <span class="app-task-list__task-name">
+              <a href="/wca/medication4" aria-describedby="read-declaration-status">
+                Understanding communication
+              </a>
+            </span>
+            {% if session['medication'] %}
+            <strong class="govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
+            {% elif session['medication-progress4'].inProgress %}
+            <strong class="govuk-tag govuk-tag--blue app-task-list__tag" id="contact-details-status">In progress</strong>
+            {% else %}
+            <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="list-convictions-status">Not started</strong>
+            {% endif %}
+          </li>
+
+          <li class="app-task-list__item">
+            <span class="app-task-list__task-name">
+              <a href="/wca/socialstatement4" 
+              aria-describedby="read-declaration-status">
+              Coping with changes
+              </a>
+            </span>
+            {% if data['socialstatements'] and (data['socialstatements'].length > 0) %}
+            <strong class="govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
+            {% else %}
+            <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="list-convictions-status">Not started</strong>
+            {% endif %}
+          </li>
+          
+          <li class="app-task-list__item">
+            <span class="app-task-list__task-name">
+              <a href="/wca/statement4" aria-describedby="read-declaration-status">
+                Eating and drinking	
+              </a>
+            </span> 
+            <!-- <strong class="govuk-tag govuk-tag--blue app-task-list__tag">
+              In progress
+            </strong> -->
+            {% if data['statements'] and (data['statements'].length > 0) %}
+            <strong class="govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
+            {% else %}
+            <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="list-convictions-status">Not started</strong>
+            {% endif %}
+          </li>
+
+          <li class="app-task-list__item">
+            <span class="app-task-list__task-name">
+              <h4 class="govuk-heading-m-score">
+                Total score
+                </h4>
+            </span> 
+         
+            
+            <h4 class="app-task-list__tag govuk-heading-m-score">
+              0
+              </h4>
+            
+          </li>
+
+
+    </ol>
+    <!-- <button class="govuk-button" data-module="govuk-button">
+                Save and continue
+              </button> -->
+  </div>
+  <div class="govuk-grid-column-two-thirds">
+  </div>
+{% endblock %}

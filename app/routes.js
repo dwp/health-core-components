@@ -1563,3 +1563,25 @@ router.get('/wca/socialstatement4', function (req, res) {
     res.redirect('/pip/task-list4');
    });
 
+
+
+  
+
+
+   router.get('/wca/scoring', function (req, res) {
+      res.render('corecomponents/Research/4Navigation/WCA-tasklist/Scoring.html', { session: req.session.data });
+     });
+      
+
+     router.get('/wca/descriptor/mobile', function (req, res) {
+      res.render('corecomponents/Research/4Navigation/WCA-tasklist/descriptors/Mobilising_descriptors.html', { session: req.session.data });
+     });
+
+     router.post('/wca/descriptor/mobile/save-and-continue', function (req, res) {
+      if (req.body['wca/descriptor/mobile']) {
+      req.session.data['wca/descriptor/mobile'] = req.body['wca/descriptor/mobile']
+      }
+      res.redirect('/wca/scoring');
+     });
+
+   
