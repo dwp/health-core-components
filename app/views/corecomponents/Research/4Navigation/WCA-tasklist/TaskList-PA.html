@@ -4,20 +4,27 @@ TextArea configurable component
 {% endblock %}
 
 
+{% block beforeContent %}
+
+<a href="/corecomponents/Research/4Navigation/WCA-tasklist/TaskList" class="govuk-back-link">Back to Overview</a>
+
+{% endblock %}
+
 
 {% block content %}
-<a href="/corecomponents/Research/4Navigation/WCA-tasklist/TaskList" class="govuk-back-link">Back to Overview</a>
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
 
     <h1 class="govuk-heading-l">Physical assessment</h1>
+    <p class="govuk-body">Select areas applicable for this assessment</p>
+    <br>
     <ol class="app-task-list">
      
         <h2 class="app-task-list__section">
-          <span class="app-task-list__section-number">1. </span> General health
+          <span class="app-task-list__section-number">General health
         </h2>
-        <ul class="app-task-list__items">
+        <ul class="app-task-list__items1">
           <!-- <li class="app-task-list__item">
                       <span class="app-task-list__task-name">
                         <a href="#" aria-describedby="eligibility-status">
@@ -43,9 +50,9 @@ TextArea configurable component
 
 
       <h2 class="app-task-list__section">
-        <span class="app-task-list__section-number">2. </span> Lower back and legs
+        <span class="app-task-list__section-number">Lower back and legs
       </h2>
-      <ul class="app-task-list__items">
+      <ul class="app-task-list__items1">
         <!-- <li class="app-task-list__item">
                     <span class="app-task-list__task-name">
                       <a href="#" aria-describedby="eligibility-status">
@@ -96,9 +103,9 @@ TextArea configurable component
 
 
       <h2 class="app-task-list__section">
-        <span class="app-task-list__section-number">3. </span> Neck and arms
+        <span class="app-task-list__section-number">Neck and arms
       </h2>
-      <ul class="app-task-list__items">
+      <ul class="app-task-list__items1">
         <!-- <li class="app-task-list__item">
                     <span class="app-task-list__task-name">
                       <a href="#" aria-describedby="eligibility-status">
@@ -173,9 +180,9 @@ TextArea configurable component
 
 
       <h2 class="app-task-list__section">
-        <span class="app-task-list__section-number">4. </span> Cardiovascular and respiratory
+        <span class="app-task-list__section-number">Cardiovascular and respiratory
       </h2>
-      <ul class="app-task-list__items">
+      <ul class="app-task-list__items1">
         <!-- <li class="app-task-list__item">
                     <span class="app-task-list__task-name">
                       <a href="#" aria-describedby="eligibility-status">
@@ -285,9 +292,9 @@ TextArea configurable component
 
 
       <h2 class="app-task-list__section">
-        <span class="app-task-list__section-number">5. </span> Vision, speech and hearing
+        <span class="app-task-list__section-number">Vision, speech and hearing
       </h2>
-      <ul class="app-task-list__items">
+      <ul class="app-task-list__items1">
         <!-- <li class="app-task-list__item">
                     <span class="app-task-list__task-name">
                       <a href="#" aria-describedby="eligibility-status">
@@ -311,9 +318,9 @@ TextArea configurable component
       </ul>
 
       <h2 class="app-task-list__section">
-        <span class="app-task-list__section-number">6. </span> Central nervous system
+        <span class="app-task-list__section-number">Central nervous system
       </h2>
-      <ul class="app-task-list__items">
+      <ul class="app-task-list__items1">
         <!-- <li class="app-task-list__item">
                     <span class="app-task-list__task-name">
                       <a href="#" aria-describedby="eligibility-status">
