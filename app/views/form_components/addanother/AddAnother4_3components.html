@@ -1,0 +1,109 @@
+
+{% extends "layout-key-detail-bar.html" %}
+
+{% block pageTitle %}
+  TextArea component
+{% endblock %}
+
+
+{% block beforeContent %}
+
+<!-- <a href="#" class="govuk-back-link">Back</a> -->
+{% endblock %}
+
+
+{% block content %}
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-three-quarters">
+  <!-- <span class="govuk-caption-l">Review</span> -->
+  <h1 class="govuk-heading-l">Current medication and treatment</h1>
+
+
+  <!-- <form action="/wca_v1/TakingStatementsentry-post" method="post" novalidate> -->
+
+  <!-- <ul class="govuk-list">
+    <li>
+    <a href="/form_components/TakingStatements" class="govuk-link">View all previous statements</a>
+    </li>
+  </ul> -->
+
+<h2 class="govuk-heading-m">Medication 1</h2>
+
+
+  <form action="#" method="post" novalidate>
+
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="width-20">
+        Name of medication
+      </label>
+      <input class="govuk-input" id="width-20" name="width-20" type="text"></div>
+
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="width-20">
+          Dose
+        </label>
+  <input class="govuk-input" id="width-20" name="width-20" type="text"></div>
+
+  <div class="govuk-form-group">
+    <fieldset class="govuk-fieldset">
+      <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+        <label class="govuk-label">
+          Any side effects
+        </label>
+      </legend>
+      <div class="govuk-checkboxes">
+        <div class="govuk-checkboxes__item">
+          <input class="govuk-checkboxes__input" id="where-do-you-live" name="where-do-you-live" type="checkbox" value="england">
+          <label class="govuk-label govuk-checkboxes__label" for="where-do-you-live">
+            Side effect 1
+          </label>
+        </div>
+        <div class="govuk-checkboxes__item">
+          <input class="govuk-checkboxes__input" id="where-do-you-live-2" name="where-do-you-live" type="checkbox" value="scotland">
+          <label class="govuk-label govuk-checkboxes__label" for="where-do-you-live-2">
+            Side effect 2
+          </label>
+        </div>
+        <div class="govuk-checkboxes__item">
+          <input class="govuk-checkboxes__input" id="where-do-you-live-3" name="where-do-you-live" type="checkbox" value="wales">
+          <label class="govuk-label govuk-checkboxes__label" for="where-do-you-live-3">
+            Side effect 3
+          </label>
+        </div>
+        <div class="govuk-checkboxes__item">
+          <input class="govuk-checkboxes__input" id="where-do-you-live-3" name="where-do-you-live" type="checkbox" value="wales">
+          <label class="govuk-label govuk-checkboxes__label" for="where-do-you-live-3">
+            Side effect 4
+          </label>
+        </div>
+
+      </div>
+
+    </fieldset>
+  </div>
+
+<hr>
+<br>
+
+<br>
+
+
+<a href="AddAnother4_3components_add" class="govuk-link govuk-!-font-size-19">Add another medication</a>
+<br>
+<br>
+<br>
+    {{ govukButton({
+      id: "comment",
+      name: "comment",
+      value: "add-statement",
+      text: "Save and continue"
+    }) }}
+
+  </div>
+  </div>
+  </main>
+
+
+
+{% endblock %}

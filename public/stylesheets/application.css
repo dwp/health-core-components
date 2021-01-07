@@ -7,6 +7,59 @@
 
 
 
+
+/* Tasklist no bullet points */
+
+.app-task-list__items1 {
+  font-family: "Arial", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 400;
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1.25;
+  margin-bottom: 40px;
+  list-style: none;
+  padding-left: 0;
+}
+
+@media print {
+  .app-task-list__items1 {
+    font-family: sans-serif;
+  }
+}
+
+@media (min-width: 40.0625em) {
+  .app-task-list__items1 {
+    font-size: 19px;
+    font-size: 1.1875rem;
+    line-height: 1.31579;
+  }
+}
+
+@media print {
+  .app-task-list__items1 {
+    font-size: 14pt;
+    line-height: 1.15;
+  }
+}
+
+@media (min-width: 40.0625em) {
+  .app-task-list__items1 {
+    margin-bottom: 60px;
+  }
+}
+
+@media (min-width: 40.0625em) {
+  .app-task-list__items1 {
+    padding-left: 0px;
+  }
+}
+
+
+
+
+
 /* Tabs_dwp */
 
 /* .navigation-secondary ul:after {
@@ -547,6 +600,79 @@
     margin-bottom: 30px;
   }
 }
+
+
+
+.govuk-heading-m {
+  color: #0b0c0c;
+  font-family: "Arial", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 700;
+  font-size: 18px;
+  font-size: 1.125rem;
+  line-height: 1.11111;
+  display: block;
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+
+/* Scoring total font */
+
+
+.govuk-heading-m-score {
+  color: #0b0c0c;
+  font-family: "Arial", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 700;
+  font-size: 18px;
+  font-size: 1.125rem;
+  line-height: 1.11111;
+  display: block;
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+
+
+@media print {
+  .govuk-heading-m-score {
+    color: #000000;
+  }
+}
+
+@media print {
+  .govuk-heading-m-score {
+    font-family: sans-serif;
+  }
+}
+
+@media (min-width: 40.0625em) {
+  .govuk-heading-m-score {
+    font-size: 24px;
+    font-size: 1.5rem;
+    line-height: 1.25;
+  }
+}
+
+@media print {
+  .govuk-heading-m-score {
+    font-size: 18pt;
+    line-height: 1.15;
+  }
+}
+
+@media (min-width: 40.0625em) {
+  .govuk-heading-m-score {
+    margin-bottom: 0px;
+  }
+}
+
+
+
+
 
 .govuk-heading-m {
   color: #0b0c0c;
@@ -7652,114 +7778,6 @@ p + .govuk-heading-s,
     padding-right: 0;
   }
 }
-
-
-/* Tasklist no bullet points */
-
-.app-task-list__items1 {
-  font-family: "Arial", sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  font-weight: 400;
-  font-size: 16px;
-  font-size: 1rem;
-  line-height: 1.25;
-  margin-bottom: 40px;
-  list-style: none;
-  padding-left: 0;
-}
-
-@media print {
-  .app-task-list__items1 {
-    font-family: sans-serif;
-  }
-}
-
-@media (min-width: 40.0625em) {
-  .app-task-list__items1 {
-    font-size: 19px;
-    font-size: 1.1875rem;
-    line-height: 1.31579;
-  }
-}
-
-@media print {
-  .app-task-list__items1 {
-    font-size: 14pt;
-    line-height: 1.15;
-  }
-}
-
-@media (min-width: 40.0625em) {
-  .app-task-list__items1 {
-    margin-bottom: 60px;
-  }
-}
-
-@media (min-width: 40.0625em) {
-  .app-task-list__items1 {
-    padding-left: 0px;
-  }
-}
-
-
-
-/* Scoring total font */
-
-.govuk-heading-m-score {
-  color: #0b0c0c;
-  font-family: "Arial", sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  font-weight: 700;
-  font-size: 18px;
-  font-size: 1.125rem;
-  line-height: 1.11111;
-  display: block;
-  margin-top: 0;
-  margin-bottom: 15px;
-}
-
-
-@media print {
-  .govuk-heading-m-score {
-    color: #000000;
-  }
-}
-
-@media print {
-  .govuk-heading-m-score {
-    font-family: sans-serif;
-  }
-}
-
-@media (min-width: 40.0625em) {
-  .govuk-heading-m-score {
-    font-size: 24px;
-    font-size: 1.5rem;
-    line-height: 1.25;
-  }
-}
-
-@media print {
-  .govuk-heading-m-score {
-    font-size: 18pt;
-    line-height: 1.15;
-  }
-}
-
-@media (min-width: 40.0625em) {
-  .govuk-heading-m-score {
-    margin-bottom: 0px;
-  }
-}
-
-
-
-
-
-
-
 
 .app-task-list__items {
   font-family: "Arial", sans-serif;
