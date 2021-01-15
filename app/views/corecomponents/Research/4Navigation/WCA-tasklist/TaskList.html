@@ -9,7 +9,7 @@ TextArea configurable component
     <ol class="app-task-list">
       <li>
         <h2 class="app-task-list__section">
-          <span class="app-task-list__section-number">About claimant 
+          <span class="app-task-list__section-number">Claimant evidence 
         </h2>
         <ul class="app-task-list__items1">
 
@@ -101,6 +101,33 @@ TextArea configurable component
             <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="list-convictions-status">Not started</strong>
             {% endif %}
           </li>
+
+
+          <!-- <li class="app-task-list__item">
+            <span class="app-task-list__task-name">
+              <a href="/wca/observestatement4" aria-describedby="read-declaration-status">
+                Physical assessment
+              </a>
+            </span>
+            {% if data['observestatements'] and (data['observestatements'].length > 0) %}
+            <strong class="govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
+            {% else %}
+            <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="list-convictions-status">Not started</strong>
+            {% endif %}
+          </li>
+
+          <li class="app-task-list__item">
+            <span class="app-task-list__task-name">
+              <a href="/wca/observestatement4" aria-describedby="read-declaration-status">
+                Mental health
+              </a>
+            </span>
+            {% if data['observestatements'] and (data['observestatements'].length > 0) %}
+            <strong class="govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
+            {% else %}
+            <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="list-convictions-status">Not started</strong>
+            {% endif %}
+          </li> -->
 
           <!-- <li class="app-task-list__item">
           <span class="app-task-list__task-name">
