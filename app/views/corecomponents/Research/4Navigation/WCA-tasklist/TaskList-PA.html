@@ -20,10 +20,40 @@ TextArea configurable component
     <h2 class="govuk-heading-l">govuk-heading-l</h2> -->
 
     <h1 class="govuk-heading-l">Physical assessment</h1>
-    <p class="govuk-body">Select areas applicable for this assessment</p>
+    <div id="event-name-hint" class="govuk-hint">
+      Select areas applicable for this assessment
+    </div>
+  
     <br>
     <ol class="app-task-list">
      
+      <h2 class="app-task-list__section">
+        <span class="app-task-list__section-number">Physical assessment consent
+      </h2>
+      <ul class="app-task-list__items1">
+        <!-- <li class="app-task-list__item">
+                    <span class="app-task-list__task-name">
+                      <a href="#" aria-describedby="eligibility-status">
+                        Consent required
+                      </a>
+                    </span>
+                    <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="list-convictions-status">Not started</strong>
+                  </li> -->
+        <li class="app-task-list__item">
+          <span class="app-task-list__task-name">
+            <a href="/corecomponents/Research/4Navigation/WCA-tasklist/physical-assessments/General-health/GeneralHealth" aria-describedby="read-declaration-status">
+              Ask for consent
+            </a>
+          </span>
+          {% if session['general-health'] %}
+          <strong class="govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
+          {% else %}
+          <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="list-convictions-status">Not started</strong>
+          {% endif %}
+        </li>
+      </ul>
+       
+
         <h2 class="app-task-list__section">
           <span class="app-task-list__section-number">General health
         </h2>

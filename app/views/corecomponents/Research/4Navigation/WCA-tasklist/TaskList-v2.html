@@ -1,4 +1,19 @@
-{% extends "corecomponents/Research/4Navigation/layout-key-detail-bar-tasklist-wca-noNavBar.html" %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% extends "corecomponents/Research/3Navigation/layout-key-detail-bar-tasklist-wca.html" %}
 {% block pageTitle %}
 TextArea configurable component
 {% endblock %}
@@ -6,14 +21,13 @@ TextArea configurable component
 {% block content %}
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-    <h1 class="govuk-heading-l">Work capacity assessment</h1>
-    <br>
+    <h1 class="govuk-heading-l">Assessment overview</h1>
+
     <ol class="app-task-list">
       <li>
         <h2 class="app-task-list__section">
           <span class="app-task-list__section-number">Claimant evidence 
         </h2>
-     
         <ul class="app-task-list__items1">
 
           <li class="app-task-list__item">
@@ -91,7 +105,6 @@ TextArea configurable component
             {% endif %}
           </li>
         
-          
 
           <li class="app-task-list__item">
             <span class="app-task-list__task-name">
@@ -105,32 +118,7 @@ TextArea configurable component
             <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="list-convictions-status">Not started</strong>
             {% endif %}
           </li>
-          <li class="app-task-list__item">
-            <span class="app-task-list__task-name">
-              <a href="/corecomponents/Research/4Navigation/WCA-tasklist/physical-assessments/consent" aria-describedby="read-declaration-status">
-                Physical assessment
-              </a>
-            </span>
-            {% if session['general-health'] %}
-            <strong class="govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
-            {% else %}
-            <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="list-convictions-status">Optional</strong>
-            {% endif %}
-          </li>
 
-
-<li class="app-task-list__item">
-  <span class="app-task-list__task-name">
-    <a href="/wca/observestatement4" aria-describedby="read-declaration-status">
-      Mental health
-    </a>
-  </span>
-  {% if data['observestatements'] and (data['observestatements'].length > 0) %}
-  <strong class="govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
-  {% else %}
-  <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="list-convictions-status">Optional</strong>
-  {% endif %}
-</li>
 
           <!-- <li class="app-task-list__item">
             <span class="app-task-list__task-name">
@@ -175,45 +163,73 @@ TextArea configurable component
       <li>
     
 
- 
-          
-       
-
-
-
-
-     
-    
         <h2 class="app-task-list__section">
-          <span class="app-task-list__section-number">Next steps
+          <span class="app-task-list__section-number">Physical assessment
         </h2>
+        <div id="more-detail-hint" class="govuk-hint">
+          Select if applicable for this assessment
+        </div>
+        <ul class="app-task-list__items1">
+          <!-- <li class="app-task-list__item">
+                      <span class="app-task-list__task-name">
+                        <a href="#" aria-describedby="eligibility-status">
+                          Consent required
+                        </a>
+                      </span>
+                      <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="list-convictions-status">Not started</strong>
+                    </li> -->
+                    <li class="app-task-list__item">
+                      <span class="app-task-list__task-name">
+                        <a href="/corecomponents/Research/4Navigation/WCA-tasklist/physical-assessments/consent" aria-describedby="read-declaration-status">
+                          Physical assessment
+                        </a>
+                      </span>
+                      {% if session['general-health'] %}
+                      <strong class="govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
+                      {% else %}
+                      <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="list-convictions-status">Not started</strong>
+                      {% endif %}
+                    </li>
+                  </ul>
+                </li>
+                <li>
+       
+        <h2 class="app-task-list__section">
+          <span class="app-task-list__section-number"> Mental health
+        </h2>
+        <div id="more-detail-hint" class="govuk-hint">
+          Select if applicable for this assessment
+        </div>
         <ul class="app-task-list__items1">
           <li class="app-task-list__item">
             <span class="app-task-list__task-name">
-              <a href="/corecomponents/Research/4Navigation/WCA-tasklist/review" aria-describedby="eligibility-status">
-                Abandon assessment
+              <a href="#" aria-describedby="eligibility-status">
+                Mental health
               </a>
             </span>
-            <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="list-convictions-status">Optional
-              </strong>
+            <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="list-convictions-status">Not started</strong>
           </li>
-          <li class="app-task-list__item">
-            <span class="app-task-list__task-name">
-              <a href="/corecomponents/Research/4Navigation/WCA-tasklist/review" aria-describedby="eligibility-status">
-                Curtail assessment
-              </a>
-            </span>
-            <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="list-convictions-status">Optional
-              </strong>
-          </li>
-        
+        </ul>
+      </li>
+      
+
+
+
+
+
+      <li>
+    
+        <h2 class="app-task-list__section">
+          <span class="app-task-list__section-number">Complete face to face
+        </h2>
+        <ul class="app-task-list__items1">
           <li class="app-task-list__item">
             <span class="app-task-list__task-name">
               <a href="/corecomponents/Research/4Navigation/WCA-tasklist/review" aria-describedby="eligibility-status">
                 Review and submit
               </a>
             </span>
-            <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="list-convictions-status">Not started
+            <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="list-convictions-status">Do this last
               </strong>
           </li>
         </ul>
