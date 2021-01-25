@@ -19,17 +19,16 @@
         <form action="/wca/descriptor/mobile/save-and-continue" method="post" novalidate>
 
        
-        <span class="govuk-caption-l">Mobilising and using steps</span>
 
+        <h1 class="govuk-heading-l">Mobilising and using steps</h1>
 
 
         <div class="govuk-form-group">
           <fieldset class="govuk-fieldset">
-            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-              <h1 class="govuk-fieldset__heading">
-                Choose the descriptor that's most appropriate to the claimant
-              </h1>
-            </legend>
+            <label class="govuk-label" for="contact-by-email">
+              Choose the descriptor that's most appropriate to the claimant
+            </label>
+        
             <div class="govuk-radios">
               <div class="govuk-radios__item">
                 <input class="govuk-radios__input" id="mobile1" name="mobile1" type="radio" value="{{ session['mobile1'] }}">
