@@ -7,6 +7,7 @@
 
 /* Header width */
 
+
 @media (min-width: 48.0625em) {
   .govuk-header__logo {
     width: 50%;
@@ -16,6 +17,7 @@
   }
 }
 
+
 @media (min-width: 48.0625em) {
   .govuk-header__content {
     width: 50%;
@@ -23,7 +25,7 @@
     float: left;
   }
 }
-
+ 
 
 
 
