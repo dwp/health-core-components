@@ -1,0 +1,37 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Assessment has already been completed
+{% endblock %}
+
+
+{% block beforeContent %}
+<!-- <a href="javascript:window.history.back();" class="govuk-back-link">Back</a> -->
+{% endblock %}
+
+{% block content %}
+
+
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-three-quarters">
+        <h1 class="govuk-heading-l">Assessment has been completed</h1>
+    
+
+        <p class="govuk-body">
+          As this assessment had been completed, this assessment can not be edited again.
+        </p>
+        <!-- <p class="govuk-body">
+          To view the report, the status of this assessment may need updating.
+        </p> -->
+
+
+        <button class="govuk-button" data-module="govuk-button">
+          Back
+        </button>
+      </div>
+    </div>
+  
+
+
+{% endblock %}
