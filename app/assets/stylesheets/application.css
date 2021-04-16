@@ -1,3 +1,30 @@
+
+/* print  */
+
+@media print {
+  .govuk-link, a, .app-step-nav-header__title, .app-step-nav-related__link {
+    display: none;
+  }
+}
+
+@media print {
+  .govuk-footer {
+    display:none;;
+  }
+}
+
+@media print {
+  .govuk-summary-list--no-border {
+    border: 0;
+  }
+}
+
+
+
+
+
+/* font  */
+
 .govuk-link, a, .app-step-nav-header__title, .app-step-nav-related__link {
   font-family: "Arial", sans-serif;
   -webkit-font-smoothing: antialiased;
