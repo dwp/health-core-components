@@ -1,6 +1,7 @@
 
 /* print  */
 
+
 @media print {
   .govuk-link, a, .app-step-nav-header__title, .app-step-nav-related__link {
     display: none;
@@ -18,7 +19,6 @@
     border: 0;
   }
 }
-
 
 
 
