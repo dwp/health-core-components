@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-Health assessment report
+Work capability assessment report
 {% endblock %}
 
 
@@ -16,9 +16,9 @@ Health assessment report
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-full">
 
-  <span class="govuk-caption-xl">Universal Credit</span>
+  <!-- <span class="govuk-caption-l">Eating and drinking</span> -->
 
-        <h1 class="govuk-heading-xl">Health assessment report</h1>
+        <h1 class="govuk-heading-l">Work capability assessment report</h1>
 
         <br>
 
@@ -30,12 +30,12 @@ Health assessment report
               Name
             </dt>
             <dd class="govuk-summary-list__value">
-              John Doe
+              John Smith
             </dd>
           </div>
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
-              National Insurance number
+              National insurance number
             </dt>
             <dd class="govuk-summary-list__value">
               QQ 12 34 56 X
@@ -49,103 +49,124 @@ Health assessment report
               31 December 1999
             </dd>
           </div>
+          </dl>
+
+
+
+
+        <table class="govuk-table">
+            <h2 class="govuk-heading-l">Scoring</h2>
+          <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+              <th scope="col" class="govuk-table__header">Descriptor</th>
+              <th scope="col" class="govuk-table__header">Score</th>
+            </tr>
+          </thead>
+          <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">Mobilising and using steps</th>
+              <td class="govuk-table__cell">0</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">Standing, sitting and tranferring from seat to seat</th>
+              <td class="govuk-table__cell">Not assessed</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">Reaching</th>
+              <td class="govuk-table__cell">Not assessed</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">Picking up and moving things</th>
+              <td class="govuk-table__cell">Not assessed</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">Manual dexterity</th>
+              <td class="govuk-table__cell">Not assessed</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">Making self understood</th>
+              <td class="govuk-table__cell">Not assessed</td>
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header">Understanding communication</th>
+                <td class="govuk-table__cell">Not assessed</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header">Navigation</th>
+                <td class="govuk-table__cell">Not assessed</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header">Continence</th>
+                <td class="govuk-table__cell">0</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header">Stay conscious when awake</th>
+                <td class="govuk-table__cell">Not assessed</td>
+              </tr>
+       
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header">Learning to do new tasks</th>
+                <td class="govuk-table__cell">6</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header">Awareness of hazards and danger</th>
+                <td class="govuk-table__cell">0</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header">Planning, starting and finishing everyday tasks</th>
+                <td class="govuk-table__cell">0</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header">Coping with changes</th>
+                <td class="govuk-table__cell">0</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header">Getting about</th>
+                <td class="govuk-table__cell">6</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header">Coping with social situations</th>
+                <td class="govuk-table__cell">0</td>
+                <tr class="govuk-table__row">
+                  <th scope="row" class="govuk-table__header">Behaving appropriately around other people</th>
+                  <td class="govuk-table__cell">0</td>
+                </tr>
+                <tr class="govuk-table__row">
+                  <th scope="row" class="govuk-table__header">Eating and drinking</th>
+                  <td class="govuk-table__cell">Not assessed</td>
+                </tr>
+                <tr class="govuk-table__row">
+                  <th scope="row" class="govuk-table__header">Total score:</th>
+                  <th class="govuk-table__cell">12</th>
+                </tr>
+          
+              
+
+          </tbody>
+        </table>
+   
+  
+     
+          <br>
+
+        <h2 class="govuk-heading-l">Claimant evidence</h2>
+
+        <dl class="govuk-summary-list govuk-!-margin-bottom-9">
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
-              Benefit type
+              Additional attendees
             </dt>
             <dd class="govuk-summary-list__value">
-              Universal Credit
+              None
             </dd>
           </div>
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
-              Date of health assessment completed
+              Condition history
             </dt>
             <dd class="govuk-summary-list__value">
-              3 March 2021
+              	Alcohol misuse<br>This started many years ago and drinks daily<br>She states he drinks 8 cans of strong cider per day<br>Attends AA meetings up to 4 time a day<br>Attends AA meetings up to 4 times a day<br>IS under the care of the GP<br>Does not take medication for this condition<br>Depression<br>She states her GP diagnosed this condition 3 years ago<br>Has low mood for several hours a day<br>No counselling or specialist input<br>No thoughts of self harm or suicide, in the past or present, and has no active plans. 
             </dd>
           </div>
-      
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">
-              Name of Healthcare Professional
-            </dt>
-            <dd class="govuk-summary-list__value">
-              Jane Jones
-            </dd>
-          </div>
-          <!-- <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">
-              Email of Healthcare Professional
-            </dt>
-            <dd class="govuk-summary-list__value">
-              jjones@email.com
-            </dd>
-          </div> -->
-        </dl>
-
-
-
-
-
-        <h2 class="govuk-heading-l">Health assessment</h2>
-        <dl class="govuk-summary-list">
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-            How was the assessment conducted
-          </dt>
-          <dd class="govuk-summary-list__value">
-            Telephone
-          </dd>
-        </div>
-        </dl>
-
-  <!-- <h3 class="govuk-heading-m">Additional attendees
-  </h3> -->
-  <h3 class="govuk-heading-m">Additional attendees
-  </h3>
-
-  <dl class="govuk-summary-list">
-
-
-
-
-  <div class="govuk-summary-list__row govuk-summary-list--no-border">
-    <dt class="govuk-summary-list__key">
-      Attendee 1
-    </dt>
-    <dd class="govuk-summary-list__value">
-      Name: David Doe<br>Relationship to claimant: Father
-    </dd>
-  </div>
-<!-- <h3 class="govuk-heading-s">Additional attendee 2
-</h3> -->
-
-<div class="govuk-summary-list__row ">
-  <dt class="govuk-summary-list__key">
-    Attendee 2
-  </dt>
-  <dd class="govuk-summary-list__value">
-    Name: Peter Parker<br>Relationship to claimant: Support worker
-  </dd>
-</div>
-</dl>
-
-
-
-
-
-<!-- <h3 class="govuk-heading-m">Condition history
-</h3> -->
-<dl class="govuk-summary-list govuk-!-margin-bottom-9">
-  <div class="govuk-summary-list__row">
-    <dt class="govuk-summary-list__key">
-      Condition history
-    </dt>
-    <dd class="govuk-summary-list__value">
-        Alcohol misuse<br>This started many years ago and drinks daily<br>She states he drinks 8 cans of strong cider per day<br>Attends AA meetings up to 4 time a day<br>Attends AA meetings up to 4 times a day<br>IS under the care of the GP<br>Does not take medication for this condition<br>Depression<br>She states her GP diagnosed this condition 3 years ago<br>Has low mood for several hours a day<br>No counselling or specialist input<br>No thoughts of self harm or suicide, in the past or present, and has no active plans. 
-    </dd>
-  </div>
 
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
@@ -179,10 +200,13 @@ Takes vitamin C and vitamin D supplements<br>No prescribed medication given or t
         </dl>
 
 
+  <h2 class="govuk-heading-l">Functions and capabilities</h2>
+
+  <h2 class="govuk-heading-l">Physical functions </h2>
 
 
 
-  <h3 class="govuk-heading-m">Mobilising and using steps </h3>
+  <h3 class="govuk-heading-s">Mobilising and using steps </h3>
 
   <dl class="govuk-summary-list">
   <div class="govuk-summary-list__row govuk-summary-list--no-border">
@@ -205,7 +229,7 @@ Takes vitamin C and vitamin D supplements<br>No prescribed medication given or t
 
 
 <dl class="govuk-summary-list">
-  <h3 class="govuk-heading-m">Continence </h3>
+  <h3 class="govuk-heading-s">Continence </h3>
 
   <dl class="govuk-summary-list">
   <div class="govuk-summary-list__row govuk-summary-list--no-border">
@@ -226,9 +250,9 @@ Takes vitamin C and vitamin D supplements<br>No prescribed medication given or t
   </div>
 </dl>
 
+<dl class="govuk-summary-list">
+  <h3 class="govuk-heading-s">Learning to do new tasks
 
-<dl class="govuk-summary-list"></dl>
-  <h3 class="govuk-heading-m">Learning to do new tasks
   </h3>
 
   <dl class="govuk-summary-list">
@@ -237,7 +261,7 @@ Takes vitamin C and vitamin D supplements<br>No prescribed medication given or t
       Which of these options describes how well the claimant can learn how to do new tasks?
     </dt>
     <dd class="govuk-summary-list__value">
-      Can learn how to do a moderately complicated task, such as using a washing machine, but nothing more complicated than that
+      None of the above
     </dd>
   </div>
   <div class="govuk-summary-list__row govuk-summary-list">
@@ -245,192 +269,84 @@ Takes vitamin C and vitamin D supplements<br>No prescribed medication given or t
       Give details
     </dt>
     <dd class="govuk-summary-list__value">
-      Copes with all aspects including washing , dressing managing bills, normal memory at interview, orientated in time and place
+      N/a
     </dd>
   </div>
+
 </dl>
 
+<dl class="govuk-summary-list">
+  <h3 class="govuk-heading-s">Awareness of hazards and danger
 
-<dl class="govuk-summary-list"></dl>
-  <h3 class="govuk-heading-m">Awareness of hazards and danger
   </h3>
 
-  <dl class="govuk-summary-list">
+<dl class="govuk-summary-list">
   <div class="govuk-summary-list__row govuk-summary-list--no-border">
     <dt class="govuk-summary-list__key">
       How often does the claimant need someone with them to help them stay safe?
     </dt>
     <dd class="govuk-summary-list__value">
-      None of the above    </dd>
+      None of the above
+    </dd>
   </div>
   <div class="govuk-summary-list__row govuk-summary-list">
     <dt class="govuk-summary-list__key">
       Give details
     </dt>
     <dd class="govuk-summary-list__value">
-      Lives on her own, uses public transport. Does not have anyone to help her    </dd>
+      N/a
+    </dd>
   </div>
 </dl>
 
-<dl class="govuk-summary-list"></dl>
-  <h3 class="govuk-heading-m">Planning, starting and finishing everyday tasks
+<dl class="govuk-summary-list">
+  <h3 class="govuk-heading-s">Planning, starting and finishing everyday tasks
+
   </h3>
 
-  <dl class="govuk-summary-list">
+<dl class="govuk-summary-list">
   <div class="govuk-summary-list__row govuk-summary-list--no-border">
     <dt class="govuk-summary-list__key">
       Can the claimant plan, start and finish everyday tasks without difficulty?
     </dt>
     <dd class="govuk-summary-list__value">
-      None of the above    </dd>
-  </div>
-  <div class="govuk-summary-list__row govuk-summary-list">
-    <dt class="govuk-summary-list__key">
-      Give details
-    </dt>
-    <dd class="govuk-summary-list__value">
-      Although she drinks daily, she lives independently, attends numerous AA meetings daily and DWP appointments. She was neatly dressed and well kempt and orientated in time and place. No signs of anxiety   </dd>
-  </div>
-</dl>
-
-
-<dl class="govuk-summary-list"></dl>
-  <h3 class="govuk-heading-m">Coping with social situations
-  </h3>
-
-  <dl class="govuk-summary-list">
-  <div class="govuk-summary-list__row govuk-summary-list--no-border">
-    <dt class="govuk-summary-list__key">
-      How does the claimant cope with meeting and being with people?
-    </dt>
-    <dd class="govuk-summary-list__value">
-      None of the above    </dd>
-  </div>
-  <div class="govuk-summary-list__row govuk-summary-list">
-    <dt class="govuk-summary-list__key">
-      Give details
-    </dt>
-    <dd class="govuk-summary-list__value">
-      Able to manage and attend DWP appointments, numerous AA meetingsAttended alone today USed public transportno signs of anxiety at interview  </div>
-</dl>
-
-
-
-<dl class="govuk-summary-list"></dl>
-  <h3 class="govuk-heading-m">Getting about
-  </h3>
-
-  <dl class="govuk-summary-list">
-  <div class="govuk-summary-list__row govuk-summary-list--no-border">
-    <dt class="govuk-summary-list__key">
-      How does the claimant cope with meeting and being with people?
-    </dt>
-    <dd class="govuk-summary-list__value">
-      Is unable to get to a specified place with which the claimant is familiar, without being accompanied by another person.   </dd>
-  </div>
-  <div class="govuk-summary-list__row govuk-summary-list">
-    <dt class="govuk-summary-list__key">
-      Give details
-    </dt>
-    <dd class="govuk-summary-list__value">
-      Came alone, is able to use public transport as required, goes to shops, DWP appointments alone and so sign of anxiety  </div>
-</dl>
-
-
-<dl class="govuk-summary-list"></dl>
-  <h3 class="govuk-heading-m">Coping with social situations
-  </h3>
-
-  <dl class="govuk-summary-list">
-  <div class="govuk-summary-list__row govuk-summary-list--no-border">
-    <dt class="govuk-summary-list__key">
-      How does the claimant cope with meeting and being with people?
-    </dt>
-    <dd class="govuk-summary-list__value">
-      None of the above  </dd>
-  </div>
-  <div class="govuk-summary-list__row govuk-summary-list">
-    <dt class="govuk-summary-list__key">
-      Give details
-    </dt>
-    <dd class="govuk-summary-list__value">
-      Does not have anyone to accompany her to interview or AA meetings. Can use public transport, shops, DWP offices . No signs of anxiety at the interview and came alone  </div>
-</dl>
-
-
-<dl class="govuk-summary-list"></dl>
-  <h3 class="govuk-heading-m">Behaving appropriately around other people
-  </h3>
-
-  <dl class="govuk-summary-list">
-  <div class="govuk-summary-list__row govuk-summary-list--no-border">
-    <dt class="govuk-summary-list__key">
-      How often does the claimant behave in a way which upsets other people?
-    </dt>
-    <dd class="govuk-summary-list__value">
-      None of the above  </dd>
-  </div>
-  <div class="govuk-summary-list__row govuk-summary-list">
-    <dt class="govuk-summary-list__key">
-      Give details
-    </dt>
-    <dd class="govuk-summary-list__value">
-      Denies behavioural problems , behaved normally at assessment. Goes to AA meetings and DWP meetings without difficulty </div>
-</dl>
-
-
-
-<dl class="govuk-summary-list"></dl>
-<h2 class="govuk-heading-m">Fit for work</h2>
-
-  <dl class="govuk-summary-list">
-  <div class="govuk-summary-list__row">
-    <dt class="govuk-summary-list__key">
-      Has the customer service desk (CSD) approved this?
-    </dt>
-    <dd class="govuk-summary-list__value">
-      Yes<br>What was the practitioner's name?: Doctor Healing</dd>
-  </div>
-
-</dl>
-
-<!-- 
-<dl class="govuk-summary-list"></dl>
-<h2 class="govuk-heading-m">Right leg (checkbox reveal example)</h2>
-
-  <dl class="govuk-summary-list">
-  <div class="govuk-summary-list__row">
-    <dt class="govuk-summary-list__key">
-      Select the examination you want to complete
-    </dt>
-    <dd class="govuk-summary-list__value">
-      Straight leg raising<br>Choose option: Ability to lift straight leg when lying down is reduced by muscle tightness at the back of the leg
-      <br><br>Hip flexion<br>Choose option: Hip bending is slightly reduced to between 130° and 110°
-    <br><br>Knee extension<br>Choose option: Unable to fully straighten knee
+      None of the above
     </dd>
   </div>
-
-
-</dl>
-
-<dl class="govuk-summary-list"></dl>
-<h2 class="govuk-heading-m">Left leg (checkbox reveal example)</h2>
-
-  <dl class="govuk-summary-list">
-  <div class="govuk-summary-list__row">
+  <div class="govuk-summary-list__row govuk-summary-list">
     <dt class="govuk-summary-list__key">
-      Select the examination you want to complete
+      Give details
     </dt>
     <dd class="govuk-summary-list__value">
-      Straight leg raising<br>Choose option: Ability to lift straight leg when lying down is reduced by muscle tightness at the back of the leg
-      <br><br>Hip flexion<br>Choose option: Hip bending is slightly reduced to between 130° and 110°
-    <br><br>Knee extension<br>Choose option: Unable to fully straighten knee
+      N/a
     </dd>
-  </div> -->
-
-
+  </div>
 </dl>
 
+
+<dl class="govuk-summary-list">
+  <h3 class="govuk-heading-s">Coping with changes
+
+  </h3>
+
+<dl class="govuk-summary-list">
+  <div class="govuk-summary-list__row govuk-summary-list--no-border">
+    <dt class="govuk-summary-list__key">
+      How well can the claimant cope with changes to their routine?
+    </dt>
+    <dd class="govuk-summary-list__value">
+      None of the above
+    </dd>
+  </div>
+  <div class="govuk-summary-list__row govuk-summary-list">
+    <dt class="govuk-summary-list__key">
+      Give details
+    </dt>
+    <dd class="govuk-summary-list__value">
+      N/a
+    </dd>
+  </div>
+</dl>
 
 
 
@@ -438,9 +354,9 @@ Takes vitamin C and vitamin D supplements<br>No prescribed medication given or t
 
           <input type="hidden" name="answers-checked" value="true">
 
-          <!-- <button class="govuk-button" data-module="govuk-button">
-            Return to referral
-          </button> -->
+          <button class="govuk-button" data-module="govuk-button">
+            Print
+          </button>
 
         </form>
 

@@ -1,0 +1,82 @@
+{% extends "layout-key-detail-bar.html" %}
+
+{% block pageTitle %}
+  TextArea component
+{% endblock %}
+
+
+{% block beforeContent %}
+
+<!-- <a href="#" class="govuk-back-link">Back</a> -->
+{% endblock %}
+
+
+{% block content %}
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-three-quarters">
+  <!-- <span class="govuk-caption-l">Eating and drinking</span> -->
+
+  <div class="govuk-error-summary" aria-labelledby="error-summary-title" role="alert" tabindex="-1" data-module="govuk-error-summary">
+    <h2 class="govuk-error-summary__title" id="error-summary-title">
+      There is a problem
+    </h2>
+    <div class="govuk-error-summary__body">
+      <ul class="govuk-list govuk-error-summary__list">
+        <li>
+          <a href="#name-csd">Enter the name of CSD practitioner if consulted</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="govuk-form-group">
+    <fieldset class="govuk-fieldset" aria-describedby="how-contacted-conditional-hint">
+      <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+        <h1 class="govuk-fieldset__heading">
+          Have you found evidence for LCWRA?
+        </h1>
+      </legend>
+      <!-- <div id="how-contacted-conditional-hint" class="govuk-hint">
+        Select one option.
+      </div> -->
+      <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="how-contacted-conditional" name="how-contacted" type="radio" value="email" checked="checked" data-aria-controls="conditional-how-contacted-conditional">
+          <label class="govuk-label govuk-radios__label" for="how-contacted-conditional">
+            Yes
+          </label>
+        </div>
+        <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-how-contacted-conditional">
+          <div class="govuk-form-group govuk-form-group--error">
+            <label class="govuk-label" for="contact-by-email">
+              Name of CSD practitioner if consulted
+            </label>
+            <span id="event-name-error" class="govuk-error-message">
+  <span class="govuk-visually-hidden">Error:</span> Enter the name of CSD practitioner if consulted
+</span>
+            <input class="govuk-input govuk-!-width-full" id="name-csd" name="contact-by-email" type="email" spellcheck="false"></div>
+
+        </div>
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="how-contacted-conditional-2" name="how-contacted" type="radio" value="phone" data-aria-controls="conditional-how-contacted-conditional-2">
+          <label class="govuk-label govuk-radios__label" for="how-contacted-conditional-2">
+            No
+          </label>
+        </div>
+
+      </div>
+
+    </fieldset>
+  </div>
+
+</div>
+</div>
+
+<button class="govuk-button" data-module="govuk-button">
+  Save and continue
+</button>
+
+
+
+{% endblock %}

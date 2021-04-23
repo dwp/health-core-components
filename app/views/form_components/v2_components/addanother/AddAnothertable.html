@@ -1,0 +1,95 @@
+
+{% extends "layout-key-detail-bar.html" %}
+
+{% block pageTitle %}
+  TextArea component
+{% endblock %}
+
+
+{% block beforeContent %}
+
+<!-- <a href="#" class="govuk-back-link">Back</a> -->
+{% endblock %}
+
+
+{% block content %}
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-three-quarters">
+  <!-- <span class="govuk-caption-l">Review</span> -->
+  <h1 class="govuk-heading-l">Additional attendees</h1>
+
+
+  <!-- <form action="/wca_v1/TakingStatementsentry-post" method="post" novalidate> -->
+
+  <!-- <ul class="govuk-list">
+    <li>
+    <a href="/form_components/TakingStatements" class="govuk-link">View all previous statements</a>
+    </li>
+  </ul> -->
+
+
+
+
+
+    <table class="govuk-table">
+      <!-- <caption class="govuk-table__caption">Informal observations</caption> -->
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th scope="col" class="govuk-table__header">Attendees list</th>
+          <!-- <th scope="col" class="govuk-table__header govuk-table__header--numeric">Actions</th> -->
+        </tr>
+      </thead>
+      <tbody class="govuk-table__body">
+
+  {% for statement in data.statements %}
+        <tr class="govuk-table__row">
+
+            <td scope="row" class="govuk-table__cell">{{ statement }}</td>
+
+          <!-- <td class="govuk-table__cell govuk-table__cell--numeric"><a href="#" class="govuk-link">Edit</a>&nbsp&nbsp<a href="#" class="govuk-link">Remove</a></td> -->
+        </tr>
+  {% endfor %}
+
+      </tbody>
+
+    </table>
+
+  <form action="/form_components/TakingStatementsentry-v1" method="post" novalidate>
+
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="width-20">
+        Name
+      </label>
+      <input class="govuk-input" id="width-20" name="width-20" type="text"></div>
+
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="width-20">
+          Relationship to claimant
+        </label>
+  <input class="govuk-input" id="width-20" name="width-20" type="text"></div>
+<button class="govuk-button govuk-button--secondary" data-module="govuk-button" ">Add statement </button>
+
+
+
+
+
+<br>
+<br>
+
+
+
+    {{ govukButton({
+      id: "comment",
+      name: "comment",
+      value: "add-statement",
+      text: "Save and continue"
+    }) }}
+
+  </div>
+  </div>
+  </main>
+
+
+
+{% endblock %}

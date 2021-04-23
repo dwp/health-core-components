@@ -1,0 +1,123 @@
+{% extends "layout-key-detail-bar.html" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+
+{% block beforeContent %}
+<main id="content" role="main">
+  <div class="grid-row">
+    <div class="column-full">
+
+      <nav class="navigation-secondary">
+        <ul>
+          <li>
+            <a href="#" class="active" aria-current="section">Assessment started: 14:00</a>
+          </li>
+          <li>
+            <a href="#">Abandon assessment</a>
+          </li>
+
+
+
+        </ul>
+      </nav>
+
+    </div>
+  </div>
+</main>
+{% endblock %}
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-three-quarters">
+    <a class="govuk-back-link" href="/url/of/previous/page">Back</a>
+    <h1 class="govuk-heading-l">Start the consultation</h1>
+    {% from "govuk/components/textarea/macro.njk" import govukTextarea %}
+
+{{ govukTextarea({
+  name: "evidence-considered",
+  id: "evidence-considered",
+  label: {
+    text: "Evidence considered"
+  },
+  hint: {
+    text: "List all evidence considered alongside the consultation findings"
+  }
+}) }}
+<h2 class="govuk-heading-m">Additional attendees</h2>
+<p> The following individual attended the consultation with the claimant</p>
+{% from "govuk/components/input/macro.njk" import govukInput %}
+
+<h3 class="govuk-heading-s">Attendee 1   <a href="multuple_addAnother-section" class="govuk-link govuk-!-font-size-19 app-task-list__tag govuk-!-font-weight-regular" id="list-convictions-status">Remove</a></h3>
+
+{{ govukInput({
+  label: {
+    text: "Name of individual"
+  },
+  id: "additional-attendee-name",
+  name: "additional-attendee-name"
+}) }}
+{% from "govuk/components/input/macro.njk" import govukInput %}
+
+{{ govukInput({
+  label: {
+    text: "Relationship to claimant"
+  },
+  id: "additional-attendee-relationship",
+  name: "additional-attendee-relationship"
+}) }}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+<hr>
+<br>
+<br>
+
+<h3 class="govuk-heading-s">Attendee 2   <a href="multuple_addAnother-section" class="govuk-link govuk-!-font-size-19 app-task-list__tag govuk-!-font-weight-regular" id="list-convictions-status">Remove</a></h3>
+
+{{ govukInput({
+  label: {
+    text: "Name of individual"
+  },
+  id: "additional-attendee-name",
+  name: "additional-attendee-name"
+}) }}
+{% from "govuk/components/input/macro.njk" import govukInput %}
+
+{{ govukInput({
+  label: {
+    text: "Relationship to claimant"
+  },
+  id: "additional-attendee-relationship",
+  name: "additional-attendee-relationship"
+}) }}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+
+
+<a href="AddAnother1_1component_add" class="govuk-link govuk-!-font-size-19">Add another attendee</a>
+
+<br>
+<br>
+<br>
+<br>
+{{ govukWarningText({
+  text: "By starting this consultation I am confirming that the nature and purpose of the consultation has been explained to the claimant and/or their representative.",
+  iconFallbackText: "Warning"
+}) }}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+{{ govukButton({
+  text: "Start now",
+  href: "/corecomponents/Research/2Navigation/pip-tasklist/0-tasklist_entry_DONE",
+  isStartButton: true
+}) }}
+  </div>
+
+</div>
+
+</main>
+</div>
+
+{% endblock %}

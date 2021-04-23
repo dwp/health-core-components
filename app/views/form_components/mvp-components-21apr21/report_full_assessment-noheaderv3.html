@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-Health assessment report
+Work capability assessment report
 {% endblock %}
 
 
@@ -16,9 +16,9 @@ Health assessment report
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-full">
 
-  <span class="govuk-caption-xl">Universal Credit</span>
+  <!-- <span class="govuk-caption-l">Eating and drinking</span> -->
 
-        <h1 class="govuk-heading-xl">Health assessment report</h1>
+        <h1 class="govuk-heading-l">Health assessment report</h1>
 
         <br>
 
@@ -35,7 +35,7 @@ Health assessment report
           </div>
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
-              National Insurance number
+              National insurance number
             </dt>
             <dd class="govuk-summary-list__value">
               QQ 12 34 56 X
@@ -65,7 +65,14 @@ Health assessment report
               3 March 2021
             </dd>
           </div>
-      
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              How was the assessment conducted
+            </dt>
+            <dd class="govuk-summary-list__value">
+              Telephone
+            </dd>
+          </div>
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
               Name of Healthcare Professional
@@ -74,78 +81,143 @@ Health assessment report
               Jane Jones
             </dd>
           </div>
-          <!-- <div class="govuk-summary-list__row">
+          <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
               Email of Healthcare Professional
             </dt>
             <dd class="govuk-summary-list__value">
               jjones@email.com
             </dd>
-          </div> -->
+          </div>
         </dl>
 
 
 
 
 
-        <h2 class="govuk-heading-l">Health assessment</h2>
-        <dl class="govuk-summary-list">
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-            How was the assessment conducted
-          </dt>
-          <dd class="govuk-summary-list__value">
-            Telephone
-          </dd>
-        </div>
-        </dl>
+        <h2 class="govuk-heading-l">Assessment</h2>
+
 
   <!-- <h3 class="govuk-heading-m">Additional attendees
   </h3> -->
   <h3 class="govuk-heading-m">Additional attendees
   </h3>
 
-  <dl class="govuk-summary-list">
-
-
-
+  <dl class="govuk-summary-list govuk-!-margin-bottom-9">
 
   <div class="govuk-summary-list__row govuk-summary-list--no-border">
     <dt class="govuk-summary-list__key">
       Attendee 1
     </dt>
     <dd class="govuk-summary-list__value">
-      Name: David Doe<br>Relationship to claimant: Father
     </dd>
   </div>
+
+
+  <div class="govuk-summary-list__row govuk-summary-list--no-border">
+    <dt class="govuk-summary-list__key">
+      Name
+    </dt>
+    <dd class="govuk-summary-list__value">
+      David Doe
+    </dd>
+  </div>
+  <div class="govuk-summary-list__row govuk-summary-list govuk-summary-list--no-border">
+    <dt class="govuk-summary-list__key">
+      Relationship to claimant
+    </dt>
+    <dd class="govuk-summary-list__value">
+      Father
+    </dd>
+  </div>
+
+<br>
 <!-- <h3 class="govuk-heading-s">Additional attendee 2
 </h3> -->
 
-<div class="govuk-summary-list__row ">
+<div class="govuk-summary-list__row govuk-summary-list--no-border">
   <dt class="govuk-summary-list__key">
     Attendee 2
   </dt>
   <dd class="govuk-summary-list__value">
-    Name: Peter Parker<br>Relationship to claimant: Support worker
+   
+  </dd>
+</div>
+<div class="govuk-summary-list__row govuk-summary-list--no-border">
+  <dt class="govuk-summary-list__key">
+    Name
+  </dt>
+  <dd class="govuk-summary-list__value">
+    Peter Parker
+  </dd>
+</div>
+<div class="govuk-summary-list__row govuk-summary-list">
+  <dt class="govuk-summary-list__key">
+    Relationship to claimant
+  </dt>
+  <dd class="govuk-summary-list__value">
+    Support worker
   </dd>
 </div>
 </dl>
 
 
+<h3 class="govuk-heading-m">Condition history
+</h3>
 
-
-
-<!-- <h3 class="govuk-heading-m">Condition history
-</h3> -->
 <dl class="govuk-summary-list govuk-!-margin-bottom-9">
-  <div class="govuk-summary-list__row">
-    <dt class="govuk-summary-list__key">
-      Condition history
-    </dt>
-    <dd class="govuk-summary-list__value">
-        Alcohol misuse<br>This started many years ago and drinks daily<br>She states he drinks 8 cans of strong cider per day<br>Attends AA meetings up to 4 time a day<br>Attends AA meetings up to 4 times a day<br>IS under the care of the GP<br>Does not take medication for this condition<br>Depression<br>She states her GP diagnosed this condition 3 years ago<br>Has low mood for several hours a day<br>No counselling or specialist input<br>No thoughts of self harm or suicide, in the past or present, and has no active plans. 
-    </dd>
-  </div>
+
+<div class="govuk-summary-list__row govuk-summary-list--no-border">
+  <dt class="govuk-summary-list__key">
+    Condition 1
+  </dt>
+  <dd class="govuk-summary-list__value">
+  </dd>
+</div>
+
+        
+        
+          <div class="govuk-summary-list__row govuk-summary-list--no-border">
+            <dt class="govuk-summary-list__key">
+              Condition type
+            </dt>
+            <dd class="govuk-summary-list__value">
+              	Alcohol misuse </dd>
+          </div>
+          <div class="govuk-summary-list__row govuk-summary-list--no-border">
+            <dt class="govuk-summary-list__key">
+              How condition effects the claimant
+            </dt>
+            <dd class="govuk-summary-list__value">
+              	This started many years ago and drinks daily<br>She states he drinks 8 cans of strong cider per day<br>Attends AA meetings up to 4 time a day<br>Attends AA meetings up to 4 times a day<br>IS under the care of the GP<br>Does not take medication for this condition<br>Depression<br>She states her GP diagnosed this condition 3 years ago<br>Has low mood for several hours a day<br>No counselling or specialist input<br>No thoughts of self harm or suicide, in the past or present, and has no active plans. 
+            </dd>
+          </div>
+
+          <div class="govuk-summary-list__row govuk-summary-list--no-border">
+            <dt class="govuk-summary-list__key">
+              Condition 2
+            </dt>
+            <dd class="govuk-summary-list__value">
+            </dd>
+          </div>
+          
+                  
+                  
+                    <div class="govuk-summary-list__row govuk-summary-list--no-border">
+                      <dt class="govuk-summary-list__key">
+                        Condition type
+                      </dt>
+                      <dd class="govuk-summary-list__value">
+                          Alcohol misuse </dd>
+                    </div>
+                    <div class="govuk-summary-list__row">
+                      <dt class="govuk-summary-list__key">
+                        How condition effects the claimant
+                      </dt>
+                      <dd class="govuk-summary-list__value">
+                          This started many years ago and drinks daily<br>She states he drinks 8 cans of strong cider per day<br>Attends AA meetings up to 4 time a day<br>Attends AA meetings up to 4 times a day<br>IS under the care of the GP<br>Does not take medication for this condition<br>Depression<br>She states her GP diagnosed this condition 3 years ago<br>Has low mood for several hours a day<br>No counselling or specialist input<br>No thoughts of self harm or suicide, in the past or present, and has no active plans. 
+                      </dd>
+                    </div>
 
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
@@ -380,57 +452,80 @@ Takes vitamin C and vitamin D supplements<br>No prescribed medication given or t
 
 
 
+
+
 <dl class="govuk-summary-list"></dl>
-<h2 class="govuk-heading-m">Fit for work</h2>
+<h2 class="govuk-heading-m">Fit for work (radio reveal example)</h2>
 
   <dl class="govuk-summary-list">
-  <div class="govuk-summary-list__row">
+  <div class="govuk-summary-list__row govuk-summary-list--no-border">
     <dt class="govuk-summary-list__key">
       Has the customer service desk (CSD) approved this?
     </dt>
     <dd class="govuk-summary-list__value">
-      Yes<br>What was the practitioner's name?: Doctor Healing</dd>
+      Yes </dd>
+  </div>
+  <div class="govuk-summary-list__row govuk-summary-list--no-border">
+    <dt class="govuk-summary-list__key">
+      What was the practitioner's name?
+    </dt>
+    <dd class="govuk-summary-list__value">
+      Doctor Healing </dd>
   </div>
 
 </dl>
 
-<!-- 
+
 <dl class="govuk-summary-list"></dl>
 <h2 class="govuk-heading-m">Right leg (checkbox reveal example)</h2>
 
   <dl class="govuk-summary-list">
-  <div class="govuk-summary-list__row">
+  <div class="govuk-summary-list__row govuk-summary-list--no-border">
     <dt class="govuk-summary-list__key">
       Select the examination you want to complete
     </dt>
     <dd class="govuk-summary-list__value">
-      Straight leg raising<br>Choose option: Ability to lift straight leg when lying down is reduced by muscle tightness at the back of the leg
-      <br><br>Hip flexion<br>Choose option: Hip bending is slightly reduced to between 130° and 110°
-    <br><br>Knee extension<br>Choose option: Unable to fully straighten knee
-    </dd>
+      Straight leg raising</dd>
+  </div>
+  <div class="govuk-summary-list__row govuk-summary-list--no-border">
+    <dt class="govuk-summary-list__key">
+      Choose option
+    </dt>
+    <dd class="govuk-summary-list__value">
+      Ability to lift straight leg when lying down is reduced by muscle tightness at the back of the leg</dd>
   </div>
 
-
-</dl>
-
-<dl class="govuk-summary-list"></dl>
-<h2 class="govuk-heading-m">Left leg (checkbox reveal example)</h2>
-
-  <dl class="govuk-summary-list">
-  <div class="govuk-summary-list__row">
+  <div class="govuk-summary-list__row govuk-summary-list--no-border">
     <dt class="govuk-summary-list__key">
       Select the examination you want to complete
     </dt>
     <dd class="govuk-summary-list__value">
-      Straight leg raising<br>Choose option: Ability to lift straight leg when lying down is reduced by muscle tightness at the back of the leg
-      <br><br>Hip flexion<br>Choose option: Hip bending is slightly reduced to between 130° and 110°
-    <br><br>Knee extension<br>Choose option: Unable to fully straighten knee
-    </dd>
-  </div> -->
+      Hip flexion</dd>
+  </div>
+  <div class="govuk-summary-list__row govuk-summary-list--no-border">
+    <dt class="govuk-summary-list__key">
+      Choose option
+    </dt>
+    <dd class="govuk-summary-list__value">
+      Hip bending is slightly reduced to between 130° and 110°
+      </div>
 
+      <div class="govuk-summary-list__row govuk-summary-list--no-border">
+        <dt class="govuk-summary-list__key">
+          Select the examination you want to complete
+        </dt>
+        <dd class="govuk-summary-list__value">
+          Knee extension</dd>
+      </div>
+      <div class="govuk-summary-list__row govuk-summary-list--no-border">
+        <dt class="govuk-summary-list__key">
+          Choose option
+        </dt>
+        <dd class="govuk-summary-list__value">
+          Unable to fully straighten knee
+          </div>
 
 </dl>
-
 
 
 
@@ -438,9 +533,9 @@ Takes vitamin C and vitamin D supplements<br>No prescribed medication given or t
 
           <input type="hidden" name="answers-checked" value="true">
 
-          <!-- <button class="govuk-button" data-module="govuk-button">
-            Return to referral
-          </button> -->
+          <button class="govuk-button" data-module="govuk-button">
+            Continue
+          </button>
 
         </form>
 

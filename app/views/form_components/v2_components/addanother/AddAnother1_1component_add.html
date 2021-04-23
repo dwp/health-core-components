@@ -1,0 +1,77 @@
+
+{% extends "layout-key-detail-bar.html" %}
+
+{% block pageTitle %}
+  TextArea component
+{% endblock %}
+
+
+{% block beforeContent %}
+
+<!-- <a href="#" class="govuk-back-link">Back</a> -->
+{% endblock %}
+
+
+{% block content %}
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-three-quarters">
+  <!-- <span class="govuk-caption-l">Review</span> -->
+  <h1 class="govuk-heading-l">History of conditions</h1>
+
+
+
+
+
+  <h2 class="govuk-heading-m">Condition 1
+    <a href="/form_components/AddAnother" class="govuk-link govuk-!-font-size-19 app-task-list__tag govuk-!-font-weight-regular" id="list-convictions-status">Remove</a>
+</h2>
+
+
+  <form action="#" method="post" novalidate>
+
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="width-20">
+        Provide details
+      </label>
+      <input class="govuk-input" id="width-20" name="width-20" type="text"></div>
+
+
+<hr>
+<br>
+<br>
+<h2 class="govuk-heading-m">Condition 2
+  <a href="/form_components/AddAnother" class="govuk-link govuk-!-font-size-19 app-task-list__tag govuk-!-font-weight-regular" id="list-convictions-status">Remove</a>
+</h2>
+
+<div class="govuk-form-group">
+  <label class="govuk-label" for="width-20">
+    Provide details
+  </label>
+  <input class="govuk-input" id="width-20" name="width-20" type="text"></div>
+
+
+
+<hr>
+<br>
+<br>
+
+
+<a href="#" class="govuk-link govuk-!-font-size-19">Add another condition</a>
+<br>
+<br>
+<br>
+    {{ govukButton({
+      id: "comment",
+      name: "comment",
+      value: "add-statement",
+      text: "Save and continue"
+    }) }}
+
+  </div>
+  </div>
+  </main>
+
+
+
+{% endblock %}

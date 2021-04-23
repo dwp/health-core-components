@@ -1,0 +1,55 @@
+{% extends "layout-key-detail-bar.html" %}
+
+{% block pageTitle %}
+  TextArea configurable component
+{% endblock %}
+
+
+{% block beforeContent %}
+
+<!-- <a href="#" class="govuk-back-link">Back</a> -->
+{% endblock %}
+
+
+{% block content %}
+
+<div class="govuk-error-summary" aria-labelledby="error-summary-title" role="alert" tabindex="-1" data-module="govuk-error-summary">
+  <h2 class="govuk-error-summary__title" id="error-summary-title">
+    There is a problem
+  </h2>
+  <div class="govuk-error-summary__body">
+    <ul class="govuk-list govuk-error-summary__list">
+      <li>
+        <a href="#condition-history">Enter condition history</a>
+      </li>
+    </ul>
+  </div>
+</div>
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-three-quarters">
+
+<div class="govuk-form-group govuk-form-group--error">
+  <!-- <span class="govuk-caption-l">Section heading (Caption)</span> -->
+  <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--l" for="condition-history">
+      Condition history
+    </label>
+  </h1>
+  <div id="more-detail-hint" class="govuk-hint">
+    Provide all details of your condition history
+  </div>
+  <span id="more-detail-error" class="govuk-error-message">
+    <span class="govuk-visually-hidden">Error:</span> Enter condition history
+  </span>
+  <textarea class="govuk-textarea" id="condition-history" name="condition-history" rows="10" aria-describedby="more-detail-hint"></textarea>
+</div>
+
+</div>
+</div>
+
+<button class="govuk-button" data-module="govuk-button">
+  Save and continue
+</button>
+
+
+
+{% endblock %}

@@ -1,0 +1,57 @@
+{% extends "layout-key-detail-bar.html" %}
+
+{% block pageTitle %}
+  TextArea component
+{% endblock %}
+
+
+{% block beforeContent %}
+
+<a href="#" class="govuk-back-link">Back</a>
+{% endblock %}
+
+
+{% block content %}
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-three-quarters">
+  <span class="govuk-caption-l">Review</span>
+<h1 class="govuk-heading-l">Informal observations</h1>
+
+<div class="govuk-form-group">
+  <label class="govuk-label" for="width-20">
+    Provide a statement
+  </label>
+  <input class="govuk-input" id="width-20" name="width-20" type="text" placeholder="Statement 1 lorem ipsum">
+</div>
+<div class="govuk-form-group">
+  <label class="govuk-label" for="width-20">
+    Provide a statement
+  </label>
+  <input class="govuk-input" id="width-20" name="width-20" type="text" placeholder="Statement 2 lorem ipsum">
+</div>
+<div class="govuk-form-group">
+  <label class="govuk-label" for="width-20">
+    Provide a statement
+  </label>
+  <input class="govuk-input" id="width-20" name="width-20" type="text" placeholder="Statement 3 lorem ipsum">
+</div>
+<br>
+
+<button class="govuk-button govuk-button--secondary" data-module="govuk-button">
+    Add another statement
+  </button>
+
+</div>
+</div>
+
+<br>
+
+
+<button class="govuk-button" data-module="govuk-button">
+  Save
+</button>
+
+
+
+{% endblock %}

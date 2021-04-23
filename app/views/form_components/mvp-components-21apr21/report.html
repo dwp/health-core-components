@@ -1,0 +1,944 @@
+{% extends "layout-key-detail-bar.html" %}
+
+{% block pageTitle %}
+Report page
+{% endblock %}
+
+
+{% block beforeContent %}
+
+<!-- <a href="#" class="govuk-back-link">Back</a> -->
+{% endblock %}
+
+
+{% block content %}
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-full">
+  <!-- <span class="govuk-caption-l">Eating and drinking</span> -->
+
+        <h1 class="govuk-heading-l">Check report before submitting for approval</h1>
+
+        <h2 class="govuk-heading-m">Assessment details</h2>
+
+        <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Name
+            </dt>
+            <dd class="govuk-summary-list__value">
+              John Smith
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <!-- <a class="govuk-link" href="#">
+                Change<span class="govuk-visually-hidden"> name</span>
+              </a> -->
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              National Insurance number
+            </dt>
+            <dd class="govuk-summary-list__value">
+              AA 12 34 56 B
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <!-- <a class="govuk-link" href="#">
+                Change<span class="govuk-visually-hidden"> name</span>
+              </a> -->
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Date of birth
+            </dt>
+            <dd class="govuk-summary-list__value">
+              31 December 1999
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <!-- <a class="govuk-link" href="#">
+                Change<span class="govuk-visually-hidden"> date of birth</span>
+              </a> -->
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Date of assessment
+            </dt>
+            <dd class="govuk-summary-list__value">
+              	20 October 2020
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <!-- <a class="govuk-link" href="#">
+                Change<span class="govuk-visually-hidden"> date of birth</span>
+              </a> -->
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Assessment centre
+            </dt>
+            <dd class="govuk-summary-list__value">
+                Tresco House
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <!-- <a class="govuk-link" href="#">
+                Change<span class="govuk-visually-hidden"> date of birth</span>
+              </a> -->
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Assessor
+            </dt>
+            <dd class="govuk-summary-list__value">
+                	Joe Bloggs
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <!-- <a class="govuk-link" href="#">
+                Change<span class="govuk-visually-hidden"> date of birth</span>
+              </a> -->
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Face-to-face start time
+            </dt>
+            <dd class="govuk-summary-list__value">
+                2:27pm
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <!-- <a class="govuk-link" href="#">
+                Change<span class="govuk-visually-hidden"> date of birth</span>
+              </a> -->
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Face-to-face end time
+            </dt>
+            <dd class="govuk-summary-list__value">
+                	3:15pm
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <!-- <a class="govuk-link" href="#">
+                Change<span class="govuk-visually-hidden"> date of birth</span>
+              </a> -->
+            </dd>
+          </div>
+
+
+        </dl>
+
+        <h2 class="govuk-heading-m">Claimant evidence</h2>
+
+        <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Additional attendees
+            </dt>
+            <dd class="govuk-summary-list__value">
+              None
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">
+                Change<span class="govuk-visually-hidden"> previous application number</span>
+              </a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Condition history
+            </dt>
+            <dd class="govuk-summary-list__value">
+              	Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse non dictum ipsum. Donec in ultrices metus. Morbi fringilla odio nec fermentum sodales. Mauris vitae magna sed odio aliquam laoreet id sit amet tortor.
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">
+                Change<span class="govuk-visually-hidden"> licence type</span>
+              </a>
+            </dd>
+          </div>
+
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Medication and side effects
+            </dt>
+            <dd class="govuk-summary-list__value">
+              	Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse non dictum ipsum. Donec in ultrices metus. Morbi fringilla odio nec fermentum sodales. Mauris vitae magna sed odio aliquam laoreet id sit amet tortor.
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">
+                Change<span class="govuk-visually-hidden"> licence period</span>
+              </a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Social and work history
+            </dt>
+            <dd class="govuk-summary-list__value">Social & work comment 1<br>Social & work comment 2<br>Social & work comment 3</dd>
+
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">
+                Change<span class="govuk-visually-hidden"> licence period</span>
+              </a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Typical day
+            </dt>
+            <dd class="govuk-summary-list__value">Typical day comment 1<br>Typical day comment 2<br>Typical day comment 3</dd>
+
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">
+                Change<span class="govuk-visually-hidden"> licence period</span>
+              </a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Informal observations
+            </dt>
+            <dd class="govuk-summary-list__value">Observation comment 1<br>Observation comment 2</dd>
+
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">
+                Change<span class="govuk-visually-hidden"> licence period</span>
+              </a>
+            </dd>
+          </div>
+        </dl>
+
+
+  <h2 class="govuk-heading-m">Physical assessments</h2>
+<p class="govuk-body">The details and scope of the physical examination were explained to Joe, including advice not to perform any movements causing pain or discomfort. Claimant gave consent for the process to proceed.</p>
+
+
+<dl class="govuk-summary-list govuk-!-margin-bottom-9">
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      General health
+    </dt>
+    <dd class="govuk-summary-list__value">
+      Height (m): 1.3<br>Weight (Kg): 94<br>BMI: 25%
+    </dd>
+    <dd class="govuk-summary-list__actions">
+      <a class="govuk-link" href="#">
+        Change<span class="govuk-visually-hidden"> previous application number</span>
+      </a>
+    </dd>
+  </div>
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+Lower back and legs
+    </dt>
+    <dd class="govuk-summary-list__value">
+Not assessed
+    </dd>
+    <dd class="govuk-summary-list__actions">
+      <a class="govuk-link" href="#">
+        Review<span class="govuk-visually-hidden"> previous application number</span>
+      </a>
+    </dd>
+  </div>
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Neck and arms
+    </dt>
+    <dd class="govuk-summary-list__value">
+Not assessed
+    <dd class="govuk-summary-list__actions">
+      <a class="govuk-link" href="#">
+        Review<span class="govuk-visually-hidden"> licence period</span>
+      </a>
+    </dd>
+  </div>
+  <div class="govuk-summary-list__row govuk-summary-list--no-border">
+    <dt class="govuk-summary-list__key">
+      Cardiovascular and respiratory
+    </dt>
+    <dd class="govuk-summary-list__value">
+          </dd>
+    <dd class="govuk-summary-list__actions">
+      <a class="govuk-link" href="#">
+        Change<span class="govuk-visually-hidden"> licence type</span>
+      </a>
+    </dd>
+  </div>
+  <div class="govuk-summary-list__row row govuk-summary-list--no-border">
+    <dt class="govuk-summary-list__key">
+      Cardiac
+    </dt>
+    <dd class="govuk-summary-list__value">
+    Respiratory rate at rest: Lorem ipsum  </dd>
+    <dd class="govuk-summary-list__actions">
+
+    </dd>
+  </div>
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Breathlessness
+    </dt>
+    <dd class="govuk-summary-list__value">
+    Breathlessness: Lorem ipsum<br>Other findings: Lorem ipsum</dd>
+    <dd class="govuk-summary-list__actions">
+
+    </dd>
+  </div>
+
+
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Vision, speech and hearing
+    </dt>
+    <dd class="govuk-summary-list__value">
+Not assessed
+    <dd class="govuk-summary-list__actions">
+      <a class="govuk-link" href="#">
+        Review<span class="govuk-visually-hidden"> licence period</span>
+      </a>
+    </dd>
+  </div>
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Central nervous system
+    </dt>
+    <dd class="govuk-summary-list__value">
+Not assessed
+    <dd class="govuk-summary-list__actions">
+      <a class="govuk-link" href="#">
+        Review<span class="govuk-visually-hidden"> licence period</span>
+      </a>
+    </dd>
+  </div>
+</dl>
+
+
+<h2 class="govuk-heading-m">Mental health</h2>
+
+<dl class="govuk-summary-list govuk-!-margin-bottom-9">
+<div class="govuk-summary-list__row govuk-summary-list--no-border">
+  <dt class="govuk-summary-list__key">
+    Appearance
+  </dt>
+  <dd class="govuk-summary-list__value">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+  </dd>
+  <dd class="govuk-summary-list__actions">
+    <a class="govuk-link" href="#">
+      Change<span class="govuk-visually-hidden"> previous application number</span>
+    </a>
+  </dd>
+</div>
+<div class="govuk-summary-list__row govuk-summary-list--no-border">
+  <dt class="govuk-summary-list__key">
+Behaviour
+  </dt>
+  <dd class="govuk-summary-list__value">Not assessed
+
+  </dd>
+  <dd class="govuk-summary-list__actions">
+    <a class="govuk-link" href="#">
+      <span class="govuk-visually-hidden"> previous application number</span>
+    </a>
+  </dd>
+</div>
+<div class="govuk-summary-list__row govuk-summary-list--no-border">
+  <dt class="govuk-summary-list__key">
+    Speech
+  </dt>
+  <dd class="govuk-summary-list__value">Not assessed
+
+  <dd class="govuk-summary-list__actions">
+    <a class="govuk-link" href="#">
+      <span class="govuk-visually-hidden"> licence period</span>
+    </a>
+  </dd>
+</div>
+<div class="govuk-summary-list__row govuk-summary-list--no-border">
+  <dt class="govuk-summary-list__key">
+    Mood
+  </dt>
+  <dd class="govuk-summary-list__value">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        </dd>
+  <dd class="govuk-summary-list__actions">
+    <a class="govuk-link" href="#">
+      <span class="govuk-visually-hidden"> licence type</span>
+    </a>
+  </dd>
+</div>
+
+<div class="govuk-summary-list__row govuk-summary-list--no-border">
+  <dt class="govuk-summary-list__key">
+    Cognition general
+  </dt>
+  <dd class="govuk-summary-list__value">
+  Not assessed </dd>
+  <dd class="govuk-summary-list__actions">
+
+  </dd>
+</div>
+<div class="govuk-summary-list__row govuk-summary-list--no-border">
+  <dt class="govuk-summary-list__key">
+    Insight
+  </dt>
+  <dd class="govuk-summary-list__value">
+  Not assessed  </dd>
+  <dd class="govuk-summary-list__actions">
+
+  </dd>
+</div>
+<div class="govuk-summary-list__row govuk-summary-list--no-border">
+  <dt class="govuk-summary-list__key">
+    Thoughts
+  </dt>
+  <dd class="govuk-summary-list__value">
+  Not assessed</dd>
+  <dd class="govuk-summary-list__actions">
+
+  </dd>
+</div>
+
+
+<div class="govuk-summary-list__row govuk-summary-list--no-border">
+  <dt class="govuk-summary-list__key">
+    Perceptions
+  </dt>
+  <dd class="govuk-summary-list__value">
+Not assessed
+  <dd class="govuk-summary-list__actions">
+    <a class="govuk-link" href="#">
+      <span class="govuk-visually-hidden"> licence period</span>
+    </a>
+  </dd>
+</div>
+<div class="govuk-summary-list__row govuk-summary-list--no-border">
+  <dt class="govuk-summary-list__key">
+    Addictions
+  </dt>
+  <dd class="govuk-summary-list__value">
+Not assessed
+  <dd class="govuk-summary-list__actions">
+    <a class="govuk-link" href="#">
+      <span class="govuk-visually-hidden"> licence period</span>
+    </a>
+  </dd>
+</div>
+<div class="govuk-summary-list__row">
+  <dt class="govuk-summary-list__key">
+    Cognitive tests
+  </dt>
+  <dd class="govuk-summary-list__value">
+Not assessed
+  <dd class="govuk-summary-list__actions">
+    <a class="govuk-link" href="#">
+      <span class="govuk-visually-hidden"> licence period</span>
+    </a>
+  </dd>
+</div>
+</dl>
+
+
+
+<h2 class="govuk-heading-m">Assessment scoring</h2>
+
+
+
+<dl class="govuk-summary-list govuk-!-margin-bottom-9">
+<div class="govuk-summary-list__row">
+  <dt class="govuk-summary-list__key">
+    Activity
+  </dt>
+  <dd class="govuk-summary-list__key">
+    Score
+  </dd>
+  <dd class="govuk-summary-list__actions">
+    <a class="govuk-link" href="#">
+      <span class="govuk-visually-hidden"> previous application number</span>
+    </a>
+  </dd>
+</div>
+<div class="govuk-summary-list__row">
+  <dt class="govuk-summary-list__key">
+Moving around and using steps (mobilising)
+  </dt>
+  <dd class="govuk-summary-list__value">
+6
+  </dd>
+  <dd class="govuk-summary-list__actions">
+    <a class="govuk-link" href="#">
+      Change<span class="govuk-visually-hidden"></span>
+    </a>
+  </dd>
+</div>
+<div class="govuk-summary-list__row">
+  <dt class="govuk-summary-list__key">
+    Using your hands (manual dexterity)
+  </dt>
+  <dd class="govuk-summary-list__value">
+9
+  <dd class="govuk-summary-list__actions">
+    <a class="govuk-link" href="#">
+      Change<span class="govuk-visually-hidden"> licence period</span>
+    </a>
+  </dd>
+</div>
+<div class="govuk-summary-list__row">
+  <dt class="govuk-summary-list__key">
+    Learning to do new tasks
+  </dt>
+  <dd class="govuk-summary-list__value">
+        6</dd>
+  <dd class="govuk-summary-list__actions">
+    <a class="govuk-link" href="#">
+      Change<span class="govuk-visually-hidden"> licence type</span>
+    </a>
+  </dd>
+</div>
+<div class="govuk-summary-list__row">
+  <dt class="govuk-summary-list__key">
+    Eating and drinking
+  </dt>
+  <dd class="govuk-summary-list__value">
+        Not met</dd>
+  <dd class="govuk-summary-list__actions">
+    <a class="govuk-link" href="#">
+      Change<span class="govuk-visually-hidden"> licence type</span>
+    </a>
+  </dd>
+</div>
+
+<div class="govuk-summary-list__row govuk-summary-list--no-border">
+  <dt class="govuk-summary-list__key">
+    Total score
+  </dt>
+  <dd class="govuk-summary-list__key">
+  21</dd>
+  <dd class="govuk-summary-list__actions">
+
+  </dd>
+</div>
+
+</dl>
+
+
+
+<h2 class="govuk-heading-m">Medical opinion</h2>
+<p class="govuk-body">I have considered the possible ESA activity outcomes and my advice is that the following apply:</p>
+
+<h3 class="govuk-heading-s">Moving around and using steps (mobilising)</h3>
+<dl class="govuk-summary-list">
+<div class="govuk-summary-list__row govuk-summary-list--no-border">
+  <dt class="govuk-summary-list__key">
+    Relevant statements
+  </dt>
+  <dd class="govuk-summary-list__value">
+    Typical day comment 1<br>Typical day comment 2
+  </dd>
+  <dd class="govuk-summary-list__actions">
+    <a class="govuk-link" href="#">Change
+      <span class="govuk-visually-hidden"> previous application number</span>
+    </a>
+  </dd>
+</div>
+<div class="govuk-summary-list__row">
+  <dt class="govuk-summary-list__key">
+    Outcome
+  </dt>
+  <dd class="govuk-summary-list__value">
+    Joe can move around (mobilise): No more than 200 metres
+  </dd>
+  <dd class="govuk-summary-list__actions">
+    <a class="govuk-link" href="#">Change
+      <span class="govuk-visually-hidden"> previous application number</span>
+    </a>
+  </dd>
+</div>
+</dl>
+
+<h3 class="govuk-heading-s">Using your hands (manual dexterity)</h3>
+<dl class="govuk-summary-list">
+<div class="govuk-summary-list__row govuk-summary-list--no-border">
+  <dt class="govuk-summary-list__key">
+Relevant statements
+  </dt>
+  <dd class="govuk-summary-list__value">
+    Typical day comment 1<br>Typical day comment 2
+  </dd>
+  <dd class="govuk-summary-list__actions">
+    <a class="govuk-link" href="#">Change
+      <span class="govuk-visually-hidden"> previous application number</span>
+    </a>
+  </dd>
+</div>
+<div class="govuk-summary-list__row">
+  <dt class="govuk-summary-list__key">
+    Outcome
+  </dt>
+  <dd class="govuk-summary-list__value">
+    Joe cannot use either a keyboard or a mouse.
+  </dd>
+  <dd class="govuk-summary-list__actions">
+    <a class="govuk-link" href="#">Change
+      <span class="govuk-visually-hidden"> previous application number</span>
+    </a>
+  </dd>
+</div>
+</dl>
+
+
+
+<h3 class="govuk-heading-s">Learning to do new tasks</h3>
+<dl class="govuk-summary-list">
+<div class="govuk-summary-list__row govuk-summary-list--no-border">
+  <dt class="govuk-summary-list__key">
+    Relevant statements
+  </dt>
+  <dd class="govuk-summary-list__value">
+    Typical day comment 1<br>Typical day comment 2
+  </dd>
+  <dd class="govuk-summary-list__actions">
+    <a class="govuk-link" href="#">Change
+      <span class="govuk-visually-hidden"> previous application number</span>
+    </a>
+  </dd>
+</div>
+<div class="govuk-summary-list__row">
+  <dt class="govuk-summary-list__key">
+    Outcome
+  </dt>
+  <dd class="govuk-summary-list__value">
+    	Joe can learn how to do a moderately complicated task, such as using a washing machine, but nothing more complicated that that.
+  </dd>
+  <dd class="govuk-summary-list__actions">
+    <a class="govuk-link" href="#">Change
+      <span class="govuk-visually-hidden"> previous application number</span>
+    </a>
+  </dd>
+</div>
+</dl>
+
+
+
+<h3 class="govuk-heading-s">Eating and drinking	</h3>
+<dl class="govuk-summary-list govuk-!-margin-bottom-9">
+<div class="govuk-summary-list__row govuk-summary-list--no-border">
+  <dt class="govuk-summary-list__key">
+Relevant statements
+  </dt>
+  <dd class="govuk-summary-list__value">
+    Typical day comment 1<br>Typical day comment 2
+  </dd>
+  <dd class="govuk-summary-list__actions">
+    <a class="govuk-link" href="#">Change
+      <span class="govuk-visually-hidden"> previous application number</span>
+    </a>
+  </dd>
+</div>
+<div class="govuk-summary-list__row">
+  <dt class="govuk-summary-list__key">
+    Outcome
+  </dt>
+  <dd class="govuk-summary-list__value">
+    	Joe can usually manage getting food and drink to their mouth.<br>Joe can usually manage to chew or swallow food and drink.
+  </dd>
+  <dd class="govuk-summary-list__actions">
+    <a class="govuk-link" href="#">Change
+      <span class="govuk-visually-hidden"> previous application number</span>
+    </a>
+  </dd>
+</div>
+</dl>
+
+
+
+<dl class="govuk-summary-list">
+<div class="govuk-summary-list__row govuk-summary-list--no-border">
+  <dt class="govuk-summary-list__key">
+    Joe did not identify any problems in the following areas:
+  </dt>
+
+  <dd class="govuk-summary-list__actions">
+    <a class="govuk-link" href="#">Add area
+      <span class="govuk-visually-hidden"> previous application number</span>
+    </a>
+  </dd>
+</div>
+</dl>
+
+
+    <p class="govuk-body">Standing, sitting and transferring from seat to seat<br>Reaching<br>Picking up and moving things<br>Speaking, writing and typing (making self understood)<br>Hearing and reading (understanding communication)<br>Getting around safely (navigation)<br>Controlling your bowels and bladder and using a collecting device (continence)<br>Staying conscious when awake<br>Awareness of hazards and danger<br>Planning, starting and finishing everyday tasks<br>Coping with changes<br>Going out (getting about)<br>Coping with social situations<br>Behaving appropriately around other people</p>
+
+
+
+
+
+    <h2 class="govuk-heading-m">Exceptional circumstances</h2>
+
+    <dl class="govuk-summary-list">
+      <div class="govuk-summary-list__row">
+      <dd class="govuk-summary-list__value">
+Evidence to support the opinion that the claimant does not meet any of the criteria to be treated as having limited capability for work and limited capability for work-related activity.
+
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="#">
+            Change<span class="govuk-visually-hidden"> previous application number</span>
+          </a>
+        </dd>
+      </div>
+      </dl>
+      <dl class="govuk-summary-list">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Terminally ill
+        </dt>
+        <dd class="govuk-summary-list__value">
+          There are no conditions reported that are likely to result in death within 6 months.  </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="#">
+            <span class="govuk-visually-hidden"> licence type</span>
+          </a>
+        </dd>
+      </div>
+
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Serious risk pregnancy
+        </dt>
+        <dd class="govuk-summary-list__value">
+      	There is no evidence to suggest that the client is undergoing a 'serious risk' pregnancy.  </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="#">
+
+          </a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Substantial risk to mental or physical health
+        </dt>
+        <dd class="govuk-summary-list__value">The evidence does not suggest that there would be a substantial risk to the mental or physical health of the claimant (or another person) if the claimant was found capable of work or work-related activity.
+
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="#">
+
+          </a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Chemotherapy or radiotherapy
+        </dt>
+        <dd class="govuk-summary-list__value">	From the available evidence, the claimant is not receiving, likely to receive in the next 6 months, or recovering from treatment for cancer by way of chemotherapy or radiotherapy.
+
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="#">
+
+          </a>
+        </dd>
+      </div>
+      </dl>
+      <dl class="govuk-summary-list">
+        <div class="govuk-summary-list__row">
+        <dd class="govuk-summary-list__value">There are no exceptional circumstances why Tomas should be treated as limited capability for work.
+          </dd>
+</div>
+</dl>
+
+<dl class="govuk-summary-list">
+<div class="govuk-summary-list__row">
+  <dt class="govuk-summary-list__key">
+    Regular treatment
+  </dt>
+  <dd class="govuk-summary-list__value">
+    No conditions reported or evidence available. </dd>
+  <dd class="govuk-summary-list__actions">
+    <a class="govuk-link" href="#">
+      <span class="govuk-visually-hidden"> licence type</span>
+    </a>
+  </dd>
+</div>
+
+<div class="govuk-summary-list__row">
+  <dt class="govuk-summary-list__key">
+    Hospital inpatient
+  </dt>
+  <dd class="govuk-summary-list__value">
+  No conditions reported or evidence available. </dd>
+  <dd class="govuk-summary-list__actions">
+    <a class="govuk-link" href="#">
+
+    </a>
+  </dd>
+</div>
+<div class="govuk-summary-list__row">
+  <dt class="govuk-summary-list__key">
+    Cannot work by law (infectious disease)
+  </dt>
+  <dd class="govuk-summary-list__value">No conditions reported or evidence available.
+
+  <dd class="govuk-summary-list__actions">
+    <a class="govuk-link" href="#">
+
+    </a>
+  </dd>
+</div>
+<div class="govuk-summary-list__row">
+  <dt class="govuk-summary-list__key">
+    Substantial risk to mental or physical health
+  </dt>
+  <dd class="govuk-summary-list__value">	The evidence does not suggest that there would be a substantial risk to the mental or physical health of the claimant if found not to have limited capability for work.
+
+  <dd class="govuk-summary-list__actions">
+    <a class="govuk-link" href="#">
+
+    </a>
+  </dd>
+</div>
+<div class="govuk-summary-list__row">
+  <dt class="govuk-summary-list__key">
+    Life threatening disease (uncontrollable and uncontrolled)
+  </dt>
+  <dd class="govuk-summary-list__value">No conditions reported or evidence available.
+  <dd class="govuk-summary-list__actions">
+    <a class="govuk-link" href="#">
+
+    </a>
+  </dd>
+</div>
+<div class="govuk-summary-list__row">
+  <dt class="govuk-summary-list__key">
+    Pregnancy around dates of confinement
+  </dt>
+  <dd class="govuk-summary-list__value">The evidence does not suggest there is limited capability for work around dates of expected week of confinement.
+  <dd class="govuk-summary-list__actions">
+    <a class="govuk-link" href="#">
+
+    </a>
+  </dd>
+</div>
+</dl>
+
+
+
+    <h2 class="govuk-heading-m">Recommended review period</h2>
+
+    <dl class="govuk-summary-list">
+      <div class="govuk-summary-list__row  govuk-summary-list--no-border">
+      <dd class="govuk-summary-list__value">
+
+        I advise that Joe's case needs reviewing in 18 months.    </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="#">
+            Change<span class="govuk-visually-hidden"> previous application number</span>
+          </a>
+        </dd>
+      </div>
+      </dl>
+      <dl class="govuk-summary-list">
+        <div class="govuk-summary-list__row">
+        <dd class="govuk-summary-list__value">
+
+          The reasons for this are:<br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sit amet molestie arcu.
+   </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="#">
+
+            </a>
+          </dd>
+        </div>
+        </dl>
+
+
+            <h2 class="govuk-heading-m">Personal summary statement</h2>
+
+            <dl class="govuk-summary-list">
+              <div class="govuk-summary-list__row  govuk-summary-list--no-border">
+              <dd class="govuk-summary-list__value">
+
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sit amet molestie arcu. Nam dapibus risus leo, vel condimentum lorem dictum sed. Donec rhoncus id leo vel cursus. Proin nibh sem, lobortis at faucibus eget, pretium non elit. Sed feugiat lectus ut felis hendrerit pulvinar. Ut in odio lacinia felis consectetur condimentum et ut erat. Donec auctor mi in eros sodales, at malesuada erat ultrices. Nulla facilisi. Vestibulum nec interdum nulla.  </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a class="govuk-link" href="#">
+                    Change<span class="govuk-visually-hidden"> previous application number</span>
+                  </a>
+                </dd>
+              </div>
+              </dl>
+
+
+              <h2 class="govuk-heading-m">Declaration</h2>
+
+      <p class="govuk-body">This form has been completed by a healthcare professional approved by the Secretary of State for Work and Pensions.<br><br>I have completed this form in accordance with the current guidance to ESA examining healthcare professionals as issued by the Department for Work and Pensions.<br><br>I can confirm that there is no harmful information in the report.</p>
+
+        <h2 class="govuk-heading-m">Now send your application</h2>
+
+        <p class="govuk-body">By submitting this notification you are confirming that, to the best of your knowledge, the details you are providing are correct.</p>
+
+
+        <dl class="govuk-summary-list">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+Healthcare Professional’s name
+          </dt>
+          <dd class="govuk-summary-list__value">
+            Joe Bloggs </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="#">
+              <span class="govuk-visually-hidden"> licence type</span>
+            </a>
+          </dd>
+        </div>
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+          Healthcare Professional's title
+          </dt>
+          <dd class="govuk-summary-list__value">
+        Registered medical practitioner  </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="#">
+
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Date
+          </dt>
+          <dd class="govuk-summary-list__value">15 May 2020
+
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="#">
+
+            </a>
+          </dd>
+        </div>
+
+        </dl>
+
+
+
+        <form action="/form-handler" method="post" novalidate>
+
+          <input type="hidden" name="answers-checked" value="true">
+
+          <button class="govuk-button" data-module="govuk-button">
+            Submitted for pre-approval
+          </button>
+
+        </form>
+
+
+        <button class="govuk-button govuk-button--secondary" data-module="govuk-button">
+          Print report
+        </button>
+
+      </div>
+    </div>
+
+
+{% endblock %}
