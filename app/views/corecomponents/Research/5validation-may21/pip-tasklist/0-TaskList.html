@@ -1,0 +1,193 @@
+{% extends "corecomponents/Research/3Navigation/layout-key-detail-bar-tasklist-pip.html" %}
+{% block pageTitle %}
+TextArea configurable component
+{% endblock %}
+
+
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+
+
+    <ol class="app-task-list">
+      <li>
+        <h2 class="app-task-list__section">
+          <span class="app-task-list__section-number">1. </span> Assessment
+        </h2>
+        <ul class="app-task-list__items">
+          <li class="app-task-list__item">
+            <span class="app-task-list__task-name">
+              <a href="/pip/evidence-considered"
+                aria-describedby="eligibility-status">
+                Start consultation
+              </a>
+            </span>
+            {% if session['evidence-considered'] %}
+            <strong class="govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
+            {% else %}
+            <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="list-convictions-status">Not started</strong>
+            {% endif %}
+          </li>
+
+
+
+          <li class="app-task-list__item">
+            <span class="app-task-list__task-name">
+              <a href="/pip/add-attendee"
+                aria-describedby="add-attendee">
+                Additional attendees
+              </a>
+            </span>
+            {% if session['add-attendee'] %}
+            <strong class="govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
+            {% else %}
+            <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="list-convictions-status">Not started</strong>
+            {% endif %}
+          </li>
+
+          <li class="app-task-list__item">
+            <span class="app-task-list__task-name">
+              <a href="/pip/history-condition" 
+              aria-describedby="read-declaration-status">
+              History of conditions
+              </a>
+            </span>
+            {% if session['history-condition'] %}
+            <strong class="govuk-tag app-task-list__tag" id="history-condition">Completed</strong>
+            {% else %}
+            <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="history-condition">Not started</strong>
+            {% endif %}
+          </li>
+          
+          
+
+
+
+            <li class="app-task-list__item">
+            <span class="app-task-list__task-name">
+              <a href="/pip/medication-name" aria-describedby="read-declaration-status">
+                Current medication and treatment
+              </a>
+            </span>
+            {% if session['medication-name'] %}
+            <strong class="govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
+            {% else %}
+            <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="list-convictions-status">Not started</strong>
+            {% endif %}
+          </li>
+
+
+
+
+          <li class="app-task-list__item">
+            <span class="app-task-list__task-name">
+              <a href="/pip/variability" aria-describedby="read-declaration-status">
+                Functional history
+              </a>
+            </span>
+            {% if session['variability'] %}
+            <strong class="govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
+            {% else %}
+            <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="list-convictions-status">Not started</strong>
+            {% endif %}
+          </li>
+
+          <li class="app-task-list__item">
+            <span class="app-task-list__task-name">
+              <a href="/pip/social-history" aria-describedby="read-declaration-status">
+                Social and occupational history
+              </a>
+            </span>
+            {% if session['social-history'] %}
+            <strong class="govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
+            {% else %}
+            <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="list-convictions-status">Not started</strong>
+            {% endif %}
+          </li>
+
+          <li class="app-task-list__item">
+            <span class="app-task-list__task-name">
+              <a href="/pip/observations" aria-describedby="read-declaration-status">
+                Observations
+              </a>
+            </span>
+            {% if session['observations'] %}
+            <strong class="govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
+            {% else %}
+            <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="list-convictions-status">Not started</strong>
+            {% endif %}
+          </li>
+
+
+
+        </ul>
+      </li>
+      <li>
+        <h2 class="app-task-list__section">
+          <span class="app-task-list__section-number">2. </span> Examination
+        </h2>
+        <ul class="app-task-list__items">
+          <!-- <li class="app-task-list__item">
+                      <span class="app-task-list__task-name">
+                        <a href="#" aria-describedby="eligibility-status">
+                          Consent required
+                        </a>
+                      </span>
+                      <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="list-convictions-status">Not started</strong>
+                    </li> -->
+          <li class="app-task-list__item">
+            <span class="app-task-list__task-name">
+              <a href="/pip/mental-state" aria-describedby="read-declaration-status">
+                Mental state
+              </a>
+            </span>
+            {% if session['mental-state'] %}
+            <strong class="govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
+            {% else %}
+            <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="list-convictions-status">Not started</strong>
+            {% endif %}
+          </li>
+
+          
+
+          <li class="app-task-list__item">
+            <span class="app-task-list__task-name">
+              <a href="/pip/musculoskeletal" aria-describedby="read-declaration-status">
+                Musculoskeletal system
+              </a>
+            </span>
+            {% if session['musculoskeletal'] %}
+            <strong class="govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
+            {% else %}
+            <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="list-convictions-status">Not started</strong>
+            {% endif %}
+          </li>
+
+          
+
+
+
+          <li class="app-task-list__item">
+            <span class="app-task-list__task-name">
+              <a href="/pip/other-systems" aria-describedby="read-declaration-status">
+                Other relevant systems
+              </a>
+            </span>
+            {% if session['other-systems'] %}
+            <strong class="govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
+            {% else %}
+            <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="list-convictions-status">Not started</strong>
+            {% endif %}
+          </li>
+         
+        </ul>
+      </li>
+    </ol>
+    <!-- <button class="govuk-button" data-module="govuk-button">
+                Save and continue
+              </button> -->
+  </div>
+  <div class="govuk-grid-column-two-thirds">
+  </div>
+{% endblock %}

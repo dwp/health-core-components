@@ -1,0 +1,220 @@
+{% extends "layout-key-detail-bar.html" %}
+
+{% block pageTitle %}
+  TextArea component
+{% endblock %}
+
+
+{% block beforeContent %}
+
+<a href="javascript:window.history.back();" class="govuk-back-link">Back</a>
+{% endblock %}
+
+
+{% block content %}
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-three-quarters">
+
+    <form action="/corecomponents/Research/4Navigation/WCA-tasklist/TaskList-PA" method="post" novalidate>
+
+
+
+        <span class="govuk-caption-l">Neck and arms</span>
+       
+        <h2 class="govuk-heading-l">Left forearm</h2>
+
+<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" aria-describedby="citizenship-conditional-hint">
+    <label class="govuk-label" for="more-detail">
+      Select the examination you want to complete
+    </label>
+    <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="citizenship-conditional" name="citizen" type="checkbox" value="email" data-aria-controls="conditional-pinch-grip-conditional">
+        <label class="govuk-label govuk-checkboxes__label" for="citizenship-conditional">
+          Pinch grip
+        </label>
+      </div>
+      <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-pinch-grip-conditional">
+        <div class="govuk-form-group">
+<fieldset class="govuk-fieldset">
+<legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+  <h1 class="govuk-fieldset__heading">
+    Choose below
+  </h1>
+</legend>
+<div class="govuk-radios">
+  <div class="govuk-radios__item">
+    <input class="govuk-radios__input" id="where-do-you-live" name="where-do-you-live" type="radio" value="england">
+    <label class="govuk-label govuk-radios__label" for="where-do-you-live">
+      Normal (thumb to index finger)
+    </label>
+  </div>
+  <div class="govuk-radios__item">
+    <input class="govuk-radios__input" id="where-do-you-live-2" name="where-do-you-live" type="radio" value="scotland">
+    <label class="govuk-label govuk-radios__label" for="where-do-you-live-2">
+      Thumb and finger grip is weaker than normal: can touch but with reduced power
+    </label>
+  </div>
+  <div class="govuk-radios__item">
+    <input class="govuk-radios__input" id="where-do-you-live-3" name="where-do-you-live" type="radio" value="wales">
+    <label class="govuk-label govuk-radios__label" for="where-do-you-live-3">
+      Pinch grip reduced: can touch but with reduced power
+    </label>
+  </div>
+  <div class="govuk-radios__item">
+    <input class="govuk-radios__input" id="where-do-you-live-3" name="where-do-you-live" type="radio" value="wales">
+    <label class="govuk-label govuk-radios__label" for="where-do-you-live-3">
+      Cannot grip with thumb and finger: unable to touch thumb to finger
+    </label>
+  </div>
+</div>
+
+</fieldset>
+</div>
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="citizenship-conditional-2" name="citizen" type="checkbox" value="phone" data-aria-controls="conditional-power-grip-conditional">
+        <label class="govuk-label govuk-checkboxes__label" for="citizenship-conditional-2">
+          Power grip
+        </label>
+      </div>
+      <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-power-grip-conditional">
+        <div class="govuk-form-group">
+<fieldset class="govuk-fieldset">
+<legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+  <h1 class="govuk-fieldset__heading">
+    Choose below
+  </h1>
+</legend>
+<div class="govuk-radios">
+  <div class="govuk-radios__item">
+    <input class="govuk-radios__input" id="where-do-you-live" name="where-do-you-live2" type="radio" value="england">
+    <label class="govuk-label govuk-radios__label" for="where-do-you-live">
+      Normal
+    </label>
+  </div>
+  <div class="govuk-radios__item">
+    <input class="govuk-radios__input" id="where-do-you-live-2" name="where-do-you-live2" type="radio" value="scotland">
+    <label class="govuk-label govuk-radios__label" for="where-do-you-live-2">
+      Power grip reduced
+    </label>
+  </div>
+  <div class="govuk-radios__item">
+    <input class="govuk-radios__input" id="where-do-you-live-3" name="where-do-you-live2" type="radio" value="wales">
+    <label class="govuk-label govuk-radios__label" for="where-do-you-live-3">
+      Cannot grip: fingers 3 cm from palm
+    </label>
+  </div>
+  <div class="govuk-radios__item">
+    <input class="govuk-radios__input" id="where-do-you-live-3" name="where-do-you-live2" type="radio" value="wales">
+    <label class="govuk-label govuk-radios__label" for="where-do-you-live-3">
+      Cannot grip at all: cannot bend fingers
+    </label>
+  </div>
+</div>
+</fieldset>
+</div>
+      </div>
+
+<div class="govuk-checkboxes__item">
+  <input class="govuk-checkboxes__input" id="citizenship-conditional-2" name="citizen" type="checkbox" value="phone" data-aria-controls="conditional-wrist-dorsiflexio-conditional">
+  <label class="govuk-label govuk-checkboxes__label" for="citizenship-conditional-2">
+    Wrist dorsiflexion
+  </label>
+</div>
+<div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-wrist-dorsiflexio-conditional">
+  <div class="govuk-form-group">
+<fieldset class="govuk-fieldset">
+<legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+<h1 class="govuk-fieldset__heading">
+Choose below
+</h1>
+</legend>
+<div class="govuk-radios">
+<div class="govuk-radios__item">
+<input class="govuk-radios__input" id="where-do-you-live" name="where-do-you-live3" type="radio" value="england">
+<label class="govuk-label govuk-radios__label" for="where-do-you-live">
+  Normal (30° or more)
+</label>
+</div>
+<div class="govuk-radios__item">
+<input class="govuk-radios__input" id="where-do-you-live-2" name="where-do-you-live3" type="radio" value="scotland">
+<label class="govuk-label govuk-radios__label" for="where-do-you-live-2">
+  Wrist bending backwards is reduced to less than 30°
+</label>
+</div>
+
+</div>
+
+</fieldset>
+</div>
+      </div>
+
+
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="citizenship-conditional-2" name="citizen" type="checkbox" value="phone" data-aria-controls="conditional-wrist-plantarflexion-conditional">
+        <label class="govuk-label govuk-checkboxes__label" for="citizenship-conditional-2">
+          Wrist plantarflexion
+        </label>
+      </div>
+      <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-wrist-plantarflexion-conditional">
+        <div class="govuk-form-group">
+<fieldset class="govuk-fieldset">
+<legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+  <h1 class="govuk-fieldset__heading">
+    Choose below
+  </h1>
+</legend>
+<div class="govuk-radios">
+  <div class="govuk-radios__item">
+    <input class="govuk-radios__input" id="where-do-you-live" name="where-do-you-live4" type="radio" value="england">
+    <label class="govuk-label govuk-radios__label" for="where-do-you-live">
+      Normal (30° or more)
+    </label>
+  </div>
+  <div class="govuk-radios__item">
+    <input class="govuk-radios__input" id="where-do-you-live-2" name="where-do-you-live4" type="radio" value="scotland">
+    <label class="govuk-label govuk-radios__label" for="where-do-you-live-2">
+      Wrist bending forwards is reduced to less than 30°
+    </label>
+  </div>
+
+ 
+
+</div>
+</fieldset>
+</div>
+      </div>
+
+
+
+
+
+
+
+
+
+
+      </div>
+
+
+  </fieldset>
+</div>
+
+<div class="govuk-form-group">
+  <label class="govuk-label" for="more-detail">
+      Other findings
+    </label>
+
+  <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint"></textarea>
+</div>
+
+
+<button class="govuk-button" data-module="govuk-button">
+Save and continue
+</button>
+</div>
+</div>
+{% endblock %}

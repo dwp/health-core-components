@@ -1,0 +1,78 @@
+{% extends "layout-key-detail-bar.html" %}
+
+{% block pageTitle %}
+  TextArea component
+{% endblock %}
+
+
+{% block beforeContent %}
+
+<a href="javascript:window.history.back();" class="govuk-back-link">Back</a>
+{% endblock %}
+
+
+{% block content %}
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-three-quarters">
+  <!-- <span class="govuk-caption-l">Eating and drinking</span> -->
+
+  <form action="/corecomponents/Research/4Navigation/WCA-tasklist/TaskList-PA" method="post" novalidate>
+
+
+
+  <div class="govuk-form-group">
+    <fieldset class="govuk-fieldset" aria-describedby="sign-in-hint">
+      <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+        <h1 class="govuk-fieldset__heading">
+        Has consent been given for this physical assessment
+        </h1>
+      </legend>
+      <!-- <div id="sign-in-hint" class="govuk-hint">
+        Select which one best matches
+      </div> -->
+       <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
+         <div class="govuk-radios__item">
+           <input class="govuk-radios__input" id="sign-in-2" name="sign-in" type="radio" value="govuk-verify" aria-describedby="sign-in-2-item-hint">
+           <label class="govuk-label govuk-radios__label" for="sign-in-2">
+             Yes
+           </label>
+         </div>
+
+  <div class="govuk-radios__item">
+    <input class="govuk-radios__input" id="how-contacted-conditional" name="how-contacted" type="radio" value="email" data-aria-controls="conditional-how-contacted-conditional">
+    <label class="govuk-label govuk-radios__label" for="how-contacted-conditional">
+      No
+    </label>
+  </div>
+  <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-how-contacted-conditional">
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="contact-by-email">
+        Why consent wasn't given
+      </label>
+      <textarea class="govuk-textarea" id="contact-by-email" name="contact-by-email" rows="5" type="email" spellcheck="false"></textarea>
+    </div>
+
+  </div>
+
+
+      </div>
+    </fieldset>
+
+
+
+  </div>
+
+
+
+
+</div>
+</div>
+
+<button class="govuk-button" data-module="govuk-button">
+  Save and continue
+</button>
+
+
+
+{% endblock %}

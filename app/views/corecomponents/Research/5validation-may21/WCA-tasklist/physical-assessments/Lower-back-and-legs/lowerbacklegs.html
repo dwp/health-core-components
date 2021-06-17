@@ -1,0 +1,73 @@
+{% extends "layout-key-detail-bar.html" %}
+
+{% block pageTitle %}
+  TextArea component
+{% endblock %}
+
+
+{% block beforeContent %}
+
+<a href="javascript:window.history.back();" class="govuk-back-link">Back</a>
+{% endblock %}
+
+
+{% block content %}
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-three-quarters">
+
+        
+        <form action="/corecomponents/Research/4Navigation/WCA-tasklist/TaskList-PA" method="post" novalidate>
+
+
+
+        <span class="govuk-caption-l">Lower back and legs</span>
+
+
+
+        {{ govukCheckboxes({
+          idPrefix: "back-legs",
+          name: "back-legs",
+          fieldset: {
+            legend: {
+              text: "Select all of the areas you have assessed",
+              isPageHeading: true,
+              classes: "govuk-fieldset__legend--l"
+            }
+          },
+        
+          items: [
+            {
+              value: "{{ data['lower-back'] }}",
+              text: "Lower back",
+              checked: checked("back-legs", "lower-back")
+            },
+            {
+              value: "{{ data['Left-leg'] }}",
+              text: "Left leg",
+              checked: checked("back-legs", "left-leg")
+            },
+            {
+              value: "{{ data['right-leg'] }}",
+              text: "Right leg"
+            }
+          ]
+        }) }}
+
+
+
+
+
+      
+
+
+</div>
+</div>
+
+<button class="govuk-button" data-module="govuk-button">
+  Save and continue
+</button>
+
+
+
+{% endblock %}
