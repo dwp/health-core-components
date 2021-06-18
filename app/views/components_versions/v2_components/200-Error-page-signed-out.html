@@ -1,0 +1,39 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+You have been signed out – Health Assessment Service
+{% endblock %}
+
+
+
+{% block content %}
+
+
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-three-quarters">
+        <h1 class="govuk-heading-l">You have been signed out</h1>
+    
+
+        <p class="govuk-body">
+          You have been signed out because you did not do anything for 3 hours.
+        </p>
+
+        <p class="govuk-body">
+          Any information you entered on the previous page, since you last saved, has been deleted. This is for data protection.
+        </p>
+     <br>
+     <br>
+        <p class="govuk-body">
+Go to the  <a href="#" class="govuk-link">last page you viewed</a>. This will sign you back in again.     </p>
+        
+<br>
+<p class="govuk-body">
+If the problem persists, go to <a href="#" class="govuk-link">DWP Place (opens in new tab)</a> and select the option to ‘report an incident’.
+</p>
+      </div>
+    </div>
+  
+
+
+{% endblock %}
