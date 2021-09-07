@@ -317,7 +317,7 @@ app.post('/form_components/TakingStatementsentry-v2', function (req, res, next){
 })
 
 // Statements captured WCA journey
-app.post('/wca_v1/TakingStatementsentry', function (req, res, next){
+app.post('/archive/wca_v1/TakingStatementsentry', function (req, res, next){
   console.log(req.session)
   if (typeof req.session.data.statements !== 'object'){
     req.session.data.statements=[];
@@ -328,6 +328,7 @@ app.post('/wca_v1/TakingStatementsentry', function (req, res, next){
   console.log(req.session)
   next()
 })
+
 
 
 app.post('/corecomponents/Research/2Navigation/tasklist/Statementsentry_Social', function (req, res, next){
@@ -349,7 +350,7 @@ console.log(req.body)
 
 
 // Statements captured WCA journey
-app.post('/WCA_v1/TakingStatementsentry_saved', function (req, res, next){
+app.post('/archive/wca_v1/TakingStatementsentry_saved', function (req, res, next){
   console.log(req.session)
   if (typeof req.session.data.statements !== 'object'){
     req.session.data.statements=[];

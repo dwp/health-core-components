@@ -1,0 +1,120 @@
+{% extends "archive/wca_v1/layout-key-detail-bar-status1060.html" %}
+
+{% block pageTitle %}
+  TextArea configurable component
+{% endblock %}
+
+
+{% block beforeContent %}
+
+<!-- <a href="#" class="govuk-back-link">Back</a> -->
+{% endblock %}
+
+
+{% block content %}
+
+<main class="govuk-main-wrapper">
+<div class="govuk-grid-row">
+<div class="govuk-grid-column-one-quarter">
+
+
+  <a href="TakingStatementsentry" class="govuk-body govuk-!-font-size-16">Informal observations</a>
+  <br>
+  <br>
+  <a href="#" class="govuk-body govuk-!-font-size-16">Add attendees</a>
+  <br>
+  <br>
+  <a href="#" class="govuk-body govuk-!-font-size-16">Abandon assessment</a>
+  <br>
+  <br>
+  <hr>
+  <br>
+  <br>
+
+  <table class="govuk-table">
+    <!-- <caption class="govuk-table__caption">Months and rates</caption> -->
+    <thead class="govuk-table__head">
+      <tr class="govuk-table__row">
+        <th scope="col" class="govuk-table__header">Assessment</th>
+        <th scope="col" class="govuk-table__header govuk-table__header--numeric"></th>
+      </tr>
+    </thead>
+    <tbody class="govuk-table__body">
+      <tr class="govuk-table__row">
+        <th scope="row" class="govuk-table__header"><a href="/wca_v1/Landingpage" class="govuk-body govuk-!-font-size-16">Start consultation</a></th>
+        <td class="govuk-table__cell govuk-table__cell--numeric">
+
+    <div class="govuk-tag govuk-phase-banner__content__tag">
+      OK
+    </div>
+
+
+</td>
+      </tr>
+
+      <tr class="govuk-table__row">
+        <th scope="row" class="govuk-table__header"><a href="/wca_v1/condition_history" class="govuk-body govuk-!-font-size-16 govuk-!-font-weight-bold">Condition history</a></th>
+        <td class="govuk-table__cell govuk-table__cell--numeric"></td>
+      </tr>
+      <tr class="govuk-table__row">
+        <th scope="row" class="govuk-table__header"><a href="#" class="govuk-body govuk-!-font-size-16">Social and work history</a></th>
+        <td class="govuk-table__cell govuk-table__cell--numeric"></td>
+      </tr>
+      <tr class="govuk-table__row">
+        <th scope="row" class="govuk-table__header"><a href="#" class="govuk-body govuk-!-font-size-16">Typical day</a></th>
+        <td class="govuk-table__cell govuk-table__cell--numeric"></td>
+      </tr>
+      <tr class="govuk-table__row">
+        <th scope="row" class="govuk-table__header"><a href="#" class="govuk-body govuk-!-font-size-16">Medication and side effects</a></th>
+        <td class="govuk-table__cell govuk-table__cell--numeric"></td>
+      </tr>
+      <tr class="govuk-table__row">
+        <th scope="row" class="govuk-table__header"><a href="/wca_v1/PA/landingpage" class="govuk-body govuk-!-font-size-16">Physical assessments</a></th>
+        <td class="govuk-table__cell govuk-table__cell--numeric"></td>
+      </tr>
+      <tr class="govuk-table__row">
+        <th scope="row" class="govuk-table__header"><a href="#" class="govuk-body govuk-!-font-size-16">Mental health</a></th>
+        <td class="govuk-table__cell govuk-table__cell--numeric"></td>
+      </tr>
+      <tr class="govuk-table__row">
+        <th scope="row" class="govuk-table__header"><a href="#" class="govuk-body govuk-!-font-size-16">Finish assessment</a></th>
+        <td class="govuk-table__cell govuk-table__cell--numeric"></td>
+      </tr>
+    </tbody>
+  </table>
+
+
+
+
+
+
+</div>
+
+
+      <div class="govuk-grid-column-three-quarters-nav">
+
+<div class="govuk-form-group">
+  <!-- <span class="govuk-caption-l">Section heading (Caption)</span> -->
+  <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--l" for="more-detail">
+      Condition history
+    </label>
+  </h1>
+  <div id="more-detail-hint" class="govuk-hint">
+    Provide all details of your condition history
+  </div>
+  <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="10
+" aria-describedby="more-detail-hint"></textarea>
+</div>
+
+
+
+
+
+<button class="govuk-button" data-module="govuk-button">
+  Save and continue
+</button>
+</div>
+</div>
+</main>
+
+{% endblock %}
