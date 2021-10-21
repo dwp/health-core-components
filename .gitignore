@@ -11,3 +11,5 @@ public
 node_modules/*
 .tmuxp.*
 package-lock.json
+public/stylesheets/docs-ie8.css
+public/stylesheets/docs.css
