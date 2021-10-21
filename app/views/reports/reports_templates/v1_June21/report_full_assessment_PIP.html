@@ -1,0 +1,671 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Personal Independence Payment report
+{% endblock %}
+
+
+{% block beforeContent %}
+
+<!-- <a href="#" class="govuk-back-link">Back</a> -->
+{% endblock %}
+
+
+{% block content %}
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-full">
+
+  <span class="govuk-caption-xl">Personal Independence Payment</span>
+
+        <h1 class="govuk-heading-xl">Health assessment report</h1>
+
+        <br>
+
+        <h2 class="govuk-heading-l">Claimant details</h2>
+
+        <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Name
+            </dt>
+            <dd class="govuk-summary-list__value">
+              John Doe
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              National Insurance number
+            </dt>
+            <dd class="govuk-summary-list__value">
+              QQ 12 34 56 X
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Date of birth
+            </dt>
+            <dd class="govuk-summary-list__value">
+              31 December 1995
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Benefit type
+            </dt>
+            <dd class="govuk-summary-list__value">
+              Personal Independence Payment
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Date assessment was completed
+            </dt>
+            <dd class="govuk-summary-list__value">
+              3 June 2021
+            </dd>
+          </div>
+       
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Name of Healthcare Professional
+            </dt>
+            <dd class="govuk-summary-list__value">
+              Jane Jones
+            </dd>
+          </div>
+          <!-- <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Email of Healthcare Professional
+            </dt>
+            <dd class="govuk-summary-list__value">
+              jjones@email.com
+            </dd>
+          </div> -->
+        </dl>
+
+
+
+
+          <h2 class="govuk-heading-l">Health assessment</h2>
+          <dl class="govuk-summary-list">
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              How are you conducting this assessment?
+            </dt>
+            <dd class="govuk-summary-list__value">
+              Face to Face
+            </dd>
+          </div>
+          
+  
+    <!-- <h3 class="govuk-heading-m">Additional attendees
+    </h3> -->
+    <!-- <h3 class="govuk-heading-m">Additional attendees
+    </h3>
+  
+    <dl class="govuk-summary-list">
+  
+  
+    <div class="govuk-summary-list__row ">
+      <dt class="govuk-summary-list__key">
+        Attendee 1
+      </dt>
+      <dd class="govuk-summary-list__value">
+        Name: Jayne Helper<br>Relationship to claimant: Support worker
+      </dd>
+    </div> -->
+  <!-- <h3 class="govuk-heading-s">Additional attendee 2
+  </h3> -->
+  
+
+
+  
+  
+
+
+
+
+
+
+
+         
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              History of condition
+            </dt>
+            <dd class="govuk-summary-list__value">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+              <br><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+            </dd>
+          </div>
+
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Current medication or treatment
+            </dt>
+            <dd class="govuk-summary-list__value">
+              Lorem ipsum dolor sit amet<br>
+              Lorem ipsum dolor sit amet<br>
+              Lorem ipsum dolor sit amet<br>
+              Lorem ipsum dolor sit amet<br>
+              Lorem ipsum dolor sit amet
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Social and occupational history
+            </dt>
+            <dd class="govuk-summary-list__value">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            <br><br>  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+            </dd>
+          </div>
+        </dl>
+
+
+          <!-- <h2 class="govuk-heading-l">Day to day life</h2> -->
+      
+            <h3 class="govuk-heading-m">Preparing food</h3>
+          
+            <dl class="govuk-summary-list">
+            <div class="govuk-summary-list__row govuk-summary-list--no-border">
+              <dt class="govuk-summary-list__key">
+                Notes on preparing food
+             </dt>
+              <dd class="govuk-summary-list__value">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+              </dd>
+            </div>
+            <div class="govuk-summary-list__row govuk-summary-list--no-border">
+              <dt class="govuk-summary-list__key">
+                How well can the claimant cook food?
+              </dt>
+              <dd class="govuk-summary-list__value">
+                Can prepare and cook a simple meal unaided
+              </dd>
+              </div>
+
+            <div class="govuk-summary-list__row govuk-summary-list">
+              <dt class="govuk-summary-list__key">
+                What is the reason for this answer?
+              </dt>
+              <dd class="govuk-summary-list__value">
+                
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+</dd>              </dd>        
+            </div>
+          </dl>
+
+          <h3 class="govuk-heading-m">Taking Nutrition    </h3>
+          
+          <dl class="govuk-summary-list">
+          <div class="govuk-summary-list__row govuk-summary-list--no-border">
+            <dt class="govuk-summary-list__key">
+              Notes on taking nutrition
+           </dt>
+            <dd class="govuk-summary-list__value">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row govuk-summary-list--no-border">
+            <dt class="govuk-summary-list__key">
+              Which of these describes how well the claimant can take nutrition?
+            </dt>
+            <dd class="govuk-summary-list__value">
+              Can take nutrition unaided
+            </dd></div>
+
+          <div class="govuk-summary-list__row govuk-summary-list">
+            <dt class="govuk-summary-list__key">
+              What is the reason for this answer?
+            </dt>
+            <dd class="govuk-summary-list__value">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </dd>        
+          </div>
+        </dl>
+
+
+        <h3 class="govuk-heading-m">Managing therapy</h3>
+          
+        <dl class="govuk-summary-list">
+        <div class="govuk-summary-list__row govuk-summary-list--no-border">
+          <dt class="govuk-summary-list__key">
+            Notes on managing therapy
+         </dt>
+          <dd class="govuk-summary-list__value">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row govuk-summary-list--no-border">
+          <dt class="govuk-summary-list__key">
+            Which of these describes how well the claimant can manage therapy or monitor a health condition?
+          </dt>
+          <dd class="govuk-summary-list__value">
+            Either does not receive medication or therapy or need to monitor a health condition, or can manage medication or therapy or monitor a health condition unaided         </dd></div>
+
+        <div class="govuk-summary-list__row govuk-summary-list">
+          <dt class="govuk-summary-list__key">
+            What is the reason for this answer?
+          </dt>
+          <dd class="govuk-summary-list__value">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+          </dd>        
+        </div>
+      </dl>
+       
+        
+      <h3 class="govuk-heading-m">Washing and bathing    </h3>
+          
+      <dl class="govuk-summary-list">
+      <div class="govuk-summary-list__row govuk-summary-list--no-border">
+        <dt class="govuk-summary-list__key">
+          Notes on washing and bathing
+       </dt>
+        <dd class="govuk-summary-list__value">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row govuk-summary-list--no-border">
+        <dt class="govuk-summary-list__key">
+          Which of these describes how well the claimant can wash and bathe?
+        </dt>
+        <dd class="govuk-summary-list__value">
+          Can wash and bathe unaided        </dd></div>
+
+      <div class="govuk-summary-list__row govuk-summary-list">
+        <dt class="govuk-summary-list__key">
+          What is the reason for this answer?
+        </dt>
+        <dd class="govuk-summary-list__value">
+        
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </dd>
+        </dd>        
+      </div>
+    </dl>
+
+    
+    <h3 class="govuk-heading-m">Managing toilet needs    </h3>
+          
+    <dl class="govuk-summary-list">
+    <div class="govuk-summary-list__row govuk-summary-list--no-border">
+      <dt class="govuk-summary-list__key">
+        Notes on managing toilet needs
+     </dt>
+      <dd class="govuk-summary-list__value">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+      </div>
+    <div class="govuk-summary-list__row govuk-summary-list--no-border">
+      <dt class="govuk-summary-list__key">
+        Which of these describes how well the claimant can manage toilet needs?
+            </dt>
+      <dd class="govuk-summary-list__value">
+        Can manage toilet needs or incontinence unaided         </dd></div>
+
+    <div class="govuk-summary-list__row govuk-summary-list">
+      <dt class="govuk-summary-list__key">
+        What is the reason for this answer?
+      </dt>
+      <dd class="govuk-summary-list__value">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+      </dd>        
+    </div>
+  </dl>
+
+  <h3 class="govuk-heading-m">Dressing and undressing    </h3>
+          
+  <dl class="govuk-summary-list">
+  <div class="govuk-summary-list__row govuk-summary-list--no-border">
+    <dt class="govuk-summary-list__key">
+      Notes on dressing and undressing
+   </dt>
+    <dd class="govuk-summary-list__value">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+    </dd></div>
+  <div class="govuk-summary-list__row govuk-summary-list--no-border">
+    <dt class="govuk-summary-list__key">
+      Which of these describes how well the claimant can dress and undress?
+              </dt>
+    <dd class="govuk-summary-list__value">
+      Needs to use an aid or appliance to be able to dress or undress       </dd></div>
+
+  <div class="govuk-summary-list__row govuk-summary-list">
+    <dt class="govuk-summary-list__key">
+      What is the reason for this answer?
+    </dt>
+    <dd class="govuk-summary-list__value">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+    </dd>        
+  </div>
+</dl>
+
+
+<h3 class="govuk-heading-m">Communicating verbally    </h3>
+          
+<dl class="govuk-summary-list">
+<div class="govuk-summary-list__row govuk-summary-list--no-border">
+  <dt class="govuk-summary-list__key">
+    Notes on communicating verbally
+ </dt>
+  <dd class="govuk-summary-list__value">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+  </dd></div>
+<div class="govuk-summary-list__row govuk-summary-list--no-border">
+  <dt class="govuk-summary-list__key">
+    Which of these describes how well the claimant can communicate verbally?
+            </dt>
+  <dd class="govuk-summary-list__value">
+    Can express and understand verbal information unaided </dd></div>
+
+<div class="govuk-summary-list__row govuk-summary-list">
+  <dt class="govuk-summary-list__key">
+    What is the reason for this answer?
+  </dt>
+  <dd class="govuk-summary-list__value">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+  </dd>        
+</div>
+</dl>
+
+
+
+<h3 class="govuk-heading-m">Reading and understanding signs, symbols and words    </h3>
+          
+<dl class="govuk-summary-list">
+<div class="govuk-summary-list__row govuk-summary-list--no-border">
+  <dt class="govuk-summary-list__key">
+    Notes on reading and understanding signs, symbols and words
+ </dt>
+  <dd class="govuk-summary-list__value">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+  </dd></div>
+<div class="govuk-summary-list__row govuk-summary-list--no-border">
+  <dt class="govuk-summary-list__key">
+    Which of these describes how well the claimant can read and understand signs, symbols and words?            </dt>
+  <dd class="govuk-summary-list__value">
+    Can read and understand basic and complex written information either unaided or using spectacles or contact lenses </dd></div>
+
+<div class="govuk-summary-list__row govuk-summary-list">
+  <dt class="govuk-summary-list__key">
+    What is the reason for this answer?
+  </dt>
+  <dd class="govuk-summary-list__value">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+  </dd>        
+</div>
+</dl>
+
+
+<h3 class="govuk-heading-m">Engaging face to face    </h3>
+          
+<dl class="govuk-summary-list">
+<div class="govuk-summary-list__row govuk-summary-list--no-border">
+  <dt class="govuk-summary-list__key">
+    Notes on engaging face to face
+ </dt>
+  <dd class="govuk-summary-list__value">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+  </dd></div>
+<div class="govuk-summary-list__row govuk-summary-list--no-border">
+  <dt class="govuk-summary-list__key">
+    Which of these describes how well the claimant can engage face to face?          </dt>
+  <dd class="govuk-summary-list__value">
+    Can engage with other people unaided</dd></div>
+<div class="govuk-summary-list__row govuk-summary-list">
+  <dt class="govuk-summary-list__key">
+    What is the reason for this answer?
+  </dt>
+  <dd class="govuk-summary-list__value">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+  </dd>        
+</div>
+</dl>
+
+
+<h3 class="govuk-heading-m">Budgeting  </h3>
+          
+<dl class="govuk-summary-list govuk-!-margin-bottom-9">
+<div class="govuk-summary-list__row govuk-summary-list--no-border">
+  <dt class="govuk-summary-list__key">
+    Notes on budgeting
+ </dt>
+  <dd class="govuk-summary-list__value">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+  </dd></div>
+<div class="govuk-summary-list__row govuk-summary-list--no-border">
+  <dt class="govuk-summary-list__key">
+    Which of these describes how well the claimant can budget?         </dt>
+  <dd class="govuk-summary-list__value">
+    Can manage complex budgeting decisions unaided
+  </dd></div>
+<div class="govuk-summary-list__row govuk-summary-list">
+  <dt class="govuk-summary-list__key">
+    What is the reason for this answer?
+  </dt>
+  <dd class="govuk-summary-list__value">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+  </dd>        
+</div>
+</dl>
+
+
+
+
+
+<!-- <h2 class="govuk-heading-l">Mobility and getting around</h2> -->
+      
+<h3 class="govuk-heading-m">Planning and following journeys</h3>
+
+<dl class="govuk-summary-list">
+<div class="govuk-summary-list__row govuk-summary-list--no-border">
+  <dt class="govuk-summary-list__key">
+    Notes on planning and following journeys
+ </dt>
+  <dd class="govuk-summary-list__value">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+  </dd>
+</div>
+<div class="govuk-summary-list__row govuk-summary-list--no-border">
+  <dt class="govuk-summary-list__key">
+    Which of these describes how well the claimant can plan and follow journeys?
+  </dt>
+  <dd class="govuk-summary-list__value">
+    Can plan and follow the route of a journey unaided              </dd>
+</div>
+
+<div class="govuk-summary-list__row govuk-summary-list">
+  <dt class="govuk-summary-list__key">
+    What is the reason for this answer?
+  </dt>
+  <dd class="govuk-summary-list__value">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+  </dd>        
+</div>
+</dl>
+
+
+<h3 class="govuk-heading-m">Moving around</h3>
+
+<dl class="govuk-summary-list govuk-!-margin-bottom-9">
+<div class="govuk-summary-list__row govuk-summary-list--no-border">
+  <dt class="govuk-summary-list__key">
+    Notes on moving around
+ </dt>
+  <dd class="govuk-summary-list__value">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+  </dd>
+</div>
+<div class="govuk-summary-list__row govuk-summary-list--no-border">
+  <dt class="govuk-summary-list__key">
+    Which of these describes how well the claimant can move around?
+  </dt>
+  <dd class="govuk-summary-list__value">
+    Can stand and then move more than 200 metres, either aided or unaided</dd>
+</div>
+
+<div class="govuk-summary-list__row govuk-summary-list">
+  <dt class="govuk-summary-list__key">
+    What is the reason for this answer?
+  </dt>
+  <dd class="govuk-summary-list__value">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+  </dd>        
+</div>
+</dl>
+
+
+  <!-- <h2 class="govuk-heading-l">Current condition</h2> -->
+
+  <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Physical health
+    </dt>
+    <dd class="govuk-summary-list__value">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+    </dd>
+  </div>
+  <div class="govuk-summary-list__row govuk-summary-list">
+    <dt class="govuk-summary-list__key">
+      Mental state
+    </dt>
+    <dd class="govuk-summary-list__value">
+      Appearance<br>
+      Tired: Lorem ipsum<br>
+      Grooming: Lorem ipsum<br>
+      Dress General: Lorem ipsum<br>
+      Tremulous: Lorem ipsum<br>
+      Increased sweating: Lorem ipsum<br>
+      Complexion: Lorem ipsum<br>
+      <br>
+      Behaviour<br>
+      Activity Rocking: Lorem ipsum<br>
+      Facial Expression: Lorem ipsum<br>
+      Activity General: Lorem ipsum<br>
+      Coping at interview – Lorem ipsum<br>
+      Arousal: Lorem ipsum<br>
+      Rapport: Lorem ipsum<br>
+      Eye contact: Lorem ipsum<br>
+      <br>
+      Speech<br>
+      Amount: Lorem ipsum<br>
+      Rate: Lorem ipsum<br>
+      Volume: Lorem ipsum<br>
+      Content: Lorem ipsum<br>
+      <br>
+      Mood<br>
+      Demeanour – Lorem ipsum<br>
+      <br>
+      Cognition<br>
+      Orientation: Lorem ipsum.<br>
+      Prompting: Lorem ipsum<br>
+      General Memory: Lorem ipsum<br>
+      Concentration: Lorem ipsum<br>
+      <br>
+      Insight<br>
+      Insight: Lorem ipsum
+       
+ </dd>
+  </div>
+  <div class="govuk-summary-list__row govuk-summary-list">
+    <dt class="govuk-summary-list__key">
+      Observations
+    </dt>
+    <dd class="govuk-summary-list__value">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+<br><br>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+ </dd>
+  </div>
+  <div class="govuk-summary-list__row govuk-summary-list">
+    <dt class="govuk-summary-list__key">
+      Variability
+    </dt>
+    <dd class="govuk-summary-list__value">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    </dd>
+  </div>
+
+  <div class="govuk-summary-list__row govuk-summary-list">
+    <dt class="govuk-summary-list__key">
+      Has the claimant’s functional restriction lasted at least 3 months?
+    </dt>
+    <dd class="govuk-summary-list__value">
+      </dd>
+  </div>
+  <div class="govuk-summary-list__row govuk-summary-list">
+    <dt class="govuk-summary-list__key">
+      Is the claimant likely to have functional restrictions for at least 9 months?
+    </dt>
+    <dd class="govuk-summary-list__value">
+      </dd>
+       </div>
+       <div class="govuk-summary-list__row govuk-summary-list">
+        <dt class="govuk-summary-list__key">
+          When should this claim be reviewed?
+        </dt>
+        <dd class="govuk-summary-list__value">
+          No future assessments required
+          </dd>
+           </div>
+           <div class="govuk-summary-list__row govuk-summary-list">
+            <dt class="govuk-summary-list__key">
+              Why should the claim be reviewed then?
+            </dt>
+            <dd class="govuk-summary-list__value">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+              </dd>
+               </div>
+</dl>
+
+<!-- 
+<button class="govuk-button govuk-button--secondary" data-module="govuk-button">
+  Print report
+</button>
+
+        <form action="#" method="post" novalidate>
+
+          <input type="hidden" name="answers-checked" value="true">
+
+          <button class="govuk-button" data-module="govuk-button">
+            Continue
+          </button>
+
+         
+        </form> -->
+
+
+
+
+      </div>
+    </div>
+
+
+{% endblock %}
