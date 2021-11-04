@@ -13,3 +13,6 @@ node_modules/*
 package-lock.json
 public/stylesheets/docs-ie8.css
 public/stylesheets/docs.css
+public/stylesheets/docs-ie8.css
+*.css
+public/stylesheets/docs.css
