@@ -1,0 +1,495 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Health assessment report
+{% endblock %}
+
+
+{% block beforeContent %}
+
+<!-- <a href="#" class="govuk-back-link">Back</a> -->
+{% endblock %}
+
+
+{% block content %}
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-full">
+
+  <!-- <span class="govuk-caption-l">Eating and drinking</span> -->
+
+  <h1 class="govuk-heading-xl">Review health assessment</h1>
+
+
+        <br>
+
+        <h2 class="govuk-heading-l">Claimant details</h2>
+
+        <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Name
+            </dt>
+            <dd class="govuk-summary-list__value">
+              John Doe
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              National insurance number
+            </dt>
+            <dd class="govuk-summary-list__value">
+              QQ 12 34 56 X
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Date of birth
+            </dt>
+            <dd class="govuk-summary-list__value">
+              31 December 1999
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Benefit type
+            </dt>
+            <dd class="govuk-summary-list__value">
+              Universal Credit
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Date assessment was completed
+            </dt>
+            <dd class="govuk-summary-list__value">
+              3 March 2021
+            </dd>
+          </div>
+      
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Name of Healthcare Professional
+            </dt>
+            <dd class="govuk-summary-list__value">
+              Jane Jones
+            </dd>
+          </div>
+   
+        </dl>
+
+
+
+
+
+        <h2 class="govuk-heading-l">Health assessment</h2>
+
+     
+        <dl class="govuk-summary-list">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            How was the assessment conducted
+          </dt>
+          <dd class="govuk-summary-list__value">
+            Telephone
+          </dd>
+        
+        </div>
+        </dl>
+
+
+
+  <h3 class="govuk-heading-m">Current medication and treatment
+    <a href="/form_components/AddAnother" class="govuk-link govuk-!-font-size-19 app-task-list__tag govuk-!-font-weight-regular" id="list-convictions-status">Change</a>
+  </h3>
+
+  <dl class="govuk-summary-list govuk-summary-list--no-border">
+
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Medication 1
+    </dt>
+    <dd class="govuk-summary-list__value">
+      Medication and dosage: Lorem ipsum - 1mg<br>
+      Frequency: Three times a day<br>
+      Side effects: Lorem ipsum dolor sit amet, ei purto tibique sed. Lorem ipsum dolor sit amet, ei purto tibique sed. Lorem ipsum dolor sit amet, ei purto tibique sed. Lorem ipsum dolor sit amet, ei purto tibique sed. Lorem ipsum dolor sit amet, ei purto tibique sed.<br>
+<br>
+      Lorem ipsum dolor sit amet, ei purto tibique sed. Lorem ipsum dolor sit amet, ei purto tibique sed. Lorem ipsum dolor sit amet, ei purto tibique sed. Lorem ipsum dolor sit amet, ei purto tibique sed.
+    </dd>
+    <dd class="govuk-summary-list__actions">
+      <a class="govuk-link" href="#">
+        <span class="govuk-visually-hidden"></span>
+      </a>
+    </dd>
+  </div>
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Medication 2
+    </dt>
+    <dd class="govuk-summary-list__value">
+      Medication and dosage: Lorem ipsum - 20mg<br>
+      Frequency: Once a day<br>
+      Side effects: Lorem ipsum dolor sit amet, ei purto tibique sed. Lorem ipsum dolor sit amet, ei purto tibique sed. Lorem ipsum dolor sit amet, ei purto tibique sed. Lorem ipsum dolor sit amet, ei purto tibique sed. Lorem ipsum dolor sit amet, ei purto tibique sed.<br>
+<br>
+      Lorem ipsum dolor sit amet, ei purto tibique sed. Lorem ipsum dolor sit amet, ei purto tibique sed. Lorem ipsum dolor sit amet, ei purto tibique sed. Lorem ipsum dolor sit amet, ei purto tibique sed.
+    </dd>
+    <dd class="govuk-summary-list__actions">
+      <a class="govuk-link" href="#">
+        <span class="govuk-visually-hidden"></span>
+      </a>
+    </dd>
+  </div>
+<!-- <h3 class="govuk-heading-s">Additional attendee 2
+</h3> -->
+
+</dl>
+
+
+<h3 class="govuk-heading-m">Left leg Peripheral Circulation
+  <a href="/form_components/AddAnother" class="govuk-link govuk-!-font-size-19 app-task-list__tag govuk-!-font-weight-regular" id="list-convictions-status">Change</a>
+</h3>
+
+
+<dl class="govuk-summary-list">
+  <div class="govuk-summary-list__row govuk-summary-list--no-border">
+    <dt class="govuk-summary-list__key">
+      Select the examination to complete
+    </dt>
+    <dd class="govuk-summary-list__value">
+      Dorsalis<br>State your findings: Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum
+      <br>
+      <br>
+      Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum
+      <br>
+      <br>
+      Oedema<br>State your findings: Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum
+    
+    </dd>
+  </div>
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Other findings
+    </dt>
+    <dd class="govuk-summary-list__value">
+      There were some additional Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum
+    </dd>
+  </div>
+
+</dl>
+
+
+<h2 class="govuk-heading-l">Assessment
+</h2>
+
+
+
+<dl class="govuk-summary-list">
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Condition history
+    </dt>
+    <dd class="govuk-summary-list__value">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    </dd>
+  </div>
+</dl>
+
+
+  <dl class="govuk-summary-list">
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Medication and side effects
+            </dt>
+            <dd class="govuk-summary-list__value">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </div>
+        </dl>
+
+    
+        <dl class="govuk-summary-list">
+
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Social and work history
+            </dt>
+            <dd class="govuk-summary-list__value">    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </dd>
+          </div>
+        </dl>
+
+     
+        <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+
+
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Typical day
+            </dt>
+       
+            <dd class="govuk-summary-list__value">    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </dd>
+
+          </div>
+      
+        </dl>
+
+
+
+        <h2 class="govuk-heading-l">Physical functions</h2>
+
+  <h3 class="govuk-heading-m">Mobilising and using steps
+    <a href="/form_components/AddAnother" class="govuk-link govuk-!-font-size-19 app-task-list__tag govuk-!-font-weight-regular" id="list-convictions-status">Change</a>
+  </h3>
+
+
+  <dl class="govuk-summary-list">
+  <div class="govuk-summary-list__row govuk-summary-list--no-border">
+    <dt class="govuk-summary-list__key">
+      Choose the descriptor that's most appropriate 
+    </dt>
+    <dd class="govuk-summary-list__value">
+      Cannot go up or down 2 steps, even if using a handrail
+    </dd>
+  </div>
+  <div class="govuk-summary-list__row govuk-summary-list">
+    <dt class="govuk-summary-list__key">
+      Give details
+    </dt>
+    <dd class="govuk-summary-list__value">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    </dd>
+  </div>
+</dl>
+
+
+<h3 class="govuk-heading-m">Continence
+  <a href="/form_components/AddAnother" class="govuk-link govuk-!-font-size-19 app-task-list__tag govuk-!-font-weight-regular" id="list-convictions-status">Change</a>
+</h3>
+
+  <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+  <div class="govuk-summary-list__row govuk-summary-list--no-border">
+    <dt class="govuk-summary-list__key">
+      Which of these options describes how well the claimant can control their bladder and bowels?
+    </dt>
+    <dd class="govuk-summary-list__value">
+      None of the above
+    </dd>
+  </div>
+  <div class="govuk-summary-list__row govuk-summary-list">
+    <dt class="govuk-summary-list__key">
+      Give details
+    </dt>
+    <dd class="govuk-summary-list__value">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    </dd>
+  </div>
+</dl>
+
+
+<h2 class="govuk-heading-l">Mental, cognitive and intellectual capabilities</h2>
+
+
+
+<h3 class="govuk-heading-m">Learning to do new tasks
+  <a href="/form_components/AddAnother" class="govuk-link govuk-!-font-size-19 app-task-list__tag govuk-!-font-weight-regular" id="list-convictions-status">Change</a>
+</h3>
+
+
+  <dl class="govuk-summary-list">
+  <div class="govuk-summary-list__row govuk-summary-list--no-border">
+    <dt class="govuk-summary-list__key">
+      Which of these options describes how well the claimant can learn how to do new tasks?
+    </dt>
+    <dd class="govuk-summary-list__value">
+      Can learn how to do a moderately complicated task, such as using a washing machine, but nothing more complicated than that
+    </dd>
+  </div>
+  <div class="govuk-summary-list__row govuk-summary-list">
+    <dt class="govuk-summary-list__key">
+      Give details
+    </dt>
+    <dd class="govuk-summary-list__value">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    </dd>
+  </div>
+</dl>
+
+
+<h3 class="govuk-heading-m">Awareness of hazards and danger
+  <a href="/form_components/AddAnother" class="govuk-link govuk-!-font-size-19 app-task-list__tag govuk-!-font-weight-regular" id="list-convictions-status">Change</a>
+</h3>
+
+  <dl class="govuk-summary-list">
+  <div class="govuk-summary-list__row govuk-summary-list--no-border">
+    <dt class="govuk-summary-list__key">
+      How often does the claimant need someone with them to help them stay safe?
+    </dt>
+    <dd class="govuk-summary-list__value">
+      None of the above    </dd>
+  </div>
+  <div class="govuk-summary-list__row govuk-summary-list">
+    <dt class="govuk-summary-list__key">
+      Give details
+    </dt>
+    <dd class="govuk-summary-list__value">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+  </div>
+</dl>
+
+
+<h3 class="govuk-heading-m">Planning, starting and finishing everyday tasks
+  <a href="/form_components/AddAnother" class="govuk-link govuk-!-font-size-19 app-task-list__tag govuk-!-font-weight-regular" id="list-convictions-status">Change</a>
+</h3>
+
+
+  <dl class="govuk-summary-list">
+  <div class="govuk-summary-list__row govuk-summary-list--no-border">
+    <dt class="govuk-summary-list__key">
+      Can the claimant plan, start and finish everyday tasks without difficulty?
+    </dt>
+    <dd class="govuk-summary-list__value">
+      None of the above    </dd>
+  </div>
+  <div class="govuk-summary-list__row govuk-summary-list">
+    <dt class="govuk-summary-list__key">
+      Give details
+    </dt>
+    <dd class="govuk-summary-list__value">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    </div>
+</dl>
+
+
+<h3 class="govuk-heading-m">Coping with social situations
+  <a href="/form_components/AddAnother" class="govuk-link govuk-!-font-size-19 app-task-list__tag govuk-!-font-weight-regular" id="list-convictions-status">Change</a>
+</h3>
+
+
+  <dl class="govuk-summary-list">
+  <div class="govuk-summary-list__row govuk-summary-list--no-border">
+    <dt class="govuk-summary-list__key">
+      How does the claimant cope with meeting and being with people?
+    </dt>
+    <dd class="govuk-summary-list__value">
+      None of the above    </dd>
+  </div>
+  <div class="govuk-summary-list__row govuk-summary-list">
+    <dt class="govuk-summary-list__key">
+      Give details
+    </dt>
+    <dd class="govuk-summary-list__value">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    </div>
+</dl>
+
+
+
+<h3 class="govuk-heading-m">Getting about
+  <a href="/form_components/AddAnother" class="govuk-link govuk-!-font-size-19 app-task-list__tag govuk-!-font-weight-regular" id="list-convictions-status">Change</a>
+</h3>
+
+
+  <dl class="govuk-summary-list">
+  <div class="govuk-summary-list__row govuk-summary-list--no-border">
+    <dt class="govuk-summary-list__key">
+      How does the claimant cope with meeting and being with people?
+    </dt>
+    <dd class="govuk-summary-list__value">
+      Is unable to get to a specified place with which the claimant is familiar, without being accompanied by another person.   </dd>
+  </div>
+  <div class="govuk-summary-list__row govuk-summary-list">
+    <dt class="govuk-summary-list__key">
+      Give details
+    </dt>
+    <dd class="govuk-summary-list__value">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    </div>
+</dl>
+
+
+<h3 class="govuk-heading-m">Coping with social situations
+  <a href="/form_components/AddAnother" class="govuk-link govuk-!-font-size-19 app-task-list__tag govuk-!-font-weight-regular" id="list-convictions-status">Change</a>
+</h3>
+
+
+  <dl class="govuk-summary-list">
+  <div class="govuk-summary-list__row govuk-summary-list--no-border">
+    <dt class="govuk-summary-list__key">
+      How does the claimant cope with meeting and being with people?
+    </dt>
+    <dd class="govuk-summary-list__value">
+      None of the above  </dd>
+  </div>
+  <div class="govuk-summary-list__row govuk-summary-list">
+    <dt class="govuk-summary-list__key">
+      Give details
+    </dt>
+    <dd class="govuk-summary-list__value">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    </div>
+</dl>
+
+
+
+<h3 class="govuk-heading-m">Behaving appropriately around other people
+  <a href="/form_components/AddAnother" class="govuk-link govuk-!-font-size-19 app-task-list__tag govuk-!-font-weight-regular" id="list-convictions-status">Change</a>
+</h3>
+
+
+  <dl class="govuk-summary-list">
+  <div class="govuk-summary-list__row govuk-summary-list--no-border">
+    <dt class="govuk-summary-list__key">
+      How often does the claimant behave in a way which upsets other people?
+    </dt>
+    <dd class="govuk-summary-list__value">
+      None of the above  </dd>
+  </div>
+  <div class="govuk-summary-list__row govuk-summary-list">
+    <dt class="govuk-summary-list__key">
+      Give details
+    </dt>
+    <dd class="govuk-summary-list__value">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    </div>
+</dl>
+
+
+<h3 class="govuk-heading-m">Fit for work
+  <a href="/form_components/AddAnother" class="govuk-link govuk-!-font-size-19 app-task-list__tag govuk-!-font-weight-regular" id="list-convictions-status">Change</a>
+</h3>
+
+  <dl class="govuk-summary-list">
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Has the customer service desk (CSD) approved this?
+    </dt>
+    <dd class="govuk-summary-list__value">
+      Yes<br>What was the practitioner's name?: Doctor Healing</dd>
+  </div>
+
+</dl>
+
+
+
+</dl>
+
+
+
+
+        <form action="#" method="post" novalidate>
+
+          <input type="hidden" name="answers-checked" value="true">
+
+        
+        </form>
+
+
+
+
+      </div>
+    </div>
+
+
+
+
+{% endblock %}
